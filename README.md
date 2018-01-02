@@ -8,6 +8,7 @@ To set up Magical Library, place `standard.css`, `standard.js` and the `fonts` f
 <link rel="stylesheet" href="path/to/standard.css">
 <script src="path/to/standard.js"></script>
 ~~~~
+For the proper function of standard.js, please also import jQuery.
 That's it.
 
 ### Usage
