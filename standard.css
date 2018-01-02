@@ -193,14 +193,20 @@ p{
 .top{
 	margin-top:10px;
 }
+.bottom{
+	margin-bottom:10px;
+}
+.right{
+	margin-right:10px;
+}
+.left{
+	margin-left:10px;
+}
 .no-mar{
 	margin:0;
 }
 .right{
 	float:right;
-}
-.bottom{
-	margin-bottom:10px;
 }
 .center{
 	margin-left:10px;
