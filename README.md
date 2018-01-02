@@ -5,6 +5,7 @@ It's licensed under GNU GNP 3, so you can change it as much as you like.
 ### Setup
 To set up Magical Library, place `standard.css`, `standard.js` and the `fonts` folder into the same directory on your website, and link it using
 ~~~~
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="path/to/standard.css">
 <script src="path/to/standard.js"></script>
 ~~~~
