@@ -224,12 +224,14 @@ p{
 	color:white;
 	text-align: justify;
 	transition: all .1s linear;
+	border-radius:3px 3px 0 0;
 }
 .project .footer{
 	padding: 15px 0 1px 20px;
 	margin-top:0;
 	background-color:#3F95A3;
 	transition: all .1s linear;
+	border-radius:0 0 3px 3px;
 }
 .project .footer .footer-text{
 	margin-top:0;
