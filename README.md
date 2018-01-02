@@ -3,7 +3,13 @@
 It's licensed under GNU GNP 3, so you can change it as much as you like.
 
 ### Setup
-To set up Magical Library, place `standard.css` and the `fonts` folder into the same directory on your website, and link it using `<link rel="stylesheet" href="path/to/magiclib.css"`. That's it.
+To set up Magical Library, place `standard.css`, `standard.js` and the `fonts` folder into the same directory on your website, and link it using
+~~~~
+<link rel="stylesheet" href="path/to/standard.css">
+<script src="path/to/standard.js"></script>
+~~~~
+For the proper function of standard.js, please also import jQuery.
+That's it.
 
 ### Usage
 Magical Library tries to avoid default styles (globally referencing elements rather than classes) wherever possible, to make it as non-destructive in complex projects as possible. Class names are designed to be very evident. For a full usage guide, see the Wiki of this repository.
