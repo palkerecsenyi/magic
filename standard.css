@@ -187,6 +187,9 @@ p{
 	margin: 0 auto;
 	margin-bottom:10px;
 }
+.col .box{
+	width:85%;
+}
 .top{
 	margin-top:10px;
 }
