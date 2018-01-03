@@ -105,6 +105,8 @@ p{
 .container{
 	margin-left:10%;
 	margin-right:10%;
+}
+nav + .container{
 	margin-top:80px;
 }
 .row{
