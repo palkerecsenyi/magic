@@ -371,6 +371,13 @@ input[type='radio']+label:before{
 .radio-label{
 	font-size:18px;
 }
+input[type='radio'] + label:before{
+	border-radius:50%;
+	width:16px;
+}
+input[type='radio']:checked + label:before{
+	box-shadow: inset 0px 0px 0px 21px #57def9;
+}
 input[type='checkbox']{
 	visibility:hidden;
 	position:absolute;
@@ -386,18 +393,17 @@ input[type='checkbox']+label:before{
 	transition: all .1s linear;
 	cursor:pointer;
 }
+input[type='checkbox'] + label:before{
+	width:16px;
+}
+input[type='checkbox']:checked + label:before{
+	box-shadow: inset 0px 0px 0px 21px #57def9;
+}
 .check-group{
 	margin-bottom:5px;
 }
 .check-label{
 	font-size:18px;
-}
-input[type='radio'] + label:before{
-	border-radius:50%;
-	width:16px;
-}
-input[type='radio']:checked + label:before{
-	box-shadow: inset 0px 0px 0px 21px #57def9;
 }
 select{
 	font-size:20px;
