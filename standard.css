@@ -106,7 +106,7 @@ p{
 	display:flex;
 	justify-content: space-between;
 }
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 425px){
 	.row{
 		display: block;
 	}
@@ -183,9 +183,9 @@ p{
 	margin-right:10px;
 	margin-top:0;
 }
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 425px){
 	[class*="col"]{
-		width:100&;
+		width:100;
 	}
 }
 .box{
