@@ -234,6 +234,7 @@ nav + .container{
 /*Project cards*/
 .project{
 	cursor:pointer;
+	margin-bottom:10px;
 }
 .project .body{
 	padding:6px 20px 5px 20px;
@@ -386,6 +387,27 @@ input[type='radio']+label:before{
 	margin-bottom:5px;
 }
 .radio-label{
+	font-size:18px;
+}
+input[type='checkbox']{
+	visibility:hidden;
+	position:absolute;
+}
+input[type='checkbox']+label:before{
+	height:16px;
+	margin-right: 4px;
+	content: " ";
+	display:inline-block;
+	vertical-align: baseline;
+	border:1px solid #ccc;
+	box-shadow: inset 0px 0px 10px 10px rgba(209,209,209,1);
+	transition: all .1s linear;
+	cursor:pointer;
+}
+.check-group{
+	margin-bottom:5px;
+}
+.check-label{
 	font-size:18px;
 }
 input[type='radio'] + label:before{
