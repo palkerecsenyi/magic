@@ -216,6 +216,7 @@ p{
 /*Project cards*/
 .project{
 	cursor:pointer;
+	margin-bottom:10px;
 }
 .project .body{
 	padding:6px 20px 5px 20px;
