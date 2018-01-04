@@ -302,11 +302,26 @@ nav .nav-items{
 	padding:0;
 	margin-right:20px;
 }
+@media only screen and (max-width: 768px){
+	nav .nav-items{
+		float:none;
+		margin:0;
+		margin-bottom:8px;
+		text-align: center;
+	}
+}
 nav .nav-brand{
 	width:50px;
 	padding:12px 18px 12px 18px;
 	margin:0 0 0 10%;
 	fill: white;
+}
+@media only screen and (max-width: 768px){
+	nav .nav-brand{
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+	}
 }
 nav .nav-items .nav-item{
 	display:inline;
@@ -314,6 +329,18 @@ nav .nav-items .nav-item{
 	-webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
 	border-radius:2px;
+}
+@media only screen and (max-width: 768px){
+	nav .nav-items .nav-item{
+		padding:0 20px 0 0;
+		transition: none;
+	}
+}
+@media only screen and (max-width: 425px){
+	nav .nav-items .nav-item{
+		padding:0 4px 0 0;
+		transition: none;
+	}
 }
 nav .nav-items .nav-item:not(.important):not(.active){
 	-webkit-transition: background-color 0.5s;
