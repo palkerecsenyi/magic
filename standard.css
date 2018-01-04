@@ -44,9 +44,29 @@ p{
 .mobile{
 	display:none;
 }
+.desktop-tablet{
+	display:block;
+}
+.desktop{
+	display: block;
+}
+.tablet-mobile{
+	display:none;
+}
 @media only screen and (max-width: 425px){
+	.desktop-tablet{
+		display: none;
+	}
 	.mobile{
 		display: block;
+	}
+}
+@media only screen and (max-width: 768px){
+	.desktop{
+		display: none;
+	}
+	.tablet-mobile{
+		display:block;
 	}
 }
 .header{
