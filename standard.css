@@ -266,7 +266,6 @@ nav + .container{
 }
 /*Buttons*/
 .btn{
-	background-color:#1E75DC;
 	padding:10px 20px;
 	border:none;
 	color:white;
@@ -278,8 +277,31 @@ nav + .container{
 	margin-top:10px;
 	border-radius:5px;
 }
-.btn:hover{
+.btn.btn-default{
+	background-color:#1E75DC;
+}
+.btn.btn-default:hover{
 	background-color:#478FE5;
+}
+.btn.btn-yellow{
+	background-color: #DCC213;
+}
+.btn.btn-yellow:hover{
+	background-color:#F0DD59;
+}
+.btn.btn-red{
+	background-color: #CB3033;
+}
+.btn.btn-red:hover{
+	background-color: #D96063;
+}
+.btn.btn-green{
+	background-color: #34AD21;
+}
+.btn.btn-green:hover{
+	background-color: #44D62E;
+}
+.btn:hover{
 	cursor:pointer;
 }
 .btn:disabled{
@@ -294,6 +316,8 @@ nav{
 	position:fixed;
 	width:100%;
 	margin-bottom:20px;
+	min-height:50px;
+	max-height:100px;
 }
 nav .nav-items{
 	float:right;
@@ -316,8 +340,23 @@ nav .nav-brand{
 	margin:0 0 0 10%;
 	fill: white;
 }
+nav .nav-brand-text{
+	display:inline-block;
+	padding:7px 18px 8px 18px;
+	margin:0 0 0 10%;
+	color:white;
+	text-decoration: none;
+	font-family: 'Noto';
+	font-size:24px;
+	vertical-align: middle;
+}
 @media only screen and (max-width: 768px){
 	nav .nav-brand{
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+	}
+	nav .nav-brand-text{
 		display: block;
 		margin: 0 auto;
 		text-align: center;
