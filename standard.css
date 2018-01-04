@@ -225,6 +225,9 @@ nav + .container{
 	margin: 0 auto;
 	margin-bottom:10px;
 }
+.box.box-fluid{
+	width:100%;
+}
 .col .box{
 	width:85%;
 }
