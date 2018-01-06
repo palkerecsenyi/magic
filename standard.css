@@ -225,8 +225,10 @@ nav + .container{
 	margin: 0 auto;
 	margin-bottom:10px;
 }
-.box.box-fluid{
-	width:100%;
+@media only screen and (min-width: 768px){
+	.box.box-fluid{
+		width:100%;
+	}
 }
 .col .box{
 	width:85%;
