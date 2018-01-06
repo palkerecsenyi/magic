@@ -3,7 +3,7 @@
 It's licensed under GNU GNP 3, so you can change it as much as you like.
 
 ### Setup
-To set up Magical Library, place `standard.css`, `standard.js` and the `fonts` folder into the same directory on your website, and link it using
+To set up Magical Library, place `standard.css` (or `standard.min.css` for a minified file), `standard.js` and the `fonts` folder into the same directory on your website, and link it using
 ~~~~
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="path/to/standard.css">
@@ -19,6 +19,6 @@ Magical Library tries to avoid default styles (globally referencing elements rat
 Two fonts are used: `Noto Sans` by Google and `Roboto` by Christian Robertson.
 
 ### Documentation
-To use Magic, you'll need to read the official documentation. It's currently available on this repository's Wiki, at https://github.com/palkerecsenyi/magiclib/wiki
+To use Magic, you'll need to read the official documentation. It's currently available on this repository's Wiki, at https://github.com/palkerecsenyi/magic/wiki
 
 That's it. Enjoy!
