@@ -134,6 +134,10 @@ p{
 .mute{
 	color:#434343;
 }
+.important{
+	font-weight:bolder;
+	text-transform: uppercase;
+}
 /*Containers*/
 .container{
 	margin-left:10%;
@@ -269,26 +273,50 @@ nav + .container{
 	display:inline;
 	font-size:24px;
 }
+/*Colours
+.default{
+	background-color: #3EB7B1;
+}
+.red{
+	background-color: #B54747;
+}
+.green{
+	background-color: #4AA63B;
+}
+.yellow{
+	background-color: #C8C754;
+}*/
 /*Project cards*/
 .project{
 	cursor:pointer;
 	margin-bottom:10px;
+	border-radius: 3px;
 }
 .project .body{
 	padding:6px 20px 5px 20px;
 	margin-bottom:0;
-	background-color:#48A8B8;
 	color:white;
 	text-align: justify;
 	transition: all .1s linear;
-	border-radius:3px 3px 0 0;
+	border-radius: 3px 3px 0 0;
 }
 .project .footer{
 	padding: 15px 0 1px 20px;
 	margin-top:0;
-	background-color:#3F95A3;
 	transition: all .1s linear;
-	border-radius:0 0 3px 3px;
+	border-radius: 0 0 3px 3px;
+}
+.project.default .footer{
+	background-color:#329691;
+}
+.project.red .footer{
+	background-color:#953A3A;
+}
+.project.green .footer{
+	background-color: #3B862F;
+}
+.project.yellow .footer{
+	background-color: #A1A134;
 }
 .project .footer .footer-text{
 	margin-top:0;
@@ -296,11 +324,29 @@ nav + .container{
 	text-transform: uppercase;
 	font-family: 'Noto';
 }
-.project:hover .footer{
-	background-color: #37828E;
+.project.default:hover .footer{
+	background-color: #287A76;
 }
-.project:hover .body{
-	background-color: #3F95A3;
+.project.red:hover .footer{
+	background-color: #813232;
+}
+.project.green:hover .footer{
+	background-color: #2E6925;
+}
+.project.yellow:hover .footer{
+	background-color: #797927;
+}
+.project.default:hover .body{
+	background-color: #329691;
+}
+.project.red:hover .body{
+	background-color: #953A3A;
+}
+.project.green:hover .body{
+	background-color: #3B862F;
+}
+.project.yellow:hover .body{
+	background-color: #A1A134;
 }
 /*Buttons*/
 .btn{
