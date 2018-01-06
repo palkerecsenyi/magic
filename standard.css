@@ -353,6 +353,10 @@ nav + .container{
 	border-radius: 3px;
 	margin:0 auto;
 	color: white;
+	margin-bottom:10px;
+}
+.person .link{
+	color:white;
 }
 .person .image{
 	display: inline;
@@ -429,6 +433,11 @@ footer .body .content{
 }
 footer .body .content h1{
 	margin:0;
+	font-family: 'NotoThin', sans-serif;
+	font-size:24px;
+}
+footer .body .content h1::after{
+	margin:0;
 }
 footer .body .links{
 	width:40%;
@@ -448,6 +457,7 @@ footer .body .links ul li a{
 	text-transform: uppercase;
 	transition: all .1s ease;
 	font-weight: bolder;
+	font-size:14px;
 }
 footer .bottom{
 	padding: 5px 10%;
@@ -465,13 +475,22 @@ footer.green .bottom{
 footer.yellow .bottom{
 	background-color: #A9A836;
 }
-@media only screen and (max-width: 425px){
+footer .body .links ul li.header{
+	font-size:18px;
+}
+footer .link{
+	color:white;
+}
+@media only screen and (max-width: 683px){
 	footer .body{
 		display: block;
 		justify-content: none;
 	}
 	footer .body .content, footer .body .links{
 		width:100%;
+	}
+	footer .body .links{
+		justify-content:flex-start;
 	}
 }
 /*Navbar*/
