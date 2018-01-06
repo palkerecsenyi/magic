@@ -333,6 +333,85 @@ nav + .container{
 	background-color: #6B6B6B;
 	cursor:default;
 }
+/*Person*/
+.person{
+	width:85%;
+	padding:15px;
+	border-radius: 3px;
+	margin:0 auto;
+	color: white;
+}
+.person.default{
+	background-color: #3EB7B1;
+}
+.person.red{
+	background-color: #B54747;
+}
+.person.green{
+	background-color: #4AA63B;
+}
+.person.yellow{
+	background-color: #C8C754;
+}
+.person .image{
+	display: inline;
+	width:10%;
+	vertical-align: middle;
+}
+.person .identifier{
+	display:inline-block;
+}
+.person .name{
+	font-family: 'Noto', sans-serif;
+	font-size:34px;
+	display:inline-block;
+	margin: 10px 0 0 10px;
+}
+.person .role{
+	display:block;
+	margin: 0 0 0 10px;
+	text-transform: uppercase;
+	font-weight: bolder;
+}
+.person .links{
+	display:inline-block;
+	float:right;
+}
+.person .links a{
+	text-decoration:none;
+	color:white;
+	text-transform: uppercase;
+	transition: all .1s ease;
+	font-weight: bolder;
+}
+.person .content .description{
+	margin: 10px 0 0 0;
+}
+@media only screen and (max-width: 547px){
+	.person .identifier{
+		display:block;
+	}
+	.person .name{
+		margin: 0;
+		text-align:center;
+		display:block;
+	}
+	.person .role{
+		margin:0;
+		text-align:center;
+	}
+	.person .links{
+		margin:0;
+		display:block;
+		float:none;
+		text-align:center;
+	}
+	.person .image{
+		width:50%;
+		display:block;
+		margin:0 auto;
+	}
+}
 /*Navbar*/
 nav{
 	background-color:#79D3B5;
