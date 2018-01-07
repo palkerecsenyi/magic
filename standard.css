@@ -134,7 +134,7 @@ p{
 .mute{
 	color:#434343;
 }
-.important{
+.important-text{
 	font-weight:bolder;
 	text-transform: uppercase;
 }
@@ -394,7 +394,7 @@ nav + .container{
 }
 /*Person*/
 .person{
-	width:85%;
+	width:100%;
 	padding:15px;
 	border-radius: 3px;
 	margin:0 auto;
@@ -438,7 +438,7 @@ nav + .container{
 .person .content .description{
 	margin: 10px 0 0 0;
 }
-@media only screen and (max-width: 547px){
+@media only screen and (max-width: 320px){
 	.person .identifier{
 		display:block;
 	}
@@ -463,6 +463,48 @@ nav + .container{
 		margin:0 auto;
 	}
 }
+@media only screen and (max-width:375px){
+	.person{
+		width:85%;
+	}
+}
+/*Comments*/
+.comments{
+	margin-top: 10px;
+}
+.comments .new{
+	margin-bottom:5px;
+}
+.comments .new .btn{
+	margin-top:5px;
+}
+.comments .comment{
+	border-radius:3px;
+	border: 1px solid gray;
+	margin-bottom:10px;
+}
+.comments .comment .body{
+	padding: 5px 15px;
+}
+.comments .comment .separator{
+	margin-bottom:0;
+}
+.comments .comment .footer{
+	margin-top:0;
+	background-color: #EDEDED;
+	height:100%;
+	padding: 10px 15px;
+}
+.comments .comment .footer p{
+	margin:0;
+	font-family: 'Noto', sans-serif;
+	text-transform: uppercase;
+	color:#333333;
+}
+.comments .comment .footer a{
+	text-decoration: none;
+	color:#333333;
+}
 /*Footer*/
 footer{
 	margin-top:30px;
@@ -472,7 +514,7 @@ footer{
 footer .body{
 	padding: 15px 10% 0 10%;
 	display:inline-flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 }
 footer .body .content{
 	width:60%;
@@ -527,16 +569,31 @@ footer .body .links ul li.header{
 footer .link{
 	color:white;
 }
-@media only screen and (max-width: 683px){
+@media only screen and (max-width: 944px){
 	footer .body{
 		display: block;
-		justify-content: none;
+		justify-content: flex-start;
 	}
 	footer .body .content, footer .body .links{
 		width:100%;
 	}
 	footer .body .links{
 		justify-content:flex-start;
+		margin:0;
+		width:100%;
+	}
+	footer .body .links ul{
+		padding:0;
+		padding-right:10px;
+	}
+}
+@media only screen and (max-width: 320px){
+	footer .body .links{
+		display:block;
+		margin: 0 auto;
+	}
+	footer .body .links ul{
+		padding:0;
 	}
 }
 /*Navbar*/
@@ -549,6 +606,7 @@ nav{
 	margin-bottom:20px;
 	min-height:50px;
 	max-height:100px;
+	z-index:999;
 }
 nav .nav-items{
 	float:right;
