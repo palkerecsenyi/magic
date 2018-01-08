@@ -233,6 +233,14 @@ nav + .container{
 		width:100%;
 	}
 }
+@media only screen and (max-width: 768px){
+	.row.pile-tablet{
+		display:block;
+	}
+	.row.pile-tablet [class*="col"]{
+		width:100%;
+	}
+}
 .box{
 	width:75%;
 	padding:30px;
@@ -250,6 +258,9 @@ nav + .container{
 .col .box{
 	width:85%;
 }
+.no-mar{
+	margin:0;
+}
 .top{
 	margin-top:10px;
 }
@@ -261,9 +272,6 @@ nav + .container{
 }
 .left{
 	margin-left:10px;
-}
-.no-mar{
-	margin:0;
 }
 .right-float{
 	float:right;
@@ -385,12 +393,16 @@ nav + .container{
 .btn.btn-green:hover{
 	background-color: #44D62E;
 }
-.btn:hover{
+.btn:not(:disabled):hover{
 	cursor:pointer;
 }
 .btn:disabled{
 	background-color: #6B6B6B;
 	cursor:default;
+}
+.btn:disabled:hover{
+	background-color:#6B6B6B;
+	cursor:not-allowed;
 }
 /*Person*/
 .person{
