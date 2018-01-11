@@ -19,9 +19,6 @@ body{
 	font-family: 'Roboto', sans-serif;
 	margin:0;
 }
-p{
-	text-align:justify;
-}
 ::selection {
 	background-color: #36AA9D;
 	color:white;
@@ -29,6 +26,23 @@ p{
 ::-moz-selection {
 	background-color: #36AA9D;
 	color:white;
+}
+h1{
+	font-size:34px;
+	font-family:'NotoThin';
+}
+h2{
+	font-size:28px;
+	font-family:'NotoThin';
+}
+h3{
+	font-size:22px;
+	font-family:'Noto';
+	font-weight: bolder;
+}
+p{
+	line-height:22px;
+	font-family:'Noto';
 }
 /*Colours*/
 .default{
@@ -42,6 +56,9 @@ p{
 }
 .yellow{
 	background-color: #C8C754;
+}
+.blue{
+	background-color: #5C76B1;
 }
 /*Features*/
 .link{
@@ -65,6 +82,12 @@ p{
 }
 .tablet-mobile{
 	display:none;
+}
+.i-code{
+	font-family: Courier;
+	color:#C94133;
+	padding:5px;
+	background-color: #EFEFEF;
 }
 @media only screen and (max-width: 425px){
 	.desktop-tablet{
@@ -148,9 +171,13 @@ p{
 nav + .container{
 	margin-top:80px;
 }
+.navigation + .container{
+	margin-top:120px;
+}
 .row{
 	display:flex;
 	justify-content: flex-start;
+	width:100%;
 }
 @media only screen and (max-width: 425px){
 	.row{
@@ -232,6 +259,7 @@ nav + .container{
 @media only screen and (max-width: 425px){
 	[class*="col"]{
 		width:100%;
+		margin:0;
 	}
 }
 @media only screen and (max-width: 768px){
@@ -240,6 +268,7 @@ nav + .container{
 	}
 	.row.pile-tablet [class*="col"]{
 		width:100%;
+		margin:0;
 	}
 }
 .box{
@@ -257,11 +286,15 @@ nav + .container{
 		width:100%;
 	}
 }
+@media only screen and (max-width:425px){
+	.box{
+		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+	}
+}
 .col .box{
-	width:85%;
+	width:95%;
 }
 .no-mar{
-
 	margin:0;
 }
 .top{
@@ -283,6 +316,76 @@ nav + .container{
 	margin-left:10px;
 	display:inline;
 	font-size:24px;
+}
+/*Hero*/
+.hero{
+	height:50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+nav + .hero{
+	margin-top:50px;
+}
+@media only screen and (max-width:768px){
+	nav + .hero{
+		margin-top:75px;
+	}
+}
+.hero .hero-content{
+	text-align: center;
+	color:white;
+}
+.hero .hero-content .title{
+	font-size:62px;
+	margin-bottom:0;
+	margin-top:0;
+	padding:0;
+	font-family: 'NotoThin';
+}
+.hero .hero-content .caption{
+	font-size:20px;
+	margin-top:5px;
+	font-family: 'Noto';
+}
+/*Extra nav*/
+.navigation{
+	width:100%;
+	color:white;
+	height:50px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: nowrap;
+	position:fixed;
+	top:0;
+	overflow:hidden;
+}
+.navigation ul{
+	list-style-type: none;
+}
+.navigation ul li{
+	display:inline-block;
+	margin-right:10px;
+	font-family:'Noto';
+}
+.navigation ul li a{
+	color:white;
+	text-decoration: none;
+}
+.navigation ul li.bold{
+	font-weight:bolder;
+	font-family:'Noto';
+	font-size:20px;
+}
+nav + .navigation{
+	top:50px;
+	box-shadow:0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+}
+@media only screen and (max-width:768px){
+	nav + .navigation{
+		top:75px;
+	}
 }
 /*Project cards*/
 .project{
@@ -359,6 +462,7 @@ nav + .container{
 	text-decoration: none;
 	margin-top:10px;
 	border-radius:5px;
+	outline:none;
 }
 .btn-grad{
 	padding:10px 25px;
@@ -371,6 +475,10 @@ nav + .container{
 	margin-top:10px;
 	border-radius:25px;
 	cursor:pointer;
+	outline:none;
+}
+.btn-fluid{
+	width:100%;
 }
 .btn-grad:hover{
 	box-shadow: 5px 5px 25px -6px rgba(0,0,0,0.75);
@@ -403,22 +511,22 @@ nav + .container{
 .btn.btn-green{
 	background-color: #34AD21;
 }
-.btn-outline{
+.btn-inline{
 	background-color:white !important;
 }
-.btn-outline.btn-default{
+.btn-inline.btn-default{
 	border:2px solid #478FE5;
 	color:#478FE5 !important;
 }
-.btn-outline.btn-yellow{
+.btn-inline.btn-yellow{
 	border:2px solid #F0DD59;
 	color:#F0DD59 !important;
 }
-.btn-outline.btn-red{
+.btn-inline.btn-red{
 	border:2px solid #D96063;
 	color:#D96063 !important;
 }
-.btn-outline.btn-green{
+.btn-inline.btn-green{
 	border:2px solid #44D62E;
 	color:#44D62E !important;
 }
@@ -616,6 +724,9 @@ footer.green .bottom{
 }
 footer.yellow .bottom{
 	background-color: #A9A836;
+}
+footer.blue .bottom{
+	background-color: #405687;
 }
 footer .body .links ul li.header{
 	font-size:18px;
