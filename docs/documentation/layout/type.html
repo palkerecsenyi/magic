@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/library/standard.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://palkerecsenyi.github.io/magic/standard.js"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+		<link rel="stylesheet" href="../../prism.css">
+		<meta charset="UTF-8">
+		<title>Magic - Documentation</title>
+		<style>
+			.colour{
+				text-align:center;
+			}
+		</style>
+			<script>
+			function openNav(){
+				document.getElementById("nav-mobile").style.width = "100%";
+
+			}
+			function closeNav(){
+				document.getElementById("nav-mobile").style.width = "0";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="nav-mobile">
+			<a href="javascript:void(0)" class="close" onClick="closeNav()">&times;</a>
+			<a href="https://palkerecsenyi.github.io/magic/docs/">Home</a>
+			<a href="https://palkerecsenyi.github.io/magic/docs/start">Get Started</a>
+			<a href="https://palkerecsenyi.github.io/magic/docs/documentation">Documentation</a>
+			<a href="https://github.com/palkerecsenyi/magic">Github</a>
+		</div>
+		<nav class="blue">
+			<ul class="nav-left">
+				<li><a href="/" class="nav-brand-text">Magic.CSS</a></li>
+				<li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
+			</ul>
+			<ul class="nav-right">
+				<li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/docs/">Home</a></li>
+				<li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/docs/start">Get Started</a></li>
+				<li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/docs/documentation">Documentation</a></li>
+				<li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
+			</ul>
+		</nav>
+		<div class="navigation blue">
+			<div class="section">
+				<p class="bold"><a href="../layout/index.html">Layout</a></p>
+				<p><a href="../layout/container.html">Container</a></p>
+				<p><a href="../layout/grid.html">Grid</a></p>
+				<p><a href="../layout/type.html">Typography</a></p>
+			</div>
+			<div class="section">
+				<p class="bold"><a href="../components/index.html">Components</a></p>
+				<p><a href="../components/box.html">Box</a></p>
+				<p><a href="../components/button.html">Button</a></p>
+				<p><a href="../components/colour.html">Colour</a></p>
+			</div>
+		</div>
+		<div class="container">
+			<h1 class="header">Typography</h1>
+			<p class="trailer">The quality of your typography determines a lot. Magic comes with several customisable text formats, each made to integrate well with any website.</p>
+			<hr class="separator">
+			<h2>Default text styles</h2>
+			<p>For all typography, Magic uses the '<a href="https://www.google.com/get/noto/" class="link">Noto</a>' font by Google. In some instances, the font weight is changed to achieve a more appropriate look. Both the 'Noto Regular' and 'Noto Thin' fonts are used. Magic applies makes default tags (e.g. <span class="i-code">h1, h2, p</span>) look like this:</p>
+			<h1>Heading 1 (h1)</h1>
+			<h2>Heading 2 (h2)</h2>
+			<h3>Heading 3 (h3)</h3>
+			<h4>Heading 4 (h4)</h4>
+			<h5>Heading 5 (h5)</h5>
+			<h6>Heading 6 (h6)</h6>
+			<p>Paragraph (p)</p>
+			<hr class="separator">
+			<p>These require no additional mark-up, just the normal tags as shown above.</p>
+			<h2>Headers</h2>
+			<p>Magic also has special headers, sub-headers, 'trailers' and separators for pages:</p>
+			<h1 class="header">Header</h1>
+			<h2 class="sub-header">Sub-header</h2>
+			<p class="trailer">Trailer - Lorem ipsum dolor sit amet.</p>
+			<hr class="separator">
+			<pre><code class="language-markup">&lt;h1 class="header"&gt;Header&lt;/h1&gt;
+&lt;h2 class="sub-header"&gt;Sub-header&lt;/h2&gt; &lt;!-- Does not have to be h2 --&gt;
+&lt;p class="trailer"&gt;Trailer - Lorem ipsum dolor sit amet&lt;/p&gt;
+&lt;hr class="separator"&gt;</code></pre>
+			<p>These are intended to be used at the top of an informational page (e.g. documentation!) to introduce the page's content.</p>
+			<h2>Links</h2>
+			<p>Magic does not style <span class="i-code">&lt;a&gt;</span> tags by default. Without any class names, a link simply looks like the browser default: <a href="#">Click me!</a>. However, in most cases links look nicer with Magic styles. They make them look clearly clickable, and make the stand out from text: <a href="#" class="link">Click me!</a>. To do this, simply add the <span class="i-code">link</span> class to any <span class="i-code">&lt;a&gt;</span> tag:</p>
+			<pre><code class="language-markup">&lt;a href="#" class="link"&gt;Click me!&lt;/a&gt;</code></pre>
+			<h2>Secondary text</h2>
+			<p>Magic also has faded secondary text, designed to go directly after any primary heading:</p>
+			<h3>Primary <span class="mute">Secondary</span></h3>
+			<pre><code class="language-markup">&lt;h3&gt;Primary &lt;span class=&quot;mute&quot;&gt;Secondary&lt;/span&gt;&lt;/h3&gt;</code></pre>
+			<h2>Important text</h2>
+			<p>Make a paragraph section seem more important by adding one of the following classes:</p>
+			<p class="important-1">I am very important</p>
+			<p class="important-2">I am very important</p>
+			<p class="important-3">I am very important</p>
+			<p class="important-4">I am very important (nicest)</p>
+			<pre><code class="language-markup">&lt;p class=&quot;important-1&quot;&gt;I am very important&lt;/p&gt;
+&lt;p class=&quot;important-2&quot;&gt;I am very important&lt;/p&gt;
+&lt;p class=&quot;important-3&quot;&gt;I am very important&lt;/p&gt;
+&lt;p class=&quot;important-4&quot;&gt;I am very important (nicest)&lt;/p&gt;</code></pre>
+		</div>
+		<footer class="blue">
+			<div class="body">
+				<div class="content">
+					<h1>Magic.css</h1>
+					<p>Neat and unique CSS framework for dynamic websites</p>
+				</div>
+				<div class="links">
+					<ul>
+						<li class="header">Pages</li>
+						<li><a href="/">Home</a></li>
+						<li><a href="#">Start</a></li>
+						<li><a href="https://github.com/palkerecsenyi/magic/">Github</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="bottom">
+				<p>&copy; Magic 2018 <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
+			</div>
+		</footer>
+		<script src="../../prism.js"></script>
+	</body>
+</html>

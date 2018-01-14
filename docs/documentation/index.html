@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Import everything, the same list as on this page, except also FontAwesome (for icons) and highlightjs (for code highlighting)-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://palkerecsenyi.github.io/magic/standard.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://palkerecsenyi.github.io/magic/standard.js"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+		<meta charset="UTF-8">
+		<script>hljs.initHighlightingOnLoad();</script>
+		<title>Magic - Neat and unique CSS framework for dynamic websites</title>
+		<script>
+			function openNav(){
+				document.getElementById("nav-mobile").style.width = "100%";
+
+			}
+			function closeNav(){
+				document.getElementById("nav-mobile").style.width = "0";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="nav-mobile">
+			<a href="javascript:void(0)" class="close" onClick="closeNav()">&times;</a>
+			<a href="https://palkerecsenyi.github.io/magic/docs/">Home</a>
+			<a href="https://palkerecsenyi.github.io/magic/docs/start">Get Started</a>
+			<a href="https://palkerecsenyi.github.io/magic/docs/documentation">Documentation</a>
+			<a href="https://github.com/palkerecsenyi/magic">Github</a>
+		</div>
+		<nav class="blue">
+			<ul class="nav-left">
+				<li><a href="/" class="nav-brand-text">Magic.CSS</a></li>
+				<li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
+			</ul>
+			<ul class="nav-right">
+				<li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/docs/">Home</a></li>
+				<li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/docs/start">Get Started</a></li>
+				<li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/docs/documentation">Documentation</a></li>
+				<li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
+			</ul>
+		</nav>
+		<div class="hero blue">
+			<div class="hero-content">
+				<h1 class="title">Docs</h1>
+				<p class="caption">Choose a topic</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row pile-tablet">
+				<div class="col col4">
+					<div>
+						<h1>Layout</h1>
+						<p>Setting up columns and rows to build page layouts.</p>
+						<a class="btn-grad btn-grad-red" href="layout">Layout</a>
+					</div>
+				</div>
+				<div class="col col4">
+					<div>
+						<h1>Components</h1>
+						<p>Use Magic components to craft unique, neat and responsive UI.</p>
+						<a class="btn-grad btn-grad-green" href="components">Components</a>
+					</div>
+				</div>
+				<div class="col col4">
+					<div>
+						<h1>Examples</h1>
+						<p>If you're stuck, or need inspiration, check out these examples.</p>
+						<a class="btn-grad btn-grad-blue" href="example">Examples</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="blue">
+			<div class="body">
+				<div class="content">
+					<h1>Magic.css</h1>
+					<p>Neat and unique CSS framework for dynamic websites</p>
+				</div>
+				<div class="links">
+					<ul>
+						<li class="header">Pages</li>
+						<li><a href="/">Home</a></li>
+						<li><a href="#">Start</a></li>
+						<li><a href="https://github.com/palkerecsenyi/magic/">Github</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="bottom">
+				<p>&copy; Magic 2018 <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/library/standard.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://palkerecsenyi.github.io/magic/standard.js"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+		<meta charset="UTF-8">
+		<script>hljs.initHighlightingOnLoad();</script>
+		<title>Magic - Documentation</title>
+			<script>
+			function openNav(){
+				document.getElementById("nav-mobile").style.width = "100%";
+
+			}
+			function closeNav(){
+				document.getElementById("nav-mobile").style.width = "0";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="nav-mobile">
+			<a href="javascript:void(0)" class="close" onClick="closeNav()">&times;</a>
+			<a href="https://palkerecsenyi.github.io/magic/docs/">Home</a>
+			<a href="https://palkerecsenyi.github.io/magic/docs/start">Get Started</a>
+			<a href="https://palkerecsenyi.github.io/magic/docs/documentation">Documentation</a>
+			<a href="https://github.com/palkerecsenyi/magic">Github</a>
+		</div>
+		<nav class="blue">
+			<ul class="nav-left">
+				<li><a href="/" class="nav-brand-text">Magic.CSS</a></li>
+				<li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
+			</ul>
+			<ul class="nav-right">
+				<li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/docs/">Home</a></li>
+				<li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/docs/start">Get Started</a></li>
+				<li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/docs/documentation">Documentation</a></li>
+				<li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
+			</ul>
+		</nav>
+		<div class="navigation blue">
+			<div class="section">
+				<p class="bold"><a href="../layout/index.html">Layout</a></p>
+				<p><a href="../layout/container.html">Container</a></p>
+				<p><a href="../layout/grid.html">Grid</a></p>
+				<p><a href="../layout/type.html">Typography</a></p>
+			</div>
+			<div class="section">
+				<p class="bold"><a href="../components/index.html">Components</a></p>
+				<p><a href="../components/box.html">Box</a></p>
+				<p><a href="../components/button.html">Button</a></p>
+				<p><a href="../components/colour.html">Colour</a></p>
+			</div>
+		</div>
+		<div class="container">
+			<h1 class="header">Layout</h1>
+			<hr class="separator">
+			<h2>Containers</h2>
+			<p>In Magic, element layout works quite similarly to most other libraries. At the top of most pages, you'll find a navigation bar (typically shortened to navbar).</p>
+			<p>Below that is a container, which makes sure elements appear neatly on the page. Elements should always be placed inside containers (unless noted otherwise). For example, the following text is placed incorrectly - outside of a container:</p>
+		</div>
+		<p>I don't look right!</p>
+		<div class="container">
+			<p>To learn more about containers, see the <a href="container.html" class="link">container</a> page.</p>
+			<h2>Grid</h2>
+			<p>Magic also allows you to create grid layouts within containers, using <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" class="link">CSS Flexbox</a>. Grids contain columns and rows, to arrange elements - they're a key component of most websites. We've made it very simple, and setting up a grid is just a matter of easy markup. For example, the following layout uses a grid to make two side-by-side sections, which pile on mobile:</p>
+			<div class="box box-fluid">
+				<div class="row">
+					<div class="col8">
+						<h1>Column 1</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis sodales sem. Sed in lectus sem. Integer eu elit sit amet libero ornare faucibus. Maecenas eget molestie purus. Aenean consequat rutrum quam eget rhoncus. Proin diam lorem, mollis vel orci ac, rhoncus sodales ipsum.</p>
+					</div>
+					<div class="col4">
+						<h1>Column 2</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis sodales sem. Sed in lectus sem. Integer eu elit sit amet libero ornare faucibus. Maecenas eget molestie purus. Aenean consequat rutrum quam eget rhoncus. Proin diam lorem, mollis vel orci ac, rhoncus sodales ipsum.</p>
+					</div>
+				</div>
+			</div>
+			<p>To learn more about grids, see the <a href="grid.html" class="link">grid</a> page.</p>
+		</div>
+		<footer class="blue">
+			<div class="body">
+				<div class="content">
+					<h1>Magic.css</h1>
+					<p>Neat and unique CSS framework for dynamic websites</p>
+				</div>
+				<div class="links">
+					<ul>
+						<li class="header">Pages</li>
+						<li><a href="/">Home</a></li>
+						<li><a href="#">Start</a></li>
+						<li><a href="https://github.com/palkerecsenyi/magic/">Github</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="bottom">
+				<p>&copy; Magic 2018 <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
+			</div>
+		</footer>
+	</body>
+</html>

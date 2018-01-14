@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/library/standard.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://palkerecsenyi.github.io/magic/standard.js"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+		<link rel="stylesheet" href="../../prism.css">
+		<meta charset="UTF-8">
+		<script>hljs.initHighlightingOnLoad();</script>
+		<title>Magic - Documentation</title>
+			<script>
+			function openNav(){
+				document.getElementById("nav-mobile").style.width = "100%";
+
+			}
+			function closeNav(){
+				document.getElementById("nav-mobile").style.width = "0";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="nav-mobile">
+			<a href="javascript:void(0)" class="close" onClick="closeNav()">&times;</a>
+			<a href="https://palkerecsenyi.github.io/magic/docs/">Home</a>
+			<a href="https://palkerecsenyi.github.io/magic/docs/start">Get Started</a>
+			<a href="https://palkerecsenyi.github.io/magic/docs/documentation">Documentation</a>
+			<a href="https://github.com/palkerecsenyi/magic">Github</a>
+		</div>
+		<nav class="blue">
+			<ul class="nav-left">
+				<li><a href="/" class="nav-brand-text">Magic.CSS</a></li>
+				<li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
+			</ul>
+			<ul class="nav-right">
+				<li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/docs/">Home</a></li>
+				<li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/docs/start">Get Started</a></li>
+				<li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/docs/documentation">Documentation</a></li>
+				<li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
+			</ul>
+		</nav>
+		<div class="navigation blue">
+			<div class="section">
+				<p class="bold"><a href="../layout/index.html">Layout</a></p>
+				<p><a href="../layout/container.html">Container</a></p>
+				<p><a href="../layout/grid.html">Grid</a></p>
+				<p><a href="../layout/type.html">Typography</a></p>
+			</div>
+			<div class="section">
+				<p class="bold"><a href="../components/index.html">Components</a></p>
+				<p><a href="../components/box.html">Box</a></p>
+				<p><a href="../components/button.html">Button</a></p>
+				<p><a href="../components/colour.html">Colour</a></p>
+			</div>
+		</div>
+		<div class="container">
+			<h1 class="header">Box</h1>
+			<hr class="separator">
+			<h2>Introduction</h2>
+			<p>A box in Magic.css is used to contain items, typically objects requiring user interaction, such as a form. Here's a quick example:</p>
+			<div class="box bottom center">
+				<h1 class="box-title">Sign in</h1>
+				<input type="text" placeholder="Username">
+				<input type="password" placeholder="Password">
+				<button class="btn btn-default btn-outline">Sign in</button>
+			</div>
+			<p>...is made with the following syntax:</p>
+			<pre class="top"><code class="language-markup line-numbers">&lt;div class=&quot;box center&quot;&gt;
+	&lt;h1 class=&quot;box-title&quot;&gt;Sign in&lt;/h1&gt;
+	&lt;input type=&quot;text&quot; placeholder=&quot;Username&quot;&gt;
+	&lt;input type=&quot;password&quot; placeholder=&quot;Password&quot;&gt;
+	&lt;button class=&quot;btn btn-default btn-outline&quot;&gt;Sign in&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+			<h2>Making boxes</h2>
+			<h3>Simple box</h3>
+			<p>Boxes, despite seeming very simple, are quite customisable. Firstly, basic markup for a box is as follows:</p>
+			<pre class="top"><code class="language-markup line-numbers">&lt;div class=&quot;box&quot;&gt;
+	...
+&lt;/div&gt;</code></pre>
+			<h3>Fluid box</h3>
+			<p>Then, you may wish to make the box fill 100% of the container:</p>
+			<pre class="top"><code class="language-markup line-numbers">&lt;div class=&quot;box box-fluid&quot;&gt;
+	...
+&lt;/div&gt;</code></pre>
+			<div class="box box-fluid">
+				<p>I'm fluid!</p>
+			</div>
+			<h3>Coloured box</h3>
+			<p>As with most other elements, you can also assign a Magic colour to a box. See the <a href="colour.html" class="link">colour</a> page for a guide on colours.</p>
+			<pre class="top"><code class="language-markup line-numbers">&lt;div class=&quot;box blue&quot;&gt;
+	...
+&lt;/div&gt;</code></pre>
+			<div class="box blue">
+				<p>I'm blue!</p>
+			</div>
+			<h3>Centered box</h3>
+			<p>By default, boxes are left-aligned. To center any non-text element in Magic (including boxes), you just need to add the <span class="i-code">center</span> class:</p>
+			<pre class="top"><code class="language-markup line-numbers">&lt;div class=&quot;box center&quot;&gt;
+	...
+&lt;/div&gt;</code></pre>
+			<div class="box center">
+				<p>I'm centered!</p>
+			</div>
+			<h2>Usage</h2>
+			<p>Magic.css includes boxes for user-interactive content (e.g. sign-in forms, confirmation codes, etc). However, due to their simple nature, boxes can be used for practically any purpose. Though they may seem like it, they are <em>not</em>  the equivalent of 'Alerts' in <a class="link" href="https://getbootstrap.com/docs/4.0/components/alerts/">Bootstrap</a>.  In fact, there doesn't appear to be any close alternative to it. However, <a class="link" href="https://bulma.io/documentation/elements/box/">Bulma</a> has something practically equivalent. They are fully responsive (to the point that such simple elements can be responsive!), especially in terms of their margins.</p>
+		</div>
+		<footer class="blue">
+			<div class="body">
+				<div class="content">
+					<h1>Magic.css</h1>
+					<p>Neat and unique CSS framework for dynamic websites</p>
+				</div>
+				<div class="links">
+					<ul>
+						<li class="header">Pages</li>
+						<li><a href="/">Home</a></li>
+						<li><a href="#">Start</a></li>
+						<li><a href="https://github.com/palkerecsenyi/magic/">Github</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="bottom">
+				<p>&copy; Magic 2018 <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
+			</div>
+		</footer>
+		<script src="../../prism.js"></script>
+	</body>
+</html>
