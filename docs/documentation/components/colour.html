@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/library/standard.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://palkerecsenyi.github.io/magic/standard.js"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+		<link rel="stylesheet" href="../../prism.css">
+		<meta charset="UTF-8">
+		<title>Magic - Documentation</title>
+		<style>
+			.colour{
+				text-align:center;
+			}
+		</style>
+		<script>
+			function openNav(){
+				document.getElementById("nav-mobile").style.width = "100%";
+
+			}
+			function closeNav(){
+				document.getElementById("nav-mobile").style.width = "0";
+			}
+		</script>
+	</head>
+	<body>
+		<nav class="blue">
+			<ul class="nav-left">
+				<li><a href="/" class="nav-brand-text">Magic.CSS</a></li>
+				<li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
+			</ul>
+			<ul class="nav-right">
+				<li class="nav-item"><a href="/">Home</a></li>
+				<li class="nav-item"><a href="../../start">Get Started</a></li>
+				<li class="nav-item"><a href="../">Documentation</a></li>
+				<li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
+			</ul>
+		</nav>
+		<div class="navigation blue">
+			<div class="section">
+				<p class="bold"><a href="../layout/index.html">Layout</a></p>
+				<p><a href="../layout/container.html">Container</a></p>
+				<p><a href="../layout/grid.html">Grid</a></p>
+				<p><a href="../layout/type.html">Typography</a></p>
+			</div>
+			<div class="section">
+				<p class="bold"><a href="../components/index.html">Components</a></p>
+				<p><a href="../components/box.html">Box</a></p>
+				<p><a href="../components/button.html">Button</a></p>
+				<p><a href="../components/colour.html">Colour</a></p>
+			</div>
+		</div>
+		<div id="nav-mobile">
+			<a href="javascript:void(0)" class="close" onClick="closeNav()">&times;</a>
+			<a href="/">Home</a>
+			<a href="../../start">Get Started</a>
+			<a href="../">Documentation</a>
+			<a href="https://github.com/palkerecsenyi/magic">Github</a>
+		</div>
+		<div class="container">
+			<h1 class="header">Colours</h1>
+			<hr class="separator">
+			<h2><i class="fas fa-magic"></i> Magic Colours</h2>
+			<p>Magic does not have a large range of colours, but this is purely to improve the styling. By default, Magic has the following colours, that can be applied to any element:</p>
+			<div class="row bottom">
+				<div class="col col3 default-lighten">
+					<div class="colour">
+						<p>default-lighten</p>
+					</div>
+				</div>
+				<div class="col col3 default">
+					<div class="colour">
+						<p>default</p>
+					</div>
+				</div>
+				<div class="col col3 default-darken-1">
+					<div class="colour">
+						<p>default-darken-1</p>
+					</div>
+				</div>
+				<div class="col col3 default-darken-2">
+					<div class="colour">
+						<p>default-darken-2</p>
+					</div>
+				</div>
+				
+				<div class="col col3 red-lighten">
+					<div class="colour">
+						<p>red-lighten</p>
+					</div>
+				</div>
+				<div class="col col3 red">
+					<div class="colour">
+						<p>red</p>
+					</div>
+				</div>
+				<div class="col col3 red-darken-1">
+					<div class="colour">
+						<p>red-darken-1</p>
+					</div>
+				</div>
+				<div class="col col3 red-darken-2">
+					<div class="colour">
+						<p>red-darken-2</p>
+					</div>
+				</div>
+				
+				<div class="col col3 green-lighten">
+					<div class="colour">
+						<p>green-lighten</p>
+					</div>
+				</div>
+				<div class="col col3 green">
+					<div class="colour">
+						<p>green</p>
+					</div>
+				</div>
+				<div class="col col3 green-darken-1">
+					<div class="colour">
+						<p>green-darken-1</p>
+					</div>
+				</div>
+				<div class="col col3 green-darken-2">
+					<div class="colour">
+						<p>green-darken-2</p>
+					</div>
+				</div>
+				
+				<div class="col col3 yellow-lighten">
+					<div class="colour">
+						<p>yellow-lighten</p>
+					</div>
+				</div>
+				<div class="col col3 yellow">
+					<div class="colour">
+						<p>yellow</p>
+					</div>
+				</div>
+				<div class="col col3 yellow-darken-1">
+					<div class="colour">
+						<p>yellow-darken-1</p>
+					</div>
+				</div>
+				<div class="col col3 yellow-darken-2">
+					<div class="colour">
+						<p>yellow-darken-2</p>
+					</div>
+				</div>
+				
+				<div class="col col3 blue-lighten">
+					<div class="colour">
+						<p>blue-lighten</p>
+					</div>
+				</div>
+				<div class="col col3 blue">
+					<div class="colour">
+						<p>blue</p>
+					</div>
+				</div>
+				<div class="col col3 blue-darken-1">
+					<div class="colour">
+						<p>blue-darken-1</p>
+					</div>
+				</div>
+				<div class="col col3 blue-darken-2">
+					<div class="colour">
+						<p>blue-darken-2</p>
+					</div>
+				</div>
+				
+				<div class="col col6 dark">
+					<div class="colour">
+						<p>dark</p>
+					</div>
+				</div>
+				<div class="col col6 light">
+					<div class="colour">
+						<p>light</p>
+					</div>
+				</div>
+			</div>
+			<h3>Applying colours</h3>
+			<p>Colours can be universally applied to most components simply by adding one of the class names listed above. Some components have more advanced colour processing (e.g. the navbar) and require different markup. If this is the case, it will be explained on the respective documentation page.</p>
+			<p>For example, to add a colour to a box:</p>
+			<pre><code class="language-markup">&lt;div class="box XXX"&gt; &lt;!-- Replace XXX with any class name from above --&gt;
+	...
+&lt;/div&gt;</code></pre>
+			<h2><i class="fas fa-magic"></i> Magic Gradients</h2>
+			<p>Gradients have become notorious for serving as disgusting background colours and even text colours. Despite this, Magic has three built-in gradients. They <strong>don't</strong> look like <a class="link" href="http://guideme.me/cdn/im_1e7gcc35cc175xpy1mhj3bsurvywzwyd_400_400_256s.jpg">this</a>. Instead, they're neat and modern, designed for smooth integration into your websites. Not many frameworks use aesthetic gradients like Magic. Here are all three, with their class names:</p>
+			<div class="row">
+				<div class="col col12 gradient-red">
+					<div class="colour">
+						<p>gradient-red</p>
+					</div>
+				</div>
+				<div class="col col6 gradient-blue">
+					<div class="colour">
+						<p>gradient-blue</p>
+					</div>
+				</div>
+				<div class="col col6 gradient-green">
+					<div class="colour">
+						<p>gradient-green</p>
+					</div>
+				</div>
+			</div>
+			<p>These are applied to elements in the same way as with regular colours. These also have universal support, but buttons have special styles for them, as well as footers and navbars.</p>
+			<p>For more detail, delve into the <a href="button.html" class="link">button</a> documentation, but here are three beautiful gradient buttons:</p>
+			<div class="row">
+				<div class="col col12">
+					<button class="btn-grad btn-grad-red btn-fluid" data-link="button.html">Red</button>
+				</div>
+				<div class="col col6">
+					<button class="btn-grad btn-grad-blue btn-fluid right" data-link="button.html">Blue</button>
+				</div>
+				<div class="col col6">
+					<button class="btn-grad btn-grad-green btn-fluid left" data-link="button.html">Green</button>
+				</div>
+			</div>
+			<h2>Notes</h2>
+			<ul>
+				<li>When elements are set to a specific colour, they will also have a white text colour (by default)</li>
+				<li>Text is otherwise black, and Magic currently does not have specific text colours.</li>
+				<li>Colours influence many objects in deeper ways. For example, the navbar automatically changes hover colours, the footer changes the bottom bar colour, etc.</li>
+				<li>As stated many times, some elements have special colour classes. For example, the navbar uses <span class="i-code">nav-blue</span> to define its colour. Wherever this is the case, this will be documented per element. So if the colours, text or buttons of any element look strange after applying a normal colour class, check the element's documentation.</li>
+			</ul>
+		</div>
+		<footer class="blue">
+			<div class="body">
+				<div class="content">
+					<h1>Magic.css</h1>
+					<p>Neat and unique CSS framework for dynamic websites</p>
+				</div>
+				<div class="links">
+					<ul>
+						<li class="header">Pages</li>
+						<li><a href="/">Home</a></li>
+						<li><a href="#">Start</a></li>
+						<li><a href="https://github.com/palkerecsenyi/magic/">Github</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="bottom">
+				<p>&copy; Magic 2018 <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
+			</div>
+		</footer>
+		<script src="../../prism.js"></script>
+	</body>
+</html>
