@@ -19,6 +19,6 @@ Magical Library tries to avoid default styles (globally referencing elements rat
 Two fonts are used: `Noto Sans` by Google and `Roboto` by Christian Robertson.
 
 ### Documentation
-To use Magic, you'll need to read the official documentation. It's currently available on this repository's Wiki, at https://github.com/palkerecsenyi/magic/wiki
+To use Magic, you'll need to read the official documentation. It's currently available through Github pages at https://palkerecsenyi.github.io/magic/docs/. The documentation is, in fact, made with Magic!
 
 That's it. Enjoy!
