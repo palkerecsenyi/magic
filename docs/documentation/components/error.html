@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://palkerecsenyi.github.io/magic/standard.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://palkerecsenyi.github.io/magic/standard.js"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+		<link rel="stylesheet" href="../../prism.css">
+		<meta charset="UTF-8">
+		<title>Magic - Documentation</title>
+		<style>
+			.colour{
+				text-align:center;
+			}
+		</style>
+			<script>
+			function openNav(){
+				document.getElementById("nav-mobile").style.width = "100%";
+
+			}
+			function closeNav(){
+				document.getElementById("nav-mobile").style.width = "0";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="nav-mobile">
+			<a href="javascript:void(0)" class="close" onClick="closeNav()">&times;</a>
+			<a href="https://palkerecsenyi.github.io/magic/docs/">Home</a>
+			<a href="https://palkerecsenyi.github.io/magic/docs/start">Get Started</a>
+			<a href="https://palkerecsenyi.github.io/magic/docs/documentation">Documentation</a>
+			<a href="https://github.com/palkerecsenyi/magic">Github</a>
+		</div>
+		<nav class="blue">
+			<ul class="nav-left">
+				<li><a href="/" class="nav-brand-text">Magic.CSS</a></li>
+				<li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
+			</ul>
+			<ul class="nav-right">
+				<li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/docs/">Home</a></li>
+				<li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/docs/start">Get Started</a></li>
+				<li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/docs/documentation">Documentation</a></li>
+				<li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
+			</ul>
+		</nav>
+		<div class="navigation blue">
+			<div class="section">
+				<p class="bold"><a href="../layout/index.html">Layout</a></p>
+				<p><a href="../layout/container.html">Container</a></p>
+				<p><a href="../layout/grid.html">Grid</a></p>
+				<p><a href="../layout/type.html">Typography</a></p>
+			</div>
+			<div class="section">
+				<p class="bold"><a href="../components/index.html">Components</a></p>
+				<p><a href="../components/box.html">Box</a></p>
+				<p><a href="../components/button.html">Button</a></p>
+				<p><a href="../components/colour.html">Colour</a></p>
+				<p><a href="../components/error.html">Error</a></p>
+			</div>
+		</div>
+		<div class="container">
+			<h1 class="header">Errors</h1>
+			<p class="trailer">Errors in Magic aren't really errors. They are the equivalent of what other frameworks call 'alerts' or 'notifications'.</p>
+			<hr class="separator">
+			<h2>Introduction</h2>
+			<p>Alerts/errors/notifications are a simple and straight-forward way of conveying the status of a request. For example, they can be used to tell the user that his/her login details were incorrect, or that their transaction has been successfully processed.</p>
+			<p>In Magic, an error looks like this:</p>
+			<div class="error problem">I am a 'problem' error!</div>
+			<h2>Adding errors</h2>
+			<p>That heading seems unwelcoming! We aren't actually adding any error, that's just the component's name. Anyway, to add a simple error in Magic:</p>
+			<div class="error">Unfinished error</div>
+			<pre class="top"><code class="language-markup">&lt;div class="error"&gt;Unfinished error&lt;/div&gt;</code></pre>
+			<p>That error is so unfinished, it may not even be visible. To complete it, we need to add colour.</p>
+			<h3>Adding colours</h3>
+			<p>Unlike other elements in Magic, errors have their own colours. On some browsers, however, it is possible to append a Magic colour class to the error <span class="i-code">div</span>:</p>
+			<div class="error blue-darken-1">Magic coloured error</div>
+			<pre class="top"><code class="language-markup">&lt;div class="error blue-darken-1"&gt;Magic coloured error&lt;/div&gt;</code></pre>
+			<p>However, Magic errors have their own three colours:</p>
+			<div class="error problem">Problem error</div>
+			<div class="error success">Success error</div>
+			<div class="error info">Info error</div>
+			<pre class="top"><code class="language-markup">&lt;div class="error problem"&gt;Problem error&lt;/div&gt;
+&lt;div class="error success"&gt;Success error&lt;/div&gt;
+&lt;div class="error info"&gt;Info error&lt;/div&gt;</code></pre>
+		</div>
+	</body>
+</html>
