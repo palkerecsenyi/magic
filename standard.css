@@ -513,7 +513,7 @@ nav + .hero{
 }
 @media only screen and (max-width:768px){
 	nav + .hero{
-		margin-top:75px;
+		margin-top:61px;
 	}
 }
 .hero .hero-content{
@@ -681,6 +681,11 @@ nav + .navigation{
 }
 .btn-fluid{
 	width:100%;
+}
+a.btn-fluid{
+	display:inline-block;
+	width:100%;
+	text-align: center;
 }
 .btn-grad:hover{
 	box-shadow: 5px 5px 25px -6px rgba(0,0,0,0.75);
