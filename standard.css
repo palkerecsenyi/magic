@@ -646,6 +646,7 @@ nav + .navigation{
 	outline:none;
 	cursor:pointer;
 	box-sizing: border-box;
+	white-space: nowrap;
 }
 .btn-grad{
 	padding:10px 25px;
@@ -660,6 +661,7 @@ nav + .navigation{
 	cursor:pointer;
 	outline:none;
 	box-sizing: border-box;
+	white-space: nowrap;
 }
 .btn-large{
 	font-size:22px;
