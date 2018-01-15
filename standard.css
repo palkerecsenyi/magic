@@ -472,13 +472,6 @@ nav + .container, nav + #nav-mobile + .container{
 .box-title{
 	margin-top:0;
 }
-.col .box{
-	width:85%;
-}
-.col .box-fluid{
-	width:90%;
-	padding-right:20px;
-}
 /*Positioning classes*/
 .no-mar{
 	margin:0 !important;
