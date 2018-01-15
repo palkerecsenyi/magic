@@ -1,12 +1,12 @@
-# Change log for version 0.1.1
+# Change log for version 0.0.2
 ### New features:
-* Added coloured buttons (see docs)
-* Added fluid box (100% width box - see docs)
-* Improved columns.
-* Improved navbar responsiveness.
-* Improved overall responsiveness.
-* Added classes to show objects only on specific devices (.desktop, .desktop-tablet, .tablet-mobile, .mobile)
-* Added text instead of vector as navbar brand (see docs)
+* Redesigned navbar
+* Improved overall responsiveness
+* Redesined many components
+* Added documentation
 
 ### Bug fixes:
 Fixed several bugs to do with responsiveness and design.
+
+### More
+See commit descriptions for more. I add large descriptions to all big commits.
