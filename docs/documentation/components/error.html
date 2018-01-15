@@ -68,21 +68,43 @@
 			<p>In Magic, an error looks like this:</p>
 			<div class="error problem">I am a 'problem' error!</div>
 			<h2>Adding errors</h2>
-			<p>That heading seems unwelcoming! We aren't actually adding any error, that's just the component's name. Anyway, to add a simple error in Magic:</p>
+			<p>To add a simple error in Magic:</p>
 			<div class="error">Unfinished error</div>
 			<pre class="top"><code class="language-markup">&lt;div class="error"&gt;Unfinished error&lt;/div&gt;</code></pre>
-			<p>That error is so unfinished, it may not even be visible. To complete it, we need to add colour.</p>
+			<p>This error is incomplete, as it has no colour property. To complete it, we need to add colour.</p>
 			<h3>Adding colours</h3>
-			<p>Unlike other elements in Magic, errors have their own colours. On some browsers, however, it is possible to append a Magic colour class to the error <span class="i-code">div</span>:</p>
-			<div class="error blue-darken-1">Magic coloured error</div>
-			<pre class="top"><code class="language-markup">&lt;div class="error blue-darken-1"&gt;Magic coloured error&lt;/div&gt;</code></pre>
-			<p>However, Magic errors have their own three colours:</p>
+			<p>Magic errors have their own three colours, specifically designed to match them:</p>
 			<div class="error problem">Problem error</div>
 			<div class="error success">Success error</div>
 			<div class="error info">Info error</div>
 			<pre class="top"><code class="language-markup">&lt;div class="error problem"&gt;Problem error&lt;/div&gt;
 &lt;div class="error success"&gt;Success error&lt;/div&gt;
 &lt;div class="error info"&gt;Info error&lt;/div&gt;</code></pre>
+			<p>Despite this, you can style errors by adding a Magic Colour class (including gradients):</p>
+			<div class="error blue-darken-1">Blue Darken-1</div>
+			<div class="error gradient-green">Gradient Green</div>
+			<pre class="top"><code class="language-markup">&lt;div class="error blue-darken-1"&gt;Blue Darken-1&lt;/div&gt;
+&lt;div class="error gradient-green"&gt;Gradient Green&lt;/div&gt;</code></pre>
 		</div>
+		<footer class="blue">
+			<div class="body">
+				<div class="content">
+					<h1>Magic.css</h1>
+					<p>Neat and unique CSS framework for dynamic websites</p>
+				</div>
+				<div class="links">
+					<ul>
+						<li class="header">Pages</li>
+						<li><a href="/">Home</a></li>
+						<li><a href="#">Start</a></li>
+						<li><a href="https://github.com/palkerecsenyi/magic/">Github</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="bottom">
+				<p>&copy; Magic 2018 <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
+			</div>
+		</footer>
+		<script src="../../prism.js"></script>
 	</body>
 </html>
