@@ -460,11 +460,6 @@ nav + .container, nav + #nav-mobile + .container{
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	box-sizing: border-box;
 }
-@media only screen and (max-width:425px){
-	.box{
-		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-	}
-}
 .box-title{
 	margin-top:0;
 }
@@ -473,6 +468,12 @@ nav + .container, nav + #nav-mobile + .container{
 }
 .box.box-fluid{
 	width:100% !important;
+}
+@media only screen and (max-width:425px){
+	.box{
+		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+		width:100% !important;
+	}
 }
 /*Positioning classes*/
 .no-mar{
