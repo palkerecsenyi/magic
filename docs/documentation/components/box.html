@@ -102,6 +102,16 @@
 			<div class="box center">
 				<p>I'm centered!</p>
 			</div>
+			<h3>Box title</h3>
+			<p>By default, adding a <span class="i-code">&lt;h1&gt;</span> to act as the title of a box will not appear neat, due to excessive padding. To neatly add a title to a box:</p>
+			<div class="box">
+				<h1 class="box-title">I'm a title!</h1>
+				<p>This title looks much neater than one without the <span class="i-code">box-title</span> class, as it's sized correctly and does not have the excessive padding the headers typically do.</p>
+			</div>
+			<pre><code class="language-markup">&lt;div class="box"&gt;
+	&lt;h1 class="box-title"&gt;I'm a title!&lt;/h1&gt;
+	&lt;p&gt;This title looks much neater than one without the class, as it's sized correctly and does not have the excessive padding the headers typically do.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
 			<h2>Usage</h2>
 			<p>Magic.css includes boxes for user-interactive content (e.g. sign-in forms, confirmation codes, etc). However, due to their simple nature, boxes can be used for practically any purpose. Though they may seem like it, they are <em>not</em>  the equivalent of 'Alerts' in <a class="link" href="https://getbootstrap.com/docs/4.0/components/alerts/">Bootstrap</a>.  In fact, there doesn't appear to be any close alternative to it. However, <a class="link" href="https://bulma.io/documentation/elements/box/">Bulma</a> has something practically equivalent. They are fully responsive (to the point that such simple elements can be responsive!), especially in terms of their margins.</p>
 		</div>

@@ -458,6 +458,7 @@ nav + .container, nav + #nav-mobile + .container{
 	margin-bottom:10px;
 	display:block;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-sizing: border-box;
 }
 @media only screen and (min-width: 768px){
 	.box.box-fluid{
@@ -649,6 +650,7 @@ nav + .navigation{
 	border-radius:5px;
 	outline:none;
 	cursor:pointer;
+	box-sizing: border-box;
 }
 .btn-grad{
 	padding:10px 25px;
@@ -662,6 +664,7 @@ nav + .navigation{
 	border-radius:25px;
 	cursor:pointer;
 	outline:none;
+	box-sizing: border-box;
 }
 .btn-large{
 	font-size:22px;
