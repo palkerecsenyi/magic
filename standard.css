@@ -463,9 +463,6 @@ nav + .container, nav + #nav-mobile + .container{
 .box-title{
 	margin-top:0;
 }
-.col .box:not(.box-fluid){
-	width:85%;
-}
 .box.box-fluid{
 	width:100% !important;
 }
