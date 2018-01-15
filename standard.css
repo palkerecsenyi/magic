@@ -466,6 +466,9 @@ nav + .container, nav + #nav-mobile + .container{
 .box.box-fluid{
 	width:100% !important;
 }
+.col .box{
+	width:100% !important;
+}
 @media only screen and (max-width:425px){
 	.box{
 		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
