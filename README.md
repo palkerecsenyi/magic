@@ -4,11 +4,11 @@ It's licensed under GNU GNP 3, so you can change it as much as you like.
 
 ### Setup
 To set up Magical Library, place `magic.css` (or `magic.min.css` for a minified file) and the `fonts` folder into the same directory on your website, and link it using
-~~~~
+```HTML
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="path/to/magic.css">
 <script src="path/to/standard.js"></script>
-~~~~
+```
 For the proper function of standard.js, please also import jQuery.
 That's it.
 
