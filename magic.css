@@ -641,6 +641,21 @@ nav + .navigation {
 .project.yellow .body, .project.yellow .footer .footer-text {
   color: black !important; }
 
+.badge {
+  font-size: 14px !important;
+  font-family: "Noto";
+  border-radius: 4px;
+  padding: 1px 8px;
+  display: inline-block; }
+  .badge .badge-light {
+    font-family: "NotoThin"; }
+
+.badge.round {
+  border-radius: 50%; }
+
+.badge.large {
+  font-size: 17px !important; }
+
 .btn {
   padding: 10px 20px;
   border: none;
