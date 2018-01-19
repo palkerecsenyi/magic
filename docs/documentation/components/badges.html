@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://palkerecsenyi.github.io/magic/magic.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+		<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+		<link rel="stylesheet" href="../../prism.css">
+		<meta charset="UTF-8">
+		<script>hljs.initHighlightingOnLoad();</script>
+		<title>Magic - Documentation</title>
+			<script>
+			function openNav(){
+				document.getElementById("nav-mobile").style.width = "100%";
+
+			}
+			function closeNav(){
+				document.getElementById("nav-mobile").style.width = "0";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="nav-mobile">
+			<a href="javascript:void(0)" class="close" onClick="closeNav()">&times;</a>
+			<a href="https://palkerecsenyi.github.io/magic/docs/">Home</a>
+			<a href="https://palkerecsenyi.github.io/magic/docs/start">Get Started</a>
+			<a href="https://palkerecsenyi.github.io/magic/docs/documentation">Documentation</a>
+			<a href="https://github.com/palkerecsenyi/magic">Github</a>
+		</div>
+		<nav class="blue">
+			<ul class="nav-left">
+				<li><a href="/" class="nav-brand-text">Magic.CSS</a></li>
+				<li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
+			</ul>
+			<ul class="nav-right">
+				<li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/docs/">Home</a></li>
+				<li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/docs/start">Get Started</a></li>
+				<li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/docs/documentation">Documentation</a></li>
+				<li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
+			</ul>
+		</nav>
+		<div class="navigation blue">
+			<div class="section">
+				<p class="bold"><a href="../layout/index.html">Layout</a></p>
+				<p><a href="../layout/container.html">Container</a></p>
+				<p><a href="../layout/grid.html">Grid</a></p>
+				<p><a href="../layout/type.html">Typography</a></p>
+			</div>
+			<div class="section">
+				<p class="bold"><a href="../components/index.html">Components</a></p>
+				<p><a href="../components/badges.html">Badge</a></p>
+				<p><a href="../components/box.html">Box</a></p>
+				<p><a href="../components/button.html">Button</a></p>
+				<p><a href="../components/colour.html">Colour</a></p>
+				<p><a href="../components/error.html">Error</a></p>
+			</div>
+		</div>
+		<div class="container">
+			<h1 class="header">Badges</h1>
+			<h2 class="trailer">Badges are simple components that you can use to represent the status of an item.</h2>
+			<hr class="separator">
+			<h2>Examples</h2>
+			<p>Badges serve many purposes: they can indicate new notifications, show how many emails you have, etc. Here's a few examples:</p>
+			<span class="badge red">I'm a badge!</span>
+			<span class="badge blue">I'm a blue badge!</span>
+			<span class="badge red round">5</span>
+			<h2>Adding badges</h2>
+			<p>Badges are made with <span class="i-code">&lt;span&gt;</span> tags, so adapt the text item's font size. For example:</p>
+		</div>
+		<footer class="blue">
+			<div class="body">
+				<div class="content">
+					<h1>Magic.css</h1>
+					<p>Neat and unique CSS framework for dynamic websites</p>
+				</div>
+				<div class="links">
+					<ul>
+						<li class="header">Pages</li>
+						<li><a href="/">Home</a></li>
+						<li><a href="#">Start</a></li>
+						<li><a href="https://github.com/palkerecsenyi/magic/">Github</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="bottom">
+				<p>&copy; Magic 2018 <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
+			</div>
+		</footer>
+		<script src="../../prism.js"></script>
+	</body>
+</html>
