@@ -1,9 +1,10 @@
-# Change log for version 0.0.2
+# Changelog for version 0.0.4
 ### New features:
-* Redesigned navbar
-* Improved overall responsiveness
+* Added badges
+* Added raw SASS file
 * Redesined many components
-* Added documentation
+* Improved responsiveness
+* Improved box sizing
 
 ### Bug fixes:
 Fixed several bugs to do with responsiveness and design.
