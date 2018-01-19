@@ -10,7 +10,7 @@
 		<meta charset="UTF-8">
 		<script>hljs.initHighlightingOnLoad();</script>
 		<title>Magic - Documentation</title>
-			<script>
+		<script>
 			function openNav(){
 				document.getElementById("nav-mobile").style.width = "100%";
 
@@ -38,8 +38,8 @@
 				<li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/docs/start">Get Started</a></li>
 				<li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/docs/documentation">Documentation</a></li>
 				<li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
-			</ul>
-		</nav>
+		  </ul>
+	</nav>
 		<div class="navigation blue">
 			<div class="section">
 				<p class="bold"><a href="../layout/index.html">Layout</a></p>
@@ -67,8 +67,31 @@
 			<span class="badge red round">5</span>
 			<h2>Adding badges</h2>
 			<p>Badges are made with <span class="i-code">&lt;span&gt;</span> tags, so adapt the text item's font size. For example:</p>
+			<h1>Header 1 <span class="badge dark">Badge</span></h1>
+			<h2>Header 2 <span class="badge red">Badge</span></h2>
+			<h3>Header 3 <span class="badge green">Badge</span></h3>
+			<p>Paragraph <span class="badge blue">Badge</span></p>
+			<span class="badge yellow">Badge outside of text</span>
+			<span class="badge gradient-blue">Badge with gradient</span>
+			<pre><code class="language-markup">&lt;h1&gt;Header 1 &lt;span class="badge dark"&gt;Badge&lt;/span&gt;&lt;/h1&gt;
+&lt;h2&gt;Header 2 &lt;span class="badge red"&gt;Badge&lt;/span&gt;&lt;/h2&gt;
+&lt;h3&gt;Header 3 &lt;span class="badge green"&gt;Badge&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;Paragraph &lt;span class="badge blue"&gt;Badge&lt;/span&gt;&lt;/p&gt;
+&lt;span class="badge yellow"&gt;Badge outside of text&lt;/span&gt;
+&lt;span class="badge gradient-blue"&gt;Badge with gradient&lt;/span&gt;</code></pre>
+			<p>Generally, to add a badge, use <span class="i-code">&lt;span class="badge XXX"&gt;</span>, where XXX is any Magic colour, including gradients.</p>
+			<h2>Rounded badges <span class="badge red">Pre-alpha</span></h2>
+			<p>When bades contain only a single number or letter, you can make them circular:</p>
+			<h3><span class="badge red round">5</span></h3>
+			<pre><code class="language-markup">&lt;span class="badge red round"&gt;5&lt;/span&gt;</code></pre>
+			<p>These work exactly the same as regular badges, so can be attached to any text item and have any Magic colour.</p>
+			<h2>Icon badges</h2>
+		  <p>Your Magic badges can also have FontAwesome icons:</p>
+			<span class="badge dark"><i class="far fa-envelope"></i> 50 new messages</span>
+			<span class="badge dark"><i class="fas fa-question-circle"></i> 22 new questions</span>
+			<pre><code class="language-markup">&lt;span class="badge dark"&gt;&lt;i class="fas fa-question-circle"&gt;&lt;/i&gt; 22 new questions&lt;/span&gt;</code></pre>
 		</div>
-		<footer class="blue">
+	<footer class="blue">
 			<div class="body">
 				<div class="content">
 					<h1>Magic.css</h1>
@@ -87,6 +110,6 @@
 				<p>&copy; Magic 2018 <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
 			</div>
 		</footer>
-		<script src="../../prism.js"></script>
-	</body>
+	<script src="../../prism.js"></script>
+</body>
 </html>
