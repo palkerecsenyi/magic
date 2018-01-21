@@ -8,9 +8,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/components-10-brightgreen.svg">
   <img src="https://img.shields.io/badge/lines-1295-brightgreen.svg">
-  <a href="https://github.com/palkerecsenyi/magic/releases/tag/0.0.3">
-    <img src="https://img.shields.io/badge/latest-0.0.3-brightgreen.svg">
-  </a>
+  <a href="https://badge.fury.io/js/magical-css"><img src="https://badge.fury.io/js/magical-css.svg" alt="npm version"></a>
 </p>
 
 ### Setup
