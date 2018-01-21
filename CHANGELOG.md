@@ -5,6 +5,7 @@
 * Redesined many components
 * Improved responsiveness
 * Improved box sizing
+* Changed colours to be more shiny and vibrant.
 
 ### Bug fixes:
 Fixed several bugs to do with responsiveness and design.
