@@ -12,14 +12,28 @@
 </p>
 
 ### Setup
+#### Simple
+Simply add this to the `<head>` of your page:
+```HTML
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/magical-css@0.0.3/magic.css">
+```
+#### More information
+To get Magic, do one of the following:
+* Use NPM:
+```bash
+npm install magical-css
+```
+* Use Yarn:
+```bash
+yarn add magical-css
+```
+* Download https://github.com/palkerecsenyi/magic
+
 To set up Magical Library, place `magic.css` (or `magic.min.css` for a minified file) and the `fonts` folder into the same directory on your website, and link it using
 ```HTML
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="path/to/magic.css">
-```
-You can also install Magic using NPM:
-```bash
-npm install magical-css
 ```
 
 ### Usage
