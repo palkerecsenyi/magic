@@ -18,7 +18,7 @@
 Simply add this to the `<head>` of your page:
 ```HTML
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://unpkg.com/magical-css@0.0.3/magic.css">
+<link rel="stylesheet" href="https://unpkg.com/magical-css">
 ```
 #### More information
 To get Magic, do one of the following:

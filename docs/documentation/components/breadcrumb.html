@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/magical-css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+    <link rel="stylesheet" href="../../prism.css">
+    <meta charset="UTF-8">
+    <script>hljs.initHighlightingOnLoad();</script>
+    <title>Magic - Documentation</title>
+    <script>
+      function openNav(){
+        document.getElementById("nav-mobile").style.width = "100%";
+
+      }
+      function closeNav(){
+        document.getElementById("nav-mobile").style.width = "0";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="nav-mobile">
+      <a href="javascript:void(0)" class="close" onClick="closeNav()">&times;</a>
+      <a href="https://palkerecsenyi.github.io/magic/">Home</a>
+      <a href="https://palkerecsenyi.github.io/magic/start">Get Started</a>
+      <a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a>
+      <a href="https://github.com/palkerecsenyi/magic">Github</a>
+    </div>
+    <nav class="blue">
+      <ul class="nav-left">
+        <li><a href="/" class="nav-brand-text">Magic.CSS</a></li>
+        <li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/">Home</a></li>
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/start">Get Started</a></li>
+        <li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a></li>
+        <li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
+      </ul>
+    </nav>
+    <div class="navigation blue">
+      <div class="section">
+        <p class="bold"><a href="../layout/index.html">Layout</a></p>
+        <p><a href="../layout/container.html">Container</a></p>
+        <p><a href="../layout/grid.html">Grid</a></p>
+        <p><a href="../layout/type.html">Typography</a></p>
+      </div>
+      <div class="section">
+        <p class="bold"><a href="../components/index.html">Components</a></p>
+        <p><a href="../components/badges.html">Badge</a></p>
+        <p><a href="../components/box.html">Box</a></p>
+        <p><a href="../components/breadcrumb.html">Breadcrumb</a></p>
+        <p><a href="../components/button.html">Button</a></p>
+        <p><a href="../components/colour.html">Colour</a></p>
+        <p><a href="../components/error.html">Error</a></p>
+        <p><a href="../components/project.html">Project</a></p>
+      </div>
+    </div>
+    <div class="container">
+      <h1 class="header">Breadcrumbs</h1>
+      <h2 class="trailer">A breadcrumb is a simple way of informing a user of their position on a website.</h2>
+      <hr class="separator">
+      <h2>Example</h2>
+      <div class="breadcrumb">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Components</a></li>
+          <li><p>Breadcrumbs</p></li>
+        </ul>
+      </div>
+      <p>The idea is to show the user the series of links they went through to end up where they are, and not to create a list of pages. For example, this user went from the 'Home' page, from which they went to the 'Documentation' page, from which they went to the 'Components' page, from which they went to the 'Breadcrumbs' page. Using the breadcrumb, they can see the path they followed, as well as click on a link to return to any of the pages they came from.</p>
+      <h2>Adding breadcrumbs</h2>
+      <p>To add a basic breadcrumb, use the following code:</p>
+      <pre><code class="language-html">&lt;div class="breadcrumb"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Components&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;Breadcrumbs&lt;/p&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+      <p>Here, the <span class="i-code">&lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;</span> sections define active links, and the <span class="i-code">&lt;li&gt;&lt;p &gt;...&lt;/p&gt;&lt;/li&gt;</span> define the current page (i.e. a non-active text item). In each case, you <strong>must have</strong> either the <span class="i-code">&lt;a&gt;</span> or the <span class="i-code">&lt;p&gt;</span> tags for proper function.</p>
+      <div class="error info">The '/' separators are added using CSS ::before selectors, so you do not have to add them in your markup.</div>
+      <div class="error problem">Magic breadcrumbs are supposed to be neat and simple features, so therefore <strong>do not</strong> support any colours.</div>
+      <h2>Longer breadcrumbs</h2>
+      <p>For larger sites with a deeper hierarchy, breadcrumbs could get very lengthy. Therefore, breadcrumbs will automatically scroll if the content is too much to fit into a line:</p>
+      <div class="breadcrumb">
+        <ul>
+          <li><a href="#">Lorem</a></li>
+          <li><a href="#">Ipsum</a></li>
+          <li><a href="#">Dolor</a></li>
+          <li><a href="#">Sit</a></li>
+          <li><a href="#">Amet, </a></li>
+          <li><a href="#">Consectetur</a></li>
+          <li><a href="#">Adipiscing</a></li>
+          <li><a href="#">Elit.</a></li>
+          <li><a href="#">In</a></li>
+          <li><a href="#">Condimentum</a></li>
+          <li><a href="#">Viverra</a></li>
+          <li><a href="#">Ultrices.</a></li>
+          <li><a href="#">Ut</a></li>
+          <li><a href="#">Aliquam</a></li>
+          <li><p>Quis</p></li>
+        </ul>
+      </div>
+      <h2>Outside of container</h2>
+      <p>Breadcrumbs, unlike other elements, work well outside of a container:</p>
+    </div>
+    <div class="breadcrumb">
+      <ul>
+        <li><a href="#">Home</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Components</a></li>
+          <li><p>Breadcrumbs</p></li>
+      </ul>
+    </div>
+    <div class="container">
+      <p>When placed outside of a container, they are particularly useful at the top of a page (directly below the navbar), so that they are the first thing a user sees.</p>
+    </div>
+    <footer class="blue">
+      <div class="body">
+        <div class="content">
+          <h1>Magic.css</h1>
+          <p>Neat and unique CSS framework for dynamic websites</p>
+        </div>
+        <div class="links">
+          <ul>
+            <li class="header">Pages</li>
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Start</a></li>
+            <li><a href="https://github.com/palkerecsenyi/magic/">Github</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>&copy; Magic 2018 <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
+      </div>
+    </footer>
+    <script src="../../prism.js"></script>
+  </body>
+</html>

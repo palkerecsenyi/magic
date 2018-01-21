@@ -1,11 +1,9 @@
-# Changelog for version 0.0.4
+# Changelog for version 0.0.5
 ### New features:
-* Added badges
-* Added raw SASS file
-* Redesined many components
+* Added CSS map
+* Added breadcrumbs
+* Added documentation for project cards.
 * Improved responsiveness
-* Improved box sizing
-* Changed colours to be more shiny and vibrant.
 
 ### Bug fixes:
 Fixed several bugs to do with responsiveness and design.

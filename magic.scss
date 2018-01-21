@@ -1,14 +1,14 @@
 @font-face{
 	font-family: 'Noto';
-	src: url('fonts/NotoSans-Regular.ttf');
+	src: url('../fonts/NotoSans-Regular.ttf');
 }
 @font-face{
 	font-family: 'NotoThin';
-	src: url('fonts/NotoSans-Thin.ttf');
+	src: url('../fonts/NotoSans-Thin.ttf');
 }
 @font-face{
 	font-family: 'NotoBold';
-	src: url('fonts/NotoSans-Bold.ttf');
+	src: url('../fonts/NotoSans-Bold.ttf');
 }
 //Native colours
 $default: #00D1B2;
@@ -568,8 +568,11 @@ nav + .navigation{
 	}
 }
 //Project cards
+.project-link{
+  cursor:pointer;
+  text-decoration: none;
+}
 .project{
-	cursor:pointer;
 	margin-bottom:10px;
 	border-radius: 5px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -820,6 +823,49 @@ a.btn-fluid{
 .btn:disabled:hover, .btn.btn-disabled:hover{
 	background-color:#6B6B6B !important;
 	cursor:not-allowed;
+}
+//Breadcrumb
+.breadcrumb{
+  width:100%;
+  background: $light !important;
+  border-radius:5px;
+  padding: 1px 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  box-sizing:border-box;
+  ul{
+    list-style-type: none;
+    padding:0;
+    white-space: nowrap;
+    li{
+      display:inline-block;
+      a{
+        font-family:$font-regular;
+        color:$default-darker;
+        text-decoration: none;
+        vertical-align: middle;
+        transition:0.2s all ease;
+      }
+      a:hover{
+        color:$default-darker-2;
+      }
+      p{
+        display: inline-block;
+        margin:0;
+        padding:0;
+        vertical-align: middle;
+        color:gray;
+      }
+    }
+    li:not(:first-of-type)::before{
+      content: "/";
+      font-family: $font-thin;
+      padding: 0 15px;
+      font-size:24px;
+      color:grey;
+      vertical-align: middle;
+    }
+  }
 }
 //Person
 .person{
