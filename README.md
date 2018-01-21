@@ -1,15 +1,17 @@
-# Magical Library
-...is a simple CSS library for building stylish interactive websites.
-It's licensed under GNU GNP 3, so you can change it as much as you like.
+<p align="center">
+  <a href="https://palkerecsenyi.github.io/magic/docs/">
+    <img src="https://palkerecsenyi.github.io/magic/docs/documentation/media/icon.svg" width="80">
+  </a>
+  <h1 align="center" style="margin-top:0;">Magic.CSS</h1>
+</p>
+<p align="center">Magic.CSS is a simple and responsive CSS library, made with SASS. It's inspired by (though not directly derived from) Bootstrap and Materialize. Each component is made with minimal markup to increase neatness, and they come with extensive, user-friendly <a href="https://palkerecsenyi.github.io/magic/docs/">documentation</a>.</p>
 
 ### Setup
 To set up Magical Library, place `magic.css` (or `magic.min.css` for a minified file) and the `fonts` folder into the same directory on your website, and link it using
 ```HTML
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="path/to/magic.css">
-<script src="path/to/standard.js"></script>
 ```
-For the proper function of standard.js, please also import jQuery.
 That's it.
 
 ### Usage
