@@ -5,6 +5,10 @@
   <h1 align="center" style="margin-top:0;">Magic.CSS</h1>
 </p>
 <p align="center">Magic.CSS is a simple and responsive CSS library, made with SASS. It's inspired by (though not directly derived from) Bootstrap and Materialize. Each component is made with minimal markup to increase neatness, and they come with extensive, user-friendly <a href="https://palkerecsenyi.github.io/magic/docs/">documentation</a>.</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/components-10-brightgreen.svg">
+  <img src="https://img.shields.io/badge/lines-1295-brightgreen.svg">
+</p>
 
 ### Setup
 To set up Magical Library, place `magic.css` (or `magic.min.css` for a minified file) and the `fonts` folder into the same directory on your website, and link it using
