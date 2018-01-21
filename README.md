@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://palkerecsenyi.github.io/magic/docs/">
-    <img src="https://palkerecsenyi.github.io/magic/docs/documentation/media/icon.svg" width="80">
+    <img src="https://palkerecsenyi.github.io/magic/documentation/media/icon.svg" width="80">
   </a>
   <h1 align="center" style="margin-top:0;">Magic.CSS</h1>
 </p>
