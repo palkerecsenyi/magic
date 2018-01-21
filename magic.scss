@@ -11,32 +11,33 @@
 	src: url('fonts/NotoSans-Bold.ttf');
 }
 //Native colours
-$default: #54c9b6;
-$red: #c75757;
-$green: #63a456;
-$yellow: #e6e64d;
-$blue: #7894d3;
+$default: #00D1B2;
+$red: #FF3860;
+$green: #1DD168;
+$yellow: #ffdd57;
+$blue: #209cee;
 $dark: #242424;
 $light: #F3F3F3;
 //Native colours lighter
-$default-lighter: #9de1d6;
-$red-lighter: #df9f9f;
-$green-lighter: #a3ca9b;
-$yellow-lighter: #efef8f;
-$blue-lighter: #b2c2e6;
+$default-lighter: #0effdb;
+$red-lighter: #ff5f7f;
+$green-lighter: #3fe484;
+$yellow-lighter: #ffe378;
+$blue-lighter: #4caff1;
 //Native colours darker
-$default-darker: #36b09b;
-$red-darker: #ac3939;
-$green-darker: #518646;
-$yellow-darker: #c9c91d;
-$blue-darker: #385bad;
+$default-darker: #00a78e;
+$red-darker: #f80032;
+$green-darker: #17a753;
+$yellow-darker: #ffcf12;
+$blue-darker: #0f7ec8;
 //Native colours darker-2
-$default-darker-2: #2a8979;
-$red-darker-2: #862d2d;
-$green-darker-2: #3d6435;
-$yellow-darker-2: #9c9c16;
-$blue-darker-2: #253d74;
+$default-darker-2: #008571;
+$red-darker-2: #c60027;
+$green-darker-2: #128542;
+$yellow-darker-2: #daae00;
+$blue-darker-2: #0c64a0;
 
+//Fonts
 $font-stack: 'Roboto', 'Noto', sans-serif;
 $font-thin: 'NotoThin';
 $font-regular: 'Noto';
@@ -83,7 +84,7 @@ p{
 }
 .default-lighten{
 	background-color: $default-lighter;
-	color:white !important;
+	color:black !important;
 }
 
 .red{
