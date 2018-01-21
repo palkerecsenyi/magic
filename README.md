@@ -19,7 +19,10 @@ To set up Magical Library, place `magic.css` (or `magic.min.css` for a minified 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="path/to/magic.css">
 ```
-That's it.
+You can also install Magic using NPM:
+```bash
+npm install magical-css
+```
 
 ### Usage
 Magical Library tries to avoid default styles (globally referencing elements rather than classes) wherever possible, to make it as non-destructive in complex projects as possible. Class names are designed to be very evident. For a full usage guide, see the Wiki of this repository.
