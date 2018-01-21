@@ -4,10 +4,13 @@
   </a>
   <h1 align="center" style="margin-top:0;">Magic.CSS</h1>
 </p>
-<p align="center">Magic.CSS is a simple and responsive CSS library, made with SASS. It's inspired by (though not directly derived from) Bootstrap and Materialize. Each component is made with minimal markup to increase neatness, and they come with extensive, user-friendly <a href="https://palkerecsenyi.github.io/magic/docs/">documentation</a>.</p>
+<p align="center">Magic.CSS is a <strong>simple and responsive CSS library</strong>, made with SASS. It's inspired by (though not directly derived from) Bootstrap and Materialize. Each component is made with minimal markup to increase neatness, and they come with extensive, user-friendly <a href="https://palkerecsenyi.github.io/magic/docs/">documentation</a>.</p>
 <p align="center">
   <img src="https://img.shields.io/badge/components-10-brightgreen.svg">
   <img src="https://img.shields.io/badge/lines-1295-brightgreen.svg">
+  <a href="https://github.com/palkerecsenyi/magic/releases/tag/0.0.3">
+    <img src="https://img.shields.io/badge/latest-0.0.3-brightgreen.svg">
+  </a>
 </p>
 
 ### Setup
