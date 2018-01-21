@@ -31,5 +31,7 @@
       "url": "https://raw.githubusercontent.com/palkerecsenyi/magic/master/LICENSE"
     }
   ],
-  "homepage": "https://palkerecsenyi.github.io/magic/docs/"
+  "homepage": "https://palkerecsenyi.github.io/magic/docs/",
+  "unpkg": "dist/magic.css",
+  "main": "dist/magic.css"
 }
