@@ -8,18 +8,33 @@
 <p align="center">
   <img src="https://img.shields.io/badge/components-10-brightgreen.svg">
   <img src="https://img.shields.io/badge/lines-1295-brightgreen.svg">
-  <a href="https://github.com/palkerecsenyi/magic/releases/tag/0.0.3">
-    <img src="https://img.shields.io/badge/latest-0.0.3-brightgreen.svg">
-  </a>
+  <a href="https://badge.fury.io/js/magical-css"><img src="https://badge.fury.io/js/magical-css.svg" alt="npm version"></a>
 </p>
 
 ### Setup
+#### Simple
+Simply add this to the `<head>` of your page:
+```HTML
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/magical-css@0.0.3/magic.css">
+```
+#### More information
+To get Magic, do one of the following:
+* Use NPM:
+```bash
+npm install magical-css
+```
+* Use Yarn:
+```bash
+yarn add magical-css
+```
+* Download https://github.com/palkerecsenyi/magic
+
 To set up Magical Library, place `magic.css` (or `magic.min.css` for a minified file) and the `fonts` folder into the same directory on your website, and link it using
 ```HTML
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="path/to/magic.css">
 ```
-That's it.
 
 ### Usage
 Magical Library tries to avoid default styles (globally referencing elements rather than classes) wherever possible, to make it as non-destructive in complex projects as possible. Class names are designed to be very evident. For a full usage guide, see the Wiki of this repository.
