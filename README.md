@@ -9,6 +9,7 @@
   <img src="https://img.shields.io/badge/components-10-brightgreen.svg">
   <img src="https://img.shields.io/badge/lines-1295-brightgreen.svg">
   <a href="https://badge.fury.io/js/magical-css"><img src="https://badge.fury.io/js/magical-css.svg" alt="npm version"></a>
+  <a href="https://gitter.im/magic-css/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link"><img src="http://badges.gitter.im/magic-css.png"></a>
 </p>
 
 ### Setup
