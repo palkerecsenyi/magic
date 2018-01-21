@@ -1,13 +1,13 @@
 {
-  "name": "Magic.CSS",
+  "name": "magical-css",
   "description": "A simple, unique, and responsive CSS framework, made with SASS.",
   "version": "0.0.3",
   "keywords": [
     "sass",
+    "framework",
     "css",
-    "magic",
-    "responsive",
-    "framework"
+    "magical",
+    "responsive"
   ],
   "maintainers": [
     {
@@ -27,8 +27,8 @@
   ],
   "licenses": [
     {
-      "name": "GNU General Public License v3.0",
-      "url": "https://github.com/palkerecsenyi/magic/blob/master/LICENSE"
+      "name": "NU General Public License v3.0",
+      "url": "https://raw.githubusercontent.com/palkerecsenyi/magic/master/LICENSE"
     }
   ],
   "homepage": "https://palkerecsenyi.github.io/magic/docs/"

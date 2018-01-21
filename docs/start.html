@@ -7,8 +7,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		
 		<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+		<link rel="stylesheet" href="prism.css">
 		<meta charset="UTF-8">
 		<script>hljs.initHighlightingOnLoad();</script>
 		<title>Magic - Neat and unique CSS framework for dynamic websites</title>
@@ -45,48 +44,24 @@
 		<div class="container">
 			<h1 class="header">Get started</h1>
 			<hr class="separator">
+            <h2>Get Magic</h2>
+            <h3>Simple</h3>
 			<p>Getting started with Magic.css is easy! Simply insert this code into your &lt;head&gt;:</p>
-			<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;<br>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;<br>&lt;link rel="stylesheet" href="https://palkerecsenyi.github.io/magic/magic.css"&gt;</code></pre>
+			<pre><code class="language-html">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+&lt;link rel="stylesheet" href="https://unpkg.com/magical-css@0.0.3/magic.css"&gt;</code></pre>
+            <h3>Download</h3>
+			<p>To download Magic, please visit our <a href="https://github.com/palkerecsenyi/magic" class="link">Github repository</a>.</p>
+            <h3>Project managers</h3>
+            <p>You can also find Magic on NPM and Yarn:</p>
+            <h5>NPM</h5>
+            <pre><code class="language-bash">npm install magical-css</code></pre>
+            <h5>Yarn</h5>
+            <pre><code class="language-bash">yarn add magical-css</code></pre>
 			<p>That's it! Of course, you've barely done anything at this point! To use Magic.css, see our documentation:</p>
 			<a href="documentation" class="btn-grad btn-grad-blue btn-fluid">Documentation</a>
 			<h2 class="sub-header">Icons</h2>
-			<p>For many components in Magic, icons are quite useful. For example, consider the random layout below:</p>
-			<hr class="separator">
-			<div class="row">
-				<div class="col col6">
-					<div>
-						<h1>Programming</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis sodales sem. </p>
-					</div>		
-				</div>
-				<div class="col col6">
-					<div>
-						<h1>Twitter</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis sodales sem.</p>
-					</div>
-				</div>
-			</div>
-			<hr class="separator">
-			<h3>Adding icons</h3>
-			<p>We can make it much more appealing and professional, just by adding icons:</p>
-			<hr class="separator">
-			<div class="row">
-				<div class="col col6">
-					<div>
-						<h1><i class="fas fa-code"></i> Programming</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis sodales sem. </p>
-					</div>		
-				</div>
-				<div class="col col6">
-					<div>
-						<h1><i class="fab fa-twitter"></i> Twitter</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis sodales sem.</p>
-					</div>
-				</div>
-			</div>
-			<hr class="separator">
-			<p>See? This demonstration contains icons from FontAwesome, which provides an easy-to-use, extensive and beautiful icon library. To integrate FontAwesome, also add the following line to your &lt;head&gt;:</p>
-			<pre><code>&lt;script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"&gt;&lt;/script&gt;</code></pre>
+          <p>For many components in Magic, icons are quite useful. Magic does not have a built-in icon system, but we found that FontAwesome fits perfectly. To integrate FontAwesome, also add the following line to your <span class="i-code">&lt;head&gt;</span>:</p>
+			<pre><code class="language-html">&lt;script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"&gt;&lt;/script&gt;</code></pre>
 			<p>Now that you've set up Magic, contiue to our <a class="link" href="documentation">documentation</a> :)</p>
 		</div>
 		<footer class="blue">
@@ -108,5 +83,6 @@
 				<p>&copy; Magic 2018 <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
 			</div>
 		</footer>
+      <script src="prism.js"></script>
 	</body>
 </html>

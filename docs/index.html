@@ -7,8 +7,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		
 		<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+		<link rel="stylesheet" href="prism.css">
 		<meta charset="UTF-8">
 		<script>hljs.initHighlightingOnLoad();</script>
 		<title>Magic - Neat and unique CSS framework for dynamic websites</title>
@@ -87,12 +86,9 @@
 			<!--Separator line-->
 			<hr class="separator">
 			<h1><i class="fas fa-cloud-download-alt"></i> Set up</h1>
-			<h3>CDN</h3>
 			<p>Setting up Magic is easy! Simply copy this code into the &lt;head&gt; of your page:</p>
-			<!--Not in Magic.css: Coloured code with https://highlightjs.org/-->
-			<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;<br>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;<br>&lt;link rel="stylesheet" href="https://palkerecsenyi.github.io/magic/magic.css"&gt;</code></pre>
-			<h3>Download</h3>
-			<p>To download Magic, please visit our <a href="https://github.com/palkerecsenyi/magic" class="link">Github repository</a>.</p>
+			<pre><code class="language-html">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+&lt;link rel="stylesheet" href="https://unpkg.com/magical-css@0.0.3/magic.css"&gt;</code></pre>
 			<hr class="separator">
 			<h1><i class="fas fa-book"></i> Documentation</h1>
 			<p>This page is created to provide extensive, beginner-friendly documentation on Magic. Each article is complete with examples and demonstrations. Get started:</p>
@@ -123,5 +119,6 @@
 				<p>&copy; Magic 2018 <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
 			</div>
 		</footer>
+      <script src="prism.js"></script>
 	</body>
 </html>
