@@ -1,12 +1,10 @@
-# Changelog for version 0.0.5
+# Changelog for version 0.1.0
 ### New features:
-* Added CSS map
-* Added breadcrumbs
-* Added documentation for project cards.
-* Improved responsiveness
+* Added button groups.
+* Added button group docs.
 
 ### Bug fixes:
-Fixed several bugs to do with responsiveness and design.
+* Fixed 'home' link on navbar pages.
 
 ### More
 See commit descriptions for more. I add large descriptions to all big commits.

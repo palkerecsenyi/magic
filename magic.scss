@@ -564,12 +564,12 @@ nav + .hero{
       color:white;
       text-decoration: none;
     }
-  }
-  p.bold{
-    font-weight:bolder;
-    font-family:$font-regular;
-    font-size:20px;
-    margin-right:10px;
+    &.bold{
+      font-weight:bolder;
+      font-family:$font-regular;
+      font-size:20px;
+      margin-right:10px;
+    }
   }
   .section:not(:first-child){
     margin-left:35px;
@@ -690,6 +690,47 @@ nav + .navigation{
   outline:none;
   box-sizing: border-box;
   white-space: nowrap;
+}
+.btn-group{
+  .btn{
+    border-radius:0;
+    margin:0;
+    display:inline-block;
+    float:left;
+    &:first-child{
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    &:last-child{
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+  &.vertical{
+    display:table;
+    border-collapse:collapse;
+    table-layout: fixed;
+    .btn{
+      display:block;
+      clear:both;
+      border-radius:0;
+      width:100%;
+      text-align: center;
+      &:first-child{
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+      &:last-child{
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+  }
+  &::after{
+    content:"";
+    clear:both;
+    display:table;
+  }
 }
 .btn-large{
   font-size:22px;
@@ -1196,11 +1237,11 @@ nav.light ul .nav-item a, nav.light, nav.light ul .nav-brand-text{
   z-index:1000;
   top:0;
   left:0;
-  background-color: black;
-  opacity: 0.9;
   overflow-x: hidden;
   padding-top:60px;
-  transition: 0.5s;
+  &.animate{
+    transition: all 0.5s ease;
+  }
   .close{
     position:absolute;
     top:0;
@@ -1208,18 +1249,19 @@ nav.light ul .nav-item a, nav.light, nav.light ul .nav-brand-text{
     font-size:36px;
     font-family: $font-thin;
     margin-left:50px;
-    color:white;
+    color:inherit;
     text-decoration: none;
   }
   a:not(.close){
-    padding:8px;
+    padding:8px 14px;
     text-decoration: none;
-    color:white;
-    font-size:24px;
-    font-family: $font-regular;
+    color:inherit;
+    font-size:30px;
+    font-family: $font-thin;
     display:block;
     transition: 0.3s;
-    text-align:center;
+    text-align:left;
+    white-space: nowrap;
   }
 }
 //Forms
