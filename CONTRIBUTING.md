@@ -16,6 +16,7 @@ When adding a pull request, always update the CHANGELOG.md file to show the chan
 * Use descriptive language, and explain everything you're adding.
 * Update the version number in package.json to represent the version that your addition would be working towards.
 * Prepare to actively discuss changes - stay online for at least a couple of minutes after adding a pull request to see and reply to comments and questions.
-* Ensure that the Travis build succeeds.
+* If changing main CSS, ONLY DIRECTLY CHANGE SASS, don't change the output CSS. Write additions to the SCSS file, and then compile it and update both magic.css, and magic.min.css in the dist folder.
+* Ensure that the Travis build succeeds - if SASS finds an issue when test-compiling your SCSS, the build will fail, and we will be unable to merge your pull request.
 
 That's it! Please contribute...
