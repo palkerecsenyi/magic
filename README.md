@@ -10,7 +10,7 @@
   <a href="https://gitter.im/magic-css/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link"><img src="http://badges.gitter.im/magic-css.png"></a>
   <a href="https://travis-ci.org/palkerecsenyi/magic"><img src="https://travis-ci.org/palkerecsenyi/magic.svg?branch=master"></a>
   <a href="https://www.jsdelivr.com/package/npm/magical-css"><img src="https://data.jsdelivr.com/v1/package/npm/magical-css/badge"></a>
-  <a href="https://github.com/palkerecsenyi/magic/"><img src="https://img.shields.io/github/downloads/palkerecsenyi/magic/total.svg"></a>
+  <a href="https://www.npmjs.com/package/magical-css"><img src="https://img.shields.io/npm/dt/magical-css.svg"></a>
 </p>
 
 ### Setup
