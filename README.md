@@ -6,11 +6,12 @@
 </p>
 <p align="center">Magic.CSS is a <strong>simple and responsive CSS library</strong>, made with SASS. It's inspired by (though not directly derived from) Bootstrap and Materialize. Each component is made with minimal markup to increase neatness, and they come with extensive, user-friendly <a href="https://palkerecsenyi.github.io/magic/docs/">documentation</a>.</p>
 <p align="center">
-  <a href="https://www.npmjs.com/package/magical-css"><img src="https://img.shields.io/npm/v/magical-css.svg" alt="npm version"></a>
-  <a href="https://gitter.im/magic-css/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link"><img src="http://badges.gitter.im/magic-css.png"></a>
   <a href="https://travis-ci.org/palkerecsenyi/magic"><img src="https://travis-ci.org/palkerecsenyi/magic.svg?branch=master"></a>
+  <a href="https://www.npmjs.com/package/magical-css"><img src="https://img.shields.io/npm/v/magical-css.svg" alt="npm version"></a>
   <a href="https://www.jsdelivr.com/package/npm/magical-css"><img src="https://data.jsdelivr.com/v1/package/npm/magical-css/badge"></a>
   <a href="https://www.npmjs.com/package/magical-css"><img src="https://img.shields.io/npm/dt/magical-css.svg"></a>
+  <a href='https://coveralls.io/github/palkerecsenyi/magic'><img src='https://coveralls.io/repos/github/palkerecsenyi/magic/badge.svg' alt='Coverage Status' /></a>
+   <a href="https://gitter.im/magic-css/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link"><img src="http://badges.gitter.im/magic-css.png"></a>
 </p>
 
 ### Setup
