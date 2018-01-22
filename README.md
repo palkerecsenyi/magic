@@ -10,33 +10,32 @@
   <a href="https://gitter.im/magic-css/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link"><img src="http://badges.gitter.im/magic-css.png"></a>
   <a href="https://travis-ci.org/palkerecsenyi/magic"><img src="https://travis-ci.org/palkerecsenyi/magic.svg?branch=master"></a>
   <a href="https://www.jsdelivr.com/package/npm/magical-css"><img src="https://data.jsdelivr.com/v1/package/npm/magical-css/badge"></a>
-  <a href="https://github.com/palkerecsenyi/magic/"><img src="https://img.shields.io/github/downloads/palkerecsenyi/magic/total.svg"></a>
+  <a href="https://www.npmjs.com/package/magical-css"><img src="https://img.shields.io/npm/dt/magical-css.svg"></a>
 </p>
 
 ### Setup
-#### Simple
-Simply add this to the `<head>` of your page:
+To set up Magic on your website, simply add this to the `<head>` of your page:
 ```HTML
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://unpkg.com/magical-css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magical-css@latest/dist/magic.css">
 ```
-#### More information
-To get Magic, do one of the following:
-* Use NPM:
+Please note that if a new version of Magic is released, your website will receive it automatically, which may mean that some parts of your page change. To get a fixed version, see the jsDelivr docs: https://www.jsdelivr.com.
+
+
+To install Magic, uncompiled SCSS, docs and more, do one of the following:
 ```bash
 npm install magical-css
 ```
-* Use Yarn:
 ```bash
 yarn add magical-css
 ```
-* Download https://github.com/palkerecsenyi/magic
-
-To set up Magical Library, place `magic.css` (or `magic.min.css` for a minified file) and the `fonts` folder into the same directory on your website, and link it using
-```HTML
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="path/to/magic.css">
+```bash
+bower install magical-css
 ```
+
+Clone https://github.com/palkerecsenyi/magic.git
+
+For the proper functionality of Magic, please double check that the fonts are linked correctly at the start of `dist/magic.css`. If using a CDN, this works automatically.
 
 ### Usage
 Magical Library tries to avoid default styles (globally referencing elements rather than classes) wherever possible, to make it as non-destructive in complex projects as possible. Class names are designed to be very evident. For a full usage guide, see the Wiki of this repository.
