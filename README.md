@@ -30,6 +30,11 @@ npm install magical-css
 ```bash
 yarn add magical-css
 ```
+* Use Bower:
+```bash
+bower install magical-css
+```
+
 * Download https://github.com/palkerecsenyi/magic
 
 To set up Magical Library, place `magic.css` (or `magic.min.css` for a minified file) and the `fonts` folder into the same directory on your website, and link it using
