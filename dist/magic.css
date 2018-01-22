@@ -510,11 +510,11 @@ nav + .hero {
     .navigation p a {
       color: white;
       text-decoration: none; }
-  .navigation p.bold {
-    font-weight: bolder;
-    font-family: "Noto";
-    font-size: 20px;
-    margin-right: 10px; }
+    .navigation p.bold {
+      font-weight: bolder;
+      font-family: "Noto";
+      font-size: 20px;
+      margin-right: 10px; }
   .navigation .section:not(:first-child) {
     margin-left: 35px; }
 
@@ -644,6 +644,38 @@ nav + .navigation {
   outline: none;
   box-sizing: border-box;
   white-space: nowrap; }
+
+.btn-group .btn {
+  border-radius: 0;
+  margin: 0;
+  display: inline-block;
+  float: left; }
+  .btn-group .btn:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px; }
+  .btn-group .btn:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px; }
+.btn-group.vertical {
+  display: table;
+  border-collapse: collapse;
+  table-layout: fixed; }
+  .btn-group.vertical .btn {
+    display: block;
+    clear: both;
+    border-radius: 0;
+    width: 100%;
+    text-align: center; }
+    .btn-group.vertical .btn:first-child {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px; }
+    .btn-group.vertical .btn:last-child {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px; }
+.btn-group::after {
+  content: "";
+  clear: both;
+  display: table; }
 
 .btn-large {
   font-size: 22px;
@@ -1130,11 +1162,10 @@ nav.light ul .nav-item a, nav.light, nav.light ul .nav-brand-text {
   z-index: 1000;
   top: 0;
   left: 0;
-  background-color: black;
-  opacity: 0.9;
   overflow-x: hidden;
-  padding-top: 60px;
-  transition: 0.5s; }
+  padding-top: 60px; }
+  #nav-mobile.animate {
+    transition: all 0.5s ease; }
   #nav-mobile .close {
     position: absolute;
     top: 0;
@@ -1142,17 +1173,18 @@ nav.light ul .nav-item a, nav.light, nav.light ul .nav-brand-text {
     font-size: 36px;
     font-family: "NotoThin";
     margin-left: 50px;
-    color: white;
+    color: inherit;
     text-decoration: none; }
   #nav-mobile a:not(.close) {
-    padding: 8px;
+    padding: 8px 14px;
     text-decoration: none;
-    color: white;
-    font-size: 24px;
-    font-family: "Noto";
+    color: inherit;
+    font-size: 30px;
+    font-family: "NotoThin";
     display: block;
     transition: 0.3s;
-    text-align: center; }
+    text-align: left;
+    white-space: nowrap; }
 
 input[type='email'], input[type='text'], input[type='password'], textarea {
   font-family: "Noto", sans-serif;
