@@ -1,0 +1,17 @@
+{
+  "name": "magical-css",
+  "description": "A simple, unique, and responsive CSS framework, made with SASS.",
+  "main": "dist/magic.css",
+  "authors": [
+    "Pal Kerecsenyi <palkerecs@gmail.com>"
+  ],
+  "license": "GPL-3.0-or-later",
+  "keywords": [
+    "sass",
+    "framework",
+    "css",
+    "magical",
+    "responsive"
+  ],
+  "homepage": "https://github.com/palkerecsenyi/magiclib"
+}
