@@ -1,10 +1,10 @@
-# Changelog for version 0.1.0
+# Changelog for version 0.2.0
 ### New features:
-* Added button groups.
-* Added button group docs.
+* Added Person Cards + docs
+* Added Comments + docs
 
 ### Bug fixes:
-* Fixed 'home' link on navbar pages.
+* Improved SASS neatness.
 
 ### More
 See commit descriptions for more. I add large descriptions to all big commits.

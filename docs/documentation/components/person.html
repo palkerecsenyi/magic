@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magical-css@latest/dist/magic.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+    <link rel="stylesheet" href="../../prism.css">
+    <meta charset="UTF-8">
+    <script>hljs.initHighlightingOnLoad();</script>
+    <title>Magic - Documentation</title>
+    <script>
+      function openNav(){
+        document.getElementById("nav-mobile").style.width = "100%";
+
+      }
+      function closeNav(){
+        document.getElementById("nav-mobile").style.width = "0";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="nav-mobile" class="blue animate">
+      <a href="javascript:void(0)" class="close" onClick="closeNav()">&times;</a>
+      <a href="https://palkerecsenyi.github.io/magic/">Home</a>
+      <a href="https://palkerecsenyi.github.io/magic/start">Get Started</a>
+      <a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a>
+      <a href="https://github.com/palkerecsenyi/magic">Github</a>
+    </div>
+    <nav class="blue">
+      <ul class="nav-left">
+        <li><a href="/magic" class="nav-brand-text">Magic.CSS</a></li>
+        <li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/">Home</a></li>
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/start">Get Started</a></li>
+        <li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a></li>
+        <li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
+      </ul>
+    </nav>
+    <div class="navigation blue">
+      <div class="section">
+        <p class="bold"><a href="../layout/index.html">Layout</a></p>
+        <p><a href="../layout/container.html">Container</a></p>
+        <p><a href="../layout/grid.html">Grid</a></p>
+        <p><a href="../layout/type.html">Typography</a></p>
+      </div>
+      <div class="section">
+        <p class="bold"><a href="../components/index.html">Components</a></p>
+        <p><a href="../components/badges.html">Badge</a></p>
+        <p><a href="../components/box.html">Box</a></p>
+        <p><a href="../components/breadcrumb.html">Breadcrumb</a></p>
+        <p><a href="../components/button.html">Button</a></p>
+        <p><a href="../components/colour.html">Colour</a></p>  <p><a href="../components/comment.html">Comment</a></p>
+        <p><a href="../components/error.html">Error</a></p>
+        <p><a href="../components/person.html">Person</a></p>
+        <p><a href="../components/project.html">Project</a></p>
+      </div>
+    </div>
+    <div class="container">
+      <h1 class="header">Person cards <span class="badge red">New!</span></h1>
+      <h2 class="trailer">Use 'Person Cards' to neatly represent a 'person' with an image, links and description.</h2>
+      <hr class="separator">
+      <h2>Example</h2>
+      <div class="person default">
+        <img class="image" src="http://via.placeholder.com/350x300">
+        <div class="identifier">
+          <p class="name">John Doe</p>
+          <p class="role">Senior Magic.CSS Developer</p>
+        </div>
+        <p class="links"><a href="#">Twitter</a> | <a href="#">Facebook</a></p>
+        <div class="content">
+          <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet metus et varius aliquet. Donec sed arcu congue, sodales urna ornare, sagittis urna. Donec eu pretium dolor. Nam gravida semper enim id pulvinar. Nullam mollis iaculis magna eu convallis. Vestibulum finibus lorem eu vulputate varius. Morbi semper, mauris nec interdum tempor, leo tortor eleifend erat, at facilisis diam nulla ac lorem. Nullam nulla sapien, consequat ut lectus vitae, luctus dapibus justo. Pellentesque suscipit tempor ante, quis ornare augue auctor in. Vestibulum non commodo elit, cursus pellentesque justo. Nunc et quam vel nunc porta sagittis.</p>
+        </div>
+      </div>
+      <h2>Adding Person Cards</h2>
+      <p>Person cards are an interesting and very responsive way of representing a person (e.g. on a 'meet the team' page). They support images, links, and different types of text. Try resizing the page to see how they respond.</p>
+      <p>Person cards, due to the variety of content they can hold, require slightly more syntax than the average Magic component. Don't worry! It all makes sense:</p>
+      <pre><code class="language-html">&lt;div class=&quot;person default&quot;&gt;
+  &lt;img class=&quot;image&quot; src=&quot;http://via.placeholder.com/350x300&quot;&gt;
+  &lt;div class=&quot;identifier&quot;&gt;
+    &lt;p class=&quot;name&quot;&gt;John Doe&lt;/p&gt;
+    &lt;p class=&quot;role&quot;&gt;Senior Magic.CSS Developer&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;p class=&quot;links&quot;&gt;&lt;a href=&quot;#&quot;&gt;Twitter&lt;/a&gt; | &lt;a href=&quot;#&quot;&gt;Facebook&lt;/a&gt;&lt;/p&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;p class=&quot;description&quot;&gt;Lorem ipsum dolor sit amet, ...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <h2>Changing colours</h2>
+      <p>To change the colour, replace the 'default' with any Magic Colour in the <span class="i-code">class="person default"</span>. This includes gradients and darkens/lightens.</p>
+      <h2>Stacking person cards</h2>
+      <p>An average scenario where Person Cards could be used is on a 'Meet the Team' page. In this case, it's handy to neatly pile person cards. This can be done with the following syntax:</p>
+      <div class="person-group">
+        <div class="person red top">
+          <img class="image" src="http://via.placeholder.com/350x300">
+          <div class="identifier">
+            <p class="name">John Doe</p>
+            <p class="role">Senior Magic.CSS Developer</p>
+          </div>
+          <p class="links"><a href="#">Twitter</a> | <a href="#">Facebook</a></p>
+          <div class="content">
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet metus et varius aliquet. Donec sed arcu congue, sodales urna ornare, sagittis urna. Donec eu pretium dolor. Nam gravida semper enim id pulvinar.</p>
+          </div>
+        </div>
+        <div class="person green">
+          <img class="image" src="http://via.placeholder.com/350x300">
+          <div class="identifier">
+            <p class="name">John Doe</p>
+            <p class="role">Senior Magic.CSS Developer</p>
+          </div>
+          <p class="links"><a href="#">Twitter</a> | <a href="#">Facebook</a></p>
+          <div class="content">
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet metus et varius aliquet. Donec sed arcu congue, sodales urna ornare, sagittis urna. Donec eu pretium dolor. Nam gravida semper enim id pulvinar.</p>
+          </div>
+        </div>
+        <div class="person blue bottom">
+          <img class="image" src="http://via.placeholder.com/350x300">
+          <div class="identifier">
+            <p class="name">John Doe</p>
+            <p class="role">Senior Magic.CSS Developer</p>
+          </div>
+          <p class="links"><a href="#">Twitter</a> | <a href="#">Facebook</a></p>
+          <div class="content">
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet metus et varius aliquet. Donec sed arcu congue, sodales urna ornare, sagittis urna. Donec eu pretium dolor. Nam gravida semper enim id pulvinar.</p>
+          </div>
+        </div>
+      </div>
+      <pre style="max-height:200px;"><code class="language-html">&lt;div class=&quot;person-group&quot;&gt;
+  &lt;div class=&quot;person red&quot;&gt;
+    &lt;img class=&quot;image&quot; src=&quot;http://via.placeholder.com/350x300&quot;&gt;
+    &lt;div class=&quot;identifier&quot;&gt;
+      &lt;p class=&quot;name&quot;&gt;John Doe&lt;/p&gt;
+      &lt;p class=&quot;role&quot;&gt;Senior Magic.CSS Developer&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;links&quot;&gt;&lt;a href=&quot;#&quot;&gt;Twitter&lt;/a&gt; | &lt;a href=&quot;#&quot;&gt;Facebook&lt;/a&gt;&lt;/p&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;p class=&quot;description&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet metus et varius aliquet. Donec sed arcu congue, sodales urna ornare, sagittis urna. Donec eu pretium dolor. Nam gravida semper enim id pulvinar.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;person green&quot;&gt;
+    &lt;img class=&quot;image&quot; src=&quot;http://via.placeholder.com/350x300&quot;&gt;
+    &lt;div class=&quot;identifier&quot;&gt;
+      &lt;p class=&quot;name&quot;&gt;John Doe&lt;/p&gt;
+      &lt;p class=&quot;role&quot;&gt;Senior Magic.CSS Developer&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;links&quot;&gt;&lt;a href=&quot;#&quot;&gt;Twitter&lt;/a&gt; | &lt;a href=&quot;#&quot;&gt;Facebook&lt;/a&gt;&lt;/p&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;p class=&quot;description&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet metus et varius aliquet. Donec sed arcu congue, sodales urna ornare, sagittis urna. Donec eu pretium dolor. Nam gravida semper enim id pulvinar.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;person blue&quot;&gt;
+    &lt;img class=&quot;image&quot; src=&quot;http://via.placeholder.com/350x300&quot;&gt;
+    &lt;div class=&quot;identifier&quot;&gt;
+      &lt;p class=&quot;name&quot;&gt;John Doe&lt;/p&gt;
+      &lt;p class=&quot;role&quot;&gt;Senior Magic.CSS Developer&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;links&quot;&gt;&lt;a href=&quot;#&quot;&gt;Twitter&lt;/a&gt; | &lt;a href=&quot;#&quot;&gt;Facebook&lt;/a&gt;&lt;/p&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;p class=&quot;description&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet metus et varius aliquet. Donec sed arcu congue, sodales urna ornare, sagittis urna. Donec eu pretium dolor. Nam gravida semper enim id pulvinar.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <div class="row">
+        <div class="col col4">
+          <div>
+            <div class="person default">
+              <img class="image" src="http://via.placeholder.com/350x300">
+              <div class="identifier">
+                <p class="name">John Doe</p>
+                <p class="role">Senior Magic.CSS Developer</p>
+              </div>
+              <p class="links"><a href="#">Twitter</a> | <a href="#">Facebook</a></p>
+              <div class="content">
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet metus et varius aliquet. Donec sed arcu congue, sodales urna ornare, sagittis urna. Donec eu pretium dolor. Nam gravida semper enim id pulvinar.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col8">
+          <div>
+            <h2>Person Cards in columns</h2>
+            <p>As this example demonstrates, Person Cards <strong>do not</strong> work in columns. They must be added as full-width elements in a col12 or just in a container.</p>
+          </div>
+        </div>
+      </div>
+      <h2>Circular images</h2>
+      <p>Magic has a simple class to make any image circular. This works across all components (not just Person Cards), but is especially useful in this case. To make any image circular, simply add the class <span class="i-code">img-circular</span>:</p>
+      <div class="row">
+        <div class="col col3">
+          <div>
+            <h3 class="no-mar bottom">Normal</h3>
+            <img class="image" src="http://via.placeholder.com/150x150">
+          </div>
+        </div>
+        <div class="col col3">
+          <div>
+            <h3 class="no-mar bottom">Circular</h3>
+            <img class="image img-circular" src="http://via.placeholder.com/150x150">
+          </div>
+        </div>
+        <div class="col col6">
+          <div>
+            <p>Using this class will apply a 50% <span class="i-code">border-radius</span> property to your image. This means that if your image <em>does not</em> have a square aspect ratio, the rounded image will be an oval:</p>
+            <img class="image img-circular" src="http://via.placeholder.com/150x100">
+          </div>
+        </div>
+        <p>For more information on images in Magic, see the <a class="link" href="../layout/image.html">Image</a> page.</p>
+      </div>
+      <h2>Responsive Person Cards</h2>
+      <p>Person Cards have 'special responsiveness' by default - you don't need to change anything. It's made to work in most scenarios. Here's a screenshot to give you an idea of what Person Cards morph into on <strong>425px and below</strong>:</p>
+      <a href="../media/person-cards-mobile.PNG"><img src="../media/person-cards-mobile.PNG" class="img-responsive" width="200px"></a>
+      <p>Try resizing the browser window to see what they turn into...</p>
+    </div>
+    <footer class="blue">
+      <div class="body">
+        <div class="content">
+          <h1>Magic.css</h1>
+          <p>Neat and unique CSS framework for dynamic websites</p>
+        </div>
+        <div class="links">
+          <ul>
+            <li class="header">Pages</li>
+            <li><a href="/magic">Home</a></li>
+            <li><a href="#">Start</a></li>
+            <li><a href="https://github.com/palkerecsenyi/magic/">Github</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>&copy; Magic 2018 <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
+      </div>
+    </footer>
+    <script src="../../prism.js"></script>
+  </body>
+</html>

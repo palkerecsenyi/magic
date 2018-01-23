@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magical-css@latest/dist/magic.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+    <link rel="stylesheet" href="../../prism.css">
+    <meta charset="UTF-8">
+    <script>hljs.initHighlightingOnLoad();</script>
+    <title>Magic - Documentation</title>
+    <script>
+      function openNav(){
+        document.getElementById("nav-mobile").style.width = "100%";
+
+      }
+      function closeNav(){
+        document.getElementById("nav-mobile").style.width = "0";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="nav-mobile">
+      <a href="javascript:void(0)" class="close" onClick="closeNav()">&times;</a>
+      <a href="https://palkerecsenyi.github.io/magic/">Home</a>
+      <a href="https://palkerecsenyi.github.io/magic/start">Get Started</a>
+      <a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a>
+      <a href="https://github.com/palkerecsenyi/magic">Github</a>
+    </div>
+    <nav class="blue">
+      <ul class="nav-left">
+        <li><a href="/magic" class="nav-brand-text">Magic.CSS</a></li>
+        <li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/">Home</a></li>
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/start">Get Started</a></li>
+        <li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a></li>
+        <li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
+      </ul>
+    </nav>
+    <div class="navigation blue">
+      <div class="section">
+        <p class="bold"><a href="../layout/index.html">Layout</a></p>
+        <p><a href="../layout/container.html">Container</a></p>
+        <p><a href="../layout/grid.html">Grid</a></p>
+        <p><a href="../layout/type.html">Typography</a></p>
+      </div>
+      <div class="section">
+        <p class="bold"><a href="../components/index.html">Components</a></p>
+        <p class="active"><a href="../components/badges.html">Badge</a></p>
+        <p><a href="../components/box.html">Box</a></p><p><a href="../components/breadcrumb.html">Breadcrumb</a></p>
+        <p><a href="../components/button.html">Button</a></p>
+        <p><a href="../components/colour.html">Colour</a></p>
+        <p><a href="../components/comment.html">Comment</a></p>
+        <p><a href="../components/error.html">Error</a></p>  <p><a href="../components/person.html">Person</a></p> <p><a href="../components/project.html">Project</a></p>
+      </div>
+    </div>
+    <div class="container">
+      <h1 class="header">Comments <span class="badge red">New!</span></h1>
+      <h2 class="trailer">A pre-made set of classes to build a responsive 'comments' section</h2>
+      <hr class="separator">
+      <p>Magic is targeted at dynamic websites (e.g. social networks), and a 'comments' feed is critical for any such site. Therefore, Magic comes with a simple set of classes for comments built in!</p>
+      <h2>Example</h2>
+      <div class="comments">
+        <div class="comment">
+          <div class="body">
+            <p>I am a comment.</p>
+          </div>
+          <hr class="separator">
+          <div class="footer">
+            <p><a href="#">John Smith</a> | 01/01/2018</p>
+          </div>
+        </div>
+      </div>
+      <h2>Adding a comments section</h2>
+      <p>Magic comments are contained within a <span class="i-code">comments</span> div. This can contain comments, as well as a 'new comment' textarea. All comment-related components <strong>must</strong> be placed within the <span class="i-code">comments</span> div. To do this:</p>
+      <pre><code class="language-html">&lt;div class="comments"&gt;
+  ...
+&lt;/div&gt;</code></pre>
+      <h2>Adding a comment</h2>
+      <p>Within the <span class="i-code">comments</span> div, you can have individual comments! They consist of a body and a footer, which can both contain various content. To add a comment, place this inside your <span class="i-code">comments</span> div:</p>
+      <div class="comments">
+        <div class="comment">
+          <div class="body">
+            <p>I am a comment.</p>
+          </div>
+          <hr class="separator">
+          <div class="footer">
+            <p><a href="#">John Smith</a> | 01/01/2018</p>
+          </div>
+        </div>
+      </div>
+      <pre><code class="language-html">&lt;div class=&quot;comment&quot;&gt;
+  &lt;div class=&quot;body&quot;&gt;
+    &lt;p&gt;Amazing project!&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;hr class=&quot;separator&quot;&gt;
+  &lt;div class=&quot;footer&quot;&gt;
+    &lt;p&gt;&lt;a href=&quot;#&quot;&gt;John Smith&lt;/a&gt; | 01/01/2018&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <h2>Adding a 'new comment' section</h2>
+      <p>To neatly allow users to create a new comment, add the following (again, inside your <span class="i-code">comments</span>):</p>
+      <div class="comments">
+        <div class="new">
+          <form>
+            <textarea placeholder="Add your comment..."></textarea>
+            <button type="submit" class="btn btn-default btn-fluid">Add</button>
+          </form>
+        </div>
+        <div class="comment">
+          <div class="body">
+            <p>I am a comment.</p>
+          </div>
+          <hr class="separator">
+          <div class="footer">
+            <p><a href="#">John Smith</a> | 01/01/2018</p>
+          </div>
+        </div>
+        <div class="comment">
+          <div class="body">
+            <p>I am a comment.</p>
+          </div>
+          <hr class="separator">
+          <div class="footer">
+            <p><a href="#">John Smith</a> | 01/01/2018</p>
+          </div>
+        </div>
+        <div class="comment">
+          <div class="body">
+            <p>I am a comment.</p>
+          </div>
+          <hr class="separator">
+          <div class="footer">
+            <p><a href="#">John Smith</a> | 01/01/2018</p>
+          </div>
+        </div>
+      </div>
+      <pre style="max-height: 200px;"><code class="language-html">&lt;div class=&quot;new&quot;&gt;
+  &lt;form&gt;
+    &lt;textarea placeholder=&quot;Add your comment...&quot;&gt;&lt;/textarea&gt;
+    &lt;button type=&quot;submit&quot; class=&quot;btn btn-default btn-fluid&quot;&gt;Add&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+&lt;div class=&quot;comment&quot;&gt;
+  &lt;div class=&quot;body&quot;&gt;
+    &lt;p&gt;I am a comment.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;hr class=&quot;separator&quot;&gt;
+  &lt;div class=&quot;footer&quot;&gt;
+    &lt;p&gt;&lt;a href=&quot;#&quot;&gt;John Smith&lt;/a&gt; | 01/01/2018&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;comment&quot;&gt;
+  &lt;div class=&quot;body&quot;&gt;
+    &lt;p&gt;I am a comment.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;hr class=&quot;separator&quot;&gt;
+  &lt;div class=&quot;footer&quot;&gt;
+    &lt;p&gt;&lt;a href=&quot;#&quot;&gt;John Smith&lt;/a&gt; | 01/01/2018&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;comment&quot;&gt;
+  &lt;div class=&quot;body&quot;&gt;
+    &lt;p&gt;I am a comment.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;hr class=&quot;separator&quot;&gt;
+  &lt;div class=&quot;footer&quot;&gt;
+    &lt;p&gt;&lt;a href=&quot;#&quot;&gt;John Smith&lt;/a&gt; | 01/01/2018&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+    <footer class="blue">
+      <div class="body">
+        <div class="content">
+          <h1>Magic.css</h1>
+          <p>Neat and unique CSS framework for dynamic websites</p>
+        </div>
+        <div class="links">
+          <ul>
+            <li class="header">Pages</li>
+            <li><a href="/magic">Home</a></li>
+            <li><a href="#">Start</a></li>
+            <li><a href="https://github.com/palkerecsenyi/magic/">Github</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>&copy; Magic 2018 <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
+      </div>
+    </footer>
+    <script src="../../prism.js"></script>
+  </body>
+</html>
