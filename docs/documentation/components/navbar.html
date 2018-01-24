@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magical-css@latest/dist/magic.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+    <link rel="stylesheet" href="../../prism.css">
+    <meta charset="UTF-8">
+    <script>hljs.initHighlightingOnLoad();</script>
+    <title>Magic - Documentation</title>
+    <script>
+      function openNav(){
+        $('#nav-mobile').removeClass("animate");
+        document.getElementById("nav-mobile").style.width = "100%";
+      }
+      function closeNav(){
+        document.getElementById("nav-mobile").style.width = "0";
+      }
+      function openAnimatedNav(){
+        $('#nav-mobile').addClass("animate");
+        document.getElementById("nav-mobile").style.width = "100%";
+      }
+    </script>
+    <style>
+      .doc-nav{
+        position: static;
+      }
+      .doc-nav-post{
+        margin-top:5px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav-mobile" class="blue">
+      <a href="javascript:void(0)" class="close" onClick="closeNav()">&times;</a>
+      <a href="https://palkerecsenyi.github.io/magic/">Home</a>
+      <a href="https://palkerecsenyi.github.io/magic/start">Get Started</a>
+      <a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a>
+      <a href="https://github.com/palkerecsenyi/magic">Github</a>
+    </div>
+    <nav class="blue">
+      <ul class="nav-left">
+        <li><a href="/magic" class="nav-brand-text">Magic.CSS</a></li>
+        <li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/">Home</a></li>
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/start">Get Started</a></li>
+        <li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a></li>
+        <li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
+      </ul>
+    </nav>
+    <div class="navigation blue">
+      <div class="section">
+        <p class="bold"><a href="../layout/index.html">Layout</a></p>
+        <p><a href="../layout/container.html">Container</a></p>
+        <p><a href="../layout/grid.html">Grid</a></p>
+        <p><a href="../layout/type.html">Typography</a></p>
+      </div>
+      <div class="section">
+        <p class="bold"><a href="../components/index.html">Components</a></p>
+        <p class="active"><a href="../components/badges.html">Badge</a></p>
+        <p><a href="../components/box.html">Box</a></p><p><a href="../components/breadcrumb.html">Breadcrumb</a></p>
+        <p><a href="../components/button.html">Button</a></p>
+        <p><a href="../components/colour.html">Colour</a></p>
+        <p><a href="../components/comment.html">Comment</a></p>
+        <p><a href="../components/error.html">Error</a></p> <p><a href="../components/hero.html">Hero</a></p>  <p><a href="../components/navbar.html">Navbar</a></p>  <p><a href="../components/person.html">Person</a></p> <p><a href="../components/project.html">Project</a></p>
+      </div>
+    </div>
+    <div class="container">
+      <h1 class="header">Navbar</h1>
+      <h2 class="trailer">A crucial component of any website: a 'sticky', customisable and responsive navbar.</h2>
+      <hr class="separator">
+      <p>The vast majority of websites have at least some sort of navbar (navigation bar). Magic comes with some simple but powerful tools to build one. Here's an example:</p>
+    </div>
+    <nav class="blue doc-nav">
+      <ul class="nav-left">
+        <li><a href="/magic" class="nav-brand-text">Magic.CSS</a></li>
+        <li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/">Home</a></li>
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/start">Get Started</a></li>
+        <li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a></li>
+        <li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
+      </ul>
+    </nav>
+    <div class="container doc-nav-post">
+      <p>Looks familiar? Of course - it's on the top of every page within this website!</p>
+      <div class="error info">By default, Navbars are fixed at the top of the page. The examples on this page have custom styles (not available in Magic) to stop them from moving to their normal position, for demostration purposes.</div>
+      <h2>Simple navbar</h2>
+      <p>To build a simple navbar, use the following code:</p>
+    </div>
+    <nav class="default doc-nav">
+      <ul class="nav-left">
+        <li><a href="#" class="nav-brand-text">My Website</a></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-item"><a href="#">Home</a></li>
+        <li class="nav-item"><a href="#">About</a></li>
+        <li class="nav-item"><a href="#">Contact</a></li>
+        <li class="nav-item"><a href="#">Pricing</a></li>
+      </ul>
+    </nav>
+    <div class="container doc-nav-post">
+      <pre><code class="language-html">&lt;nav class=&quot;default&quot;&gt;
+  &lt;ul class=&quot;nav-left&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;nav-brand-text&quot;&gt;My Website&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul class=&quot;nav-right&quot;&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Pricing&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+      <p>On the first line, replace the <span class="i-code">default</span> class name with any <strong>standard</strong> Magic colour (all colours (including dark and light) except darkens and lightens). This will make several colours change automatically.</p>
+      <h3>All colours</h3>
+    </div>
+    <nav class="default doc-nav">
+      <ul class="nav-left">
+        <li><a href="#" class="nav-brand-text">Default</a></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-item"><a href="#">Home</a></li>
+        <li class="nav-item"><a href="#">About</a></li>
+        <li class="nav-item"><a href="#">Contact</a></li>
+        <li class="nav-item"><a href="#">Pricing</a></li>
+      </ul>
+    </nav>
+    <nav class="red doc-nav">
+      <ul class="nav-left">
+        <li><a href="#" class="nav-brand-text">Red</a></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-item"><a href="#">Home</a></li>
+        <li class="nav-item"><a href="#">About</a></li>
+        <li class="nav-item"><a href="#">Contact</a></li>
+        <li class="nav-item"><a href="#">Pricing</a></li>
+      </ul>
+    </nav>
+    <nav class="green doc-nav">
+      <ul class="nav-left">
+        <li><a href="#" class="nav-brand-text">Green</a></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-item"><a href="#">Home</a></li>
+        <li class="nav-item"><a href="#">About</a></li>
+        <li class="nav-item"><a href="#">Contact</a></li>
+        <li class="nav-item"><a href="#">Pricing</a></li>
+      </ul>
+    </nav>
+    <nav class="yellow doc-nav">
+      <ul class="nav-left">
+        <li><a href="#" class="nav-brand-text">Yellow</a></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-item"><a href="#">Home</a></li>
+        <li class="nav-item"><a href="#">About</a></li>
+        <li class="nav-item"><a href="#">Contact</a></li>
+        <li class="nav-item"><a href="#">Pricing</a></li>
+      </ul>
+    </nav>
+    <nav class="blue doc-nav">
+      <ul class="nav-left">
+        <li><a href="#" class="nav-brand-text">Blue</a></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-item"><a href="#">Home</a></li>
+        <li class="nav-item"><a href="#">About</a></li>
+        <li class="nav-item"><a href="#">Contact</a></li>
+        <li class="nav-item"><a href="#">Pricing</a></li>
+      </ul>
+    </nav>
+    <nav class="dark doc-nav">
+      <ul class="nav-left">
+        <li><a href="#" class="nav-brand-text">Dark</a></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-item"><a href="#">Home</a></li>
+        <li class="nav-item"><a href="#">About</a></li>
+        <li class="nav-item"><a href="#">Contact</a></li>
+        <li class="nav-item"><a href="#">Pricing</a></li>
+      </ul>
+    </nav>
+    <nav class="light doc-nav">
+      <ul class="nav-left">
+        <li><a href="#" class="nav-brand-text">Light</a></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-item"><a href="#">Home</a></li>
+        <li class="nav-item"><a href="#">About</a></li>
+        <li class="nav-item"><a href="#">Contact</a></li>
+        <li class="nav-item"><a href="#">Pricing</a></li>
+      </ul>
+    </nav>
+    <div class="container doc-nav-post">
+      <div class="error info">You may also have noticed that navbars have a slight aesthetic shadow on the bottom. This typically looks nice on websites, but can be disabled by adding the <span class="i-code">no-shadow</span> class.</div>
+      <h2>Navbar components</h2>
+      <p>As you saw in the example code above, a navbar has two main sections: nav-left and nav-right. Below is an explanation of their uses and components.</p>
+      <h3>nav-left</h3>
+      <p>This section contains items that appear on the left side of the navbar. This typically contains two items.</p>
+      <h4>Brand</h4>
+      <p>One of the most important parts of a website is the 'brand' within the navbar. In Magic, this can either be text or an image. It is defined as a list item within the <span class="i-code">nav-left</span> unordered list. To make a textual navbar brand, use the following markup inside your navbar:</p>
+    </div>
+    <nav class="default doc-nav">
+      <ul class="nav-left">
+        <li><a href="#" class="nav-brand-text">My Brand</a></li>
+      </ul>
+    </nav>
+    <div class="container doc-nav-post">
+      <pre><code class="language-html">&lt;ul class=&quot;nav-left&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;nav-brand-text&quot;&gt;My Brand&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+      <p>Most websites, however, would want to add an image as their icon. This can be done with the following markup:</p>
+    </div>
+    <nav class="default doc-nav">
+      <ul class="nav-left">
+        <li><a href="#" class="nav-brand-container">
+          <img class="nav-brand-image" src="http://via.placeholder.com/350x150">
+          </a></li>
+      </ul>
+    </nav>
+    <div class="container doc-nav-post">
+      <div class="error problem">The positioning of this icon may appear strange, but don't worry! This is because we haven't added any <span class="i-code">nav-right</span> section yet.</div>
+      <h4>Hamburger menu</h4>
+      <p>The other item found in the <span class="i-code">nav-left</span> section is the mobile 'hamburger' menu button. This is a button that opens a mobile navigation menu, and is only visible on mobile and tablet devices. The following markup adds the button (required FontAwesome):</p>
+      <pre><code class="language-html">&lt;ul class=&quot;nav-left&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;/magic&quot; class=&quot;nav-brand-text&quot;&gt;Magic.CSS&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;nav-mobile-open&quot; onClick=&quot;openNav()&quot;&gt;&lt;i class=&quot;fas fa-bars&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+      <div class="error problem">Please note that the button does not yet do anything. To completely set up a mobile navbar, see the <a class="link" href="#mobile">responsive</a> section of this page.</div>
+      <h3>nav-right</h3>
+      <p>The <span class="i-code">nav-right</span> section contains links within an unordered list. It comes directly after the <span class="i-code">nav-right</span> section in your HTML. To create a simple set of links, use the following markup:</p>
+      <pre><code class="language-html">&lt;ul class=&quot;nav-right&quot;&gt;
+  &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Pricing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+      <h5>Active items</h5>
+      <p>To make a navbar link appear 'active', just add the <span class="i-code">active</span> class to the <span class="i-code">nav-item</span>.</p>
+      <h3>Where to put it</h3>
+      <p>Your navbar markup must be the first thing within the <span class="i-code">body</span> of your website, outside of any container. For example:</p>
+      <pre><code class="language-html">&lt;body&gt;
+  &lt;nav class=&quot;default&quot;&gt;
+    &lt;ul class=&quot;nav-left&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;nav-brand-text&quot;&gt;My Website&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul class=&quot;nav-right&quot;&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Pricing&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+  &lt;div class="container"&gt;
+    ...</code></pre>
+      <h2 id="mobile">Responsive</h2>
+      <p>Magic also has a variety of tools for making your navbar work well on tablet and mobile devices. There is a minimal amount of JS involved, as well as some additional markup. Firstly, add something like the following, <strong>before the main navbar</strong>:</p>
+      <pre><code class="language-html">&lt;div id=&quot;nav-mobile&quot; class=&quot;default&quot;&gt; &lt;!--Replace default with any Magic colour--&gt;
+  &lt;a href=&quot;javascript:void(0)&quot; class=&quot;close&quot; onClick=&quot;closeNav()&quot;&gt;&amp;times;&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;Pricing&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+      <div class="error info">The links used here should typically be the same as within your normal navbar.</div>
+      <p>Make sure that your main navbar contains something like <code class="language-html">&lt;li class=&quot;nav-mobile-open&quot; onClick=&quot;openNav()&quot;&gt;&lt;i class=&quot;fas fa-bars&quot;&gt;&lt;/i&gt;&lt;/li&gt;</code>, with which mobile and tablet users can open your navbar.</p>
+      <p>Next, add this to your page <span class="i-code">head</span>:</p>
+      <pre><code class="language-html">&lt;script&gt;function openNav(){document.getElementById(&quot;nav-mobile&quot;).style.width = &quot;100%&quot;;}function closeNav(){document.getElementById(&quot;nav-mobile&quot;).style.width = &quot;0&quot;;}&lt;/script&gt;</code></pre>
+      <p>That's it! You should have a functioning mobile navbar! This page also has one. If you are using a desktop device, you can test it out with the button below:</p>
+      <a href="#" onclick="openNav()" class="btn btn-blue btn-fluid">Open navbar</a>
+      <h3>Animation</h3>
+      <p>You can also make the mobile navbar 'slide' rather than appear, by adding the <span class="i-code">animate</span> class to the div:</p>
+      <a href="#" onclick="openAnimatedNav()" class="btn btn-blue btn-fluid">Open animated navbar</a>
+    </div>
+    <footer class="blue">
+      <div class="body">
+        <div class="content">
+          <h1>Magic.css</h1>
+          <p>Neat and unique CSS framework for dynamic websites</p>
+        </div>
+        <div class="links">
+          <ul>
+            <li class="header">Pages</li>
+            <li><a href="/magic">Home</a></li>
+            <li><a href="#">Start</a></li>
+            <li><a href="https://github.com/palkerecsenyi/magic/">Github</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>&copy; Magic 2018 | Magic.CSS <span class="version"></span><span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
+      </div>
+    </footer>
+    <script src="../../prism.js"></script>
+  </body>
+</html>

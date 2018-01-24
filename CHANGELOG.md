@@ -1,13 +1,9 @@
 # Changelog for version 0.2.1
 ### New features:
-* Added hero header docs
-* Added image hero header
-* Removed deprecated files
-* Added version display to SASS
-* Added fluid button groups
+* Added docs for navbar
 
 ### Bug fixes:
-* Fixed Person Groups
+* Made text on yellow navbar be black instead of white to contrast more
 
 ### More
 See commit descriptions for more. I add large descriptions to all big commits.
