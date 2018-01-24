@@ -178,13 +178,12 @@ p {
 
 .link {
   text-decoration: none;
-  color: #00a78e;
-  text-transform: uppercase;
+  color: #0f7ec8;
   transition: all .1s ease;
   font-weight: bolder; }
 
 .link:hover {
-  color: #00D1B2; }
+  color: #209cee; }
 
 .mobile {
   display: none; }
@@ -261,7 +260,7 @@ p {
   margin-bottom: 10px;
   margin-top: 5px;
   border-radius: 3px;
-  width: 98%;
+  width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   box-sizing: border-box; }
 
@@ -481,6 +480,8 @@ nav + .container, nav + #nav-mobile + .container {
       font-size: 20px;
       margin-top: 5px;
       font-family: "Noto"; }
+  .hero.full {
+    height: 100vh !important; }
 
 nav + .hero {
   margin-top: 50px; }
@@ -488,6 +489,38 @@ nav + .hero {
 @media only screen and (max-width: 768px) {
   nav + .hero {
     margin-top: 61px; } }
+.hero-img {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 50vh; }
+  .hero-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: translateZ(-1px); }
+  .hero-img .hero-content {
+    position: absolute;
+    overflow: auto;
+    text-align: center;
+    color: white; }
+    .hero-img .hero-content .title {
+      font-size: 62px;
+      margin-bottom: 0;
+      margin-top: 0;
+      padding: 0;
+      font-family: "NotoThin"; }
+    .hero-img .hero-content .caption {
+      font-size: 20px;
+      margin-top: 5px;
+      font-family: "Noto"; }
+  .hero-img.full {
+    height: 100vh !important; }
+
 .navigation {
   width: 100%;
   color: white;
@@ -656,6 +689,16 @@ nav + .navigation {
   .btn-group .btn:last-child {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px; }
+.btn-group.fluid {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .btn-group.fluid .btn {
+    width: auto;
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: center; }
 .btn-group.vertical {
   display: table;
   border-collapse: collapse;
@@ -869,9 +912,9 @@ a.btn-fluid {
       vertical-align: middle; }
 
 .person {
-  width: 100%;
+  width: 100% !important;
   padding: 15px;
-  border-radius: 3px !important;
+  border-radius: 3px;
   margin: 0 auto;
   color: white;
   margin-bottom: 10px;
@@ -906,14 +949,21 @@ a.btn-fluid {
       font-weight: bolder; }
   .person .content .description {
     margin: 10px 0 0 0; }
-  .person:first-child {
-    border-radius: 3px 3px 0 0 !important; }
-  .person:last-child {
-    border-radius: 0 0 3px 3px !important; }
 
 .person-group .person {
-  margin: 0 !important;
-  border-radius: 0; }
+  margin: 0 !important; }
+  .person-group .person:not(:first-child):not(:last-child) {
+    border-radius: 0; }
+  .person-group .person:first-child {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0; }
+  .person-group .person:last-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px; }
 
 @media only screen and (max-width: 425px) {
   .person .identifier {
@@ -938,9 +988,6 @@ a.btn-fluid {
     width: 50%;
     display: block;
     margin: 0 auto; } }
-@media only screen and (max-width: 375px) {
-  .person {
-    width: 85%; } }
 .comments {
   margin-top: 10px;
   box-sizing: border-box; }
@@ -984,7 +1031,8 @@ a.btn-fluid {
         color: #333333; }
     .comments .comment:not(:first-of-type):not(:last-of-type) {
       border-radius: 0;
-      margin: 0; }
+      margin: 0;
+      border-bottom: 0.7px solid grey; }
     .comments .comment:last-of-type {
       border-top-left-radius: 0;
       border-top-right-radius: 0; }
@@ -1309,5 +1357,8 @@ input[type='checkbox']:checked + label:before {
 select {
   font-size: 20px;
   margin-bottom: 10px; }
+
+.version::after {
+  content: "v0.2.1"; }
 
 /*# sourceMappingURL=magic.css.map */

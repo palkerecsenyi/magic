@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://unpkg.com/magical-css">
+    <!--<link rel="stylesheet" href="https://unpkg.com/magical-css">-->
+    <link rel="stylesheet" href="../../../dist/magic.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
     <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
     <link rel="stylesheet" href="../../prism.css">
@@ -49,7 +50,7 @@
         <p><a href="../components/badges.html">Badge</a></p><p><a href="../components/box.html">Box</a></p><p><a href="../components/breadcrumb.html">Breadcrumb</a></p>
         <p><a href="../components/button.html">Button</a></p>
         <p><a href="../components/colour.html">Colour</a></p>  <p><a href="../components/comment.html">Comment</a></p>
-        <p><a href="../components/error.html">Error</a></p>  <p><a href="../components/person.html">Person</a></p> <p><a href="../components/project.html">Project</a></p>
+        <p><a href="../components/error.html">Error</a></p> <p><a href="../components/hero.html">Hero</a></p> <p><a href="../components/person.html">Person</a></p> <p><a href="../components/project.html">Project</a></p>
       </div>
     </div>
     <div id="nav-mobile">
@@ -156,8 +157,8 @@
         <pre class="top"><code class="language-markup">&lt;a class="btn btn-disabled" href="#"&gt;Disabled&lt;/a&gt;</code></pre>
         <p class="no-mar">Please note that this uses <code>pointer-events:none; tab-index:-1;</code> to disabled input. However, it is not <em>as</em> 'disabled' as a button would be. For more information, see <a href="https://css-tricks.com/almanac/properties/p/pointer-events/" target="_blank" class="link white-text">this CSS Tricks article</a> about pointer-events.</p>
       </div>
-      <h3>Button groups <span class="badge red">New!</span></h3>
-      <p>If you have a control panel with similar buttons, you can use Magic to group them.</p>
+      <h3>Button groups</h3>
+      <p>If you have a control panel with similar buttons, you can use Magic to group them. This only works for <strong>filled</strong> buttons (not outline or gradient).</p>
       <h4>Horizontal</h4>
       <p>Button groups have two variations: horizontal and vertical. This is how to lay out a horizontal button group:</p>
       <div class="btn-group">
@@ -172,6 +173,35 @@
 &lt;/div&gt;</code></pre>
       <p>See? Super simple!</p>
       <p>You can add as many buttons as you like into a button group and they will scale automatically.</p>
+      <h5>Fluid horizontal buttons <span class="badge red">New!</span></h5>
+      <p>You can make horizontal button groups fluid, too. Just add the <span class="i-code">fluid</span> class name. This will make the buttons have an equal width, and fill 100% of the width of their container:</p>
+      <div class="btn-group fluid">
+        <a href="#" class="btn btn-blue">New</a>
+        <a href="#" class="btn btn-blue">Save</a>
+        <a href="#" class="btn btn-blue">Load</a>
+      </div>
+      <pre><code class="language-html">&lt;div class=&quot;btn-group <strong>fluid</strong>&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;btn btn-blue&quot;&gt;New&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;btn btn-blue&quot;&gt;Save&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;btn btn-blue&quot;&gt;Load&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+      <div class="error info">If you try to fit too many buttons into a group, they will wrap to the next line:
+      <div class="btn-group fluid">
+        <a href="#" class="btn btn-blue">Button</a>
+        <a href="#" class="btn btn-blue">Button</a>
+        <a href="#" class="btn btn-blue">Button</a>
+        <a href="#" class="btn btn-blue">Button</a>
+        <a href="#" class="btn btn-blue">Button</a>
+        <a href="#" class="btn btn-blue">Button</a>
+        <a href="#" class="btn btn-blue">Button</a>
+        <a href="#" class="btn btn-blue">Button</a>
+        <a href="#" class="btn btn-blue">Button</a>
+        <a href="#" class="btn btn-blue">Button</a>
+        <a href="#" class="btn btn-blue">Button</a>
+        <a href="#" class="btn btn-blue">Button</a>
+      </div>
+      </div>
+      <p>This also works for vertical button groups.</p>
       <h4>Vertical</h4>
       <p>In some cases, you may wish to make a vertical button group. This is simple - just add the class <span class="i-code">vertical</span> to the group:</p>
       <div class="btn-group vertical">
@@ -187,6 +217,13 @@
       <p>The width of the entire group adjusts to the widest button automatically:</p>
       <div class="btn-group vertical">
         <a href="#" class="btn btn-blue">New Document</a>
+        <a href="#" class="btn btn-blue">Save</a>
+        <a href="#" class="btn btn-blue">Load</a>
+      </div>
+      <h5>Fluid vertical buttons <span class="badge red">New!</span></h5>
+      <p>As mentioned above, vertical buttons can be fluid too. Use the same syntax (just add the <span class="i-code">fluid</span>) class:</p>
+      <div class="btn-group vertical fluid">
+        <a href="#" class="btn btn-blue">New</a>
         <a href="#" class="btn btn-blue">Save</a>
         <a href="#" class="btn btn-blue">Load</a>
       </div>
@@ -221,7 +258,7 @@
         </div>
       </div>
       <div class="bottom">
-        <p>&copy; Magic 2018 <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
+        <p>&copy; Magic 2018 | Magic.CSS <span class="version"></span> <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
       </div>
     </footer>
     <script src="../../prism.js"></script>
