@@ -1,85 +1,101 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<!-- Import everything, the same list as on this page, except also FontAwesome (for icons) and highlightjs (for code highlighting)-->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://unpkg.com/magical-css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
-		
-		<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
-		<link rel="stylesheet" href="prism.css">
-		<meta charset="UTF-8">
-		<script>hljs.initHighlightingOnLoad();</script>
-		<title>Magic - Neat and unique CSS framework for dynamic websites</title>
-		<script>
-			function openNav(){
-				document.getElementById("nav-mobile").style.width = "100%";
+  <head>
+    <!-- Import everything, the same list as on this page, except also FontAwesome (for icons) and highlightjs (for code highlighting)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magical-css@latest/dist/magic.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
 
-			}
-			function closeNav(){
-				document.getElementById("nav-mobile").style.width = "0";
-			}
-		</script>
-	</head>
-	<body>
-		<div id="nav-mobile">
-			<a href="javascript:void(0)" class="close" onClick="closeNav()">&times;</a>
-			<a href="https://palkerecsenyi.github.io/magic/">Home</a>
-			<a href="https://palkerecsenyi.github.io/magic/start">Get Started</a>
-			<a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a>
-			<a href="https://github.com/palkerecsenyi/magic">Github</a>
-		</div>
-		<nav class="blue">
-			<ul class="nav-left">
-				<li><a href="/magic" class="nav-brand-text">Magic.CSS</a></li>
-				<li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
-			</ul>
-			<ul class="nav-right">
-				<li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/">Home</a></li>
-				<li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/start">Get Started</a></li>
-				<li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a></li>
-				<li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
-			</ul>
-		</nav>
-		<div class="container">
-			<h1 class="header">Get started</h1>
-			<hr class="separator">
-            <h2>Get Magic</h2>
-			<p>Getting started with Magic.css is easy! Simply insert this code into your &lt;head&gt;:</p>
-			<pre><code class="language-html">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+    <link rel="stylesheet" href="prism.css">
+    <meta charset="UTF-8">
+    <script>hljs.initHighlightingOnLoad();</script>
+    <title>Magic - Neat and unique CSS framework for dynamic websites</title>
+    <script>
+      function openNav(){
+        document.getElementById("nav-mobile").style.width = "100%";
+
+      }
+      function closeNav(){
+        document.getElementById("nav-mobile").style.width = "0";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="nav-mobile">
+      <a href="javascript:void(0)" class="close" onClick="closeNav()">&times;</a>
+      <a href="https://palkerecsenyi.github.io/magic/">Home</a>
+      <a href="https://palkerecsenyi.github.io/magic/start">Get Started</a>
+      <a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a>
+      <a href="https://github.com/palkerecsenyi/magic">Github</a>
+    </div>
+    <nav class="blue">
+      <ul class="nav-left">
+        <li><a href="/magic" class="nav-brand-text">Magic.CSS</a></li>
+        <li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/">Home</a></li>
+        <li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/start">Get Started</a></li>
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a></li>
+        <li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <h1 class="header">Get started</h1>
+      <hr class="separator">
+      <div class="btn-group">
+        <a href="documentation" class="btn btn-blue">Documentation</a>
+        <a href="https://github.com/palkerecsenyi/magic/" class="btn btn-blue"><i class="fab fa-github"></i> Github</a>
+      </div>
+      <h2>Get Magic</h2>
+      <p>Getting started with Magic.css is easy! Simply insert this code into your &lt;head&gt;:</p>
+      <pre><code class="language-html">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
 &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magical-css@latest/dist/magic.css"&gt;</code></pre>
-            <hr class="separator">
-			<a href="https://github.com/palkerecsenyi/magic/" class="btn btn-dark btn-fluid"><i class="fab fa-github"></i> Github</a>
-            <p>You can also install Magic with NPM, Yarn or Bower.</p>
+      <hr class="separator">
+      <p>You can also install Magic with NPM, Yarn or Bower.</p>
+      <div class="row">
+        <div class="col col4">
+          <div>
             <pre><code class="language-bash">npm install magical-css</code></pre>
+          </div>
+        </div>
+        <div class="col col4">
+          <div>
             <pre><code class="language-bash">yarn add magical-css</code></pre>
+          </div>
+        </div>
+        <div class="col col4">
+          <div>
             <pre><code class="language-bash">bower install magical-css</code></pre>
-			<p>That's it! Of course, you've barely done anything at this point! To use Magic.css, see our documentation:</p>
-			<a href="documentation" class="btn-grad btn-grad-blue btn-fluid">Documentation</a>
-			<h2 class="sub-header">Icons</h2>
-          <p>For many components in Magic, icons are quite useful. Magic does not have a built-in icon system, but we found that FontAwesome fits perfectly. To integrate FontAwesome, also add the following line to your <span class="i-code">&lt;head&gt;</span>:</p>
-			<pre><code class="language-html">&lt;script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"&gt;&lt;/script&gt;</code></pre>
-			<p>Now that you've set up Magic, contiue to our <a class="link" href="documentation">documentation</a> :)</p>
-		</div>
-		<footer class="blue">
-			<div class="body">
-				<div class="content">
-					<h1>Magic.css</h1>
-					<p>Neat and unique CSS framework for dynamic websites</p>
-				</div>
-				<div class="links">
-					<ul>
-						<li class="header">Pages</li>
-						<li><a href="/magic">Home</a></li>
-						<li><a href="#">Start</a></li>
-						<li><a href="https://github.com/palkerecsenyi/magic/">Github</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="bottom">
-				<p>&copy; Magic 2018 <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
-			</div>
-		</footer>
-      <script src="prism.js"></script>
-	</body>
+          </div>
+        </div>
+      </div>
+      <p>That's it! Of course, you've barely done anything at this point! To use Magic.css, see our documentation:</p>
+      <h2 class="sub-header">Icons</h2>
+      <p>For many components in Magic, icons are quite useful. Magic does not have a built-in icon system, but we found that FontAwesome fits perfectly. To integrate FontAwesome, also add the following line to your <span class="i-code">&lt;head&gt;</span>:</p>
+      <pre><code class="language-html">&lt;script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"&gt;&lt;/script&gt;</code></pre>
+      <p>Now that you've set up Magic, contiue to our <a class="link" href="documentation">documentation</a> :)</p>
+    </div>
+    <footer class="blue">
+      <div class="body">
+        <div class="content">
+          <h1>Magic.css</h1>
+          <p>Neat and unique CSS framework for dynamic websites</p>
+        </div>
+        <div class="links">
+          <ul>
+            <li class="header">Pages</li>
+            <li><a href="/magic">Home</a></li>
+            <li><a href="#">Start</a></li>
+            <li><a href="https://github.com/palkerecsenyi/magic/">Github</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>&copy; Magic 2018 | Magic.CSS <span class="version"></span> <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
+      </div>
+    </footer>
+    <script src="prism.js"></script>
+  </body>
 </html>

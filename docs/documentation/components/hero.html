@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magical-css@latest/dist/magic.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+    <link rel="stylesheet" href="../../prism.css">
+    <meta charset="UTF-8">
+    <script>hljs.initHighlightingOnLoad();</script>
+    <title>Magic - Documentation</title>
+    <script>
+      function openNav(){
+        document.getElementById("nav-mobile").style.width = "100%";
+
+      }
+      function closeNav(){
+        document.getElementById("nav-mobile").style.width = "0";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="nav-mobile">
+      <a href="javascript:void(0)" class="close" onClick="closeNav()">&times;</a>
+      <a href="https://palkerecsenyi.github.io/magic/">Home</a>
+      <a href="https://palkerecsenyi.github.io/magic/start">Get Started</a>
+      <a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a>
+      <a href="https://github.com/palkerecsenyi/magic">Github</a>
+    </div>
+    <nav class="blue">
+      <ul class="nav-left">
+        <li><a href="/magic" class="nav-brand-text">Magic.CSS</a></li>
+        <li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/">Home</a></li>
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/start">Get Started</a></li>
+        <li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a></li>
+        <li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
+      </ul>
+    </nav>
+    <div class="navigation blue">
+      <div class="section">
+        <p class="bold"><a href="../layout/index.html">Layout</a></p>
+        <p><a href="../layout/container.html">Container</a></p>
+        <p><a href="../layout/grid.html">Grid</a></p>
+        <p><a href="../layout/type.html">Typography</a></p>
+      </div>
+      <div class="section">
+        <p class="bold"><a href="../components/index.html">Components</a></p>
+        <p class="active"><a href="../components/badges.html">Badge</a></p>
+        <p><a href="../components/box.html">Box</a></p><p><a href="../components/breadcrumb.html">Breadcrumb</a></p>
+        <p><a href="../components/button.html">Button</a></p>
+        <p><a href="../components/colour.html">Colour</a></p>
+        <p><a href="../components/comment.html">Comment</a></p>
+        <p><a href="../components/error.html">Error</a></p> <p><a href="../components/hero.html">Hero</a></p>  <p><a href="../components/person.html">Person</a></p> <p><a href="../components/project.html">Project</a></p>
+      </div>
+    </div>
+    <div class="container">
+      <h1 class="header">Hero Header</h1>
+      <h2 class="trailer">A large hero header, perfect for a landing page.</h2>
+      <hr class="separator">
+      <h2>Example</h2>
+    </div>
+    <div class="hero default">
+      <div class="hero-content">
+        <h1 class="title">My Hero Header</h1>
+        <p class="caption">Hello. I am a hero header.</p>
+        <a href="start.html" class="btn btn-blue" style="display:inline-block">Get Started</a>
+      </div>
+    </div>
+    <div class="container">
+      <h2>Adding a hero header</h2>
+      <p>A hero header is designed to be at the top of a landing page, and <strong>outside of any container</strong>. It will fill up 50% of the viewport height, and 100% of the width. It can have centered content and a background colour (any Magic Colour) or image.</p>
+      <p>To add a hero header with a background colour, use the <span class="i-code">hero</span> class:</p>
+      <pre><code class="language-html">&lt;div class=&quot;hero default&quot;&gt; &lt;!--Change 'default' to any colour--&gt;
+  &lt;div class=&quot;hero-content&quot;&gt;
+    &lt;h1 class=&quot;title&quot;&gt;My Hero Header&lt;/h1&gt;
+    &lt;p class=&quot;caption&quot;&gt;Hello. I am a hero header.&lt;/p&gt;
+    &lt;a href=&quot;start.html&quot; class=&quot;btn btn-blue&quot; style=&quot;display:inline-block&quot;&gt;Get Started&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <h2>Full height</h2>
+      <p>By default, a hero header covers 50% of the screen size (50vh). You can change it to cover the entire screen size with the <span class="i-code">full</span> class name:</p>
+    </div>
+    <div class="hero default full">
+      <div class="hero-content">
+        <h1 class="title">My Hero Header</h1>
+        <p class="caption">Hello. I am a hero header.</p>
+        <a href="start.html" class="btn btn-blue" style="display:inline-block">Get Started</a>
+      </div>
+    </div>
+    <div class="container">
+      <pre><code class="language-html">&lt;div class=&quot;hero default full&quot;&gt;
+  &lt;div class=&quot;hero-content&quot;&gt;
+    &lt;h1 class=&quot;title&quot;&gt;My Hero Header&lt;/h1&gt;
+    &lt;p class=&quot;caption&quot;&gt;Hello. I am a hero header.&lt;/p&gt;
+    &lt;a href=&quot;start.html&quot; class=&quot;btn btn-blue&quot; style=&quot;display:inline-block&quot;&gt;Get Started&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <h2>Using an image</h2>
+      <p>Images are entirely different to background colours, so use different syntax (and an entirely different class name). Nevertheless, they are still simple to build:</p>
+    </div>
+    <div class="hero-img">
+      <img src="https://placeimg.com/1280/1080/arch">
+      <div class="hero-content">
+        <h1 class="title">My Hero Header</h1>
+        <p class="caption">Hello. I am a hero header.</p>
+        <a href="start.html" class="btn btn-blue" style="display:inline-block">Get Started</a>
+      </div>
+    </div>
+    <div class="container">
+      <pre><code class="language-html">&lt;div class=&quot;hero-img&quot;&gt;
+  &lt;img src=&quot;https://placeimg.com/1280/1080/arch&quot;&gt;
+  &lt;div class=&quot;hero-content&quot;&gt;
+    &lt;h1 class=&quot;title&quot;&gt;My Hero Header&lt;/h1&gt;
+    &lt;p class=&quot;caption&quot;&gt;Hello. I am a hero header.&lt;/p&gt;
+    &lt;a href=&quot;start.html&quot; class=&quot;btn btn-blue&quot; style=&quot;display:inline-block&quot;&gt;Get Started&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <div class="error info">
+        <p>The image may be re-scaled to fit into the container, but it will never be stretched. Ensure that you check the image before deployment.</p>
+        <hr class="separator">
+        <p>Please also ensure that any white text contrasts effectively with your image.</p>
+      </div>
+      <h2>Full height image</h2>
+      <p>Hero images can also be made full-height:</p>
+    </div>
+      <div class="hero-img full">
+        <img src="https://placeimg.com/1280/1080/arch">
+        <div class="hero-content">
+          <h1 class="title">My Hero Header</h1>
+          <p class="caption">Hello. I am a hero header.</p>
+          <a href="start.html" class="btn btn-blue" style="display:inline-block">Get Started</a>
+        </div>
+      </div>
+    <div class="container">
+      <div class="error info">This will result in different scaling of the image.</div>
+      <p>Magic does not include a parallax hero, as it's Javascript-free. Making a parallax using an <span class="i-code">img</span> tag only is not entirely possible with pure CSS, and it's usually done with a <span class="i-code">background-image</span> instead.</p>
+    </div>
+    <footer class="blue">
+      <div class="body">
+        <div class="content">
+          <h1>Magic.css</h1>
+          <p>Neat and unique CSS framework for dynamic websites</p>
+        </div>
+        <div class="links">
+          <ul>
+            <li class="header">Pages</li>
+            <li><a href="/magic">Home</a></li>
+            <li><a href="#">Start</a></li>
+            <li><a href="https://github.com/palkerecsenyi/magic/">Github</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>&copy; Magic 2018 | Magic.CSS <span class="version"></span><span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
+      </div>
+    </footer>
+    <script src="../../prism.js"></script>
+  </body>
+</html>

@@ -65,6 +65,9 @@ $break-m: 425px;
 $break-t: 768px;
 $break-l: 1024px;
 
+//Version
+$version: 'v0.2.1';
+
 //Media mixin
 @mixin media($breakpoint){
   @media only screen and (max-width: $breakpoint){
@@ -223,13 +226,12 @@ p{
 //Link
 .link{
   text-decoration:none;
-  color:$default-darker;
-  text-transform: uppercase;
+  color:$blue-darker;
   transition: all .1s ease;
   font-weight: bolder;
 }
 .link:hover{
-  color: $default;
+  color: $blue;
 }
 //Screen size hides
 .mobile{
@@ -315,7 +317,7 @@ p{
   margin-bottom:10px;
   margin-top:5px;
   border-radius: 3px;
-  width:98%;
+  width:100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   box-sizing: border-box;
 }
@@ -555,6 +557,9 @@ nav + .container, nav + #nav-mobile + .container{
       font-family: $font-regular;
     }
   }
+  &.full{
+    height: 100vh !important;
+  }
 }
 nav + .hero{
   margin-top:50px;
@@ -562,6 +567,43 @@ nav + .hero{
 @include media($break-t){
   nav + .hero{
     margin-top:61px;
+  }
+}
+.hero-img{
+  position:relative;
+  width:100%;
+  margin:auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height:50vh;
+  img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    transform: translateZ(-1px);
+  }
+  .hero-content{
+    position:absolute;
+    overflow: auto;
+    text-align: center;
+    color:white;
+    .title{
+      font-size:62px;
+      margin-bottom:0;
+      margin-top:0;
+      padding:0;
+      font-family: $font-thin;
+    }
+    .caption{
+      font-size:20px;
+      margin-top:5px;
+      font-family: $font-regular;
+    }
+  }
+  &.full{
+    height:100vh !important;
   }
 }
 //Extra nav
@@ -728,6 +770,18 @@ nav + .navigation{
     &:last-child{
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
+    }
+  }
+  &.fluid{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .btn{
+      width: auto;
+      flex-grow:1;
+      flex-basis: 0;
+      text-align: center;
     }
   }
   &.vertical{
@@ -951,9 +1005,9 @@ a.btn-fluid{
 }
 //Person
 .person{
-  width:100%;
+  width:100% !important;
   padding:15px;
-  border-radius: 3px !important;
+  border-radius: 3px;
   margin:0 auto;
   color: white;
   margin-bottom:10px;
@@ -996,16 +1050,26 @@ a.btn-fluid{
   .content .description{
     margin: 10px 0 0 0;
   }
-  &:first-child{
-    border-radius: 3px 3px 0 0 !important;
-  }
-  &:last-child{
-    border-radius: 0 0 3px 3px !important;
-  }
 }
-.person-group .person{
-  margin:0 !important;
-  border-radius: 0;
+.person-group{
+  .person{
+    margin:0 !important;
+    &:not(:first-child):not(:last-child){
+      border-radius: 0;
+    }
+    &:first-child{
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    &:last-child{
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+  }
 }
 @include media($break-m){
   .person .identifier{
@@ -1030,11 +1094,6 @@ a.btn-fluid{
     width:50%;
     display:block;
     margin:0 auto;
-  }
-}
-@include media($break-sm){
-  .person{
-    width:85%;
   }
 }
 //Comments
@@ -1090,6 +1149,7 @@ a.btn-fluid{
     &:not(:first-of-type):not(:last-of-type){
       border-radius: 0;
       margin:0;
+      border-bottom:0.7px solid grey;
     }
     &:last-of-type{
       border-top-left-radius: 0;
@@ -1418,4 +1478,7 @@ input[type='checkbox']:checked + label:before{
 select{
   font-size:20px;
   margin-bottom:10px;
+}
+.version::after{
+  content: $version;
 }
