@@ -28,5 +28,15 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://palkerecsenyi.github.io/magic/docs/",
   "unpkg": "dist/magic.css",
-  "main": "dist/magic.css"
+  "main": "dist/magic.css",
+  "scripts": {
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/palkerecsenyi/magiclib.git"
+  },
+  "devDependencies": {
+    "semantic-release": "^12.2.4"
+  }
 }
