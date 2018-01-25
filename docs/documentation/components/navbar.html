@@ -273,10 +273,10 @@
       <p>Next, add this to your page <span class="i-code">head</span>:</p>
       <pre><code class="language-html">&lt;script&gt;function openNav(){document.getElementById(&quot;nav-mobile&quot;).style.width = &quot;100%&quot;;}function closeNav(){document.getElementById(&quot;nav-mobile&quot;).style.width = &quot;0&quot;;}&lt;/script&gt;</code></pre>
       <p>That's it! You should have a functioning mobile navbar! This page also has one. If you are using a desktop device, you can test it out with the button below:</p>
-      <a href="#" onclick="openNav()" class="btn btn-blue btn-fluid">Open navbar</a>
+      <a href="#" onclick="openNav(); return false;" class="btn btn-blue btn-fluid">Open navbar</a>
       <h3>Animation</h3>
       <p>You can also make the mobile navbar 'slide' rather than appear, by adding the <span class="i-code">animate</span> class to the div:</p>
-      <a href="#" onclick="openAnimatedNav()" class="btn btn-blue btn-fluid">Open animated navbar</a>
+      <a href="#" onclick="openAnimatedNav(); return false;" class="btn btn-blue btn-fluid">Open animated navbar</a>
     </div>
     <footer class="blue">
       <div class="body">

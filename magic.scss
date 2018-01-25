@@ -14,19 +14,19 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see https://github.com/palkerecsenyi/magic/blob/master/LICENSE.
 
-MAGIC.CSS VERSION 0.2.2 on npm https://www.npmjs.com/package/magical-css
+MAGIC.CSS VERSION 0.2.3 on npm https://www.npmjs.com/package/magical-css
 */
 @font-face{
   font-family: 'Noto';
-  src: url('../fonts/NotoSans-Regular.ttf');
+  src: url('fonts/NotoSans-Regular.ttf');
 }
 @font-face{
   font-family: 'NotoThin';
-  src: url('../fonts/NotoSans-Thin.ttf');
+  src: url('fonts/NotoSans-Thin.ttf');
 }
 @font-face{
   font-family: 'NotoBold';
-  src: url('../fonts/NotoSans-Bold.ttf');
+  src: url('fonts/NotoSans-Bold.ttf');
 }
 //Native colours
 $default: #00D1B2;
@@ -68,7 +68,7 @@ $break-t: 768px;
 $break-l: 1024px;
 
 //Version
-$version: 'v0.2.2';
+$version: 'v0.2.3';
 
 //Media mixin
 @mixin media($breakpoint){
@@ -220,9 +220,9 @@ p{
 }
 .gradient-blue{
   background: #4e54c8;
-  background: -webkit-linear-gradient(left, #4e54c8, #8f94fb);
-  background: -o-linear-gradient(left, #4e54c8, #8f94fb);
-  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  background: -webkit-linear-gradient(left, #56ccf2, #2f80ed);
+  background: -o-linear-gradient(left, #56ccf2, #2f80ed);
+  background: linear-gradient(to right, #56ccf2, #2f80ed);
   color:white;
 }
 //Link
@@ -474,7 +474,9 @@ nav + .container, nav + #nav-mobile + .container{
     max-width: 100%;
     flex-basis: 100%;
     margin:0;
-    margin-bottom:10px;
+    padding:0;
+    padding:0;
+    padding-bottom:20px;
   }
 }
 @include media($break-t){
@@ -558,6 +560,9 @@ nav + .container, nav + #nav-mobile + .container{
       margin-top:5px;
       font-family: $font-regular;
     }
+    .hero-action{
+      margin-top:0;
+    }
   }
   &.full{
     height: 100vh !important;
@@ -618,7 +623,6 @@ nav + .hero{
   display:flex;
   justify-content: flex-start;
   align-items: center;
-  overflow:auto;
   white-space:nowrap;
   z-index:960;
   padding-left:10%;
