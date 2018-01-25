@@ -13,16 +13,18 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see https://github.com/palkerecsenyi/magic/blob/master/LICENSE.
+
+MAGIC.CSS VERSION 0.2.3 on npm https://www.npmjs.com/package/magical-css
 */
 @font-face {
   font-family: 'Noto';
-  src: url("../fonts/NotoSans-Regular.ttf"); }
+  src: url("fonts/NotoSans-Regular.ttf"); }
 @font-face {
   font-family: 'NotoThin';
-  src: url("../fonts/NotoSans-Thin.ttf"); }
+  src: url("fonts/NotoSans-Thin.ttf"); }
 @font-face {
   font-family: 'NotoBold';
-  src: url("../fonts/NotoSans-Bold.ttf"); }
+  src: url("fonts/NotoSans-Bold.ttf"); }
 html {
   margin: 0;
   padding: 0; }
@@ -407,7 +409,9 @@ nav + .container, nav + #nav-mobile + .container {
     max-width: 100%;
     flex-basis: 100%;
     margin: 0;
-    margin-bottom: 10px; } }
+    padding: 0;
+    padding: 0;
+    padding-bottom: 20px; } }
 @media only screen and (max-width: 768px) {
   .row.pile-tablet {
     display: block;
@@ -480,6 +484,8 @@ nav + .container, nav + #nav-mobile + .container {
       font-size: 20px;
       margin-top: 5px;
       font-family: "Noto"; }
+    .hero .hero-content .hero-action {
+      margin-top: 0; }
   .hero.full {
     height: 100vh !important; }
 
@@ -530,7 +536,6 @@ nav + .hero {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  overflow: auto;
   white-space: nowrap;
   z-index: 960;
   padding-left: 10%;
@@ -1169,6 +1174,8 @@ nav {
         text-decoration: none;
         transition: all .3s ease;
         white-space: nowrap; }
+  nav.no-shadow {
+    box-shadow: 0 !important; }
 
 nav.default ul .nav-item.active a {
   background-color: #0effdb; }
@@ -1212,7 +1219,7 @@ nav.dark ul .nav-item a:hover {
 nav.light ul .nav-item a:hover {
   background-color: #DCDCDC; }
 
-nav.light ul .nav-item a, nav.light, nav.light ul .nav-brand-text {
+nav.light ul .nav-item a, nav.light, nav.light ul .nav-brand-text, nav.yellow ul .nav-item a, nav.yellow, nav.yellow ul .nav-brand-text {
   color: black !important; }
 
 .nav-mobile-open {
@@ -1359,6 +1366,6 @@ select {
   margin-bottom: 10px; }
 
 .version::after {
-  content: "v0.2.1"; }
+  content: "v0.2.3"; }
 
 /*# sourceMappingURL=magic.css.map */
