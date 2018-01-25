@@ -625,26 +625,27 @@ nav + .hero{
   align-items: center;
   white-space:nowrap;
   z-index:960;
-  padding-left:10%;
   overflow-y: hidden;
-  p{
-    display:inline-block;
-    font-family:$font-regular;
-    margin-right:5px;
-    top:50%;
+  .links{
+    margin: 0 10%;
     a{
-      color:white;
-      text-decoration: none;
-    }
-    &.bold{
-      font-weight:bolder;
+      display:inline-block;
       font-family:$font-regular;
-      font-size:20px;
-      margin-right:10px;
+      margin-right:5px;
+      top:50%;
+      color: inherit;
+      text-decoration: none;
+      transition: .3s all ease;
+      vertical-align: middle;
+      &:hover{
+        color: lightgrey;
+      }
+      &.section{
+        font-weight: bolder;
+        font-size:1.2rem;
+        vertical-align: middle;
+      }
     }
-  }
-  .section:not(:first-child){
-    margin-left:35px;
   }
 }
 nav + .navigation{
