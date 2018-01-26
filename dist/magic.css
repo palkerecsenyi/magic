@@ -14,7 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see https://github.com/palkerecsenyi/magic/blob/master/LICENSE.
 
-MAGIC.CSS VERSION 0.2.3 on npm https://www.npmjs.com/package/magical-css
+MAGIC.CSS VERSION 0.3.0 on npm https://www.npmjs.com/package/magical-css
 */
 @font-face {
   font-family: 'Noto';
@@ -25,6 +25,24 @@ MAGIC.CSS VERSION 0.2.3 on npm https://www.npmjs.com/package/magical-css
 @font-face {
   font-family: 'NotoBold';
   src: url("fonts/NotoSans-Bold.ttf"); }
+.gradient-red, .btn-grad.btn-grad-red {
+  background: #89216B;
+  background: -webkit-linear-gradient(left, #89216B, #DA4453);
+  background: -o-linear-gradient(left, #89216B, #DA4453);
+  background: linear-gradient(to right, #89216B, #DA4453); }
+
+.gradient-green, .btn-grad.btn-grad-green {
+  background: #11998e;
+  background: -webkit-linear-gradient(left, #11998e, #38ef7d);
+  background: -o-linear-gradient(left, #11998e, #38ef7d);
+  background: linear-gradient(to right, #11998e, #38ef7d); }
+
+.gradient-blue, .btn-grad.btn-grad-blue {
+  background: #4e54c8;
+  background: -webkit-linear-gradient(left, #56ccf2, #2f80ed);
+  background: -o-linear-gradient(left, #56ccf2, #2f80ed);
+  background: linear-gradient(to right, #56ccf2, #2f80ed); }
+
 html {
   margin: 0;
   padding: 0; }
@@ -158,24 +176,12 @@ p {
   color: black !important; }
 
 .gradient-red {
-  background: #89216B;
-  background: -webkit-linear-gradient(left, #89216B, #DA4453);
-  background: -o-linear-gradient(left, #89216B, #DA4453);
-  background: linear-gradient(to right, #89216B, #DA4453);
   color: white; }
 
 .gradient-green {
-  background: #11998e;
-  background: -webkit-linear-gradient(left, #11998e, #38ef7d);
-  background: -o-linear-gradient(left, #11998e, #38ef7d);
-  background: linear-gradient(to right, #11998e, #38ef7d);
   color: white; }
 
 .gradient-blue {
-  background: #4e54c8;
-  background: -webkit-linear-gradient(left, #56ccf2, #2f80ed);
-  background: -o-linear-gradient(left, #56ccf2, #2f80ed);
-  background: linear-gradient(to right, #56ccf2, #2f80ed);
   color: white; }
 
 .link {
@@ -183,9 +189,17 @@ p {
   color: #0f7ec8;
   transition: all .1s ease;
   font-weight: bolder; }
-
-.link:hover {
-  color: #209cee; }
+  .link.lined {
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, #56ccf2, #2f80ed);
+    border-image-slice: 1;
+    transition: border-bottom-width 0.3s; }
+    .link.lined:hover {
+      border-bottom-width: 0; }
+  .link.capitals {
+    text-transform: uppercase; }
+  .link:hover {
+    color: #209cee; }
 
 .mobile {
   display: none; }
@@ -670,12 +684,12 @@ nav + .navigation {
   white-space: nowrap; }
 
 .btn-grad {
-  padding: 10px 25px;
+  padding: 8px 35px;
   border: none;
   color: white;
   font-family: "NotoThin", sans-serif;
-  font-size: 20px;
-  transition: all .4s ease;
+  font-size: 18px;
+  transition: all .2s ease;
   text-decoration: none;
   margin-top: 10px;
   border-radius: 25px;
@@ -731,7 +745,7 @@ nav + .navigation {
   padding: 15px 30px; }
 
 .btn-grad.btn-large {
-  padding: 15px 37.5px;
+  padding: 15px 65.625px;
   border-radius: 37.5px; }
 
 .btn-small {
@@ -739,7 +753,7 @@ nav + .navigation {
   padding: 7.5px 15px; }
 
 .btn-grad.btn-small {
-  padding: 7.5px 18.75px;
+  padding: 7.5px 32.8125px;
   border-radius: 18.75px; }
 
 .btn-fluid {
@@ -752,22 +766,6 @@ a.btn-fluid {
 
 .btn-grad:hover {
   box-shadow: 5px 5px 25px -6px rgba(0, 0, 0, 0.75); }
-
-.btn-grad.btn-grad-red {
-  background: #DA4453;
-  background: -webkit-linear-gradient(left, #89216B, #DA4453);
-  background: -o-linear-gradient(left, #89216B, #DA4453);
-  background: linear-gradient(to right, #89216B, #DA4453); }
-
-.btn-grad.btn-grad-green {
-  background: -webkit-linear-gradient(left, #11998e, #38ef7d);
-  background: -o-linear-gradient(left, #11998e, #38ef7d);
-  background: linear-gradient(to right, #11998e, #38ef7d); }
-
-.btn-grad.btn-grad-blue {
-  background: -webkit-linear-gradient(left, #4e54c8, #8f94fb);
-  background: -o-linear-gradient(left, #4e54c8, #8f94fb);
-  background: linear-gradient(to right, #4e54c8, #8f94fb); }
 
 .btn.btn-default {
   background-color: #00D1B2; }
@@ -1367,6 +1365,6 @@ select {
   margin-bottom: 10px; }
 
 .version::after {
-  content: "v0.2.3"; }
+  content: "v0.3.0"; }
 
 /*# sourceMappingURL=magic.css.map */
