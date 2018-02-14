@@ -14,7 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see https://github.com/palkerecsenyi/magic/blob/master/LICENSE.
 
-MAGIC.CSS VERSION 0.2.3 on npm https://www.npmjs.com/package/magical-css
+MAGIC.CSS VERSION 0.3.0 on npm https://www.npmjs.com/package/magical-css
 */
 @font-face{
   font-family: 'Noto';
@@ -55,6 +55,26 @@ $green-darker-2: #128542;
 $yellow-darker-2: #daae00;
 $blue-darker-2: #0c64a0;
 
+//Native gradients
+%gradient-red{
+  background: #89216B;
+  background: -webkit-linear-gradient(left, #89216B, #DA4453);
+  background: -o-linear-gradient(left, #89216B, #DA4453);
+  background: linear-gradient(to right, #89216B, #DA4453);
+}
+%gradient-green{
+  background: #11998e;
+  background: -webkit-linear-gradient(left, #11998e, #38ef7d);
+  background: -o-linear-gradient(left, #11998e, #38ef7d);
+  background: linear-gradient(to right, #11998e, #38ef7d);
+}
+%gradient-blue{
+  background: #4e54c8;
+  background: -webkit-linear-gradient(left, #56ccf2, #2f80ed);
+  background: -o-linear-gradient(left, #56ccf2, #2f80ed);
+  background: linear-gradient(to right, #56ccf2, #2f80ed);
+}
+
 //Fonts
 $font-stack: 'Roboto', 'Noto', sans-serif;
 $font-thin: 'NotoThin';
@@ -68,7 +88,7 @@ $break-t: 768px;
 $break-l: 1024px;
 
 //Version
-$version: 'v0.2.3';
+$version: 'v0.3.0';
 
 //Media mixin
 @mixin media($breakpoint){
@@ -205,24 +225,15 @@ p{
   color:black !important;
 }
 .gradient-red{
-  background: #89216B;
-  background: -webkit-linear-gradient(left, #89216B, #DA4453);
-  background: -o-linear-gradient(left, #89216B, #DA4453);
-  background: linear-gradient(to right, #89216B, #DA4453);
+  @extend %gradient-red;
   color:white;
 }
 .gradient-green{
-  background: #11998e;
-  background: -webkit-linear-gradient(left, #11998e, #38ef7d);
-  background: -o-linear-gradient(left, #11998e, #38ef7d);
-  background: linear-gradient(to right, #11998e, #38ef7d);
+  @extend %gradient-green;
   color:white;
 }
 .gradient-blue{
-  background: #4e54c8;
-  background: -webkit-linear-gradient(left, #56ccf2, #2f80ed);
-  background: -o-linear-gradient(left, #56ccf2, #2f80ed);
-  background: linear-gradient(to right, #56ccf2, #2f80ed);
+  @extend %gradient-blue;
   color:white;
 }
 //Link
@@ -231,9 +242,21 @@ p{
   color:$blue-darker;
   transition: all .1s ease;
   font-weight: bolder;
-}
-.link:hover{
-  color: $blue;
+  &.lined{
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, #56ccf2, #2f80ed);
+    border-image-slice: 1;
+    transition: border-bottom-width 0.3s;
+    &:hover{
+      border-bottom-width: 0;
+    }
+  }
+  &.capitals{
+    text-transform: uppercase;
+  }
+  &:hover{
+    color: $blue;
+  }
 }
 //Screen size hides
 .mobile{
@@ -511,6 +534,15 @@ nav + .container, nav + #nav-mobile + .container{
 .box.box-fluid{
   width:100% !important;
 }
+//Floaters
+.floater{
+  will-change: transform, box-shadow;
+  transition: all .3s ease;
+  &:hover{
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: translateY(-5px);
+  }
+}
 @include media($break-m){
   .box{
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
@@ -625,26 +657,27 @@ nav + .hero{
   align-items: center;
   white-space:nowrap;
   z-index:960;
-  padding-left:10%;
   overflow-y: hidden;
-  p{
-    display:inline-block;
-    font-family:$font-regular;
-    margin-right:5px;
-    top:50%;
+  .links{
+    margin: 0 10%;
     a{
-      color:white;
-      text-decoration: none;
-    }
-    &.bold{
-      font-weight:bolder;
+      display:inline-block;
       font-family:$font-regular;
-      font-size:20px;
-      margin-right:10px;
+      margin-right:5px;
+      top:50%;
+      color: inherit;
+      text-decoration: none;
+      transition: .3s all ease;
+      vertical-align: middle;
+      &:hover{
+        color: lightgrey;
+      }
+      &.section{
+        font-weight: bolder;
+        font-size:1.2rem;
+        vertical-align: middle;
+      }
     }
-  }
-  .section:not(:first-child){
-    margin-left:35px;
   }
 }
 nav + .navigation{
@@ -749,12 +782,12 @@ nav + .navigation{
   white-space: nowrap;
 }
 .btn-grad{
-  padding:10px 25px;
+  padding:8px 35px;
   border:none;
   color:white;
   font-family:$font-thin,sans-serif;
-  font-size:20px;
-  transition:all .4s ease;
+  font-size:18px;
+  transition:all .2s ease;
   text-decoration: none;
   margin-top:10px;
   border-radius:25px;
@@ -764,6 +797,9 @@ nav + .navigation{
   white-space: nowrap;
 }
 .btn-group{
+  display:flex;
+  overflow-x:auto;
+  overflow-y:hidden;
   .btn{
     border-radius:0;
     margin:0;
@@ -821,7 +857,7 @@ nav + .navigation{
   padding:15px 30px;
 }
 .btn-grad.btn-large{
-  padding:15px 37.5px;
+  padding:15px 65.625px;
   border-radius: 37.5px;
 }
 .btn-small{
@@ -829,7 +865,7 @@ nav + .navigation{
   padding:7.5px 15px;
 }
 .btn-grad.btn-small{
-  padding:7.5px 18.75px;
+  padding:7.5px 32.8125px;
   border-radius:18.75px;
 }
 .btn-fluid{
@@ -844,20 +880,13 @@ a.btn-fluid{
   box-shadow: 5px 5px 25px -6px rgba(0,0,0,0.75);
 }
 .btn-grad.btn-grad-red{
-  background: #DA4453;
-  background: -webkit-linear-gradient(left, #89216B, #DA4453);
-  background: -o-linear-gradient(left, #89216B, #DA4453);
-  background: linear-gradient(to right, #89216B, #DA4453);
+  @extend %gradient-red;
 }
 .btn-grad.btn-grad-green{
-  background: -webkit-linear-gradient(left, #11998e, #38ef7d);
-  background: -o-linear-gradient(left, #11998e, #38ef7d);
-  background: linear-gradient(to right, #11998e, #38ef7d);
+  @extend %gradient-green;
 }
 .btn-grad.btn-grad-blue{
-  background: -webkit-linear-gradient(left, #4e54c8, #8f94fb);
-  background: -o-linear-gradient(left, #4e54c8, #8f94fb);
-  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  @extend %gradient-blue;
 }
 .btn.btn-default{
   background-color: $default;
@@ -1406,27 +1435,11 @@ input[type='email'],input[type='text'],input[type='password'],textarea{
   margin-bottom:10px;
   border-radius:6px;
   border: 1px solid #A4A4A4;
+  box-sizing:border-box
 }
 input[type='email']:focus,input[type='text']:focus,input[type='password']:focus,textarea:focus{
   box-shadow: 0 0 0 4px rgba(99, 130, 242, 0.7);
   outline:none;
-}
-input[type='submit']{
-  background-color:#1E75DC;
-  padding:10px 20px;
-  border:none;
-  color:white;
-  font-family:$font-regular,sans-serif;
-  font-size:18px;
-  text-transform: uppercase;
-  transition:all .1s linear;
-  text-decoration: none;
-  margin-top:10px;
-  border-radius:5px;
-}
-input[type='submit']:hover{
-  background-color:#478FE5;
-  cursor:pointer;
 }
 input[type='radio']{
   visibility:hidden;
