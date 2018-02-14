@@ -534,6 +534,15 @@ nav + .container, nav + #nav-mobile + .container{
 .box.box-fluid{
   width:100% !important;
 }
+//Floaters
+.floater{
+  will-change: transform, box-shadow;
+  transition: all .3s ease;
+  &:hover{
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: translateY(-5px);
+  }
+}
 @include media($break-m){
   .box{
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
@@ -788,6 +797,9 @@ nav + .navigation{
   white-space: nowrap;
 }
 .btn-group{
+  display:flex;
+  overflow-x:auto;
+  overflow-y:hidden;
   .btn{
     border-radius:0;
     margin:0;
@@ -1423,27 +1435,11 @@ input[type='email'],input[type='text'],input[type='password'],textarea{
   margin-bottom:10px;
   border-radius:6px;
   border: 1px solid #A4A4A4;
+  box-sizing:border-box
 }
 input[type='email']:focus,input[type='text']:focus,input[type='password']:focus,textarea:focus{
   box-shadow: 0 0 0 4px rgba(99, 130, 242, 0.7);
   outline:none;
-}
-input[type='submit']{
-  background-color:#1E75DC;
-  padding:10px 20px;
-  border:none;
-  color:white;
-  font-family:$font-regular,sans-serif;
-  font-size:18px;
-  text-transform: uppercase;
-  transition:all .1s linear;
-  text-decoration: none;
-  margin-top:10px;
-  border-radius:5px;
-}
-input[type='submit']:hover{
-  background-color:#478FE5;
-  cursor:pointer;
 }
 input[type='radio']{
   visibility:hidden;
