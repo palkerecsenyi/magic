@@ -1322,6 +1322,7 @@ nav{
       text-decoration: none;
       font-family: $font-thin;
       font-size:24px;
+      white-space: nowrap;
     }
     .nav-brand-container{
       display:block;
@@ -1368,7 +1369,7 @@ nav.light ul .nav-item a:hover{ background-color: #DCDCDC }
 nav.light ul .nav-item a, nav.light, nav.light ul .nav-brand-text, nav.yellow ul .nav-item a, nav.yellow, nav.yellow ul .nav-brand-text{
   color:black !important;
 }
-.nav-mobile-open{ 
+.nav-mobile-open{
   display:none;
   cursor: pointer;
 }

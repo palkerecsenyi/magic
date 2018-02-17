@@ -1165,7 +1165,8 @@ nav {
       text-align: center;
       text-decoration: none;
       font-family: "NotoThin";
-      font-size: 24px; }
+      font-size: 24px;
+      white-space: nowrap; }
     nav ul .nav-brand-container {
       display: block;
       margin: 0;
