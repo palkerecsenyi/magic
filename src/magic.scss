@@ -55,6 +55,9 @@ $green-darker-2: #128542;
 $yellow-darker-2: #daae00;
 $blue-darker-2: #0c64a0;
 
+//List of standard colours
+$standard: default red green yellow blue dark light;
+
 //Native gradients
 %gradient-red{
   background: #89216B;
@@ -87,13 +90,40 @@ $break-m: 425px;
 $break-t: 768px;
 $break-l: 1024px;
 
-//Version
-$version: 'v0.3.1';
+//Controllers
+$version: 'v0.4.0';
+$debug: true;
+//^^^ Display errors or not (default: true)
 
 //Media mixin
 @mixin media($breakpoint){
   @media only screen and (max-width: $breakpoint){
     @content;
+  }
+}
+
+//Error mixin
+@mixin error($message){
+  @if ($debug){
+    content: 'Magic.CSS found a layout error: \A\A'$message'\A\A Please fix this error to remove this warning or set the "debug" SASS variable to false in magic.scss, and compile it.';
+    font-family: sans-serif !important;
+    color:white;
+    position: fixed;
+    background-color:red;
+    margin:0;
+    padding-top:20vh;
+    left:0;
+    top:0;
+    text-align:center;
+    z-index: 60;
+    font-size: 2rem;
+    height:100vh;
+    width:100vw;
+    text-decoration: none;
+    text-transform: none;
+    white-space: pre-wrap;
+    pointer-events: none;
+    font-weight: normal;
   }
 }
 
@@ -123,6 +153,7 @@ h6{ font-size:1rem; }
 p{
   line-height:22px;
   font-family:$font-regular;
+  font-size: 1rem;
 }
 //Colours
 .default{
@@ -649,14 +680,13 @@ nav + .hero{
 .navigation{
   width:100%;
   color:white;
-  height:50px;
   position:fixed;
   top:0;
   display:flex;
   justify-content: flex-start;
   align-items: center;
   white-space:nowrap;
-  z-index:960;
+  z-index:20;
   overflow-y: hidden;
   .links{
     margin: 0 10%;
@@ -669,6 +699,7 @@ nav + .hero{
       text-decoration: none;
       transition: .3s all ease;
       vertical-align: middle;
+      padding: .6rem 0;
       &:hover{
         color: lightgrey;
       }
@@ -676,6 +707,13 @@ nav + .hero{
         font-weight: bolder;
         font-size:1.2rem;
         vertical-align: middle;
+      }
+      &.active{
+        border-bottom: 1rem solid white;
+        margin-bottom: -1rem;
+      }
+      &.section.active::before{
+        @include error("Can't make a navigation link have both 'active' and 'section' class.");
       }
     }
   }
@@ -888,21 +926,6 @@ a.btn-fluid{
 .btn-grad.btn-grad-blue{
   @extend %gradient-blue;
 }
-/*
-$default: #00D1B2; //(0,209,178)
-$red: #FF3860; //(255,56,96)
-$green: #1DD168; //(29,209,104)
-$yellow: #ffdd57; //(255,221,87)
-$blue: #209cee; //(32,156,238)
-$dark: #242424; //(36,36,36)
-$light: #F3F3F3; //(243,243,243)
-
-$default-lighter: #0effdb; //(14,255,219)
-$red-lighter: #ff5f7f; //(255,95,127)
-$green-lighter: #3fe484; //(63,228,132)
-$yellow-lighter: #ffe378; //(255,227,120)
-$blue-lighter: #4caff1; //(76,175,241)
-*/
 .btn.btn-default{
   background-color: $default;
   &:focus{
@@ -1034,6 +1057,12 @@ $blue-lighter: #4caff1; //(76,175,241)
 .btn:disabled:hover, .btn.btn-disabled:hover{
   background-color:#6B6B6B !important;
   cursor:not-allowed;
+}
+[class*="darken"][class*="btn"]::before, [class*="lighten"][class*="btn"]::before{
+  @include error("Cannot use darkens or lightens for button colours.");
+}
+[class*="btn"][class*="btn-"]:not(.btn-fluid):not(.btn-group):not([class*="default"]):not([class*="red"]):not([class*="blue"]):not([class*="green"]):not([class*="yellow"]):not([class*="dark"]):not([class*="light"])::before{
+  @include error("Specified btn-XXX attribute not found.");
 }
 //Breadcrumb
 .breadcrumb{
@@ -1340,7 +1369,7 @@ nav{
   justify-content: space-between;
   align-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 40;
   box-shadow:0px 2px 8px 0px rgba(50, 50, 50, 0.5);
   position: fixed;
   top:0;
@@ -1541,6 +1570,29 @@ input[type='checkbox']:checked + label:before{
 select{
   font-size:20px;
   margin-bottom:10px;
+  border-radius: 4px;
+  font-family: $font-regular;
+  outline:none;
+  transition: all .3s ease;
+  padding-right:5px;
+}
+select:hover{
+  background-color: $light;
+}
+select:focus{
+  background-color: transparent !important;
+  box-shadow: 0 0 0 3px rgba(170,170,170,0.5);
+}
+select option{
+  transition: all .3s ease;
+  padding:5px;
+}
+select option:hover{
+  @each $colour in $standard{
+    &.opt-#{$colour}{
+      background-color:$colour;
+    }
+  }
 }
 .version::after{
   content: $version;

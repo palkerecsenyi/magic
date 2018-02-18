@@ -79,7 +79,8 @@ h6 {
 
 p {
   line-height: 22px;
-  font-family: "Noto"; }
+  font-family: "Noto";
+  font-size: 1rem; }
 
 .default {
   background-color: #00D1B2;
@@ -551,14 +552,13 @@ nav + .hero {
 .navigation {
   width: 100%;
   color: white;
-  height: 50px;
   position: fixed;
   top: 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   white-space: nowrap;
-  z-index: 960;
+  z-index: 20;
   overflow-y: hidden; }
   .navigation .links {
     margin: 0 10%; }
@@ -570,13 +570,37 @@ nav + .hero {
       color: inherit;
       text-decoration: none;
       transition: .3s all ease;
-      vertical-align: middle; }
+      vertical-align: middle;
+      padding: .6rem 0; }
       .navigation .links a:hover {
         color: lightgrey; }
       .navigation .links a.section {
         font-weight: bolder;
         font-size: 1.2rem;
         vertical-align: middle; }
+      .navigation .links a.active {
+        border-bottom: 1rem solid white;
+        margin-bottom: -1rem; }
+      .navigation .links a.section.active::before {
+        content: "Magic.CSS found a layout error: \a \a" "Can't make a navigation link have both 'active' and 'section' class." '\a \aPlease fix this error to remove this warning or set the "debug" SASS variable to false in magic.scss, and compile it.';
+        font-family: sans-serif !important;
+        color: white;
+        position: fixed;
+        background-color: red;
+        margin: 0;
+        padding-top: 20vh;
+        left: 0;
+        top: 0;
+        text-align: center;
+        z-index: 60;
+        font-size: 2rem;
+        height: 100vh;
+        width: 100vw;
+        text-decoration: none;
+        text-transform: none;
+        white-space: pre-wrap;
+        pointer-events: none;
+        font-weight: normal; }
 
 nav + .navigation {
   top: 50px;
@@ -778,21 +802,6 @@ a.btn-fluid {
 .btn-grad:hover {
   box-shadow: 5px 5px 25px -6px rgba(0, 0, 0, 0.75); }
 
-/*
-$default: #00D1B2; //(0,209,178)
-$red: #FF3860; //(255,56,96)
-$green: #1DD168; //(29,209,104)
-$yellow: #ffdd57; //(255,221,87)
-$blue: #209cee; //(32,156,238)
-$dark: #242424; //(36,36,36)
-$light: #F3F3F3; //(243,243,243)
-
-$default-lighter: #0effdb; //(14,255,219)
-$red-lighter: #ff5f7f; //(255,95,127)
-$green-lighter: #3fe484; //(63,228,132)
-$yellow-lighter: #ffe378; //(255,227,120)
-$blue-lighter: #4caff1; //(76,175,241)
-*/
 .btn.btn-default {
   background-color: #00D1B2; }
   .btn.btn-default:focus {
@@ -918,6 +927,48 @@ $blue-lighter: #4caff1; //(76,175,241)
 .btn:disabled:hover, .btn.btn-disabled:hover {
   background-color: #6B6B6B !important;
   cursor: not-allowed; }
+
+[class*="darken"][class*="btn"]::before, [class*="lighten"][class*="btn"]::before {
+  content: "Magic.CSS found a layout error: \a \a" "Cannot use darkens or lightens for button colours." '\a \aPlease fix this error to remove this warning or set the "debug" SASS variable to false in magic.scss, and compile it.';
+  font-family: sans-serif !important;
+  color: white;
+  position: fixed;
+  background-color: red;
+  margin: 0;
+  padding-top: 20vh;
+  left: 0;
+  top: 0;
+  text-align: center;
+  z-index: 60;
+  font-size: 2rem;
+  height: 100vh;
+  width: 100vw;
+  text-decoration: none;
+  text-transform: none;
+  white-space: pre-wrap;
+  pointer-events: none;
+  font-weight: normal; }
+
+[class*="btn"][class*="btn-"]:not(.btn-fluid):not(.btn-group):not([class*="default"]):not([class*="red"]):not([class*="blue"]):not([class*="green"]):not([class*="yellow"]):not([class*="dark"]):not([class*="light"])::before {
+  content: "Magic.CSS found a layout error: \a \a" "Specified btn-XXX attribute not found." '\a \aPlease fix this error to remove this warning or set the "debug" SASS variable to false in magic.scss, and compile it.';
+  font-family: sans-serif !important;
+  color: white;
+  position: fixed;
+  background-color: red;
+  margin: 0;
+  padding-top: 20vh;
+  left: 0;
+  top: 0;
+  text-align: center;
+  z-index: 60;
+  font-size: 2rem;
+  height: 100vh;
+  width: 100vw;
+  text-decoration: none;
+  text-transform: none;
+  white-space: pre-wrap;
+  pointer-events: none;
+  font-weight: normal; }
 
 .breadcrumb {
   width: 100%;
@@ -1173,7 +1224,7 @@ nav {
   justify-content: space-between;
   align-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 40;
   box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
   position: fixed;
   top: 0;
@@ -1387,9 +1438,40 @@ input[type='checkbox']:checked + label:before {
 
 select {
   font-size: 20px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  border-radius: 4px;
+  font-family: "Noto";
+  outline: none;
+  transition: all .3s ease;
+  padding-right: 5px; }
+
+select:hover {
+  background-color: #F3F3F3; }
+
+select:focus {
+  background-color: transparent !important;
+  box-shadow: 0 0 0 3px rgba(170, 170, 170, 0.5); }
+
+select option {
+  transition: all .3s ease;
+  padding: 5px; }
+
+select option:hover.opt-default {
+  background-color: default; }
+select option:hover.opt-red {
+  background-color: red; }
+select option:hover.opt-green {
+  background-color: green; }
+select option:hover.opt-yellow {
+  background-color: yellow; }
+select option:hover.opt-blue {
+  background-color: blue; }
+select option:hover.opt-dark {
+  background-color: dark; }
+select option:hover.opt-light {
+  background-color: light; }
 
 .version::after {
-  content: "v0.3.1"; }
+  content: "v0.4.0"; }
 
 /*# sourceMappingURL=magic.css.map */
