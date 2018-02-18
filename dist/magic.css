@@ -14,7 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see https://github.com/palkerecsenyi/magic/blob/master/LICENSE.
 
-MAGIC.CSS VERSION 0.3.0 on npm https://www.npmjs.com/package/magical-css
+MAGIC.CSS VERSION 0.3.1 on npm https://www.npmjs.com/package/magical-css
 */
 @font-face {
   font-family: 'Noto';
@@ -675,11 +675,11 @@ nav + .navigation {
   border-radius: 50%; }
 
 .btn {
-  padding: 10px 20px;
+  padding: 7.5px 15px;
   border: none;
   color: white;
   font-family: "Noto", sans-serif;
-  font-size: 18px;
+  font-size: 1rem;
   text-transform: uppercase;
   transition: all .2s ease;
   text-decoration: none;
@@ -778,31 +778,60 @@ a.btn-fluid {
 .btn-grad:hover {
   box-shadow: 5px 5px 25px -6px rgba(0, 0, 0, 0.75); }
 
+/*
+$default: #00D1B2; //(0,209,178)
+$red: #FF3860; //(255,56,96)
+$green: #1DD168; //(29,209,104)
+$yellow: #ffdd57; //(255,221,87)
+$blue: #209cee; //(32,156,238)
+$dark: #242424; //(36,36,36)
+$light: #F3F3F3; //(243,243,243)
+
+$default-lighter: #0effdb; //(14,255,219)
+$red-lighter: #ff5f7f; //(255,95,127)
+$green-lighter: #3fe484; //(63,228,132)
+$yellow-lighter: #ffe378; //(255,227,120)
+$blue-lighter: #4caff1; //(76,175,241)
+*/
 .btn.btn-default {
   background-color: #00D1B2; }
+  .btn.btn-default:focus {
+    box-shadow: 0 0 0 3px rgba(14, 255, 219, 0.8); }
 
 .btn.btn-blue {
   background-color: #209cee; }
+  .btn.btn-blue:focus {
+    box-shadow: 0 0 0 3px rgba(76, 175, 241, 0.8); }
 
 .btn.btn-yellow {
   background-color: #ffdd57;
   color: black !important; }
+  .btn.btn-yellow:focus {
+    box-shadow: 0 0 0 3px rgba(255, 227, 120, 0.8); }
 
 .btn.btn-red {
   background-color: #FF3860; }
+  .btn.btn-red:focus {
+    box-shadow: 0 0 0 3px rgba(255, 95, 127, 0.8); }
 
 .btn.btn-green {
   background-color: #1DD168; }
+  .btn.btn-green:focus {
+    box-shadow: 0 0 0 3px rgba(63, 228, 132, 0.8); }
 
 .btn.btn-dark {
   background-color: #242424; }
+  .btn.btn-dark:focus {
+    box-shadow: 0 0 0 3px rgba(50, 50, 50, 0.8); }
 
 .btn.btn-light {
   background-color: #F3F3F3;
   color: black !important; }
+  .btn.btn-light:focus {
+    box-shadow: 0 0 0 3px rgba(245, 245, 245, 0.8); }
 
 .btn-outline {
-  background-color: white !important; }
+  background-color: transparent !important; }
 
 .btn-outline.btn-default {
   border: 2px solid #00D1B2;
@@ -1165,7 +1194,8 @@ nav {
       text-align: center;
       text-decoration: none;
       font-family: "NotoThin";
-      font-size: 24px; }
+      font-size: 24px;
+      white-space: nowrap; }
     nav ul .nav-brand-container {
       display: block;
       margin: 0;
@@ -1360,6 +1390,6 @@ select {
   margin-bottom: 10px; }
 
 .version::after {
-  content: "v0.3.0"; }
+  content: "v0.3.1"; }
 
 /*# sourceMappingURL=magic.css.map */

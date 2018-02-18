@@ -1,139 +1,196 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://unpkg.com/magical-css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
-		
-		<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
-		<link rel="stylesheet" href="../../prism.css">
-		<meta charset="UTF-8">
-		<script>hljs.initHighlightingOnLoad();</script>
-		<title>Magic - Documentation</title>
-			<script>
-			function openNav(){
-				document.getElementById("nav-mobile").style.width = "100%";
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/magical-css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
 
-			}
-			function closeNav(){
-				document.getElementById("nav-mobile").style.width = "0";
-			}
-		</script>
-	</head>
-	<body>
-		<div id="nav-mobile" class="blue animate">
-			<a href="javascript:void(0)" class="close" onClick="closeNav()">&times;</a>
-			<a href="https://palkerecsenyi.github.io/magic/">Home</a>
-			<a href="https://palkerecsenyi.github.io/magic/start">Get Started</a>
-			<a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a>
-			<a href="https://github.com/palkerecsenyi/magic">Github</a>
-		</div>
-		<nav class="blue">
-			<ul class="nav-left">
-				<li><a href="/magic" class="nav-brand-text">Magic.CSS</a></li>
-				<li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
-			</ul>
-			<ul class="nav-right">
-				<li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/">Home</a></li>
-				<li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/start">Get Started</a></li>
-				<li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a></li>
-				<li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
-			</ul>
-		</nav>
-		<div class="navigation blue">
-			<div class="links">
-				<a class="section" href="../layout/index.html">Layout</a>
-				<a href="../layout/container.html">Container</a>
-				<a href="../layout/grid.html">Grid</a>
-				<a href="../layout/type.html">Typography</a>
-				<a class="section" href="../components/index.html">Components</a>
-				<a href="../components/badges.html">Badge</a>
-				<a href="../components/box.html">Box</a><a href="../components/breadcrumb.html">Breadcrumb</a>
-				<a href="../components/button.html">Button</a>
-				<a href="../components/colour.html">Colour</a>  <a href="../components/comment.html">Comment</a>
-				<a href="../components/error.html">Error</a> <a href="../components/hero.html">Hero</a>  <a href="../components/navbar.html">Navbar</a>  <a href="../components/person.html">Person</a> <a href="../components/project.html">Project</a>
-			</div>
-		</div>
-		<div class="container">
-			<h1 class="header">Box</h1>
-			<hr class="separator">
-			<h2>Introduction</h2>
-			<p>A box in Magic.css is used to contain items, typically objects requiring user interaction, such as a form. Here's a quick example:</p>
-			<div class="box bottom center">
-				<h1 class="box-title">Sign in</h1>
-				<input type="text" placeholder="Username">
-				<input type="password" placeholder="Password">
-				<button class="btn btn-default btn-outline">Sign in</button>
-			</div>
-			<p>...is made with the following syntax:</p>
-			<pre class="top"><code class="language-markup line-numbers">&lt;div class=&quot;box center&quot;&gt;
+    <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+    <link rel="stylesheet" href="../../prism.css">
+    <meta charset="UTF-8">
+    <script>hljs.initHighlightingOnLoad();</script>
+    <title>Magic - Documentation</title>
+    <script>
+function openNav(){
+  document.getElementById("nav-mobile").style.width = "100%";
+
+}
+function closeNav(){
+  document.getElementById("nav-mobile").style.width = "0";
+}
+    </script>
+  </head>
+  <body>
+    <div id="nav-mobile" class="blue animate">
+      <a href="javascript:void(0)" class="close" onClick="closeNav()">&times;</a>
+      <a href="https://palkerecsenyi.github.io/magic/">Home</a>
+      <a href="https://palkerecsenyi.github.io/magic/start">Get Started</a>
+      <a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a>
+      <a href="https://github.com/palkerecsenyi/magic">Github</a>
+    </div>
+    <nav class="blue">
+      <ul class="nav-left">
+        <li><a href="/magic" class="nav-brand-text">Magic.CSS</a></li>
+        <li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/">Home</a></li>
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/start">Get Started</a></li>
+        <li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a></li>
+        <li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
+      </ul>
+    </nav>
+    <div class="navigation blue">
+      <div class="links">
+        <a class="section" href="../layout/index.html">Layout</a>
+        <a href="../layout/container.html">Container</a>
+        <a href="../layout/grid.html">Grid</a>
+        <a href="../layout/type.html">Typography</a>
+        <a class="section" href="../components/index.html">Components</a>
+        <a href="../components/badges.html">Badge</a>
+        <a href="../components/box.html">Box</a><a href="../components/breadcrumb.html">Breadcrumb</a>
+        <a href="../components/button.html">Button</a>
+        <a href="../components/colour.html">Colour</a>  <a href="../components/comment.html">Comment</a>
+        <a href="../components/error.html">Error</a> <a href="../components/hero.html">Hero</a>  <a href="../components/navbar.html">Navbar</a>  <a href="../components/person.html">Person</a> <a href="../components/project.html">Project</a>
+      </div>
+    </div>
+    <div class="container">
+      <h1 class="header">Box</h1>
+      <hr class="separator">
+      <h2>Introduction</h2>
+      <p>A box in Magic.css is used to contain items, typically objects requiring user interaction, such as a form. Here's a quick example:</p>
+      <div class="box bottom center">
+        <h1 class="box-title">Sign in</h1>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <button class="btn btn-default btn-outline">Sign in</button>
+      </div>
+      <p>...is made with the following syntax:</p>
+      <pre class="top"><code class="language-markup line-numbers">&lt;div class=&quot;box center&quot;&gt;
 	&lt;h1 class=&quot;box-title&quot;&gt;Sign in&lt;/h1&gt;
 	&lt;input type=&quot;text&quot; placeholder=&quot;Username&quot;&gt;
 	&lt;input type=&quot;password&quot; placeholder=&quot;Password&quot;&gt;
 	&lt;button class=&quot;btn btn-default btn-outline&quot;&gt;Sign in&lt;/button&gt;
 &lt;/div&gt;</code></pre>
-			<h2>Making boxes</h2>
-			<h3>Simple box</h3>
-			<p>Boxes, despite seeming very simple, are quite customisable. Firstly, basic markup for a box is as follows:</p>
-			<pre class="top"><code class="language-markup line-numbers">&lt;div class=&quot;box&quot;&gt;
+      <h2>Making boxes</h2>
+      <h3>Simple box</h3>
+      <p>Boxes, despite seeming very simple, are quite customisable. Firstly, basic markup for a box is as follows:</p>
+      <pre class="top"><code class="language-markup line-numbers">&lt;div class=&quot;box&quot;&gt;
 	...
 &lt;/div&gt;</code></pre>
-			<h3>Fluid box</h3>
-			<p>Then, you may wish to make the box fill 100% of the container:</p>
-			<pre class="top"><code class="language-markup line-numbers">&lt;div class=&quot;box box-fluid&quot;&gt;
+      <h3>Fluid box</h3>
+      <p>Then, you may wish to make the box fill 100% of the container:</p>
+      <pre class="top"><code class="language-markup line-numbers">&lt;div class=&quot;box box-fluid&quot;&gt;
 	...
 &lt;/div&gt;</code></pre>
-			<div class="box box-fluid">
-				<p>I'm fluid!</p>
-			</div>
-			<h3>Coloured box</h3>
-			<p>As with most other elements, you can also assign a Magic colour to a box. See the <a href="colour.html" class="link">colour</a> page for a guide on colours.</p>
-			<pre class="top"><code class="language-markup line-numbers">&lt;div class=&quot;box blue&quot;&gt;
+      <div class="box box-fluid">
+        <p>I'm fluid!</p>
+      </div>
+      <h3>Coloured box</h3>
+      <p>As with most other elements, you can also assign a Magic colour to a box. See the <a href="colour.html" class="link">colour</a> page for a guide on colours.</p>
+      <pre class="top"><code class="language-markup line-numbers">&lt;div class=&quot;box blue&quot;&gt;
 	...
 &lt;/div&gt;</code></pre>
-			<div class="box blue">
-				<p>I'm blue!</p>
-			</div>
-			<h3>Centered box</h3>
-			<p>By default, boxes are left-aligned. To center any non-text element in Magic (including boxes), you just need to add the <span class="i-code">center</span> class:</p>
-			<pre class="top"><code class="language-markup line-numbers">&lt;div class=&quot;box center&quot;&gt;
+      <div class="box blue">
+        <p>I'm blue!</p>
+      </div>
+      <h3>Centered box</h3>
+      <p>By default, boxes are left-aligned. To center any non-text element in Magic (including boxes), you just need to add the <span class="i-code">center</span> class:</p>
+      <pre class="top"><code class="language-markup line-numbers">&lt;div class=&quot;box center&quot;&gt;
 	...
 &lt;/div&gt;</code></pre>
-			<div class="box center">
-				<p>I'm centered!</p>
-			</div>
-			<h3>Box title</h3>
-			<p>By default, adding a <span class="i-code">&lt;h1&gt;</span> to act as the title of a box will not appear neat, due to excessive padding. To neatly add a title to a box:</p>
-			<div class="box">
-				<h1 class="box-title">I'm a title!</h1>
-				<p>This title looks much neater than one without the <span class="i-code">box-title</span> class, as it's sized correctly and does not have the excessive padding the headers typically do.</p>
-			</div>
-			<pre><code class="language-markup">&lt;div class="box"&gt;
+      <div class="box center">
+        <p>I'm centered!</p>
+      </div>
+      <h3>Box title</h3>
+      <p>By default, adding a <span class="i-code">&lt;h1&gt;</span> to act as the title of a box will not appear neat, due to excessive padding. To neatly add a title to a box:</p>
+      <div class="box">
+        <h1 class="box-title">I'm a title!</h1>
+        <p>This title looks much neater than one without the <span class="i-code">box-title</span> class, as it's sized correctly and does not have the excessive padding the headers typically do.</p>
+      </div>
+      <pre><code class="language-markup">&lt;div class="box"&gt;
 	&lt;h1 class="box-title"&gt;I'm a title!&lt;/h1&gt;
 	&lt;p&gt;This title looks much neater than one without the class, as it's sized correctly and does not have the excessive padding the headers typically do.&lt;/p&gt;
 &lt;/div&gt;</code></pre>
-			<h2>Usage</h2>
-			<p>Magic.css includes boxes for user-interactive content (e.g. sign-in forms, confirmation codes, etc). However, due to their simple nature, boxes can be used for practically any purpose. Though they may seem like it, they are <em>not</em>  the equivalent of 'Alerts' in <a class="link" href="https://getbootstrap.com/docs/4.0/components/alerts/">Bootstrap</a>.  In fact, there doesn't appear to be any close alternative to it. However, <a class="link" href="https://bulma.io/documentation/elements/box/">Bulma</a> has something practically equivalent. They are fully responsive (to the point that such simple elements can be responsive!), especially in terms of their margins.</p>
-		</div>
-		<footer class="blue">
-			<div class="body">
-				<div class="content">
-					<h1>Magic.css</h1>
-					<p>Neat and unique CSS framework for dynamic websites</p>
-				</div>
-				<div class="links">
-					<ul>
-						<li class="header">Pages</li>
-						<li><a href="/magic">Home</a></li>
-						<li><a href="#">Start</a></li>
-						<li><a href="https://github.com/palkerecsenyi/magic/">Github</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="bottom">
-				<p>&copy; Magic 2018 <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
-			</div>
-		</footer>
-		<script src="../../prism.js"></script>
-	</body>
+      <h3>Floater box</h3>
+      <p>You can also make a box that 'floats' or 'hovers' when it is hovered over. This is particularly useful in a three-column marketing layout as it adds interest to boring content:</p>
+      <div class="box floater">
+        <p>Hover on me!</p>
+      </div>
+      <pre class="top"><code class="language-markup">&lt;div class=&quot;box floater&quot;&gt;
+	...
+&lt;/div&gt;</code></pre>
+      <h3>Boxes in columns</h3>
+      <p>Using the <span class="i-code">box-fluid</span> class you can make boxes work neatly in columns. This is particularly useful for landing page layouts:</p>
+      <div class="row">
+        <div class="col col4">
+          <div>
+            <div class="box box-fluid floater">
+              <h1 class="box-title">Box 1</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col col4">
+          <div>
+            <div class="box box-fluid floater">
+              <h1 class="box-title">Box 2</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col col4">
+          <div>
+            <div class="box box-fluid floater">
+              <h1 class="box-title">Box 3</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col col4&quot;&gt;
+    &lt;div&gt;
+      &lt;div class=&quot;box box-fluid floater&quot;&gt;
+        &lt;h1 class=&quot;box-title&quot;&gt;Box 1&lt;/h1&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col col4&quot;&gt;
+    &lt;div&gt;
+      &lt;div class=&quot;box box-fluid floater&quot;&gt;
+        &lt;h1 class=&quot;box-title&quot;&gt;Box 2&lt;/h1&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col col4&quot;&gt;
+    &lt;div&gt;
+      &lt;div class=&quot;box box-fluid floater&quot;&gt;
+        &lt;h1 class=&quot;box-title&quot;&gt;Box 3&lt;/h1&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <div class="error info">See the <a class="link" style="color:white;" href="../layout/grid.html">grid documentation</a> for more information.</div>
+      <h2>Usage</h2>
+      <p>Magic.css includes boxes for user-interactive content (e.g. sign-in forms, confirmation codes, etc). However, due to their simple nature, boxes can be used for practically any purpose. Though they may seem like it, they are <em>not</em>  the equivalent of 'Alerts' in <a class="link" href="https://getbootstrap.com/docs/4.0/components/alerts/">Bootstrap</a>.  In fact, there doesn't appear to be any close alternative to it. However, <a class="link" href="https://bulma.io/documentation/elements/box/">Bulma</a> has something practically equivalent. They are fully responsive (to the point that such simple elements can be responsive!), especially in terms of their margins.</p>
+    </div>
+    <footer class="blue">
+      <div class="body">
+        <div class="content">
+          <h1>Magic.css</h1>
+          <p>Neat and unique CSS framework for dynamic websites</p>
+        </div>
+        <div class="links">
+          <ul>
+            <li class="header">Pages</li>
+            <li><a href="/magic">Home</a></li>
+            <li><a href="#">Start</a></li>
+            <li><a href="https://github.com/palkerecsenyi/magic/">Github</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>&copy; Magic 2018 <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
+      </div>
+    </footer>
+    <script src="../../prism.js"></script>
+  </body>
 </html>
