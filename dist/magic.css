@@ -53,10 +53,10 @@ body {
   padding: 0; }
 
 h1, h2 {
-  font-family: "NotoThin"; }
+  font-family: "NotoThin", sans-serif; }
 
 h3, h4, h5, h6 {
-  font-family: "Noto";
+  font-family: "Noto", "Roboto", sans-serif;
   font-weight: bolder; }
 
 h1 {
@@ -79,7 +79,7 @@ h6 {
 
 p {
   line-height: 22px;
-  font-family: "Noto";
+  font-family: "Noto", "Roboto", sans-serif;
   font-size: 1rem; }
 
 .default {
@@ -242,18 +242,18 @@ p {
 .header {
   font-size: 52px;
   margin-bottom: 0;
-  font-family: "Noto"; }
+  font-family: "Noto", "Roboto", sans-serif; }
 
 .sub-header {
   font-size: 34px;
   margin-bottom: 10px;
-  font-family: "NotoThin"; }
+  font-family: "NotoThin", sans-serif; }
 
 .header + .sub-header {
   margin-top: 0; }
 
 .trailer {
-  font-family: "NotoThin";
+  font-family: "NotoThin", sans-serif;
   font-size: 24px;
   font-weight: bolder;
   line-height: normal;
@@ -273,7 +273,7 @@ p {
   padding: 15px;
   font-size: 18px;
   color: white;
-  font-family: "Noto";
+  font-family: "Noto", "Roboto", sans-serif;
   margin-bottom: 10px;
   margin-top: 5px;
   border-radius: 3px;
@@ -330,7 +330,7 @@ p {
 
 .important-4 {
   font-size: 24px;
-  font-family: "NotoThin";
+  font-family: "NotoThin", sans-serif;
   font-weight: bolder; }
 
 .container {
@@ -501,11 +501,11 @@ nav + .container, nav + #nav-mobile + .container {
       margin-bottom: 0;
       margin-top: 0;
       padding: 0;
-      font-family: "NotoThin"; }
+      font-family: "NotoThin", sans-serif; }
     .hero .hero-content .caption {
       font-size: 20px;
       margin-top: 5px;
-      font-family: "Noto"; }
+      font-family: "Noto", "Roboto", sans-serif; }
     .hero .hero-content .hero-action {
       margin-top: 0; }
   .hero.full {
@@ -541,11 +541,11 @@ nav + .hero {
       margin-bottom: 0;
       margin-top: 0;
       padding: 0;
-      font-family: "NotoThin"; }
+      font-family: "NotoThin", sans-serif; }
     .hero-img .hero-content .caption {
       font-size: 20px;
       margin-top: 5px;
-      font-family: "Noto"; }
+      font-family: "Noto", "Roboto", sans-serif; }
   .hero-img.full {
     height: 100vh !important; }
 
@@ -564,7 +564,7 @@ nav + .hero {
     margin: 0 10%; }
     .navigation .links a {
       display: inline-block;
-      font-family: "Noto";
+      font-family: "Noto", "Roboto", sans-serif;
       margin-right: 5px;
       top: 50%;
       color: inherit;
@@ -583,10 +583,10 @@ nav + .hero {
         margin-bottom: -1rem; }
       .navigation .links a.section.active::before {
         content: "Magic.CSS found a layout error: \a \a" "Can't make a navigation link have both 'active' and 'section' class." '\a \aPlease fix this error to remove this warning or set the "debug" SASS variable to false in magic.scss, and compile it.';
-        font-family: sans-serif !important;
+        font-family: 'Noto' !important;
         color: white;
         position: fixed;
-        background-color: red;
+        background-color: #FF3860;
         margin: 0;
         padding-top: 20vh;
         left: 0;
@@ -627,7 +627,7 @@ nav + .navigation {
     .project .body .title {
       padding: 5px 0;
       margin-bottom: 0;
-      font-family: "NotoThin"; }
+      font-family: "NotoThin", sans-serif; }
   .project .footer {
     padding: 15px 0 1px 20px;
     margin-top: 0;
@@ -637,7 +637,7 @@ nav + .navigation {
       margin-top: 0;
       color: #D7D7D7;
       text-transform: uppercase;
-      font-family: "Noto"; }
+      font-family: "Noto", "Roboto", sans-serif; }
 
 .project.default .footer {
   background-color: #00a78e; }
@@ -688,12 +688,12 @@ nav + .navigation {
   color: black !important; }
 
 .badge {
-  font-family: "Noto";
+  font-family: "Noto", "Roboto", sans-serif;
   border-radius: 4px;
   padding: 1px 8px;
   display: inline-block; }
   .badge .badge-light {
-    font-family: "NotoThin"; }
+    font-family: "NotoThin", sans-serif; }
 
 .badge.round {
   border-radius: 50%; }
@@ -702,7 +702,7 @@ nav + .navigation {
   padding: 7.5px 15px;
   border: none;
   color: white;
-  font-family: "Noto", sans-serif;
+  font-family: "Noto", "Roboto", sans-serif, sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
   transition: all .2s ease;
@@ -718,7 +718,7 @@ nav + .navigation {
   padding: 8px 35px;
   border: none;
   color: white;
-  font-family: "NotoThin", sans-serif;
+  font-family: "NotoThin", sans-serif, sans-serif;
   font-size: 18px;
   transition: all .2s ease;
   text-decoration: none;
@@ -930,10 +930,10 @@ a.btn-fluid {
 
 [class*="darken"][class*="btn"]::before, [class*="lighten"][class*="btn"]::before {
   content: "Magic.CSS found a layout error: \a \a" "Cannot use darkens or lightens for button colours." '\a \aPlease fix this error to remove this warning or set the "debug" SASS variable to false in magic.scss, and compile it.';
-  font-family: sans-serif !important;
+  font-family: 'Noto' !important;
   color: white;
   position: fixed;
-  background-color: red;
+  background-color: #FF3860;
   margin: 0;
   padding-top: 20vh;
   left: 0;
@@ -951,10 +951,10 @@ a.btn-fluid {
 
 [class*="btn"][class*="btn-"]:not(.btn-fluid):not(.btn-group):not([class*="default"]):not([class*="red"]):not([class*="blue"]):not([class*="green"]):not([class*="yellow"]):not([class*="dark"]):not([class*="light"])::before {
   content: "Magic.CSS found a layout error: \a \a" "Specified btn-XXX attribute not found." '\a \aPlease fix this error to remove this warning or set the "debug" SASS variable to false in magic.scss, and compile it.';
-  font-family: sans-serif !important;
+  font-family: 'Noto' !important;
   color: white;
   position: fixed;
-  background-color: red;
+  background-color: #FF3860;
   margin: 0;
   padding-top: 20vh;
   left: 0;
@@ -985,7 +985,7 @@ a.btn-fluid {
     .breadcrumb ul li {
       display: inline-block; }
       .breadcrumb ul li a {
-        font-family: "Noto";
+        font-family: "Noto", "Roboto", sans-serif;
         color: #00a78e;
         text-decoration: none;
         vertical-align: middle;
@@ -1000,7 +1000,7 @@ a.btn-fluid {
         color: gray; }
     .breadcrumb ul li:not(:first-of-type)::before {
       content: "/";
-      font-family: "NotoThin";
+      font-family: "NotoThin", sans-serif;
       padding: 0 15px;
       font-size: 24px;
       color: grey;
@@ -1023,7 +1023,7 @@ a.btn-fluid {
   .person .identifier {
     display: inline-block; }
   .person .name {
-    font-family: "Noto", sans-serif;
+    font-family: "Noto", "Roboto", sans-serif, sans-serif;
     font-size: 34px;
     display: inline-block;
     margin: 15px 0 5px 10px;
@@ -1118,7 +1118,7 @@ a.btn-fluid {
       padding: 10px 15px; }
       .comments .comment .footer p {
         margin: 0;
-        font-family: "Noto", sans-serif;
+        font-family: "Noto", "Roboto", sans-serif, sans-serif;
         text-transform: uppercase;
         color: #333333; }
       .comments .comment .footer a {
@@ -1148,7 +1148,7 @@ footer {
       width: 60%; }
       footer .body .content h1 {
         margin: 0;
-        font-family: "NotoThin", sans-serif;
+        font-family: "NotoThin", sans-serif, sans-serif;
         font-size: 24px; }
       footer .body .content h1::after {
         margin: 0; }
@@ -1219,7 +1219,7 @@ footer .link {
 nav {
   margin: 0;
   padding: 0;
-  font-family: "Noto" !important;
+  font-family: "Noto", "Roboto", sans-serif !important;
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -1244,7 +1244,7 @@ nav {
       margin: 0;
       text-align: center;
       text-decoration: none;
-      font-family: "NotoThin";
+      font-family: "NotoThin", sans-serif;
       font-size: 24px;
       white-space: nowrap; }
     nav ul .nav-brand-container {
@@ -1350,7 +1350,7 @@ nav.light ul .nav-item a, nav.light, nav.light ul .nav-brand-text, nav.yellow ul
     top: 0;
     right: 25px;
     font-size: 36px;
-    font-family: "NotoThin";
+    font-family: "NotoThin", sans-serif;
     margin-left: 50px;
     color: inherit;
     text-decoration: none; }
@@ -1359,14 +1359,14 @@ nav.light ul .nav-item a, nav.light, nav.light ul .nav-brand-text, nav.yellow ul
     text-decoration: none;
     color: inherit;
     font-size: 30px;
-    font-family: "NotoThin";
+    font-family: "NotoThin", sans-serif;
     display: block;
     transition: 0.3s;
     text-align: left;
     white-space: nowrap; }
 
 input[type='email'], input[type='text'], input[type='password'], textarea {
-  font-family: "Noto", sans-serif;
+  font-family: "Noto", "Roboto", sans-serif, sans-serif;
   font-size: 20px;
   width: 100%;
   padding: 5px;
@@ -1440,7 +1440,7 @@ select {
   font-size: 20px;
   margin-bottom: 10px;
   border-radius: 4px;
-  font-family: "Noto";
+  font-family: "Noto", "Roboto", sans-serif;
   outline: none;
   transition: all .3s ease;
   padding-right: 5px; }
@@ -1456,20 +1456,20 @@ select option {
   transition: all .3s ease;
   padding: 5px; }
 
-select option:hover.opt-default {
-  background-color: default; }
-select option:hover.opt-red {
-  background-color: red; }
-select option:hover.opt-green {
-  background-color: green; }
-select option:hover.opt-yellow {
-  background-color: yellow; }
-select option:hover.opt-blue {
-  background-color: blue; }
-select option:hover.opt-dark {
-  background-color: dark; }
-select option:hover.opt-light {
-  background-color: light; }
+select .opt-default:hover {
+  background-color: #00D1B2; }
+select .opt-red:hover {
+  background-color: #FF3860; }
+select .opt-green:hover {
+  background-color: #1DD168; }
+select .opt-yellow:hover {
+  background-color: #ffdd57; }
+select .opt-blue:hover {
+  background-color: #209cee; }
+select .opt-dark:hover {
+  background-color: #242424; }
+select .opt-light:hover {
+  background-color: #F3F3F3; }
 
 .version::after {
   content: "v0.4.0"; }

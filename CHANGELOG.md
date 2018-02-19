@@ -1,6 +1,8 @@
 # Changelog for version 0.4.0
 ### New features:
 * Added Magic.CSS layout errors
+* Added active class for navigation bar
+* Improved Select styling
 
 ### Bug fixes:
 * 

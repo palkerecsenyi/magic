@@ -55,8 +55,16 @@ $green-darker-2: #128542;
 $yellow-darker-2: #daae00;
 $blue-darker-2: #0c64a0;
 
-//List of standard colours
-$standard: default red green yellow blue dark light;
+//map of standard colours
+$standard: (
+  default: #00D1B2, //(0,209,178)
+  red: #FF3860, //(255,56,96)
+  green: #1DD168, //(29,209,104)
+  yellow: #ffdd57, //(255,221,87)
+  blue: #209cee, //(32,156,238)
+  dark: #242424, //(36,36,36)
+  light: #F3F3F3,
+);
 
 //Native gradients
 %gradient-red{
@@ -80,8 +88,8 @@ $standard: default red green yellow blue dark light;
 
 //Fonts
 $font-stack: 'Roboto', 'Noto', sans-serif;
-$font-thin: 'NotoThin';
-$font-regular: 'Noto';
+$font-thin: 'NotoThin', sans-serif;
+$font-regular: 'Noto', 'Roboto', sans-serif;
 
 //Breakpoints
 $break-xsm: 320px;
@@ -106,10 +114,10 @@ $debug: true;
 @mixin error($message){
   @if ($debug){
     content: 'Magic.CSS found a layout error: \A\A'$message'\A\A Please fix this error to remove this warning or set the "debug" SASS variable to false in magic.scss, and compile it.';
-    font-family: sans-serif !important;
+    font-family: 'Noto' !important;
     color:white;
     position: fixed;
-    background-color:red;
+    background-color:$red;
     margin:0;
     padding-top:20vh;
     left:0;
@@ -1587,9 +1595,9 @@ select option{
   transition: all .3s ease;
   padding:5px;
 }
-select option:hover{
-  @each $colour in $standard{
-    &.opt-#{$colour}{
+select {
+  @each $name, $colour in $standard{
+    .opt-#{$name}:hover{
       background-color:$colour;
     }
   }
