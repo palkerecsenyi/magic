@@ -1598,7 +1598,7 @@ select option{
 select {
   @each $name, $colour in $standard{
     .opt-#{$name}:hover{
-      background-color:$colour;
+      background-color:$colour !important;
     }
   }
 }

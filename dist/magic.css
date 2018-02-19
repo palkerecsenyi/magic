@@ -1457,19 +1457,19 @@ select option {
   padding: 5px; }
 
 select .opt-default:hover {
-  background-color: #00D1B2; }
+  background-color: #00D1B2 !important; }
 select .opt-red:hover {
-  background-color: #FF3860; }
+  background-color: #FF3860 !important; }
 select .opt-green:hover {
-  background-color: #1DD168; }
+  background-color: #1DD168 !important; }
 select .opt-yellow:hover {
-  background-color: #ffdd57; }
+  background-color: #ffdd57 !important; }
 select .opt-blue:hover {
-  background-color: #209cee; }
+  background-color: #209cee !important; }
 select .opt-dark:hover {
-  background-color: #242424; }
+  background-color: #242424 !important; }
 select .opt-light:hover {
-  background-color: #F3F3F3; }
+  background-color: #F3F3F3 !important; }
 
 .version::after {
   content: "v0.4.0"; }
