@@ -1274,6 +1274,105 @@ a.btn-fluid{
     border-top:1px solid gray !important;
   }
 }
+//Panel
+.panel{
+  font-size: 1rem;
+  border-radius:3px;
+  padding:0;
+  width:100%;
+  border:1px solid #C9C9C9;
+  .panel-title{
+    font-size:1.3rem !important;
+    background-color: $light;
+    margin:0;
+    &:first-child{
+      border-top:none !important;
+    }
+    &.panel-title-small{
+      font-size:1rem !important;
+    }
+  }
+  .panel-item{
+    padding:0.5em 0.75em;
+    margin:0;
+    border-top:1px solid #C9C9C9;
+    display:block;
+    input{
+      font-size:1rem;
+    }
+    *{
+      margin:0;
+    }
+    .check-label{
+      font-size:1rem;
+      &::before{
+        margin-right:.7em;
+        vertical-align: text-top;
+      }
+    }
+  }
+  .panel-tabs{
+    padding:0 0.75em;
+    ul{
+      list-style-type: none;
+      padding:0;
+      margin:0;
+      text-align:center;
+      white-space: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      li{
+        font-family: $font-regular;
+        display:inline-block;
+        a{
+          padding:0.5em;
+          display:inherit;
+          text-decoration:none;
+          color:$blue-darker;
+          transition: all .1s ease;
+          &:hover{
+            color: $blue;
+          }
+          &.active{
+            border-bottom:1.5px solid $blue;
+            padding-bottom:-1.5px;
+          }
+        }
+      }
+    }
+  }
+  .panel-list{
+    padding:0;
+    a{
+      display:block;
+      width:100%;
+      padding:0.6em 15px;
+      text-decoration: none;
+      color:black;
+      vertical-align: middle;
+      transition: background .1s ease;
+      box-sizing: border-box;
+      .panel-list-icon{
+        padding-right:0.5em;
+        color: #545454;
+      }
+      &:hover{
+        background:$light;
+      }
+      &:not(:last-child){
+        border-bottom:1px solid #C9C9C9;
+      }
+      &.active{
+        border-left:2px solid $blue;
+        padding-left:13px;
+        color:$blue-darker;
+        .panel-list-icon{
+          color:inherit;
+        }
+      }
+    }
+  }
+}
 //Footer
 footer{
   margin-top:30px;

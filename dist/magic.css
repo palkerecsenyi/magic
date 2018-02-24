@@ -1136,6 +1136,83 @@ a.btn-fluid {
     border-top-right-radius: 0 !important;
     border-top: 1px solid gray !important; }
 
+.panel {
+  font-size: 1rem;
+  border-radius: 3px;
+  padding: 0;
+  width: 100%;
+  border: 1px solid #C9C9C9; }
+  .panel .panel-title {
+    font-size: 1.3rem !important;
+    background-color: #F3F3F3;
+    margin: 0; }
+    .panel .panel-title:first-child {
+      border-top: none !important; }
+    .panel .panel-title.panel-title-small {
+      font-size: 1rem !important; }
+  .panel .panel-item {
+    padding: 0.5em 0.75em;
+    margin: 0;
+    border-top: 1px solid #C9C9C9;
+    display: block; }
+    .panel .panel-item input {
+      font-size: 1rem; }
+    .panel .panel-item * {
+      margin: 0; }
+    .panel .panel-item .check-label {
+      font-size: 1rem; }
+      .panel .panel-item .check-label::before {
+        margin-right: .7em;
+        vertical-align: text-top; }
+  .panel .panel-tabs {
+    padding: 0 0.75em; }
+    .panel .panel-tabs ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      white-space: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden; }
+      .panel .panel-tabs ul li {
+        font-family: "Noto", "Roboto", sans-serif;
+        display: inline-block; }
+        .panel .panel-tabs ul li a {
+          padding: 0.5em;
+          display: inherit;
+          text-decoration: none;
+          color: #0f7ec8;
+          transition: all .1s ease; }
+          .panel .panel-tabs ul li a:hover {
+            color: #209cee; }
+          .panel .panel-tabs ul li a.active {
+            border-bottom: 1.5px solid #209cee;
+            padding-bottom: -1.5px; }
+  .panel .panel-list {
+    padding: 0; }
+    .panel .panel-list a {
+      display: block;
+      width: 100%;
+      padding: 0.6em 15px;
+      text-decoration: none;
+      color: black;
+      vertical-align: middle;
+      transition: background .1s ease;
+      box-sizing: border-box; }
+      .panel .panel-list a .panel-list-icon {
+        padding-right: 0.5em;
+        color: #545454; }
+      .panel .panel-list a:hover {
+        background: #F3F3F3; }
+      .panel .panel-list a:not(:last-child) {
+        border-bottom: 1px solid #C9C9C9; }
+      .panel .panel-list a.active {
+        border-left: 2px solid #209cee;
+        padding-left: 13px;
+        color: #0f7ec8; }
+        .panel .panel-list a.active .panel-list-icon {
+          color: inherit; }
+
 footer {
   margin-top: 30px;
   color: white;

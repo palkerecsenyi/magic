@@ -5,7 +5,7 @@
 * Improved Select styling
 
 ### Bug fixes:
-* 
+* Made select style !important
 
 ### More
 See commit descriptions for more. I add large descriptions to all big commits.
