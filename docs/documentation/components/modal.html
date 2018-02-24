@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" href="https://unpkg.com/magical-css">-->
+    <link rel="stylesheet" href="../../../dist/magic.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+    <link rel="stylesheet" href="../../prism.css">
+    <meta charset="UTF-8">
+    <title>Magic - Documentation</title>
+    <script>
+      function openNav(){
+        document.getElementById("nav-mobile").style.width = "100%";
+      }
+      function closeNav(){
+        document.getElementById("nav-mobile").style.width = "0";
+      }
+      function demo(inst){
+        event.stopPropagation();
+        var toggle = "demo"+inst;
+        document.getElementById(toggle).classList.toggle("active");
+      }
+      document.addEventListener("click",function(){
+        for(i=1;i<=2;i++){
+          var toggle = "demo"+i;
+          document.getElementById(toggle).classList.remove("active");
+        }
+      });
+    </script>
+    <script src="../../navbar.js"></script>
+  </head>
+  <body>
+    <div id="nav-mobile" class="blue animate">
+      <a href="javascript:void(0)" class="close" onClick="closeNav()">&times;</a>
+      <a href="https://palkerecsenyi.github.io/magic/">Home</a>
+      <a href="https://palkerecsenyi.github.io/magic/start">Get Started</a>
+      <a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a>
+      <a href="https://github.com/palkerecsenyi/magic">Github</a>
+    </div>
+    <nav class="blue">
+      <ul class="nav-left">
+        <li><a href="/magic" class="nav-brand-text">Magic.CSS</a></li>
+        <li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/">Home</a></li>
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/start">Get Started</a></li>
+        <li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a></li>
+        <li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
+      </ul>
+    </nav>
+    <div class="navigation blue">
+			<div class="links">
+        <script>addNav(true,"modal");</script>
+			</div>
+		</div>
+    <div class="container">
+      <h1 class="header">Modal <span class="badge red">New!</span></h1>
+      <h2 class="trailer">A simple pop-up modal that you can trigger by toggling a class name.</h2>
+      <button class="btn btn-large btn-default" onClick="demo(1);">Launch demo</button>
+      <div class="modal" id="demo1">
+        <div class="modal-content" onClick="event.stopPropagation();">
+          <p>Hello!</p>
+        </div>
+        <button class="modal-close">&times;</button>
+      </div>
+      <h2>Adding a modal</h2>
+      <p>A modal consists of three parts:</p>
+      <pre><code class="language-markup">.modal
+  | .modal-content
+  | .modal-close</code></pre>
+      <p>Visually, the <code class="language-css">.modal</code> class creates the black background and frame for the content. The <code class="language-css">.modal-content</code> is a white block containing what you want your modal to show. Finally, <code class="language-css">.modal-close</code> is a close button. CSS does not insert the cross by itself; you need to add the <code class="language-markup">&amp;times;</code> escape manually.</p>
+      <div class="error yellow">Please bear in mind that Magic is not packaged with any JS at all, so you will need to add some custom JavaScript to make modals appear and disappear.</div>
+      <p>To add the modal demonstrated above:</p>
+      <pre><code class="language-html">&lt;div class=&quot;modal&quot;
+  &lt;div class=&quot;modal-content&quot;&gt;
+    &lt;p&gt;Hello!&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;button class=&quot;modal-close&quot;&gt;&amp;times;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+      <h3>Advanced Modal</h3>
+      <p>To add an advanced modal instead, try this:</p>
+      <button class="btn btn-large btn-default" onClick="demo(2)">Launch demo</button>
+      <div class="modal" id="demo2">
+        <div class="modal-adv" onClick="event.stopPropagation();">
+          <div class="modal-adv-title">
+            <h1 class="modal-adv-title-text">Modal</h1>
+            <button class="modal-adv-title-close" onClick="document.getElementById('demo2').classList.remove('active');">&times;</button>
+          </div>
+          <div class="modal-adv-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae ex justo. Curabitur viverra non ipsum eget aliquam. Maecenas sed purus ac sem venenatis faucibus eget in odio. Aenean tempus mi in diam semper, sit amet eleifend sem pharetra. Curabitur sapien dui, pharetra id urna id, ornare rhoncus eros. Duis eget hendrerit ex. Sed ac imperdiet turpis, tristique dignissim metus. Phasellus vel tellus maximus, dictum sapien nec, malesuada tellus. Cras id tincidunt erat. Nulla vitae purus at enim pharetra pellentesque. Fusce eget dui nec justo consectetur facilisis et eget enim. Etiam blandit elit et eros gravida, sed consectetur arcu pellentesque. Pellentesque eu elit id neque consequat aliquet. Mauris et euismod purus.</p>
+            <p>Nullam auctor nulla turpis, at rutrum enim vehicula ultricies. Curabitur suscipit massa vulputate, sagittis ligula in, euismod massa. Nullam et nunc sit amet felis varius vulputate sit amet eu lorem. Pellentesque vel scelerisque enim, quis suscipit enim. Donec ornare nibh sed commodo tincidunt. Proin aliquet, justo sit amet congue lacinia, purus mauris blandit libero, eget faucibus nibh turpis dignissim lorem. Nullam vehicula viverra neque id volutpat. Phasellus sit amet enim et lorem lacinia sollicitudin. In congue mauris purus, eu fermentum nisi vestibulum vitae. Duis mollis ex ligula, sed tincidunt sem convallis vitae. Nulla et risus sed nisi vehicula rhoncus. Integer eu orci vel lectus consectetur dictum.</p>
+            <p>Proin eget justo et tortor aliquet tempor. Maecenas vel ornare ipsum. Fusce vulputate nulla non dictum commodo. Duis in scelerisque massa. Integer libero mauris, varius in ante a, lacinia aliquam orci. Maecenas congue, turpis id finibus imperdiet, velit massa blandit massa, ac mattis dolor magna quis arcu. Fusce tristique lectus eget urna tempus auctor. Proin ultrices turpis at massa tempus commodo. Fusce id fermentum metus, non hendrerit quam.</p>
+            <p>Sed malesuada pharetra sem. Nunc aliquet iaculis lacinia. Duis molestie sagittis odio sed sollicitudin. Nulla vel consectetur felis. Praesent id lectus hendrerit, rhoncus libero a, vulputate lorem. Curabitur lobortis interdum accumsan. Duis id nibh lacus. Donec metus risus, maximus non tortor sed, mattis mollis risus. In a mi dolor. Nullam consequat nisl euismod mauris pretium ullamcorper.</p>
+            <p>Duis eros lacus, faucibus a vulputate et, placerat at justo. Praesent id cursus lorem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In molestie lacinia metus sit amet euismod. Quisque vestibulum ligula non neque auctor scelerisque. Ut convallis nec nisl vel imperdiet. Phasellus tempor viverra faucibus. Integer mattis imperdiet sollicitudin. Vestibulum nec fringilla lorem, nec accumsan lacus. Cras hendrerit est ut semper suscipit. Donec finibus, quam malesuada accumsan aliquet, est felis porta eros, ut interdum ipsum ante volutpat erat. Nulla interdum dolor vel tincidunt porttitor. Etiam ut interdum velit. Maecenas eget eleifend ipsum, eget suscipit lorem. Cras sodales, lorem vel congue iaculis, lorem neque pretium ipsum, nec dignissim urna sapien feugiat est. Etiam ullamcorper felis eget ante tincidunt, ac commodo justo fermentum.</p>
+            <p>Maecenas ac efficitur augue. Vestibulum tempus id quam quis sollicitudin. Aliquam ut mauris id neque congue efficitur. Mauris ultricies leo elit, ac eleifend nisl sodales ac. Proin vitae justo varius orci bibendum sollicitudin ultrices quis orci. Maecenas sapien nunc, fringilla dignissim convallis sit amet, tincidunt id lectus. Suspendisse potenti. In non lorem vel arcu commodo efficitur. Ut sed magna eu nunc porta mollis sit amet sed purus. Sed vitae auctor massa. Maecenas nulla risus, efficitur vitae metus a, euismod consectetur est.</p>
+            <p>Nunc aliquam, nisi in sollicitudin pulvinar, mauris risus lacinia massa, id tristique enim lacus a felis. Praesent convallis velit justo, id porttitor orci placerat vitae. Fusce eleifend vel tellus ac dapibus. Integer condimentum mi id dui vehicula, id porta risus rutrum. Aenean vel nisl ac libero scelerisque feugiat mattis lacinia urna. Vestibulum tristique quis risus a fringilla. Nulla ac velit mi. Fusce laoreet cursus lorem, in scelerisque mi fringilla ut. Nulla ultricies nisi at lorem accumsan, non molestie sem accumsan. Vivamus sollicitudin neque nisi, at vulputate elit suscipit a.</p>
+          </div>
+          <div class="modal-adv-footer">
+            <button class="btn btn-green">Save</button>
+            <button class="btn btn-dark">Cancel</button>
+          </div>
+        </div>
+      </div>
+      <pre><code class="language-markup">&lt;div class=&quot;modal&quot;&gt;
+  &lt;div class=&quot;modal-adv&quot;&gt;
+    &lt;div class=&quot;modal-adv-title&quot;&gt;
+      &lt;h1 class=&quot;modal-adv-title-text&quot;&gt;Modal&lt;/h1&gt;
+      &lt;button class=&quot;modal-adv-title-close&quot;&gt;&amp;times;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;modal-adv-body&quot;&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;modal-adv-footer&quot;&gt;
+      &lt;button class=&quot;btn btn-green&quot;&gt;Save&lt;/button&gt;
+      &lt;button class=&quot;btn btn-dark&quot;&gt;Cancel&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <h3>Toggling modals</h3>
+      <p>To toggle modals, simply create some JavaScript that toggles the class <span class="i-code">active</span> on the <span class="i-code">&lt;div class="modal"&gt;</span> element. When the class is present, the modal will be displayed; otherwise it will be hidden. <strong>Modals can be placed anywhere on the page.</strong></p>
+    </div>
+    <footer class="blue">
+      <div class="body">
+        <div class="content">
+          <h1>Magic.css</h1>
+          <p>Neat and unique CSS framework for dynamic websites</p>
+        </div>
+        <div class="links">
+          <ul>
+            <li class="header">Pages</li>
+            <li><a href="/magic">Home</a></li>
+            <li><a href="#">Start</a></li>
+            <li><a href="https://github.com/palkerecsenyi/magic/">Github</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>&copy; Magic 2018 <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
+      </div>
+    </footer>
+    <script src="../../prism.js"></script>
+  </body>
+</html>

@@ -1142,6 +1142,8 @@ a.btn-fluid {
   padding: 0;
   width: 100%;
   border: 1px solid #C9C9C9; }
+  .panel.bottom {
+    margin-bottom: 4rem; }
   .panel .panel-title {
     font-size: 1.3rem !important;
     background-color: #F3F3F3;
@@ -1212,6 +1214,91 @@ a.btn-fluid {
         color: #0f7ec8; }
         .panel .panel-list a.active .panel-list-icon {
           color: inherit; }
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75); }
+  .modal.active {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-content: center;
+    align-items: center;
+    justify-content: center; }
+  .modal .modal-content {
+    width: 60%;
+    background-color: white;
+    border-radius: 4px;
+    padding: 2em; }
+  .modal .modal-close {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 2rem;
+    color: white;
+    width: 40px;
+    max-width: 40px;
+    height: 40px;
+    max-height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    right: 1rem;
+    top: 1rem; }
+    .modal .modal-close:hover {
+      background-color: rgba(0, 0, 0, 0.5); }
+  .modal .modal-adv {
+    width: 60%;
+    background-color: white;
+    border-radius: 4px;
+    padding: 0; }
+    .modal .modal-adv .modal-adv-title {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.75em 1em;
+      background-color: #F3F3F3;
+      border-bottom: 1px solid #DCDCDC; }
+      .modal .modal-adv .modal-adv-title:first-child {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px; }
+      .modal .modal-adv .modal-adv-title .modal-adv-title-text {
+        font-size: 2rem;
+        display: inline-block;
+        margin: 0; }
+      .modal .modal-adv .modal-adv-title .modal-adv-title-close {
+        float: right;
+        display: inline-block;
+        vertical-align: middle;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 2rem;
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        cursor: pointer; }
+        .modal .modal-adv .modal-adv-title .modal-adv-title-close:hover {
+          background-color: #DCDCDC; }
+    .modal .modal-adv .modal-adv-body {
+      padding: 0 0.75em 0.3em;
+      max-height: 75vh;
+      overflow: auto; }
+    .modal .modal-adv .modal-adv-footer {
+      padding: 0.75em 1em;
+      background-color: #F3F3F3;
+      border-top: 1px solid #DCDCDC; }
+      .modal .modal-adv .modal-adv-footer * {
+        margin: 0; }
+      .modal .modal-adv .modal-adv-footer:last-child {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px; }
 
 footer {
   margin-top: 30px;
