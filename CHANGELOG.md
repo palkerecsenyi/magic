@@ -3,6 +3,8 @@
 * Added Magic.CSS layout errors
 * Added active class for navigation bar
 * Improved Select styling
+* Added panels + docs
+* Added modals + docs
 
 ### Bug fixes:
 * Made select style !important
