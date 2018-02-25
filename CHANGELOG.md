@@ -1,13 +1,9 @@
-# Changelog for version 0.4.0
+# Changelog for version 0.4.1
 ### New features:
-* Added Magic.CSS layout errors
-* Added active class for navigation bar
-* Improved Select styling
-* Added panels + docs
-* Added modals + docs
+None
 
 ### Bug fixes:
-* Made select style !important
+* Fixed CSS links in docs
 
 ### More
 See commit descriptions for more. I add large descriptions to all big commits.
