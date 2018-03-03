@@ -1,9 +1,10 @@
-# Changelog for version 0.4.1
+# Changelog for version 0.4.2
 ### New features:
 None
 
 ### Bug fixes:
-* Fixed CSS links in docs
+v0.5.0
+* Completely overhauled grid.
 
 ### More
 See commit descriptions for more. I add large descriptions to all big commits.

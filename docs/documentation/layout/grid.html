@@ -17,6 +17,13 @@
         document.getElementById("nav-mobile").style.width = "0";
       }
     </script>
+    <style>
+      .col-box{
+        padding: 2rem;
+        font-size: 1.5rem;
+        border-radius:5px;
+      }
+    </style>
     <script src="../../navbar.js"></script>
   </head>
   <body>
@@ -46,73 +53,634 @@
 		</div>
 		<div class="container">
 			<h1 class="header">Grid</h1>
-			<hr class="separator">
-			<h2>About grids</h2>
-			<p>A grid system is a key function of any CSS framework. It's a way of arranging elements on a page to make them simple, neat and responsive.</p>
-			<p>A grid conisist of rows and columns. In a typical framework (and in Magic), a row contains 12 spaces for columns. Within a row, you have columns, which each occupy a specified number of spaces. In one row, the number of spaces occupied therefore has to add up to 12. In the below example, there are 12 columns, each occupying 1 space. <span class="i-code">12 x 1 = 12</span> so the columns add up to complete the row.</p>
-			<div class="row" style="color:white;">
-				<div class="col col1 blue"><div>1</div></div>
-				<div class="col col1 red"><div>2</div></div>
-				<div class="col col1 green"><div>3</div></div>
-				<div class="col col1 blue"><div>4</div></div>
-				<div class="col col1 red"><div>5</div></div>
-				<div class="col col1 green"><div>6</div></div>
-				<div class="col col1 blue"><div>7</div></div>
-				<div class="col col1 red"><div>8</div></div>
-				<div class="col col1 green"><div>9</div></div>
-				<div class="col col1 blue"><div>10</div></div>
-				<div class="col col1 red"><div>11</div></div>
-				<div class="col col1 green"><div>12</div></div>
-			</div>
-			<p>Columns can be arranged in any pattern at all. In the example below, we have a column structure of 2-3-7. <span class="i-code">2 + 3 + 7 = 12</span>, so it works!</p>
-			<div class="row" style="color:white;">
-				<div class="col col2 green"><div>1</div></div>
-				<div class="col col3 blue"><div>2</div></div>
-				<div class="col col7 red"><div>3</div></div>
-			</div>
-			<p>The number of column spaces is almost always 12 across all frameworks, because 12 has many convenient factors. It allows regular layouts of 12@1, 4@3, 3@4, 2@6 and 1@12.</p>
-			<p>Another key feature of columns is that they pile on either mobile or desktop. Also, each column is reset to 100% width to appear neatly. Try resizing the screen to see what happens to the rows above.</p>
-			<h2><i class="fas fa-magic"></i> Magic grids</h2>
-			<p>Grids in magic are as simple as they could possibly get, and require minimal markup. To make a row (which contains columns), simply create a <span class="i-code">&lt;div class="row"&gt;</span>:</p>
-			<pre><code class="language-markup line-numbers">&lt;div class="row"&gt;
-	...
+      <h2 class="trailer">A grid is a key feature of any CSS framework - it helps to organise content by placing them into responsive columns.</h2>
+      <hr class="separator">
+      <h2>Automatic grid</h2>
+      <p>For example, here is a 'row' with 4 'columns':</p>
+      <div class="row">
+        <div class="col">
+          <div class="col-box light">
+            auto
+          </div>
+        </div>
+        <div class="col">
+          <div class="col-box light">
+            auto
+          </div>
+        </div>
+        <div class="col">
+          <div class="col-box light">
+            auto
+          </div>
+        </div>
+        <div class="col">
+          <div class="col-box light">
+            auto
+          </div>
+        </div>
+      </div>
+      <p>Columns can contain anything, of any length. They can be implemented in services like Twitter, where your feed page is organised in columns.</p>
+      <p>To make the row above:</p>
+      <pre><code class="language-markup">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    auto
+  &lt;/div&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    auto
+  &lt;/div&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    auto
+  &lt;/div&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    auto
+  &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-			<p>Inside a row, you need to place columns. A column is defined by using <span class="i-code">&lt;div class="col colX"&gt;</span>, where <span class="i-code">X</span> is a number between 1 and 12:</p>
-			<pre><code class="language-markup line-numbers">&lt;div class="row"&gt;
-	&lt;div class="col col6"&gt;
-		&lt;div&gt;
-			&lt;p&gt;Hi!&lt;/p&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="col col6"&gt;
-		&lt;div&gt;
-			&lt;p&gt;Hi!&lt;/p&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
+      <p>In this case, the columns automatically adapt to fill the space, and allow for <strong>up to 12 columns</strong> in one row.</p>
+      <h2>Sizes</h2>
+      <p>Of course, you can specify the size of columns to achieve more dynamic layouts, by adding the class&nbsp; <span class="i-code">colX</span>, where X is a number from <strong>1 to 12</strong>, specifying the relative size of the column. Size-specified columns can be freely mixed with automatic columns.</p>
+      <div class="row">
+        <div class="col col2">
+          <div class="col-box dark">
+            col2
+          </div>
+        </div>
+        <div class="col">
+          <div class="col-box light">
+            auto
+          </div>
+        </div>
+        <div class="col col4">
+          <div class="col-box dark">
+            col4
+          </div>
+        </div>
+      </div>
+      <pre><code class="language-markup">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col col2&quot;&gt;
+    col2
+  &lt;/div&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    auto
+  &lt;/div&gt;
+  &lt;div class=&quot;col col4&quot;&gt;
+    col4
+  &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-			<p>This would result in:</p>
-			<div class="row">
-				<div class="col col6">
-					<div>
-						<p>Hi!</p>
-					</div>
-				</div>
-				<div class="col col6">
-					<div>
-						<p>Hi!</p>
-					</div>
-				</div>
-			</div>
-			<h3>No gutter</h3>
-			<p>To remove the gutter (the spacing) between columns, simply omit the <span class="i-code">&lt;div&gt;</span> from within the <span class="i-code">&lt;div class="col colX"&gt;</span>. For example:</p>
-			<pre><code class="language-markup">&lt;div class="col col6"&gt;
-	&lt;p&gt;Hi!&lt;/p&gt;
-&lt;/div&gt;</code></pre>
-			<h2>Piling on tablet</h2>
-			<p>By default, rows will pile on mobile (425px) and below. However, it's sometimes useful to change this to tablet (768px). To do this, just add the class <span class="i-code">pile-tablet</span> to the row div.</p>
-			<hr class="separator">
-			<p>You've reached the end of the Layout section!</p>
-			<button class="btn-grad btn-fluid btn-grad-blue" data-link="../">Return to documentation</button>
+      <h2>Wrapping</h2>
+      <p>Each row can contain <strong>up to 12 columns</strong>. Any columns after this will automatically wrap onto the next line:</p>
+      <div class="row">
+        <div class="col col6">
+          <div class="col-box dark">
+            col6
+          </div>
+        </div>
+        <div class="col col3">
+          <div class="col-box dark">
+            col3
+          </div>
+        </div>
+        <div class="col">
+          <div class="col-box light">
+            auto
+          </div>
+        </div>
+        <div class="col col4">
+          <div class="col-box dark">
+            col4
+          </div>
+        </div>
+        <div class="col">
+          <div class="col-box light">
+            auto
+          </div>
+        </div>
+        <div class="col col2">
+          <div class="col-box dark">
+            col2
+          </div>
+        </div>
+      </div>
+      <p>The above example is contained within <strong>a single row</strong> and with the same syntax as in the previous example.</p>
+      <h2>Anything is possible</h2>
+      <p>It is important to understand that rows can be arranged in any pattern. Hopefully this should help:</p>
+      <div class="row">
+        <div class="col col12">
+          <div class="col-box red">
+            col12
+          </div>
+        </div>
+        
+        <div class="col col11">
+          <div class="col-box red">
+            col11
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        
+        <div class="col col10">
+          <div class="col-box red">
+            col10
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        
+        <div class="col col9">
+          <div class="col-box red">
+            col9
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        
+        <div class="col col8">
+          <div class="col-box red">
+            col8
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        
+        <div class="col col7">
+          <div class="col-box red">
+            col7
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        
+        <div class="col col6">
+          <div class="col-box red">
+            col6
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        
+        <div class="col col5">
+          <div class="col-box red">
+            col5
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        
+        <div class="col col4">
+          <div class="col-box red">
+            col4
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        
+        <div class="col col3">
+          <div class="col-box red">
+            col3
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        
+        <div class="col col2">
+          <div class="col-box red">
+            col2
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        
+        <div class="col col1">
+          <div class="col-box red">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box yellow">
+            col1
+          </div>
+        </div>
+        <div class="col col1">
+          <div class="col-box blue">
+            col1
+          </div>
+        </div>
+      </div>
+      <h2>Offset</h2>
+      <p>If you don't want to use empty columns to offset columns, you can use the &nbsp;<span class="i-code">offsetX</span>, where X is a number from 1-11:</p>
+      <div class="row">
+        <div class="col">
+          <div class="col-box light">
+            auto<br>no offset
+          </div>
+        </div>
+      </div>
+      <div class="row top">
+        <div class="col offset1">
+          <div class="col-box light">
+            auto<br>offset1
+          </div>
+        </div>
+      </div>
+      <div class="row top">
+        <div class="col offset2">
+          <div class="col-box light">
+            auto<br>offset2
+          </div>
+        </div>
+      </div>
+      <div class="row top">
+        <div class="col offset3">
+          <div class="col-box light">
+            auto<br>offset3
+          </div>
+        </div>
+      </div>
+      <div class="row top">
+        <div class="col offset4">
+          <div class="col-box light">
+            auto<br>offset4
+          </div>
+        </div>
+      </div>
+      <div class="row top">
+        <div class="col offset5">
+          <div class="col-box light">
+            auto<br>offset5
+          </div>
+        </div>
+      </div>
+      <div class="row top">
+        <div class="col offset6">
+          <div class="col-box light">
+            auto<br>offset6
+          </div>
+        </div>
+      </div>
+      <div class="row top">
+        <div class="col offset7">
+          <div class="col-box light">
+            auto<br>offset7
+          </div>
+        </div>
+      </div>
+      <div class="row top">
+        <div class="col offset8">
+          <div class="col-box light">
+            auto<br>offset8
+          </div>
+        </div>
+      </div>
+      <div class="row top">
+        <div class="col offset9">
+          <div class="col-box light">
+            auto<br>offset9
+          </div>
+        </div>
+      </div>
+      <div class="row top">
+        <div class="col offset10">
+          <div class="col-box light">
+            auto<br>offset10
+          </div>
+        </div>
+      </div>
+      <div class="row top">
+        <div class="col col2">
+          <div class="col-box light">
+            col2<br>no offset
+          </div>
+        </div>
+        <div class="col offset3">
+          <div class="col-box light">
+            auto<br>offset3
+          </div>
+        </div>
+        <div class="col offset3">
+          <div class="col-box light">
+            auto<br>offset3
+          </div>
+        </div>
+      </div>
+      <h2>Order</h2>
+      <p>You can use the &nbsp;<span class="i-code">orderX</span> class (where X is a number from 1 to 12) to change the order of columns.</p>
+      <div class="row">
+        <div class="col col4 order2">
+          <div class="col-box light">
+            col4<br>order2 (placed first)
+          </div>
+        </div>
+        <div class="col col4 order3">
+          <div class="col-box light">
+            col4<br>order3 (placed second)
+          </div>
+        </div>
+        <div class="col col4 order1">
+          <div class="col-box light">
+            col4<br>order1 (placed third)
+          </div>
+        </div>
+      </div>
 		</div>
 		<footer class="blue">
 			<div class="body">
