@@ -3,6 +3,7 @@
 None
 
 ### Bug fixes:
+v0.5.0
 * Completely overhauled grid.
 
 ### More
