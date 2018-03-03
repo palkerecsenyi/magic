@@ -14,7 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see https://github.com/palkerecsenyi/magic/blob/master/LICENSE.
 
-MAGIC.CSS VERSION 0.4.1 on npm https://www.npmjs.com/package/magical-css
+MAGIC.CSS VERSION 0.4.2 on npm https://www.npmjs.com/package/magical-css
 */
 @font-face{
   font-family: 'Noto';
@@ -99,7 +99,7 @@ $break-t: 768px;
 $break-l: 1024px;
 
 //Controllers
-$version: 'v0.4.1';
+$version: 'v0.4.2';
 $debug: true;
 //^^^ Display errors or not (default: true)
 
@@ -466,92 +466,65 @@ nav + .container, nav + #nav-mobile + .container{
   align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: wrap;
-  width:100%;
-  margin:0;
-}
-.col{
-  min-height:1px;
-  margin:0;
-  max-width: 100%;
-}
-.col > div{
-  padding-right:15px;
-}
-.col1{
-  flex: 1 1 8.333333%;
-  max-width: 8.333333%;
-}
-.col2{
-  flex: 1 1 16.666667%;
-  max-width: 16.666667%;
-}
-.col3{
-  flex: 1 1 25%;
-  max-width: 25%;
-}
-.col4{
-  flex: 1 1 33.333333%;
-  max-width: 33.333333%;
-}
-.col5{
-  flex: 1 1 41.666667%;
-  max-width: 41.666667%;
-}
-.col6{
-  flex: 1 1 50%;
-  max-width: 50%;
-}
-.col7{
-  flex: 1 1 58.333333%;
-  max-width: 58.333333%;
-}
-.col8{
-  flex: 1 1 66.666667%;
-  max-width: 66.666667%;
-}
-.col9{
-  flex: 1 1 75%;
-  max-width: 75%;
-}
-.col10{
-  flex: 1 1 83.333333%;
-  max-width: 83.333333%;
-}
-.col11{
-  flex: 1 1 91.666667%;
-  max-width: 91.666667%;
-}
-.col12{
-  flex: 1 1 100%;
-  max-width: 100%;
-}
-
-@include media($break-m){
-  .row{
-    display: block;
-    flex-wrap: nowrap;
+  list-style: none;
+  padding:0;
+  margin:-1em 0 0 -1em;
+  &.no-gutter{
+    margin:0;
+    .col{
+      padding:0;
+    }
   }
   .col{
-    width:100%;
-    max-width: 100%;
-    flex-basis: 100%;
-    margin:0;
-    padding:0;
-    padding:0;
-    padding-bottom:20px;
+    flex:1;
+    padding:1em 0 0 1em;
+    box-sizing: border-box;
+  }
+  @for $i from 1 through 12{
+    .col#{$i}{
+      flex: none !important;
+      width: percentage($i/12) !important;
+    }
+  }
+  @for $i from 1 through 11{
+    .offset#{$i}{
+      margin-left:percentage($i/12) !important;
+    }
+  }
+  @for $i from 1 through 12{
+    .offset#{$i}{
+      margin-left:percentage($i/12) !important;
+    }
+  }
+  @for $i from 1 through 12{
+    .order#{$i}{
+      order:$i;
+    }
+  }
+}
+@include media($break-m){
+  .row{
+    flex-direction: column;
+    .col{
+      width:100% !important;
+    }
+    &.no-gutter{
+      margin:-1em 0 0 -1em;
+    }
   }
 }
 @include media($break-t){
   .row.pile-tablet{
-    display:block;
-    flex-wrap: nowrap;
+    flex-direction: column;
+    .col{
+      width:100% !important;
+    }
+    &.no-gutter{
+      margin:-1em 0 0 -1em;
+    }
   }
-  .row.pile-tablet .col{
-    width:100%;
-    max-width: 100%;
-    flex-basis: 100%;
-    margin:0;
-    margin-bottom:10px;
+  div[class^="offset"]{
+    margin-left:0 !important;
   }
 }
 .box{

@@ -14,7 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see https://github.com/palkerecsenyi/magic/blob/master/LICENSE.
 
-MAGIC.CSS VERSION 0.4.1 on npm https://www.npmjs.com/package/magical-css
+MAGIC.CSS VERSION 0.4.2 on npm https://www.npmjs.com/package/magical-css
 */
 @font-face {
   font-family: 'Noto';
@@ -355,89 +355,141 @@ nav + .container, nav + #nav-mobile + .container {
   align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: wrap;
-  width: 100%;
-  margin: 0; }
-
-.col {
-  min-height: 1px;
-  margin: 0;
-  max-width: 100%; }
-
-.col > div {
-  padding-right: 15px; }
-
-.col1 {
-  flex: 1 1 8.333333%;
-  max-width: 8.333333%; }
-
-.col2 {
-  flex: 1 1 16.666667%;
-  max-width: 16.666667%; }
-
-.col3 {
-  flex: 1 1 25%;
-  max-width: 25%; }
-
-.col4 {
-  flex: 1 1 33.333333%;
-  max-width: 33.333333%; }
-
-.col5 {
-  flex: 1 1 41.666667%;
-  max-width: 41.666667%; }
-
-.col6 {
-  flex: 1 1 50%;
-  max-width: 50%; }
-
-.col7 {
-  flex: 1 1 58.333333%;
-  max-width: 58.333333%; }
-
-.col8 {
-  flex: 1 1 66.666667%;
-  max-width: 66.666667%; }
-
-.col9 {
-  flex: 1 1 75%;
-  max-width: 75%; }
-
-.col10 {
-  flex: 1 1 83.333333%;
-  max-width: 83.333333%; }
-
-.col11 {
-  flex: 1 1 91.666667%;
-  max-width: 91.666667%; }
-
-.col12 {
-  flex: 1 1 100%;
-  max-width: 100%; }
+  list-style: none;
+  padding: 0;
+  margin: -1em 0 0 -1em; }
+  .row.no-gutter {
+    margin: 0; }
+    .row.no-gutter .col {
+      padding: 0; }
+  .row .col {
+    flex: 1;
+    padding: 1em 0 0 1em;
+    box-sizing: border-box; }
+  .row .col1 {
+    flex: none !important;
+    width: 8.3333333333% !important; }
+  .row .col2 {
+    flex: none !important;
+    width: 16.6666666667% !important; }
+  .row .col3 {
+    flex: none !important;
+    width: 25% !important; }
+  .row .col4 {
+    flex: none !important;
+    width: 33.3333333333% !important; }
+  .row .col5 {
+    flex: none !important;
+    width: 41.6666666667% !important; }
+  .row .col6 {
+    flex: none !important;
+    width: 50% !important; }
+  .row .col7 {
+    flex: none !important;
+    width: 58.3333333333% !important; }
+  .row .col8 {
+    flex: none !important;
+    width: 66.6666666667% !important; }
+  .row .col9 {
+    flex: none !important;
+    width: 75% !important; }
+  .row .col10 {
+    flex: none !important;
+    width: 83.3333333333% !important; }
+  .row .col11 {
+    flex: none !important;
+    width: 91.6666666667% !important; }
+  .row .col12 {
+    flex: none !important;
+    width: 100% !important; }
+  .row .offset1 {
+    margin-left: 8.3333333333% !important; }
+  .row .offset2 {
+    margin-left: 16.6666666667% !important; }
+  .row .offset3 {
+    margin-left: 25% !important; }
+  .row .offset4 {
+    margin-left: 33.3333333333% !important; }
+  .row .offset5 {
+    margin-left: 41.6666666667% !important; }
+  .row .offset6 {
+    margin-left: 50% !important; }
+  .row .offset7 {
+    margin-left: 58.3333333333% !important; }
+  .row .offset8 {
+    margin-left: 66.6666666667% !important; }
+  .row .offset9 {
+    margin-left: 75% !important; }
+  .row .offset10 {
+    margin-left: 83.3333333333% !important; }
+  .row .offset11 {
+    margin-left: 91.6666666667% !important; }
+  .row .offset1 {
+    margin-left: 8.3333333333% !important; }
+  .row .offset2 {
+    margin-left: 16.6666666667% !important; }
+  .row .offset3 {
+    margin-left: 25% !important; }
+  .row .offset4 {
+    margin-left: 33.3333333333% !important; }
+  .row .offset5 {
+    margin-left: 41.6666666667% !important; }
+  .row .offset6 {
+    margin-left: 50% !important; }
+  .row .offset7 {
+    margin-left: 58.3333333333% !important; }
+  .row .offset8 {
+    margin-left: 66.6666666667% !important; }
+  .row .offset9 {
+    margin-left: 75% !important; }
+  .row .offset10 {
+    margin-left: 83.3333333333% !important; }
+  .row .offset11 {
+    margin-left: 91.6666666667% !important; }
+  .row .offset12 {
+    margin-left: 100% !important; }
+  .row .order1 {
+    order: 1; }
+  .row .order2 {
+    order: 2; }
+  .row .order3 {
+    order: 3; }
+  .row .order4 {
+    order: 4; }
+  .row .order5 {
+    order: 5; }
+  .row .order6 {
+    order: 6; }
+  .row .order7 {
+    order: 7; }
+  .row .order8 {
+    order: 8; }
+  .row .order9 {
+    order: 9; }
+  .row .order10 {
+    order: 10; }
+  .row .order11 {
+    order: 11; }
+  .row .order12 {
+    order: 12; }
 
 @media only screen and (max-width: 425px) {
   .row {
-    display: block;
-    flex-wrap: nowrap; }
-
-  .col {
-    width: 100%;
-    max-width: 100%;
-    flex-basis: 100%;
-    margin: 0;
-    padding: 0;
-    padding: 0;
-    padding-bottom: 20px; } }
+    flex-direction: column; }
+    .row .col {
+      width: 100% !important; }
+    .row.no-gutter {
+      margin: -1em 0 0 -1em; } }
 @media only screen and (max-width: 768px) {
   .row.pile-tablet {
-    display: block;
-    flex-wrap: nowrap; }
+    flex-direction: column; }
+    .row.pile-tablet .col {
+      width: 100% !important; }
+    .row.pile-tablet.no-gutter {
+      margin: -1em 0 0 -1em; }
 
-  .row.pile-tablet .col {
-    width: 100%;
-    max-width: 100%;
-    flex-basis: 100%;
-    margin: 0;
-    margin-bottom: 10px; } }
+  div[class^="offset"] {
+    margin-left: 0 !important; } }
 .box {
   width: 75%;
   padding: 30px;
@@ -1636,6 +1688,6 @@ select .opt-light:hover {
   background-color: #F3F3F3 !important; }
 
 .version::after {
-  content: "v0.4.1"; }
+  content: "v0.4.2"; }
 
 /*# sourceMappingURL=magic.css.map */
