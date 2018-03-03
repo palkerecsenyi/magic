@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/magical-css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+    <link rel="stylesheet" href="../../prism.css">
+    <meta charset="UTF-8">
+    <title>Magic - Documentation</title>
+    <script>
+      function openNav(){
+        document.getElementById("nav-mobile").style.width = "100%";
+      }
+      function closeNav(){
+        document.getElementById("nav-mobile").style.width = "0";
+      }
+    </script>
+    <script src="../../navbar.js"></script>
+  </head>
+  <body>
+    <div id="nav-mobile" class="blue animate">
+      <a href="javascript:void(0)" class="close" onClick="closeNav()">&times;</a>
+      <a href="https://palkerecsenyi.github.io/magic/">Home</a>
+      <a href="https://palkerecsenyi.github.io/magic/start">Get Started</a>
+      <a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a>
+      <a href="https://github.com/palkerecsenyi/magic">Github</a>
+    </div>
+    <nav class="blue">
+      <ul class="nav-left">
+        <li><a href="/magic" class="nav-brand-text">Magic.CSS</a></li>
+        <li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/">Home</a></li>
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/start">Get Started</a></li>
+        <li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a></li>
+        <li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
+      </ul>
+    </nav>
+    <div class="navigation blue">
+			<div class="links">
+        <script>addNav(true,"panel");</script>
+			</div>
+		</div>
+    <div class="container">
+      <h1 class="header">Panel <span class="badge red">New!</span></h1>
+      <h2 class="trailer">A versatile block to build menus and selections.</h2>
+      <hr class="separator">
+      <p>Many modern websites have selection menus or other similar items - these can be easily made with our Panel class.</p>
+      <div class="row pile-tablet">
+        <div class="col col4">
+          <div>
+            <div class="panel">
+              <h1 class="panel-title panel-item">Repositories</h1>
+              <div class="panel-item">
+                <input type="text" placeholder="Search...">
+              </div>
+              <div class="panel-item panel-tabs">
+                <ul>
+                  <li><a href="#">All</a></li>
+                  <li><a href="#">Forks</a></li>
+                  <li><a href="#" class="active">Public</a></li>
+                  <li><a href="#">Private</a></li>
+                </ul>
+              </div>
+              <div class="panel-item panel-list">
+                <a href="#" class="active"><i class="fas fa-book panel-list-icon"></i> magical-css</a>
+                <a href="#"><i class="fas fa-book panel-list-icon"></i> bootstrap</a>
+                <a href="#"><i class="fas fa-book panel-list-icon"></i> bulma</a>
+                <a href="#"><i class="fas fa-book panel-list-icon"></i> materialize</a>
+                <a href="#">
+                  <div class="check-group">
+                    <input type="checkbox" id="like">
+                    <label class="check-label" for="like">I like this</label>
+                  </div>
+                </a>
+              </div>
+              <div class="panel-item">
+                <button class="btn btn-blue btn-outline btn-fluid">New Repository</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col4">
+          <div>
+            <div class="panel">
+              <h1 class="panel-title panel-item">Followers</h1>
+              <div class="panel-item panel-tabs">
+                <ul>
+                  <li><a href="#" class="active">All</a></li>
+                  <li><a href="#">Secret</a></li>
+                  <li><a href="#">Active</a></li>
+                  <li><a href="#">Inactive</a></li>
+                  <li><a href="#">Friends</a></li>
+                  <li><a href="#">Best friends</a></li>
+                </ul>
+              </div>
+              <div class="panel-item">
+                <input type="text" placeholder="Search followers...">
+              </div>
+              <h1 class="panel-title panel-title-small panel-item">New</h1>
+              <div class="panel-item panel-list">
+                <a href="#"><i class="fas fa-user-circle panel-list-icon"></i> John Smith</a>
+                <a href="#"><i class="fas fa-user-circle panel-list-icon"></i> Jane Doe</a>
+              </div>
+              <h1 class="panel-title panel-title-small panel-item">Old</h1>
+              <div class="panel-item panel-list">
+                <a href="#" class="active"><i class="fas fa-user-circle panel-list-icon"></i> Jane Smith</a>
+                <a href="#"><i class="fas fa-user-circle panel-list-icon"></i> John Doe</a>
+              </div>
+              <div class="panel-item">
+                <button class="btn btn-blue btn-outline btn-fluid">Follow</button>
+              </div>
+              <h1 class="panel-title panel-title-small panel-item">Animals</h1>
+              <div class="panel-item panel-list">
+                <a href="#" class="active"><i class="fas fa-user-circle panel-list-icon"></i> Mr. Sheep</a>
+                <a href="#"><i class="fas fa-user-circle panel-list-icon"></i> Mrs. Cow</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col4">
+          <div>
+            <p>Magic Panels are modular block structures that fill the width of their container. They consist of <span class="i-code">panel-item</span> blocks, which can contain a variety of items, some of which are demonstrated <span class="desktop">to the right.</span><span class="tablet-mobile">above.</span> They can be arranged in any order, and will automatically adapt to the items around them. Panels are typically not used as full-width elements, but are instead placed as columns into full-page row structures.</p>
+          </div>
+        </div>
+      </div>
+      <h2>Using panels</h2>
+      <h3>Base</h3>
+      <p>As mentioned above, panels are modular. To start the base of a panel:</p>
+      <pre><code class="language-markup">&lt;div class=&quot;panel&quot;&gt;
+  ...
+&lt;/div&gt;</code></pre>
+      <h3>Panel items</h3>
+      <p>Magic has many panel items available, but each shares the class <span class="i-code">panel-item</span>.</p>
+      <h4>Title</h4>
+      <p>To add a title item:</p>
+      <div class="panel">
+        <h1 class="panel-title panel-item">Title</h1>
+        <h1 class="panel-title panel-title-small panel-item">Small Title</h1>
+      </div>
+      <pre><code class="language-markup">&lt;div class=&quot;panel&quot;&gt;
+  &lt;h1 class=&quot;panel-title panel-item&quot;&gt;Title&lt;/h1&gt;
+  &lt;h1 class=&quot;panel-title panel-title-small panel-item&quot;&gt;Small Title&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+      <h4>Inputs</h4>
+      <p>Panels also support inputs without additional syntax:</p>
+      <div class="panel">
+        <h1 class="panel-title panel-item">Title</h1>
+        <div class="panel-item">
+          <input type="text" placeholder="Search followers...">
+        </div>
+      </div>
+      <pre><code class="language-markup">&lt;div class=&quot;panel&quot;&gt;
+  ...
+  &lt;div class=&quot;panel-item&quot;&gt;
+    &lt;input type=&quot;text&quot; placeholder=&quot;Search followers...&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <h4>Tabs</h4>
+      <p>Panels also support a tab selection system. Please note that no JavaScript is included with Magic, so you'll have to add functionality manually:</p>
+      <div class="panel">
+        <h1 class="panel-item panel-title">Title</h1>
+        <div class="panel-item">
+          <input type="text" placeholder="Search followers...">
+        </div>
+        <div class="panel-item panel-tabs">
+          <ul>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#" class="active">Item 3 (active)</a></li>
+            <li><a href="#">Item 4</a></li>
+            <li><a href="#">Item 5</a></li>
+          </ul>
+        </div>
+      </div>
+      <pre><code class="language-markup">&lt;div class=&quot;panel&quot;&gt;
+  ...
+  &lt;div class=&quot;panel-item panel-tabs&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;Item 3 (active)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 4&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 5&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <h4>Lists</h4>
+      <p>Panels also support neat lists of clickable items. This is particularly useful for a list of similar UI items, such as followers or repositories.</p>
+      <div class="panel">
+        <h1 class="panel-item panel-title">Title</h1>
+        <div class="panel-item">
+          <input type="text" placeholder="Search followers...">
+        </div>
+        <div class="panel-item panel-tabs">
+          <ul>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#" class="active">Item 3 (active)</a></li>
+            <li><a href="#">Item 4</a></li>
+            <li><a href="#">Item 5</a></li>
+          </ul>
+        </div>
+        <div class="panel-item panel-list">
+          <a href="#">Item 1</a>
+          <a href="#" class="active">Item 2 (active)</a>
+          <a href="#"><i class="fas fa-book panel-list-icon"></i> Item 3 (with icon)</a>
+          <a href="#" class="active"><i class="fas fa-book panel-list-icon"></i> Item 3 (with icon + active)</a>
+        </div>
+      </div>
+      <pre><code class="language-markup">&lt;div class=&quot;panel&quot;&gt;
+  ...
+  &lt;div class=&quot;panel-item panel-list&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;Item 1&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;Item 2 (active)&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fas fa-book panel-list-icon&quot;&gt;&lt;/i&gt; Item 3 (with icon)&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;&lt;i class=&quot;fas fa-book panel-list-icon&quot;&gt;&lt;/i&gt; Item 3 (with icon + active)&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <h4>Buttons</h4>
+      <p>Similarly to inputs, buttons can be added easily with no additional markup.</p>
+      <div class="panel">
+        <h1 class="panel-item panel-title">Title</h1>
+        <div class="panel-item">
+          <input type="text" placeholder="Search followers...">
+        </div>
+        <div class="panel-item panel-tabs">
+          <ul>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#" class="active">Item 3 (active)</a></li>
+            <li><a href="#">Item 4</a></li>
+            <li><a href="#">Item 5</a></li>
+          </ul>
+        </div>
+        <div class="panel-item panel-list">
+          <a href="#">Item 1</a>
+          <a href="#" class="active">Item 2 (active)</a>
+          <a href="#"><i class="fas fa-book panel-list-icon"></i> Item 3 (with icon)</a>
+          <a href="#" class="active"><i class="fas fa-book panel-list-icon"></i> Item 3 (with icon + active)</a>
+        </div>
+        <div class="panel-item">
+          <button class="btn btn-blue btn-outline btn-fluid">Fluid button</button>
+        </div>
+        <div class="panel-item">
+          <button class="btn btn-blue btn-outline">Regular button</button>
+        </div>
+      </div>
+      <pre><code class="language-markup">&lt;div class=&quot;panel&quot;&gt;
+  ...
+  &lt;div class=&quot;panel-item&quot;&gt;
+    &lt;button class=&quot;btn btn-blue btn-outline btn-fluid&quot;&gt;Fluid button&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;panel-item&quot;&gt;
+    &lt;button class=&quot;btn btn-blue btn-outline&quot;&gt;Regular button&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <h2>Usage</h2>
+      <p>We recommend that panels are used similarly to the way they are used on Github (in a column structure spanning the whole page):</p>
+      <div class="row">
+        <div class="col col8">
+          <div>
+            <div style="padding:15rem 0;border-radius:3px;text-align:center;font-size:2rem;" class="red-lighten">
+              Page content (e.g. user feed)
+            </div>
+          </div>
+        </div>
+        <div class="col col4">
+          <div>
+            <div class="panel bottom">
+              <h1 class="panel-item panel-title">Your repositories <span class="badge round dark">3</span> <button class="btn btn-blue right-float btn-small">New repository</button></h1>
+              <div class="panel-item">
+                <input type="text" placeholder="Find a repository...">
+              </div>
+              <div class="panel-item panel-tabs">
+                <ul>
+                  <li><a href="#" class="active">All</a></li>
+                  <li><a href="#">Public</a></li>
+                  <li><a href="#">Private</a></li>
+                  <li><a href="#">Sources</a></li>
+                  <li><a href="#">Forks</a></li>
+                </ul>
+              </div>
+              <div class="panel-item panel-list">
+                <a href="https://github.com/palkerecsenyi/magic" class="active"><i class="fas fa-book panel-list-icon"></i> magic</a>
+                <a href="https://github.com/codeddraig/codedragon-offline"><i class="fas fa-book panel-list-icon"></i> codeddraig/codedragon-offline</a>
+                <a href="https://github.com/codeddraig/ffau"><i class="fas fa-book panel-list-icon"></i> codeddraig/ffau</a>
+              </div>
+            </div>
+            <div class="panel bottom">
+              <h1 class="panel-item panel-title">Repositories you contribute to <span class="badge round dark">3</span></h1>
+              <div class="panel-item panel-list">
+                <a href="#"><i class="fas fa-book panel-list-icon"></i> cdnjs</a>
+                <a href="#"><i class="fas fa-book panel-list-icon"></i> electron</a>
+                <a href="#"><i class="fas fa-book panel-list-icon"></i> bootstrap</a>
+              </div>
+            </div>
+            <div style="padding:1rem 0;border-radius:3px;text-align:center;font-size:1rem;" class="red-lighten">
+              More panels
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="blue">
+      <div class="body">
+        <div class="content">
+          <h1>Magic.css</h1>
+          <p>Neat and unique CSS framework for dynamic websites</p>
+        </div>
+        <div class="links">
+          <ul>
+            <li class="header">Pages</li>
+            <li><a href="/magic">Home</a></li>
+            <li><a href="#">Start</a></li>
+            <li><a href="https://github.com/palkerecsenyi/magic/">Github</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>&copy; Magic 2018 <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
+      </div>
+    </footer>
+    <script src="../../prism.js"></script>
+  </body>
+</html>

@@ -2,23 +2,22 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magical-css@latest/dist/magic.css">
+    <link rel="stylesheet" href="https://unpkg.com/magical-css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
     <link rel="stylesheet" href="../../prism.css">
     <meta charset="UTF-8">
-    <script>hljs.initHighlightingOnLoad();</script>
     <title>Magic - Documentation</title>
     <script>
       function openNav(){
         document.getElementById("nav-mobile").style.width = "100%";
-
       }
       function closeNav(){
         document.getElementById("nav-mobile").style.width = "0";
       }
     </script>
+    <script src="../../navbar.js"></script>
   </head>
   <body>
     <div id="nav-mobile" class="blue animate">
@@ -42,16 +41,7 @@
     </nav>
     <div class="navigation blue">
 			<div class="links">
-				<a class="section" href="../layout/index.html">Layout</a>
-				<a href="../layout/container.html">Container</a>
-				<a href="../layout/grid.html">Grid</a>
-				<a href="../layout/type.html">Typography</a>
-				<a class="section" href="../components/index.html">Components</a>
-				<a href="../components/badges.html">Badge</a>
-				<a href="../components/box.html">Box</a><a href="../components/breadcrumb.html">Breadcrumb</a>
-				<a href="../components/button.html">Button</a>
-				<a href="../components/colour.html">Colour</a>  <a href="../components/comment.html">Comment</a>
-				<a href="../components/error.html">Error</a> <a href="../components/hero.html">Hero</a>  <a href="../components/navbar.html">Navbar</a>  <a href="../components/person.html">Person</a> <a href="../components/project.html">Project</a>
+        <script>addNav(true,"person");</script>
 			</div>
 		</div>
     <div class="container">
