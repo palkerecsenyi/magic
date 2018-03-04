@@ -550,10 +550,11 @@ nav + .container, nav + #nav-mobile + .container {
     color: white; }
     .hero .hero-content .title {
       font-size: 62px;
-      margin-bottom: 0;
+      margin-bottom: 1rem;
       margin-top: 0;
       padding: 0;
-      font-family: "NotoThin", sans-serif; }
+      font-family: "NotoThin", sans-serif;
+      line-height: 4rem; }
     .hero .hero-content .caption {
       font-size: 20px;
       margin-top: 5px;
