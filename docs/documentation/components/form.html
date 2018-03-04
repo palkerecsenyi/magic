@@ -106,12 +106,10 @@
         </div>
         <input type="text" class="input-default">
         <div class="input-addon">
-          <input type="checkbox" id="check">
+          <input type="checkbox" id="check" class="default">
           <label for="check">Remember me?</label>
         </div>
-        <div class="input-addon">
-          <button class="btn btn-default">Go!</button>
-        </div>
+        <button class="btn btn-default input-addon">Go!</button>
       </div>
       <pre><code class="language-markup">&lt;div class=&quot;input-group&quot;&gt;
   &lt;div class=&quot;input-addon&quot;&gt;
@@ -139,10 +137,69 @@
     &lt;input type=&quot;checkbox&quot; id=&quot;check&quot;&gt;
     &lt;label for=&quot;check&quot;&gt;Remember me?&lt;/label&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;input-addon&quot;&gt;
-    &lt;button class=&quot;btn btn-default&quot;&gt;Go!&lt;/button&gt;
-  &lt;/div&gt;
+  &lt;button class=&quot;btn btn-default input-addon&quot;&gt;Go!&lt;/button&gt;
 &lt;/div&gt;</code></pre>
+      <h2>Radio inputs</h2>
+      <p>Magic has styled radio buttons:</p>
+      <div class="radio-group">
+        <input type="radio" id="r1" name="radio" class="red" checked>
+        <label for="r1" class="radio-label">Option 1</label>
+        <input type="radio" name="radio" id="r2" class="blue">
+        <label for="r2" class="radio-label">Option 2</label>
+        <input type="radio" name="radio" id="r3" class="green">
+        <label for="r3" class="radio-label">Option 3</label>
+        <input type="radio" name="radio" id="r4" class="default">
+        <label for="r4" class="radio-label">Option 4</label>
+      </div>
+      <pre><code class="language-markup">&lt;div class=&quot;radio-group&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;r1&quot; name=&quot;radio&quot; class=&quot;red&quot; checked&gt;
+  &lt;label for=&quot;r1&quot; class=&quot;radio-label&quot;&gt;Option 1&lt;/label&gt;
+  
+  &lt;input type=&quot;radio&quot; name=&quot;radio&quot; id=&quot;r2&quot; class=&quot;blue&quot;&gt;
+  &lt;label for=&quot;r2&quot; class=&quot;radio-label&quot;&gt;Option 2&lt;/label&gt;
+  
+  &lt;input type=&quot;radio&quot; name=&quot;radio&quot; id=&quot;r3&quot; class=&quot;green&quot;&gt;
+  &lt;label for=&quot;r3&quot; class=&quot;radio-label&quot;&gt;Option 3&lt;/label&gt;
+  
+  &lt;input type=&quot;radio&quot; name=&quot;radio&quot; id=&quot;r4&quot; class=&quot;default&quot;&gt;
+  &lt;label for=&quot;r4&quot; class=&quot;radio-label&quot;&gt;Option 4&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+      <h2>Checkbox inputs</h2>
+      <p>Magic also has styled checkboxes:</p>
+      <div class="check-group">
+        <input id="c1" type="checkbox" class="red" checked>
+        <label for="c1" class="check-label">Checkbox 1</label>
+        
+        <input id="c2" type="checkbox" class="blue">
+        <label for="c2" class="check-label">Checkbox 2</label>
+        
+        <input id="c3" type="checkbox" class="green">
+        <label for="c3" class="check-label">Checkbox 3</label>
+        
+        <input id="c4" type="checkbox" class="default">
+        <label for="c4" class="check-label">Checkbox 4</label>
+      </div>
+      <pre><code class="language-markup">&lt;div class=&quot;check-group&quot;&gt;
+  &lt;input id=&quot;c1&quot; type=&quot;checkbox&quot; class=&quot;red&quot; checked&gt;
+  &lt;label for=&quot;c1&quot; class=&quot;check-label&quot;&gt;Checkbox 1&lt;/label&gt;
+
+  &lt;input id=&quot;c2&quot; type=&quot;checkbox&quot; class=&quot;blue&quot;&gt;
+  &lt;label for=&quot;c2&quot; class=&quot;check-label&quot;&gt;Checkbox 2&lt;/label&gt;
+
+  &lt;input id=&quot;c3&quot; type=&quot;checkbox&quot; class=&quot;green&quot;&gt;
+  &lt;label for=&quot;c3&quot; class=&quot;check-label&quot;&gt;Checkbox 3&lt;/label&gt;
+
+  &lt;input id=&quot;c4&quot; type=&quot;checkbox&quot; class=&quot;default&quot;&gt;
+  &lt;label for=&quot;c4&quot; class=&quot;check-label&quot;&gt;Checkbox 4&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+      <h2>Submit buttons</h2>
+      <p>Submit buttons can be given the class <span class="i-code">btn</span> or <span class="i-code">btn-grad</span> to be styled nicely:</p>
+      <input type="submit" class="btn btn-default">
+      <input type="submit" class="btn btn-outline btn-default">
+      <input type="submit" class="btn-grad btn-grad-blue">
+      <pre><code class="language-markup">&lt;input type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;
+&lt;input type=&quot;submit&quot; class=&quot;btn btn-outline btn-default&quot;&gt;
+&lt;input type=&quot;submit&quot; class=&quot;btn-grad btn-grad-blue&quot;&gt;</code></pre>
     </div>
     <footer class="blue">
       <div class="body">
