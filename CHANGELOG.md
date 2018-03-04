@@ -1,7 +1,8 @@
 # Changelog for version 0.5.0
 ### New features:
 * Added input groups
-* Added 'forms' docs.
+* Added 'forms' docs
+* Added example page
 
 ### Bug fixes:
 * Changed input styling
