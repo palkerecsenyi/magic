@@ -14,7 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see https://github.com/palkerecsenyi/magic/blob/master/LICENSE.
 
-MAGIC.CSS VERSION 0.4.2 on npm https://www.npmjs.com/package/magical-css
+MAGIC.CSS VERSION 0.5.0 on npm https://www.npmjs.com/package/magical-css
 */
 @font-face{
   font-family: 'Noto';
@@ -99,7 +99,7 @@ $break-t: 768px;
 $break-l: 1024px;
 
 //Controllers
-$version: 'v0.4.2';
+$version: 'v0.5.0';
 $debug: true;
 //^^^ Display errors or not (default: true)
 
@@ -1681,20 +1681,123 @@ nav.light ul .nav-item a, nav.light, nav.light ul .nav-brand-text, nav.yellow ul
   }
 }
 //Forms
-input[type='email'],input[type='text'],input[type='password'],textarea{
+$input-box-shadow-size: .25rem;
+$input-box-shadow-opacity: 0.5;
+$input-border-radius-size: .3rem;
+$input-group-addon-padding: .375rem .75rem;
+$input-group-margin:.375rem 0;
+input[type='email'],input[type='text'],input[type='password'],input[type='number'],textarea{
   font-family:$font-regular,sans-serif;
-  font-size:20px;
+  font-size:1rem;
   width:100%;
   padding:5px;
   transition: box-shadow .3s ease;
   margin-bottom:10px;
-  border-radius:6px;
+  border-radius:$input-border-radius-size;
   border: 1px solid #A4A4A4;
-  box-sizing:border-box
+  box-sizing:border-box;
 }
 input[type='email']:focus,input[type='text']:focus,input[type='password']:focus,textarea:focus{
-  box-shadow: 0 0 0 4px rgba(99, 130, 242, 0.7);
+  &.input-default{
+    box-shadow: 0 0 0 $input-box-shadow-size rgba(0,209,178, $input-box-shadow-opacity);
+  }
+  &.input-red{
+    box-shadow: 0 0 0 $input-box-shadow-size rgba(255,56,96, $input-box-shadow-opacity);
+  }
+  &.input-green{
+    box-shadow: 0 0 0 $input-box-shadow-size rgba(29,209,104, $input-box-shadow-opacity);
+  }
+  &.input-yellow{
+    box-shadow: 0 0 0 $input-box-shadow-size rgba(255,221,87, $input-box-shadow-opacity);
+  }
+  &.input-blue{
+    box-shadow: 0 0 0 $input-box-shadow-size rgba(32,156,238, $input-box-shadow-opacity);
+  }
+  &.input-dark{
+    box-shadow: 0 0 0 $input-box-shadow-size rgba(36,36,36, $input-box-shadow-opacity);
+  }
+  &.input-light{
+    box-shadow: 0 0 0 $input-box-shadow-size $light;
+  }
   outline:none;
+}
+.input-group{
+  display: flex;
+  align-items: stretch;
+  align-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  margin:$input-group-margin;
+  *{
+    vertical-align: middle;
+  }
+  .btn{
+    margin:0;
+  }
+  .input-addon{
+    background-color: $light;
+    text-align: center;
+    padding: $input-group-addon-padding;
+    border: 1px solid #A4A4A4;
+    color:#495057;
+    display: flex;
+    align-items: center;
+    &:first-child{
+      border-top-left-radius: $input-border-radius-size;
+      border-bottom-left-radius: $input-border-radius-size;
+      border-right: none;
+    }
+    &:last-child{
+      border-top-right-radius: $input-border-radius-size;
+      border-bottom-right-radius: $input-border-radius-size;
+      border-right:1px solid #A4A4A4;
+      border-left:none;
+    }
+  }
+  input{
+    flex: 1;
+    width:unset;
+    margin:0;
+    z-index: 30;
+    &:first-of-type{
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    &:first-child{
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: $input-border-radius-size;
+      border-bottom-left-radius: $input-border-radius-size;
+    }
+    &:not(:last-child){
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    &:not(:first-child){
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+  .input-addon + input{
+    border-left:none;
+  }
+  input + .input-addon{
+    border-left:none;
+    border-right:none;
+  }
+  input + input{
+    border-left:none;
+  }
+  .input-addon + .input-addon:last-child{
+    border-left:1px solid #A4A4A4;
+  }
+  input+.input-addon+input{
+    border-left:1px solid #A4A4A4;
+  }
+  input:nth-child(2){
+    border-left:1px solid #A4A4A4;
+  }
 }
 input[type='radio']{
   visibility:hidden;

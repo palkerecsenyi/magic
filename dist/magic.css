@@ -14,7 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see https://github.com/palkerecsenyi/magic/blob/master/LICENSE.
 
-MAGIC.CSS VERSION 0.4.2 on npm https://www.npmjs.com/package/magical-css
+MAGIC.CSS VERSION 0.5.0 on npm https://www.npmjs.com/package/magical-css
 */
 @font-face {
   font-family: 'Noto';
@@ -1581,20 +1581,95 @@ nav.light ul .nav-item a, nav.light, nav.light ul .nav-brand-text, nav.yellow ul
     text-align: left;
     white-space: nowrap; }
 
-input[type='email'], input[type='text'], input[type='password'], textarea {
+input[type='email'], input[type='text'], input[type='password'], input[type='number'], textarea {
   font-family: "Noto", "Roboto", sans-serif, sans-serif;
-  font-size: 20px;
+  font-size: 1rem;
   width: 100%;
   padding: 5px;
   transition: box-shadow .3s ease;
   margin-bottom: 10px;
-  border-radius: 6px;
+  border-radius: 0.3rem;
   border: 1px solid #A4A4A4;
   box-sizing: border-box; }
 
 input[type='email']:focus, input[type='text']:focus, input[type='password']:focus, textarea:focus {
-  box-shadow: 0 0 0 4px rgba(99, 130, 242, 0.7);
   outline: none; }
+  input[type='email']:focus.input-default, input[type='text']:focus.input-default, input[type='password']:focus.input-default, textarea:focus.input-default {
+    box-shadow: 0 0 0 0.25rem rgba(0, 209, 178, 0.5); }
+  input[type='email']:focus.input-red, input[type='text']:focus.input-red, input[type='password']:focus.input-red, textarea:focus.input-red {
+    box-shadow: 0 0 0 0.25rem rgba(255, 56, 96, 0.5); }
+  input[type='email']:focus.input-green, input[type='text']:focus.input-green, input[type='password']:focus.input-green, textarea:focus.input-green {
+    box-shadow: 0 0 0 0.25rem rgba(29, 209, 104, 0.5); }
+  input[type='email']:focus.input-yellow, input[type='text']:focus.input-yellow, input[type='password']:focus.input-yellow, textarea:focus.input-yellow {
+    box-shadow: 0 0 0 0.25rem rgba(255, 221, 87, 0.5); }
+  input[type='email']:focus.input-blue, input[type='text']:focus.input-blue, input[type='password']:focus.input-blue, textarea:focus.input-blue {
+    box-shadow: 0 0 0 0.25rem rgba(32, 156, 238, 0.5); }
+  input[type='email']:focus.input-dark, input[type='text']:focus.input-dark, input[type='password']:focus.input-dark, textarea:focus.input-dark {
+    box-shadow: 0 0 0 0.25rem rgba(36, 36, 36, 0.5); }
+  input[type='email']:focus.input-light, input[type='text']:focus.input-light, input[type='password']:focus.input-light, textarea:focus.input-light {
+    box-shadow: 0 0 0 0.25rem #F3F3F3; }
+
+.input-group {
+  display: flex;
+  align-items: stretch;
+  align-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0.375rem 0; }
+  .input-group * {
+    vertical-align: middle; }
+  .input-group .btn {
+    margin: 0; }
+  .input-group .input-addon {
+    background-color: #F3F3F3;
+    text-align: center;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid #A4A4A4;
+    color: #495057;
+    display: flex;
+    align-items: center; }
+    .input-group .input-addon:first-child {
+      border-top-left-radius: 0.3rem;
+      border-bottom-left-radius: 0.3rem;
+      border-right: none; }
+    .input-group .input-addon:last-child {
+      border-top-right-radius: 0.3rem;
+      border-bottom-right-radius: 0.3rem;
+      border-right: 1px solid #A4A4A4;
+      border-left: none; }
+  .input-group input {
+    flex: 1;
+    width: unset;
+    margin: 0;
+    z-index: 30; }
+    .input-group input:first-of-type {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0; }
+    .input-group input:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: 0.3rem;
+      border-bottom-left-radius: 0.3rem; }
+    .input-group input:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0; }
+    .input-group input:not(:first-child) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0; }
+  .input-group .input-addon + input {
+    border-left: none; }
+  .input-group input + .input-addon {
+    border-left: none;
+    border-right: none; }
+  .input-group input + input {
+    border-left: none; }
+  .input-group .input-addon + .input-addon:last-child {
+    border-left: 1px solid #A4A4A4; }
+  .input-group input + .input-addon + input {
+    border-left: 1px solid #A4A4A4; }
+  .input-group input:nth-child(2) {
+    border-left: 1px solid #A4A4A4; }
 
 input[type='radio'] {
   visibility: hidden;
@@ -1688,6 +1763,6 @@ select .opt-light:hover {
   background-color: #F3F3F3 !important; }
 
 .version::after {
-  content: "v0.4.2"; }
+  content: "v0.5.0"; }
 
 /*# sourceMappingURL=magic.css.map */
