@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/magical-css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+    <link rel="stylesheet" href="../../prism.css">
+    <meta charset="UTF-8">
+    <title>Magic - Documentation</title>
+    <script>
+      function openNav(){
+        document.getElementById("nav-mobile").style.width = "100%";
+      }
+      function closeNav(){
+        document.getElementById("nav-mobile").style.width = "0";
+      }
+    </script>
+    <script src="../../navbar.js"></script>
+  </head>
+  <body>
+    <div id="nav-mobile" class="blue animate">
+      <a href="javascript:void(0)" class="close" onClick="closeNav()">&times;</a>
+      <a href="https://palkerecsenyi.github.io/magic/">Home</a>
+      <a href="https://palkerecsenyi.github.io/magic/start">Get Started</a>
+      <a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a>
+      <a href="https://github.com/palkerecsenyi/magic">Github</a>
+    </div>
+    <nav class="blue">
+      <ul class="nav-left">
+        <li><a href="/magic" class="nav-brand-text">Magic.CSS</a></li>
+        <li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/">Home</a></li>
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/start">Get Started</a></li>
+        <li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a></li>
+        <li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
+      </ul>
+    </nav>
+    <div class="navigation blue">
+			<div class="links">
+        <script>addNav(true,"form");</script>
+			</div>
+		</div>
+    <div class="container">
+      <h1 class="header">Form</h1>
+      <h2 class="trailer">Magic has several custom styles for versatile form components.</h2>
+      <hr class="separator">
+      <h2>Text input</h2>
+      <p>Magic has a simple way of styling text inputs:</p>
+      <div class="row">
+        <div class="col">
+          <input type="text" class="input-default" placeholder="Default...">
+        </div>
+        <div class="col">
+          <input type="text" class="input-red" placeholder="Red...">
+        </div>
+        <div class="col">
+          <input type="text" class="input-green" placeholder="Green...">
+        </div>
+        <div class="col">
+          <input type="text" class="input-yellow" placeholder="Yellow...">
+        </div>
+        <div class="col">
+          <input type="text" class="input-blue" placeholder="Blue...">
+        </div>
+        <div class="col">
+          <input type="text" class="input-dark" placeholder="Dark...">
+        </div>
+        <div class="col">
+          <input type="text" class="input-light" placeholder="Light...">
+        </div>
+      </div>
+      <pre><code class="language-markup">&lt;input type=&quot;text&quot; class=&quot;input-default&quot; placeholder=&quot;Default...&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;input-red&quot; placeholder=&quot;Red...&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;input-green&quot; placeholder=&quot;Green...&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;input-yellow&quot; placeholder=&quot;Yellow...&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;input-blue&quot; placeholder=&quot;Blue...&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;input-dark&quot; placeholder=&quot;Dark...&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;input-light&quot; placeholder=&quot;Light...&quot;&gt;</code></pre>
+      <div class="error info">Inputs displayed side-by-side for demonstration. They are typically block elements with 100% width.</div>
+      <h2>Input groups</h2>
+      <p>Similarly to Bootstrap, you can create input groups:</p>
+      <div class="input-group">
+        <div class="input-addon">
+          <span>@</span>
+        </div>
+        <input type="text" class="input-default">
+      </div>
+      <div class="input-group">
+        <div class="input-addon">
+          <span>@</span>
+        </div>
+        <div class="input-addon">
+          <span>Required</span>
+        </div>
+        <input type="text" class="input-default">
+        <div class="input-addon">
+          <span>Password</span>
+        </div>
+        <div class="input-addon">
+          <span>Required</span>
+        </div>
+        <input type="text" class="input-default">
+        <div class="input-addon">
+          <input type="checkbox" id="check" class="default">
+          <label for="check">Remember me?</label>
+        </div>
+        <button class="btn btn-default input-addon">Go!</button>
+      </div>
+      <pre><code class="language-markup">&lt;div class=&quot;input-group&quot;&gt;
+  &lt;div class=&quot;input-addon&quot;&gt;
+    &lt;span&gt;@&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;input type=&quot;text&quot; class=&quot;input-default&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;input-group&quot;&gt;
+  &lt;div class=&quot;input-addon&quot;&gt;
+    &lt;span&gt;@&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;input-addon&quot;&gt;
+    &lt;span&gt;Required&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;input type=&quot;text&quot; class=&quot;input-default&quot;&gt;
+  &lt;div class=&quot;input-addon&quot;&gt;
+    &lt;span&gt;Password&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;input-addon&quot;&gt;
+    &lt;span&gt;Required&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;input type=&quot;text&quot; class=&quot;input-default&quot;&gt;
+  &lt;div class=&quot;input-addon&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;check&quot;&gt;
+    &lt;label for=&quot;check&quot;&gt;Remember me?&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;button class=&quot;btn btn-default input-addon&quot;&gt;Go!&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+      <h2>Radio inputs</h2>
+      <p>Magic has styled radio buttons:</p>
+      <div class="radio-group">
+        <input type="radio" id="r1" name="radio" class="red" checked>
+        <label for="r1" class="radio-label">Option 1</label>
+        <input type="radio" name="radio" id="r2" class="blue">
+        <label for="r2" class="radio-label">Option 2</label>
+        <input type="radio" name="radio" id="r3" class="green">
+        <label for="r3" class="radio-label">Option 3</label>
+        <input type="radio" name="radio" id="r4" class="default">
+        <label for="r4" class="radio-label">Option 4</label>
+      </div>
+      <pre><code class="language-markup">&lt;div class=&quot;radio-group&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;r1&quot; name=&quot;radio&quot; class=&quot;red&quot; checked&gt;
+  &lt;label for=&quot;r1&quot; class=&quot;radio-label&quot;&gt;Option 1&lt;/label&gt;
+  
+  &lt;input type=&quot;radio&quot; name=&quot;radio&quot; id=&quot;r2&quot; class=&quot;blue&quot;&gt;
+  &lt;label for=&quot;r2&quot; class=&quot;radio-label&quot;&gt;Option 2&lt;/label&gt;
+  
+  &lt;input type=&quot;radio&quot; name=&quot;radio&quot; id=&quot;r3&quot; class=&quot;green&quot;&gt;
+  &lt;label for=&quot;r3&quot; class=&quot;radio-label&quot;&gt;Option 3&lt;/label&gt;
+  
+  &lt;input type=&quot;radio&quot; name=&quot;radio&quot; id=&quot;r4&quot; class=&quot;default&quot;&gt;
+  &lt;label for=&quot;r4&quot; class=&quot;radio-label&quot;&gt;Option 4&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+      <h2>Checkbox inputs</h2>
+      <p>Magic also has styled checkboxes:</p>
+      <div class="check-group">
+        <input id="c1" type="checkbox" class="red" checked>
+        <label for="c1" class="check-label">Checkbox 1</label>
+        
+        <input id="c2" type="checkbox" class="blue">
+        <label for="c2" class="check-label">Checkbox 2</label>
+        
+        <input id="c3" type="checkbox" class="green">
+        <label for="c3" class="check-label">Checkbox 3</label>
+        
+        <input id="c4" type="checkbox" class="default">
+        <label for="c4" class="check-label">Checkbox 4</label>
+      </div>
+      <pre><code class="language-markup">&lt;div class=&quot;check-group&quot;&gt;
+  &lt;input id=&quot;c1&quot; type=&quot;checkbox&quot; class=&quot;red&quot; checked&gt;
+  &lt;label for=&quot;c1&quot; class=&quot;check-label&quot;&gt;Checkbox 1&lt;/label&gt;
+
+  &lt;input id=&quot;c2&quot; type=&quot;checkbox&quot; class=&quot;blue&quot;&gt;
+  &lt;label for=&quot;c2&quot; class=&quot;check-label&quot;&gt;Checkbox 2&lt;/label&gt;
+
+  &lt;input id=&quot;c3&quot; type=&quot;checkbox&quot; class=&quot;green&quot;&gt;
+  &lt;label for=&quot;c3&quot; class=&quot;check-label&quot;&gt;Checkbox 3&lt;/label&gt;
+
+  &lt;input id=&quot;c4&quot; type=&quot;checkbox&quot; class=&quot;default&quot;&gt;
+  &lt;label for=&quot;c4&quot; class=&quot;check-label&quot;&gt;Checkbox 4&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+      <h2>Submit buttons</h2>
+      <p>Submit buttons can be given the class <span class="i-code">btn</span> or <span class="i-code">btn-grad</span> to be styled nicely:</p>
+      <input type="submit" class="btn btn-default">
+      <input type="submit" class="btn btn-outline btn-default">
+      <input type="submit" class="btn-grad btn-grad-blue">
+      <pre><code class="language-markup">&lt;input type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;
+&lt;input type=&quot;submit&quot; class=&quot;btn btn-outline btn-default&quot;&gt;
+&lt;input type=&quot;submit&quot; class=&quot;btn-grad btn-grad-blue&quot;&gt;</code></pre>
+    </div>
+    <footer class="blue">
+      <div class="body">
+        <div class="content">
+          <h1>Magic.css</h1>
+          <p>Neat and unique CSS framework for dynamic websites</p>
+        </div>
+        <div class="links">
+          <ul>
+            <li class="header">Pages</li>
+            <li><a href="/magic">Home</a></li>
+            <li><a href="#">Start</a></li>
+            <li><a href="https://github.com/palkerecsenyi/magic/">Github</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>&copy; Magic 2018 <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
+      </div>
+    </footer>
+    <script src="../../prism.js"></script>
+  </body>
+</html>

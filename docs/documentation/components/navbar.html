@@ -255,6 +255,29 @@
       <h3>Animation</h3>
       <p>You can also make the mobile navbar 'slide' rather than appear, by adding the <span class="i-code">animate</span> class to the div:</p>
       <a href="#" onclick="openAnimatedNav(); return false;" class="btn btn-blue btn-fluid">Open animated navbar</a>
+      <h2>Dropdowns</h2>
+      <p>To add a dropdown to your navbar, see the <a class="link lined" href="dropdown.html">Dropdown docs</a>. Here's a preview:</p>
+      <nav class="blue doc-nav">
+        <ul class="nav-left">
+          <li class="nav-brand-container"><h1 class="nav-brand-text">Example Navbar</h1></li>
+        </ul>
+        <ul class="nav-right">
+          <li class="nav-item active"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#">Contact</a></li>
+          <li class="nav-item"><a href="#">About</a></li>
+          <li class="nav-item">
+            <div class="nav-dropdown-container">
+              <a href="#" onClick="$('#dd4').toggleClass('active'); return false;">More <i class="fas fa-caret-down"></i></a>
+              <div class="nav-dropdown" id="dd4">
+                <a href="#">Sign in</a>
+                <a href="#">Sign up</a>
+                <a href="#">My profile</a>
+                <a href="#" class="red">Issues</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
     </div>
     <footer class="blue">
       <div class="body">
