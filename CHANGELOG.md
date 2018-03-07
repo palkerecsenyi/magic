@@ -3,6 +3,7 @@
 * Added input groups
 * Added 'forms' docs
 * Added example page
+* Added dropdowns
 
 ### Bug fixes:
 * Changed input styling
