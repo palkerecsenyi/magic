@@ -1,12 +1,9 @@
-# Changelog for version 0.5.0
+# Changelog for version 0.6.0
 ### New features:
-* Added input groups
-* Added 'forms' docs
-* Added example page
-* Added dropdowns
+* Added notifications
 
 ### Bug fixes:
-* Changed input styling
+None
 
 ### More
 See commit descriptions for more. I add large descriptions to all big commits.
