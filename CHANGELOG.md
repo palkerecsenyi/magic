@@ -1,11 +1,9 @@
-# Changelog for version 0.3.1
+# Changelog for version 0.6.0
 ### New features:
-* Changes to buttons - made smaller and gave focus effect.
-* Added docs for floaters and boxes in columns
+* Added notifications
 
 ### Bug fixes:
-* Fixed text wrapping in navbar
-* Fixed &lt;link&gt; in button docs
+None
 
 ### More
 See commit descriptions for more. I add large descriptions to all big commits.

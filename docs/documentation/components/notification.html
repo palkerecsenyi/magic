@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/magical-css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+    <link rel="stylesheet" href="../../prism.css">
+    <meta charset="UTF-8">
+    <title>Magic - Documentation</title>
+    <script>
+      function openNav(){
+        document.getElementById("nav-mobile").style.width = "100%";
+      }
+      function closeNav(){
+        document.getElementById("nav-mobile").style.width = "0";
+      }
+    </script>
+    <script src="../../navbar.js"></script>
+  </head>
+  <body>
+    <div id="nav-mobile" class="blue animate">
+      <a href="javascript:void(0)" class="close" onClick="closeNav()">&times;</a>
+      <a href="https://palkerecsenyi.github.io/magic/">Home</a>
+      <a href="https://palkerecsenyi.github.io/magic/start">Get Started</a>
+      <a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a>
+      <a href="https://github.com/palkerecsenyi/magic">Github</a>
+    </div>
+    <nav class="blue">
+      <ul class="nav-left">
+        <li><a href="/magic" class="nav-brand-text">Magic.CSS</a></li>
+        <li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/">Home</a></li>
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/start">Get Started</a></li>
+        <li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a></li>
+        <li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
+      </ul>
+    </nav>
+    <div class="navigation blue">
+			<div class="links">
+        <script>addNav(true,"notification");</script>
+			</div>
+		</div>
+    <div class="container">
+      <h1 class="header">Notification <span class="badge red">New!</span></h1>
+      <h2 class="trailer">A neat way of displaying extended notification-style content to users.</h2>
+      <hr class="separator">
+      <div class="notification red">
+        <div class="title"><i class="fas fa-exclamation-circle"></i> Error! <span class="close">&times;</span></div>
+        <div class="body">There was an error processing your credit card details. Instead, please send 4 Bitcoins to XXX.</div>
+      </div>
+      <div class="notification yellow">
+        <div class="title"><i class="fas fa-exclamation-triangle"></i> Warning! <span class="close">&times;</span></div>
+        <div class="body">Please make sure that you enter the correct credit card details.</div>
+      </div>
+      <div class="notification green">
+        <div class="title"><i class="fas fa-exclamation-triangle"></i> Success! <span class="close">&times;</span></div>
+        <div class="body">Thanks! You entered the correct credit card details, and your payment has been confirmed.</div>
+      </div>
+      <div class="notification blue">
+        <div class="title"><i class="fas fa-info-circle"></i> More text! <span class="close">&times;</span></div>
+        <div class="body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et ipsum justo. Donec sagittis augue velit, at feugiat magna gravida eu. Morbi accumsan neque sagittis lectus posuere viverra. Praesent laoreet hendrerit velit, ut dignissim neque. Donec neque risus, imperdiet at odio eu, venenatis tempus nisi. Pellentesque vitae lorem massa. Nunc vitae pellentesque nulla. Morbi at pulvinar orci, tincidunt hendrerit magna. Curabitur id felis non quam viverra porttitor in at sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+          <hr class="separator">
+          Nullam scelerisque eget dolor in rutrum. Curabitur quis pharetra enim. Duis arcu risus, porta in nunc et, venenatis dapibus tellus. Morbi cursus bibendum leo eu laoreet. Vivamus feugiat blandit tortor, sit amet rutrum felis gravida a. Quisque vel sagittis felis. Aliquam blandit commodo mauris in egestas. Duis molestie, diam in varius iaculis, mi lorem dapibus dui, at scelerisque mi nibh eget dolor. Pellentesque non mattis felis.
+        </div>
+      </div>
+      <div class="error yellow">Snippet uses FontAwesome icons.</div>
+      <pre><code class="language-markup">&lt;div class=&quot;notification red&quot;&gt;
+  &lt;div class=&quot;title&quot;&gt;&lt;i class=&quot;fas fa-exclamation-circle&quot;&gt;&lt;/i&gt; Error! &lt;span class=&quot;close&quot;&gt;&amp;times;&lt;/span&gt;&lt;/div&gt;
+  &lt;div class=&quot;body&quot;&gt;There was an error processing your credit card details. Instead, please send 4 Bitcoins to XXX.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;notification yellow&quot;&gt;
+  &lt;div class=&quot;title&quot;&gt;&lt;i class=&quot;fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt; Warning! &lt;span class=&quot;close&quot;&gt;&amp;times;&lt;/span&gt;&lt;/div&gt;
+  &lt;div class=&quot;body&quot;&gt;Please make sure that you enter the correct credit card details.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;notification green&quot;&gt;
+  &lt;div class=&quot;title&quot;&gt;&lt;i class=&quot;fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt; Success! &lt;span class=&quot;close&quot;&gt;&amp;times;&lt;/span&gt;&lt;/div&gt;
+  &lt;div class=&quot;body&quot;&gt;Thanks! You entered the correct credit card details, and your payment has been confirmed.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;notification blue&quot;&gt;
+  &lt;div class=&quot;title&quot;&gt;&lt;i class=&quot;fas fa-info-circle&quot;&gt;&lt;/i&gt; More text! &lt;span class=&quot;close&quot;&gt;&amp;times;&lt;/span&gt;&lt;/div&gt;
+  &lt;div class=&quot;body&quot;&gt;
+    Lorem ipsum dolor sit amet...
+    &lt;hr class=&quot;separator&quot;&gt;
+    Nullam scelerisque eget dolor in rutrum...
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <h2>Dismissing notifications <span class="badge yellow">JS</span></h2>
+      <p>To dismiss notifications, you will need to use a little JavaScript. Firstly, add the class <span class="i-code">dismissable</span> to the <span class="i-code">notification</span>:</p>
+      <pre><code class="language-markup">&lt;div class=&quot;notification default dismissable&quot;&gt;
+  &lt;div class=&quot;title&quot;&gt;&lt;i class=&quot;fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt; Warning! &lt;span class=&quot;close&quot;&gt;&amp;times;&lt;/span&gt;&lt;/div&gt;
+  &lt;div class=&quot;body&quot;&gt;You can dismiss me.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <p>Next, add some JS that changes the height of the notification from 100% to 0 (preferably when the &times; button is pressed):</p>
+      <div class="notification default dismissable" id="dismiss">
+        <div class="title"><i class="fas fa-exclamation-triangle"></i> Warning! <span class="close" onClick="var e = document.getElementById('dismiss'); e.classList.add('dismissed'); window.setTimeout(function(){e.style.display = 'none';},300);">&times;</span></div>
+        <div class="body">You can dismiss me.</div>
+      </div>
+      <pre><code class="language-markup">&lt;div class=&quot;notification default dismissable&quot; id=&quot;dismiss&quot;&gt;
+  &lt;div class=&quot;title&quot;&gt;&lt;i class=&quot;fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt; Warning! &lt;span class=&quot;close&quot; onClick=&quot;var e = document.getElementById('dismiss'); e.classList.add('dismissed'); window.setTimeout(function(){e.style.display = 'none';},300);&quot;&gt;&amp;times;&lt;/span&gt;&lt;/div&gt;
+  &lt;div class=&quot;body&quot;&gt;You can dismiss me.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <h2>Grouping notifications</h2>
+      <p>Notifications can also be grouped if several similar ones are present:</p>
+      <div class="notification-group">
+        <div class="notification blue">
+          <div class="title">Notification <span class="close">&times;</span></div>
+          <div class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tortor lorem, tempus sit amet odio sed, faucibus auctor dolor. Phasellus a tincidunt orci. Nulla ut erat a orci scelerisque lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed odio nibh, gravida nec posuere sit amet, elementum id est. Proin cursus massa vel porta ullamcorper. Pellentesque placerat velit vel sagittis eleifend.</div>
+        </div>
+        <div class="notification blue">
+          <div class="title">Notification <span class="close">&times;</span></div>
+          <div class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tortor lorem, tempus sit amet odio sed, faucibus auctor dolor. Phasellus a tincidunt orci. Nulla ut erat a orci scelerisque lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed odio nibh, gravida nec posuere sit amet, elementum id est. Proin cursus massa vel porta ullamcorper. Pellentesque placerat velit vel sagittis eleifend.</div>
+        </div>
+        <div class="notification blue">
+          <div class="title">Notification <span class="close">&times;</span></div>
+          <div class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tortor lorem, tempus sit amet odio sed, faucibus auctor dolor. Phasellus a tincidunt orci. Nulla ut erat a orci scelerisque lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed odio nibh, gravida nec posuere sit amet, elementum id est. Proin cursus massa vel porta ullamcorper. Pellentesque placerat velit vel sagittis eleifend.</div>
+        </div>
+      </div>
+      <pre><code class="language-markup">&lt;div class=&quot;notification-group&quot;&gt;
+  &lt;div class=&quot;notification blue&quot;&gt;
+    &lt;div class=&quot;title&quot;&gt;Notification &lt;span class=&quot;close&quot;&gt;&amp;times;&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;body&quot;&gt;Lorem ipsum dolor sit amet...&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;notification blue&quot;&gt;
+    &lt;div class=&quot;title&quot;&gt;Notification &lt;span class=&quot;close&quot;&gt;&amp;times;&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;body&quot;&gt;Lorem ipsum dolor sit amet...&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;notification blue&quot;&gt;
+    &lt;div class=&quot;title&quot;&gt;Notification &lt;span class=&quot;close&quot;&gt;&amp;times;&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;body&quot;&gt;Lorem ipsum dolor sit amet...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <h3>Grouping titles</h3>
+      <p>Within groups of notifications, you can have one title for the entire group, rather than individual titles for each notification:</p>
+      <div class="notification-group group-titles">
+        <div class="notification blue">
+          <div class="title">Notification <span class="close">&times;</span></div>
+          <div class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tortor lorem, tempus sit amet odio sed, faucibus auctor dolor. Phasellus a tincidunt orci. Nulla ut erat a orci scelerisque lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed odio nibh, gravida nec posuere sit amet, elementum id est. Proin cursus massa vel porta ullamcorper. Pellentesque placerat velit vel sagittis eleifend.</div>
+        </div>
+        <div class="notification blue">
+          <div class="title">Notification <span class="close">&times;</span></div>
+          <div class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tortor lorem, tempus sit amet odio sed, faucibus auctor dolor. Phasellus a tincidunt orci. Nulla ut erat a orci scelerisque lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed odio nibh, gravida nec posuere sit amet, elementum id est. Proin cursus massa vel porta ullamcorper. Pellentesque placerat velit vel sagittis eleifend.</div>
+        </div>
+        <div class="notification blue">
+          <div class="title">Notification <span class="close">&times;</span></div>
+          <div class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tortor lorem, tempus sit amet odio sed, faucibus auctor dolor. Phasellus a tincidunt orci. Nulla ut erat a orci scelerisque lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed odio nibh, gravida nec posuere sit amet, elementum id est. Proin cursus massa vel porta ullamcorper. Pellentesque placerat velit vel sagittis eleifend.</div>
+        </div>
+      </div>
+      <p>To do this, <strong>simply add the <span class="i-code">group-titles</span> class to the <span class="i-code">notification-group</span> div.</strong></p>
+      <div class="error info">Grouped-title notification groups cannot be 'dismissed' as shown for indivdual notifications above.</div>
+      <h2>Notifications in columns</h2>
+      <p>As demonstrated below, notifications work perfectly in columns, too:</p>
+      <div class="row" style="margin-top: 0">
+        <div class="col">
+          <div class="notification red">
+            <div class="title">Notification <span class="close">&times;</span></div>
+            <div class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tortor lorem, tempus sit amet odio sed, faucibus auctor dolor. Phasellus a tincidunt orci. Nulla ut erat a orci scelerisque lobortis.</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="notification red">
+            <div class="title">Notification <span class="close">&times;</span></div>
+            <div class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tortor lorem, tempus sit amet odio sed, faucibus auctor dolor. Phasellus a tincidunt orci. Nulla ut erat a orci scelerisque lobortis.</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="notification red">
+            <div class="title">Notification <span class="close">&times;</span></div>
+            <div class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tortor lorem, tempus sit amet odio sed, faucibus auctor dolor. Phasellus a tincidunt orci. Nulla ut erat a orci scelerisque lobortis.</div>
+          </div>
+        </div>
+      </div>
+      <p>For more on column layouts, see our <a class="link lined" href="../layout/grid.html">Grid docs</a>.</p>
+    </div>
+    <footer class="blue">
+      <div class="body">
+        <div class="content">
+          <h1>Magic.css</h1>
+          <p>Neat and unique CSS framework for dynamic websites</p>
+        </div>
+        <div class="links">
+          <ul>
+            <li class="header">Pages</li>
+            <li><a href="/magic">Home</a></li>
+            <li><a href="#">Start</a></li>
+            <li><a href="https://github.com/palkerecsenyi/magic/">Github</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>&copy; Magic 2018 <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
+      </div>
+    </footer>
+    <script src="../../prism.js"></script>
+  </body>
+</html>

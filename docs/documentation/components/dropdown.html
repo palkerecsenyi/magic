@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/magical-css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+    <link rel="stylesheet" href="../../prism.css">
+    <meta charset="UTF-8">
+    <title>Magic - Documentation</title>
+    <script>
+      function openNav(){
+        document.getElementById("nav-mobile").style.width = "100%";
+      }
+      function closeNav(){
+        document.getElementById("nav-mobile").style.width = "0";
+      }
+    </script>
+    <script src="../../navbar.js"></script>
+  </head>
+  <body>
+    <div id="nav-mobile" class="blue animate">
+      <a href="javascript:void(0)" class="close" onClick="closeNav()">&times;</a>
+      <a href="https://palkerecsenyi.github.io/magic/">Home</a>
+      <a href="https://palkerecsenyi.github.io/magic/start">Get Started</a>
+      <a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a>
+      <a href="https://github.com/palkerecsenyi/magic">Github</a>
+    </div>
+    <nav class="blue">
+      <ul class="nav-left">
+        <li><a href="/magic" class="nav-brand-text">Magic.CSS</a></li>
+        <li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/">Home</a></li>
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/start">Get Started</a></li>
+        <li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a></li>
+        <li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
+      </ul>
+    </nav>
+    <div class="navigation blue">
+			<div class="links">
+        <script>addNav(true,"dropdown");</script>
+			</div>
+		</div>
+    <div class="container">
+      <h1 class="header">Dropdown <span class="badge yellow">JS</span> <span class="badge red">New!</span></h1>
+      <h2 class="trailer">A universal dropdown, attachable to almost any relevant component. Requires additional JS.</h2>
+      <hr class="separator" style="margin-bottom:4rem;">
+      <div class="dropdown-container">
+        <button class="btn btn-default" onClick="$('#dd1').toggleClass('active')">Left Dropdown</button>
+        <div class="dropdown" id="dd1">
+          <a href="#">Home</a>
+          <a href="#">Contact</a>
+          <a href="#">About</a>
+          <hr class="dropdown-separator">
+          <a href="#">Sign in</a>
+          <a href="#" class="disabled">Disabled</a>
+        </div>
+      </div>
+      <div class="dropdown-container right">
+        <button class="btn btn-default" onClick="$('#dd2').toggleClass('active')">Right Dropdown</button>
+        <div class="dropdown" id="dd2">
+          <a href="#">Home</a>
+          <a href="#">Contact</a>
+          <a href="#">About</a>
+          <hr class="dropdown-separator">
+          <a href="#">Sign in</a>
+          <a href="#" class="disabled">Disabled</a>
+        </div>
+      </div>
+      <div class="dropdown-container top">
+        <button class="btn btn-default" onClick="$('#dd3').toggleClass('active')">Dropup</button>
+        <div class="dropdown" id="dd3">
+          <a href="#">Home</a>
+          <a href="#">Contact</a>
+          <a href="#">About</a>
+          <hr class="dropdown-separator">
+          <a href="#">Sign in</a>
+          <a href="#" class="disabled">Disabled</a>
+        </div>
+      </div>
+      <p>To add the dropdowns demonstrated above, use the following code (with jQuery):</p>
+      <pre><code class="language-markup">&lt;div class=&quot;dropdown-container&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot; onClick=&quot;$('#dd1').toggleClass('active')&quot;&gt;Left Dropdown&lt;/button&gt;
+  &lt;div class=&quot;dropdown&quot; id=&quot;dd1&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Very long text is supported, too.&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;
+    &lt;hr class=&quot;dropdown-separator&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;Sign in&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;disabled&quot;&gt;Disabled&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;dropdown-container right&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot; onClick=&quot;$('#dd2').toggleClass('active')&quot;&gt;Right Dropdown&lt;/button&gt;
+  &lt;div class=&quot;dropdown&quot; id=&quot;dd2&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Very long text is supported, too.&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;
+    &lt;hr class=&quot;dropdown-separator&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;Sign in&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;disabled&quot;&gt;Disabled&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;dropdown-container top&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot; onClick=&quot;$('#dd3').toggleClass('active')&quot;&gt;Dropup&lt;/button&gt;
+  &lt;div class=&quot;dropdown&quot; id=&quot;dd3&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Very long text is supported, too.&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;
+    &lt;hr class=&quot;dropdown-separator&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;Sign in&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;disabled&quot;&gt;Disabled&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <p>As demonstrated in this example, you need to toggle the class <span class="i-code">active</span> on the <span class="i-code">dropdown</span> div. This can be triggered by any component, placed directly before the <span class="i-code">dropdown</span> div in the <span class="i-code">dropdown-container</span> div.</p>
+      <div class="error yellow">Dropdowns cannot currently be nested. Trying this will currently result in unexpected behaviour.</div>
+      <h2>Navbar dropdowns</h2>
+      <p>As navbars have a completely different appearance in Magic, they have a completely different dropdown, too.</p>
+      <nav class="blue" style="position:static;">
+        <ul class="nav-left">
+          <li class="nav-brand-container"><h1 class="nav-brand-text">Example Navbar</h1></li>
+        </ul>
+        <ul class="nav-right">
+          <li class="nav-item active"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#">Contact</a></li>
+          <li class="nav-item"><a href="#">About</a></li>
+          <li class="nav-item">
+            <div class="nav-dropdown-container">
+              <a href="#" onClick="$('#dd4').toggleClass('active'); return false;">More <i class="fas fa-caret-down"></i></a>
+              <div class="nav-dropdown" id="dd4">
+                <a href="#">Sign in</a>
+                <a href="#">Sign up</a>
+                <a href="#">My profile</a>
+                <a href="#" class="red">Issues</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <pre><code class="language-markup">&lt;nav class=&quot;blue&quot;&gt;
+  &lt;ul class=&quot;nav-left&quot;&gt;
+    &lt;li class=&quot;nav-brand-container&quot;&gt;&lt;h1 class=&quot;nav-brand-text&quot;&gt;Example Navbar&lt;/h1&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul class=&quot;nav-right&quot;&gt;
+    &lt;li class=&quot;nav-item active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;div class=&quot;nav-dropdown-container&quot;&gt;
+        &lt;a href=&quot;#&quot; onClick=&quot;$('#dd4').toggleClass('active'); return false;&quot;&gt;More &lt;i class=&quot;fas fa-caret-down&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;div class=&quot;nav-dropdown&quot; id=&quot;dd4&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;Sign in&lt;/a&gt;
+          &lt;a href=&quot;#&quot;&gt;Sign up&lt;/a&gt;
+          &lt;a href=&quot;#&quot;&gt;My profile&lt;/a&gt;
+          &lt;a href=&quot;#&quot; class=&quot;red&quot;&gt;Issues&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+      <p>These work on a fairly similar basis to regular dropdowns, but look completely different and can't have disabled links, but <strong>can</strong> have coloured links.</p>
+    </div>
+    <footer class="blue">
+      <div class="body">
+        <div class="content">
+          <h1>Magic.css</h1>
+          <p>Neat and unique CSS framework for dynamic websites</p>
+        </div>
+        <div class="links">
+          <ul>
+            <li class="header">Pages</li>
+            <li><a href="/magic">Home</a></li>
+            <li><a href="#">Start</a></li>
+            <li><a href="https://github.com/palkerecsenyi/magic/">Github</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>&copy; Magic 2018 <span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
+      </div>
+    </footer>
+    <script src="../../prism.js"></script>
+  </body>
+</html>
