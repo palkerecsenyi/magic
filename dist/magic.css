@@ -14,7 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see https://github.com/palkerecsenyi/magic/blob/master/LICENSE.
 
-MAGIC.CSS VERSION 0.6.0 on npm https://www.npmjs.com/package/magical-css
+MAGIC.CSS VERSION 0.6.1 on npm https://www.npmjs.com/package/magical-css
 */
 @font-face {
   font-family: 'Noto';
@@ -1997,6 +1997,6 @@ select .opt-light:hover {
   background-color: #F3F3F3 !important; }
 
 .version::after {
-  content: "v0.6.0"; }
+  content: "v0.6.1"; }
 
 /*# sourceMappingURL=magic.css.map */
