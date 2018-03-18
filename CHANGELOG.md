@@ -1,6 +1,6 @@
-# Changelog for version 0.6.0
+# Changelog for version 0.6.1
 ### New features:
-* Added notifications
+* Added dark and light colours for notifications
 
 ### Bug fixes:
 None

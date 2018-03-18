@@ -14,7 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see https://github.com/palkerecsenyi/magic/blob/master/LICENSE.
 
-MAGIC.CSS VERSION 0.6.0 on npm https://www.npmjs.com/package/magical-css
+MAGIC.CSS VERSION 0.6.1 on npm https://www.npmjs.com/package/magical-css
 */
 @font-face{
   font-family: 'Noto';
@@ -117,7 +117,7 @@ $break-t: 768px;
 $break-l: 1024px;
 
 //Controllers
-$version: 'v0.6.0';
+$version: 'v0.6.1';
 $debug: true;
 //^^^ Display errors or not (default: true)
 
@@ -449,8 +449,9 @@ p{
       margin:0;
       line-height: 1.2rem;
       cursor:pointer;
+      color:white !important;
       &:hover{
-        color:$dark;
+        color:$dark !important;
       }
     }
   }
@@ -471,6 +472,30 @@ p{
       .title{
         background-color: map-get($darken1,$colourName);
       }
+    }
+  }
+  &.light{
+    border:1px solid lightgray;
+    .body{
+      background-color:white;
+    }
+    .title{
+      background-color: $light;
+    }
+    span.close{
+      color:black !important;
+      &:hover{
+        color:white !important;
+      }
+    }
+  }
+  &.dark{
+    border:1px solid gray;
+    .body{
+      background-color:$dark;
+    }
+    .title{
+      background-color:black;
     }
   }
 }
@@ -494,6 +519,9 @@ p{
     }
     .body{
       padding: 1rem 3rem;
+      @include media($break-m){
+        padding: 1rem;
+      }
     }
   }
   &.group-titles{
@@ -778,7 +806,7 @@ nav + .hero{
   z-index:20;
   overflow-y: hidden;
   .links{
-    margin: 0 10%;
+    padding:0 1rem;
     a{
       display:inline-block;
       font-family:$font-regular;

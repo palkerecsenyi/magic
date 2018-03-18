@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://unpkg.com/magical-css">
+    <!--<link rel="stylesheet" href="https://unpkg.com/magical-css">-->
+    <link rel="stylesheet" href="../../../dist/magic.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
@@ -48,6 +49,10 @@
       <h1 class="header">Notification <span class="badge red">New!</span></h1>
       <h2 class="trailer">A neat way of displaying extended notification-style content to users.</h2>
       <hr class="separator">
+      <div class="notification light">
+        <div class="title">Welcome <span class="badge red">New!</span> <span class="close">&times;</span></div>
+        <div class="body">Please enter your details below.</div>
+      </div>
       <div class="notification red">
         <div class="title"><i class="fas fa-exclamation-circle"></i> Error! <span class="close">&times;</span></div>
         <div class="body">There was an error processing your credit card details. Instead, please send 4 Bitcoins to XXX.</div>
@@ -69,7 +74,11 @@
         </div>
       </div>
       <div class="error yellow">Snippet uses FontAwesome icons.</div>
-      <pre><code class="language-markup">&lt;div class=&quot;notification red&quot;&gt;
+      <pre><code class="language-markup">&lt;div class=&quot;notification light&quot;&gt;
+  &lt;div class=&quot;title&quot;&gt;Welcome! &lt;span class=&quot;close&quot;&gt;&amp;times;&lt;/span&gt;&lt;/div&gt;
+  &lt;div class=&quot;body&quot;&gt;Please enter your details below.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;notification red&quot;&gt;
   &lt;div class=&quot;title&quot;&gt;&lt;i class=&quot;fas fa-exclamation-circle&quot;&gt;&lt;/i&gt; Error! &lt;span class=&quot;close&quot;&gt;&amp;times;&lt;/span&gt;&lt;/div&gt;
   &lt;div class=&quot;body&quot;&gt;There was an error processing your credit card details. Instead, please send 4 Bitcoins to XXX.&lt;/div&gt;
 &lt;/div&gt;
@@ -95,7 +104,7 @@
   &lt;div class=&quot;title&quot;&gt;&lt;i class=&quot;fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt; Warning! &lt;span class=&quot;close&quot;&gt;&amp;times;&lt;/span&gt;&lt;/div&gt;
   &lt;div class=&quot;body&quot;&gt;You can dismiss me.&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-      <p>Next, add some JS that changes the height of the notification from 100% to 0 (preferably when the &times; button is pressed):</p>
+      <p>Next, add some JS that adds the class <span class="i-code">dismissed</span> and sets the <span class="i-code">style.display</span> property to <span class="i-code">none</span> after 300ms.</p>
       <div class="notification default dismissable" id="dismiss">
         <div class="title"><i class="fas fa-exclamation-triangle"></i> Warning! <span class="close" onClick="var e = document.getElementById('dismiss'); e.classList.add('dismissed'); window.setTimeout(function(){e.style.display = 'none';},300);">&times;</span></div>
         <div class="body">You can dismiss me.</div>
