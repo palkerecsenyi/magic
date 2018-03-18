@@ -14,7 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see https://github.com/palkerecsenyi/magic/blob/master/LICENSE.
 
-MAGIC.CSS VERSION 0.5.0 on npm https://www.npmjs.com/package/magical-css
+MAGIC.CSS VERSION 0.6.0 on npm https://www.npmjs.com/package/magical-css
 */
 @font-face {
   font-family: 'Noto';
@@ -322,9 +322,10 @@ p {
       font-size: 2rem;
       margin: 0;
       line-height: 1.2rem;
-      cursor: pointer; }
+      cursor: pointer;
+      color: white !important; }
       .notification .title span.close:hover {
-        color: #242424; }
+        color: #242424 !important; }
   .notification.default .body {
     color: black !important; }
   .notification.default .body {
@@ -368,6 +369,22 @@ p {
   .notification.light .body .separator {
     box-shadow: 0 10px 10px -10px inset !important;
     margin: .7rem 0; }
+  .notification.light {
+    border: 1px solid lightgray; }
+    .notification.light .body {
+      background-color: white; }
+    .notification.light .title {
+      background-color: #F3F3F3; }
+    .notification.light span.close {
+      color: black !important; }
+      .notification.light span.close:hover {
+        color: white !important; }
+  .notification.dark {
+    border: 1px solid gray; }
+    .notification.dark .body {
+      background-color: #242424; }
+    .notification.dark .title {
+      background-color: black; }
 
 .notification-group {
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.2), 0 2px 18px 0 rgba(0, 0, 0, 0.19); }
@@ -387,6 +404,9 @@ p {
       border-bottom: 1px solid transparent; }
     .notification-group .notification .body {
       padding: 1rem 3rem; }
+      @media only screen and (max-width: 425px) {
+        .notification-group .notification .body {
+          padding: 1rem; } }
   .notification-group.group-titles .notification {
     border-bottom: 1px solid transparent; }
     .notification-group.group-titles .notification:not(:first-child) .title {
@@ -711,7 +731,7 @@ nav + .hero {
   z-index: 20;
   overflow-y: hidden; }
   .navigation .links {
-    margin: 0 10%; }
+    padding: 0 1rem; }
     .navigation .links a {
       display: inline-block;
       font-family: "Noto", "Roboto", sans-serif;
@@ -1977,6 +1997,6 @@ select .opt-light:hover {
   background-color: #F3F3F3 !important; }
 
 .version::after {
-  content: "v0.5.0"; }
+  content: "v0.6.0"; }
 
 /*# sourceMappingURL=magic.css.map */
