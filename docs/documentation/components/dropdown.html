@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/magical-css">
+    <link rel="stylesheet" href="../../../dist/magic.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
@@ -49,36 +50,39 @@
       <h2 class="trailer">A universal dropdown, attachable to almost any relevant component. Requires additional JS.</h2>
       <hr class="separator" style="margin-bottom:4rem;">
       <div class="dropdown-container">
-        <button class="btn btn-default" onClick="$('#dd1').toggleClass('active')">Left Dropdown</button>
-        <div class="dropdown" id="dd1">
-          <a href="#">Home</a>
-          <a href="#">Contact</a>
-          <a href="#">About</a>
+        <button class="btn btn-blue" onClick="$('#dd1').toggleClass('active')">Left Dropdown</button>
+        
+        <div class="dropdown blue" id="dd1">
+          <a href="#" class="dropdown-item">Home</a>
+          <a href="#" class="dropdown-item">Contact</a>
+          <a href="#" class="dropdown-item">About</a>
           <hr class="dropdown-separator">
-          <a href="#">Sign in</a>
-          <a href="#" class="disabled">Disabled</a>
+          <a href="#" class="dropdown-item">Sign in</a>
+          <a href="#" class="disabled dropdown-item">Disabled</a>
         </div>
       </div>
       <div class="dropdown-container right">
-        <button class="btn btn-default" onClick="$('#dd2').toggleClass('active')">Right Dropdown</button>
-        <div class="dropdown" id="dd2">
-          <a href="#">Home</a>
-          <a href="#">Contact</a>
-          <a href="#">About</a>
+        <button class="btn btn-red" onClick="$('#dd2').toggleClass('active')">Right Dropdown</button>
+       
+        <div class="dropdown red" id="dd2">
+          <a href="#" class="dropdown-item">Home</a>
+          <a href="#" class="dropdown-item">Contact</a>
+          <a href="#" class="dropdown-item">About</a>
           <hr class="dropdown-separator">
-          <a href="#">Sign in</a>
-          <a href="#" class="disabled">Disabled</a>
+          <a href="#" class="dropdown-item">Sign in</a>
+          <a href="#" class="disabled dropdown-item">Disabled</a>
         </div>
       </div>
       <div class="dropdown-container top">
-        <button class="btn btn-default" onClick="$('#dd3').toggleClass('active')">Dropup</button>
-        <div class="dropdown" id="dd3">
-          <a href="#">Home</a>
-          <a href="#">Contact</a>
-          <a href="#">About</a>
+        <button class="btn btn-dark" onClick="$('#dd3').toggleClass('active')">Dropup</button>
+        
+        <div class="dropdown dark" id="dd3">
+          <a href="#" class="dropdown-item">Home</a>
+          <a href="#" class="dropdown-item">Contact</a>
+          <a href="#" class="dropdown-item">About</a>
           <hr class="dropdown-separator">
-          <a href="#">Sign in</a>
-          <a href="#" class="disabled">Disabled</a>
+          <a href="#" class="dropdown-item">Sign in</a>
+          <a href="#" class="disabled dropdown-item">Disabled</a>
         </div>
       </div>
       <p>To add the dropdowns demonstrated above, use the following code (with jQuery):</p>

@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/magical-css">
+    <link rel="stylesheet" href="../../../dist/magic.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
@@ -94,6 +95,401 @@
 &lt;p class=&quot;important-2&quot;&gt;I am very important&lt;/p&gt;
 &lt;p class=&quot;important-3&quot;&gt;I am very important&lt;/p&gt;
 &lt;p class=&quot;important-4&quot;&gt;I am very important&lt;/p&gt;</code></pre>
+      <h2>Blockquotes</h2>
+      <p>Magic also has standard support for blockquotes:</p>
+      <blockquote>
+        Big fancy blockquote.
+      </blockquote>
+      <p>This uses the standard <span class="i-code">blockquote</span> tag, with no extra classes.</p>
+      <pre><code class="language-markup">&lt;blockquote&gt;
+  Big fancy blockquote.
+&lt;/blockquote&gt;</code></pre>
+      <h3>Source</h3>
+      <p>Magic also allows you to cite a source:</p>
+      <blockquote>
+        A very interesting quote.
+        <cite title="Source">by Interesting Person</cite>
+      </blockquote>
+      <pre><code class="language-markup">&lt;blockquote&gt;
+  A very interesting quote.
+  &lt;cite title=&quot;Source&quot;&gt;by Interesting Person&lt;/cite&gt;
+&lt;/blockquote&gt;</code></pre>
+      <h3>Centered</h3>
+      <p>Blockquotes can be center-aligned too. You need to use the <span class="i-code">center</span> class.</p>
+      <blockquote class="center">
+        Center aligned, fancy line changes.
+        <cite title="Source">Interesting Person</cite>
+      </blockquote>
+      <pre><code class="language-markup">&lt;blockquote class=&quot;center&quot;&gt;
+  Center aligned, fancy line changes.
+  &lt;cite title=&quot;Source&quot;&gt;Interesting Person&lt;/cite&gt;
+&lt;/blockquote&gt;</code></pre>
+      <h3>Right-aligned</h3>
+      <p>They can also be right-aligned:</p>
+      <blockquote class="right">
+        Right aligned. Obvious line changes.
+        <cite title="Source">Interesting person</cite>
+      </blockquote>
+      <pre><code class="language-markup">&lt;blockquote class=&quot;right&quot;&gt;
+  Right aligned. Obvious line changes.
+  &lt;cite title=&quot;Source&quot;&gt;Interesting person&lt;/cite&gt;
+&lt;/blockquote&gt;</code></pre>
+      <h2>Abbreviations</h2>
+      <p>Magic also supports the <span class="i-code">abbr</span> tag:</p>
+      <p><abbr title="Hypertext Markup Language">HTML</abbr></p>
+      <p><abbr title="Navigation Bar">Navbar</abbr></p>
+      <pre><code class="language-markup">&lt;p&gt;&lt;abbr title=&quot;Hypertext Markup Language&quot;&gt;HTML&lt;/abbr&gt;&lt;/p&gt;
+&lt;p&gt;&lt;abbr title=&quot;Navigation Bar&quot;&gt;Navbar&lt;/abbr&gt;&lt;/p&gt;</code></pre>
+      <h2>Tables</h2>
+      <p>Magic comes with tables, which can optionally be made responsive:</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>John</td>
+            <td>Smith</td>
+            <td>37</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>John</td>
+            <td>Doe</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Jane</td>
+            <td>Doe</td>
+            <td>21</td>
+          </tr>
+        </tbody>
+      </table>
+      <pre><code class="language-markup">&lt;table class=&quot;table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;ID&lt;/th&gt;
+      &lt;th&gt;First name&lt;/th&gt;
+      &lt;th&gt;Last name&lt;/th&gt;
+      &lt;th&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+      &lt;td&gt;John&lt;/td&gt;
+      &lt;td&gt;Smith&lt;/td&gt;
+      &lt;td&gt;37&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+      &lt;td&gt;John&lt;/td&gt;
+      &lt;td&gt;Doe&lt;/td&gt;
+      &lt;td&gt;90&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+      &lt;td&gt;Jane&lt;/td&gt;
+      &lt;td&gt;Doe&lt;/td&gt;
+      &lt;td&gt;21&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+      <h3>Dark table</h3>
+      <p>You can make the entire table darker, by adding the <span class="i-code">dark</span> class:</p>
+      <table class="table dark">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>John</td>
+            <td>Smith</td>
+            <td>37</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>John</td>
+            <td>Doe</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Jane</td>
+            <td>Doe</td>
+            <td>21</td>
+          </tr>
+        </tbody>
+      </table>
+      <pre><code class="language-markup">&lt;table class=&quot;table dark&quot;&gt;
+  ...
+&lt;/table&gt;</code></pre>
+      <h5>Individual dark parts</h5>
+      <p>You can also make individual sections of the table dark:</p>
+      <table class="table">
+        <thead>
+          <tr class="dark">
+            <th>ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>John</td>
+            <td>Smith</td>
+            <td>37</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>John</td>
+            <td>Doe</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Jane</td>
+            <td>Doe</td>
+            <td>21</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>John</td>
+            <td>Smith</td>
+            <td>37</td>
+          </tr>
+          <tr class="dark">
+            <th scope="row">2</th>
+            <td>John</td>
+            <td>Doe</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Jane</td>
+            <td>Doe</td>
+            <td>21</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>You simply need to add <span class="i-code">class="dark"</span> to any section of the table. The border colors will change automatically.</p>
+      <h3>Zebra stripes</h3>
+      <table class="table table-zebra">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>John</td>
+            <td>Smith</td>
+            <td>37</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>John</td>
+            <td>Doe</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Jane</td>
+            <td>Doe</td>
+            <td>21</td>
+          </tr>
+        </tbody>
+      </table>
+      <pre><code class="language-markup">&lt;table class=&quot;table table-zebra&quot;&gt;
+  ...
+&lt;/table&gt;</code></pre>
+      <table class="table dark table-zebra">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>John</td>
+            <td>Smith</td>
+            <td>37</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>John</td>
+            <td>Doe</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Jane</td>
+            <td>Doe</td>
+            <td>21</td>
+          </tr>
+        </tbody>
+      </table>
+      <pre><code class="language-markup">&lt;table class=&quot;table dark table-zebra&quot;&gt;
+  ...
+&lt;/table&gt;</code></pre>
+      <h3>Bordered</h3>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>John</td>
+            <td>Smith</td>
+            <td>37</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td colspan="2">John</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Jane</td>
+            <td>Doe</td>
+            <td>21</td>
+          </tr>
+        </tbody>
+      </table>
+      <pre><code class="language-markup">&lt;table class=&quot;table table-bordered&quot;&gt;
+  ...
+&lt;/table&gt;</code></pre>
+      <table class="table dark table-bordered">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>John</td>
+            <td>Smith</td>
+            <td>37</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td colspan="2">John</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Jane</td>
+            <td>Doe</td>
+            <td>21</td>
+          </tr>
+        </tbody>
+      </table>
+      <pre><code class="language-markup">&lt;table dark class=&quot;table table-bordered&quot;&gt;
+  ...
+&lt;/table&gt;</code></pre>
+      <h3>Responsive table</h3>
+      <p>To make a table responsive, place it inside a <code class="language-markup">&lt;div class="table-responsive"&gt;</code>:</p>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Header</th>
+              <th>Header</th>
+              <th>Header</th>
+              <th>Header</th>
+              <th>Header</th>
+              <th>Header</th>
+              <th>Header</th>
+              <th>Header</th>
+              <th>Header</th>
+              <th>Header</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+            </tr>
+            <tr>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+            </tr>
+            <tr>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <footer class="blue">
       <div class="body">

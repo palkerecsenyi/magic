@@ -1,9 +1,16 @@
-# Changelog for version 0.6.1
+# Changelog for version 0.7.0
 ### New features:
-* Added dark and light colours for notifications
+* Blockquotes
+* Tables
+* Redesigned comments
+
+### New documentation:
+* Blockquotes
+* Tables
+* Re-wrote comment docs.
 
 ### Bug fixes:
-None
+* Header line heights (h1,2,3,4,5,6 line height set to ``1.5rem``)
 
 ### More
 See commit descriptions for more. I add large descriptions to all big commits.
