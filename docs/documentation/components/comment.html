@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://unpkg.com/magical-css">
+    <!--<link rel="stylesheet" href="https://unpkg.com/magical-css">-->
+    <link rel="stylesheet" href="../../../dist/magic.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
@@ -45,117 +46,110 @@
 			</div>
 		</div>
     <div class="container">
-      <h1 class="header">Comments</h1>
+      <h1 class="header">Comment <span class="badge green">Updated</span></h1>
       <h2 class="trailer">A pre-made set of classes to build a responsive 'comments' section</h2>
       <hr class="separator">
       <p>Magic is targeted at dynamic websites (e.g. social networks), and a 'comments' feed is critical for any such site. Therefore, Magic comes with a simple set of classes for comments built in!</p>
       <h2>Example</h2>
       <div class="comments">
         <div class="comment">
-          <div class="body">
-            <p>I am a comment.</p>
+          <div class="comment-left">
+            <img src="http://via.placeholder.com/150x150" class="img-responsive img-circular" alt="Placeholder">
           </div>
-          <hr class="separator">
-          <div class="footer">
-            <p><a href="#">John Smith</a> | 01/01/2018</p>
+          <div class="comment-right">
+            <div class="comment-top">
+              <p><a href="#!" class="link">John Smith</a> <span class="mute">01/01/2018</span></p>
+            </div>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <div class="comment-bottom">
+              <p class="comment-bottom-text"><a href="#!" class="link capitals">Reply <span class="badge light">15</span></a><a href="#!" class="link"><i class="fas fa-thumbs-up"></i></a><a href="#!" class="link"><i class="fas fa-thumbs-down"></i></a></p>
+            </div>
+          </div>
+        </div>
+        <div class="comment comment-inverse">
+          <div class="comment-left">
+            <img src="http://via.placeholder.com/150x150" class="img-responsive img-circular" alt="Placeholder">
+          </div>
+          <div class="comment-right">
+            <div class="comment-top">
+              <p><a href="#!" class="link">John Smith</a> <span class="mute">01/01/2018</span></p>
+            </div>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <div class="comment-bottom">
+              <p class="comment-bottom-text"><a href="#!" class="link capitals">Reply <span class="badge light">15</span></a><a href="#!" class="link"><i class="fas fa-thumbs-up"></i></a><a href="#!" class="link"><i class="fas fa-thumbs-down"></i></a></p>
+            </div>
           </div>
         </div>
       </div>
       <h2>Adding a comments section</h2>
-      <p>Magic comments are contained within a <span class="i-code">comments</span> div. This can contain comments, as well as a 'new comment' textarea. All comment-related components <strong>must</strong> be placed within the <span class="i-code">comments</span> div. To do this:</p>
+      <p>Magic comments are contained within a <span class="i-code">comments</span> div. This can contain comments, as well as a 'new comment' textarea. All comment-related components <strong>must</strong> be placed within the <span class="i-code">comments</span> div.</p>
+      <p>The comment container serves as a responsive positioner for its contents</p>
+      <p>To add one:</p>
       <pre><code class="language-html">&lt;div class="comments"&gt;
   ...
 &lt;/div&gt;</code></pre>
       <h2>Adding a comment</h2>
-      <p>Within the <span class="i-code">comments</span> div, you can have individual comments! They consist of a body and a footer, which can both contain various content. To add a comment, place this inside your <span class="i-code">comments</span> div:</p>
+      <p>Within the <span class="i-code">comments</span> div, you can have individual comments. Each comment consists of a left and a right section. Within the right section, you can have a 'top', middle and 'bottom' section. To add a comment, place this inside your <span class="i-code">comments</span> div:</p>
       <div class="comments">
         <div class="comment">
-          <div class="body">
-            <p>I am a comment.</p>
+          <div class="comment-left">
+            <img src="http://via.placeholder.com/150x150" class="img-responsive img-circular" alt="Placeholder">
           </div>
-          <hr class="separator">
-          <div class="footer">
-            <p><a href="#">John Smith</a> | 01/01/2018</p>
+          <div class="comment-right">
+            <div class="comment-top">
+              <p><a href="#!" class="link">John Smith</a> <span class="mute">01/01/2018</span></p>
+            </div>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <div class="comment-bottom">
+              <p class="comment-bottom-text"><a href="#!" class="link capitals">Reply <span class="badge light">15</span></a><a href="#!" class="link"><i class="fas fa-thumbs-up"></i></a><a href="#!" class="link"><i class="fas fa-thumbs-down"></i></a></p>
+            </div>
           </div>
         </div>
       </div>
       <pre><code class="language-html">&lt;div class=&quot;comment&quot;&gt;
-  &lt;div class=&quot;body&quot;&gt;
-    &lt;p&gt;Amazing project!&lt;/p&gt;
+  &lt;div class=&quot;comment-left&quot;&gt;
+    &lt;img src=&quot;http://via.placeholder.com/150x150&quot; class=&quot;img-responsive img-circular&quot; alt=&quot;Placeholder&quot;&gt;
   &lt;/div&gt;
-  &lt;hr class=&quot;separator&quot;&gt;
-  &lt;div class=&quot;footer&quot;&gt;
-    &lt;p&gt;&lt;a href=&quot;#&quot;&gt;John Smith&lt;/a&gt; | 01/01/2018&lt;/p&gt;
+  &lt;div class=&quot;comment-right&quot;&gt;
+    &lt;div class=&quot;comment-top&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;#!&quot; class=&quot;link&quot;&gt;John Smith&lt;/a&gt; &lt;span class=&quot;mute&quot;&gt;01/01/2018&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.&lt;/p&gt;
+    &lt;div class=&quot;comment-bottom&quot;&gt;
+      &lt;p class=&quot;comment-bottom-text&quot;&gt;&lt;a href=&quot;#!&quot; class=&quot;link capitals&quot;&gt;Reply &lt;span class=&quot;badge light&quot;&gt;15&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#!&quot; class=&quot;link&quot;&gt;&lt;i class=&quot;fas fa-thumbs-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;a href=&quot;#!&quot; class=&quot;link&quot;&gt;&lt;i class=&quot;fas fa-thumbs-down&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-      <h2>Adding a 'new comment' section</h2>
-      <p>To neatly allow users to create a new comment, add the following (again, inside your <span class="i-code">comments</span>):</p>
+      <h2>Inverse comment</h2>
+      <p>A comment can also be inserted flipped, using the <span class="i-code">comment-inverse</span> class.</p>
       <div class="comments">
-        <div class="new">
-          <form>
-            <textarea placeholder="Add your comment..."></textarea>
-            <button type="submit" class="btn btn-default btn-fluid">Add</button>
-          </form>
-        </div>
-        <div class="comment">
-          <div class="body">
-            <p>I am a comment.</p>
+        <div class="comment comment-inverse">
+          <div class="comment-left">
+            <img src="http://via.placeholder.com/150x150" class="img-responsive img-circular" alt="Placeholder">
           </div>
-          <hr class="separator">
-          <div class="footer">
-            <p><a href="#">John Smith</a> | 01/01/2018</p>
-          </div>
-        </div>
-        <div class="comment">
-          <div class="body">
-            <p>I am a comment.</p>
-          </div>
-          <hr class="separator">
-          <div class="footer">
-            <p><a href="#">John Smith</a> | 01/01/2018</p>
-          </div>
-        </div>
-        <div class="comment">
-          <div class="body">
-            <p>I am a comment.</p>
-          </div>
-          <hr class="separator">
-          <div class="footer">
-            <p><a href="#">John Smith</a> | 01/01/2018</p>
+          <div class="comment-right">
+            <div class="comment-top">
+              <p><a href="#!" class="link">John Smith</a> <span class="mute">01/01/2018</span></p>
+            </div>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <div class="comment-bottom">
+              <p class="comment-bottom-text"><a href="#!" class="link capitals">Reply <span class="badge light">15</span></a><a href="#!" class="link"><i class="fas fa-thumbs-up"></i></a><a href="#!" class="link"><i class="fas fa-thumbs-down"></i></a></p>
+            </div>
           </div>
         </div>
       </div>
-      <pre style="max-height: 200px;"><code class="language-html">&lt;div class=&quot;new&quot;&gt;
-  &lt;form&gt;
-    &lt;textarea placeholder=&quot;Add your comment...&quot;&gt;&lt;/textarea&gt;
-    &lt;button type=&quot;submit&quot; class=&quot;btn btn-default btn-fluid&quot;&gt;Add&lt;/button&gt;
-  &lt;/form&gt;
-&lt;/div&gt;
-&lt;div class=&quot;comment&quot;&gt;
-  &lt;div class=&quot;body&quot;&gt;
-    &lt;p&gt;I am a comment.&lt;/p&gt;
+      <pre><code class="language-html">&lt;div class=&quot;comment comment-inverse&quot;&gt;
+  &lt;div class=&quot;comment-left&quot;&gt;
+    &lt;img src=&quot;http://via.placeholder.com/150x150&quot; class=&quot;img-responsive img-circular&quot; alt=&quot;Placeholder&quot;&gt;
   &lt;/div&gt;
-  &lt;hr class=&quot;separator&quot;&gt;
-  &lt;div class=&quot;footer&quot;&gt;
-    &lt;p&gt;&lt;a href=&quot;#&quot;&gt;John Smith&lt;/a&gt; | 01/01/2018&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;comment&quot;&gt;
-  &lt;div class=&quot;body&quot;&gt;
-    &lt;p&gt;I am a comment.&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;hr class=&quot;separator&quot;&gt;
-  &lt;div class=&quot;footer&quot;&gt;
-    &lt;p&gt;&lt;a href=&quot;#&quot;&gt;John Smith&lt;/a&gt; | 01/01/2018&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;comment&quot;&gt;
-  &lt;div class=&quot;body&quot;&gt;
-    &lt;p&gt;I am a comment.&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;hr class=&quot;separator&quot;&gt;
-  &lt;div class=&quot;footer&quot;&gt;
-    &lt;p&gt;&lt;a href=&quot;#&quot;&gt;John Smith&lt;/a&gt; | 01/01/2018&lt;/p&gt;
+  &lt;div class=&quot;comment-right&quot;&gt;
+    &lt;div class=&quot;comment-top&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;#!&quot; class=&quot;link&quot;&gt;John Smith&lt;/a&gt; &lt;span class=&quot;mute&quot;&gt;01/01/2018&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.&lt;/p&gt;
+    &lt;div class=&quot;comment-bottom&quot;&gt;
+      &lt;p class=&quot;comment-bottom-text&quot;&gt;&lt;a href=&quot;#!&quot; class=&quot;link capitals&quot;&gt;Reply &lt;span class=&quot;badge light&quot;&gt;15&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#!&quot; class=&quot;link&quot;&gt;&lt;i class=&quot;fas fa-thumbs-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;a href=&quot;#!&quot; class=&quot;link&quot;&gt;&lt;i class=&quot;fas fa-thumbs-down&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
     </div>

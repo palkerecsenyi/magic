@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/magical-css">
+    <link rel="stylesheet" href="../../../dist/magic.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
@@ -205,7 +206,36 @@
           </div>
         </div>
       </div>
-      <hr class="separator top bottom">
+      
+      <div class="table-responsive">
+        <table class="table table-zebra top bottom">
+          <thead>
+            <tr>
+              <th scope="col">Colour</th>
+              <th scope="col">Price</th>
+              <th scope="col">Tastiness</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Yellow</td>
+              <td>£42-ish</td>
+              <td>Not that tasty.</td>
+            </tr>
+            <tr>
+              <td>Green</td>
+              <td>Too much</td>
+              <td>It's OK.</td>
+            </tr>
+            <tr>
+              <td>Blue</td>
+              <td>Doesn't exist</td>
+              <td>As I said, doesn't exist.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
       <div class="box center">
         <h2 class="box-title" align="center">Order</h2>
         <form>
@@ -220,10 +250,12 @@
               <input type="text" class="input-green" placeholder="Phone number...">
             </div>
           </div>
+          
           <select style="display:block;" class="center">
             <option>Yellow pie</option>
             <option>Green pie</option>
           </select>
+          
           <label class="center" style="display:block;">Quantity</label>
           <div class="radio-group center" style="display:block;">
             <input type="radio" id="r1" class="green" name="q">
