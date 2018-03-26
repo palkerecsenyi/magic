@@ -1,16 +1,13 @@
-# Changelog for version 0.7.0
+# Changelog for version 0.7.1
 ### New features:
-* Blockquotes
-* Tables
-* Redesigned comments
+None
 
 ### New documentation:
-* Blockquotes
-* Tables
-* Re-wrote comment docs.
+None
 
 ### Bug fixes:
-* Header line heights (h1,2,3,4,5,6 line height set to ``1.5rem``)
+* Changed header line heights to 140%
+* Removed some header margins
 
 ### More
 See commit descriptions for more. I add large descriptions to all big commits.
