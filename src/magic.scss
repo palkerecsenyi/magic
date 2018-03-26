@@ -14,7 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see https://github.com/palkerecsenyi/magic/blob/master/LICENSE.
 
-MAGIC.CSS VERSION 0.7.0 on npm https://www.npmjs.com/package/magical-css
+MAGIC.CSS VERSION 0.7.1 on npm https://www.npmjs.com/package/magical-css
 */
 @font-face{
   font-family: 'Noto';
@@ -119,7 +119,7 @@ $break-t: 768px;
 $break-l: 1024px;
 
 //Controllers
-$version: 'v0.7.0';
+$version: 'v0.7.1';
 $debug: true;
 //^^^ Display errors or not (default: true)
 
@@ -171,7 +171,7 @@ body{
 }
 //Typography
 h1,h2,h3,h4,h5,h6{
-  line-height: 1.5rem;
+  line-height: 140%;
 }
 h1,h2{
   font-family:$font-thin;
@@ -229,9 +229,6 @@ abbr{
   font-size:52px;
   margin-bottom:1rem;
   font-family: $font-regular;
-  &:first-child{
-    margin-top:1.5rem !important;
-  }
 }
 .sub-header{
   font-size:34px;
