@@ -448,14 +448,18 @@ table.table {
       margin: .7rem 0; }
   .notification.blue .title {
     background-color: #0f7ec8; }
-  .notification.dark .body .separator {
-    box-shadow: 0 10px 10px -10px black inset !important;
-    margin: .7rem 0; }
+  .notification.dark .body {
+    background-color: #656565; }
+    .notification.dark .body .separator {
+      box-shadow: 0 10px 10px -10px black inset !important;
+      margin: .7rem 0; }
   .notification.dark .title {
     background-color: black; }
-  .notification.light .body .separator {
-    box-shadow: 0 10px 10px -10px lightgrey inset !important;
-    margin: .7rem 0; }
+  .notification.light .body {
+    background-color: #f6f6f6; }
+    .notification.light .body .separator {
+      box-shadow: 0 10px 10px -10px lightgrey inset !important;
+      margin: .7rem 0; }
   .notification.light .title {
     background-color: lightgrey; }
   .notification.light {
@@ -1064,117 +1068,145 @@ a.btn-fluid {
 
 .btn.btn-default {
   background-color: #00D1B2; }
+  .btn.btn-default:hover {
+    background-color: #00a78e; }
   .btn.btn-default:focus {
     box-shadow: 0 0 0 3px rgba(14, 255, 219, 0.8); }
-
-.btn.btn-blue {
-  background-color: #209cee; }
-  .btn.btn-blue:focus {
-    box-shadow: 0 0 0 3px rgba(76, 175, 241, 0.8); }
-
-.btn.btn-yellow {
-  background-color: #ffdd57;
-  color: black !important; }
-  .btn.btn-yellow:focus {
-    box-shadow: 0 0 0 3px rgba(255, 227, 120, 0.8); }
-
-.btn.btn-red {
-  background-color: #FF3860; }
-  .btn.btn-red:focus {
-    box-shadow: 0 0 0 3px rgba(255, 95, 127, 0.8); }
-
-.btn.btn-green {
-  background-color: #1DD168; }
-  .btn.btn-green:focus {
-    box-shadow: 0 0 0 3px rgba(63, 228, 132, 0.8); }
-
-.btn.btn-dark {
-  background-color: #242424; }
-  .btn.btn-dark:focus {
-    box-shadow: 0 0 0 3px rgba(50, 50, 50, 0.8); }
-
-.btn.btn-light {
-  background-color: #F3F3F3;
-  color: black !important; }
-  .btn.btn-light:focus {
-    box-shadow: 0 0 0 3px rgba(245, 245, 245, 0.8); }
-
-.btn-outline {
-  background-color: transparent !important; }
+  .btn.btn-default:active {
+    background-color: #008571; }
 
 .btn-outline.btn-default {
   border: 2px solid #00D1B2;
   color: #00D1B2 !important; }
+  .btn-outline.btn-default:hover {
+    background-color: #00D1B2 !important;
+    color: white !important; }
+  .btn-outline.btn-default:active {
+    background-color: #00a78e !important;
+    border: 2px solid #00a78e; }
 
-.btn-outline.btn-yellow {
-  border: 2px solid #ffdd57;
-  color: #ffdd57 !important; }
-
-.btn-outline.btn-blue {
-  border: 2px solid #209cee;
-  color: #209cee !important; }
+.btn.btn-red {
+  background-color: #FF3860; }
+  .btn.btn-red:hover {
+    background-color: #f80032; }
+  .btn.btn-red:focus {
+    box-shadow: 0 0 0 3px rgba(255, 95, 127, 0.8); }
+  .btn.btn-red:active {
+    background-color: #c60027; }
 
 .btn-outline.btn-red {
   border: 2px solid #FF3860;
   color: #FF3860 !important; }
+  .btn-outline.btn-red:hover {
+    background-color: #FF3860 !important;
+    color: white !important; }
+  .btn-outline.btn-red:active {
+    background-color: #f80032 !important;
+    border: 2px solid #f80032; }
+
+.btn.btn-green {
+  background-color: #1DD168; }
+  .btn.btn-green:hover {
+    background-color: #17a753; }
+  .btn.btn-green:focus {
+    box-shadow: 0 0 0 3px rgba(63, 228, 132, 0.8); }
+  .btn.btn-green:active {
+    background-color: #128542; }
 
 .btn-outline.btn-green {
   border: 2px solid #1DD168;
   color: #1DD168 !important; }
+  .btn-outline.btn-green:hover {
+    background-color: #1DD168 !important;
+    color: white !important; }
+  .btn-outline.btn-green:active {
+    background-color: #17a753 !important;
+    border: 2px solid #17a753; }
+
+.btn.btn-yellow {
+  background-color: #ffdd57;
+  color: black !important; }
+  .btn.btn-yellow:hover {
+    background-color: #ffcf12; }
+  .btn.btn-yellow:focus {
+    box-shadow: 0 0 0 3px rgba(255, 227, 120, 0.8); }
+  .btn.btn-yellow:active {
+    background-color: #daae00; }
+
+.btn-outline.btn-yellow {
+  border: 2px solid #ffdd57;
+  color: #ffdd57 !important; }
+  .btn-outline.btn-yellow:hover {
+    background-color: #ffdd57 !important;
+    color: black !important; }
+  .btn-outline.btn-yellow:active {
+    background-color: #ffcf12 !important;
+    border: 2px solid #ffcf12; }
+
+.btn.btn-blue {
+  background-color: #209cee; }
+  .btn.btn-blue:hover {
+    background-color: #0f7ec8; }
+  .btn.btn-blue:focus {
+    box-shadow: 0 0 0 3px rgba(76, 175, 241, 0.8); }
+  .btn.btn-blue:active {
+    background-color: #0c64a0; }
+
+.btn-outline.btn-blue {
+  border: 2px solid #209cee;
+  color: #209cee !important; }
+  .btn-outline.btn-blue:hover {
+    background-color: #209cee !important;
+    color: white !important; }
+  .btn-outline.btn-blue:active {
+    background-color: #0f7ec8 !important;
+    border: 2px solid #0f7ec8; }
+
+.btn.btn-dark {
+  background-color: #242424; }
+  .btn.btn-dark:hover {
+    background-color: black; }
+  .btn.btn-dark:focus {
+    box-shadow: 0 0 0 3px rgba(101, 101, 101, 0.8); }
+  .btn.btn-dark:active {
+    background-color: black; }
 
 .btn-outline.btn-dark {
   border: 2px solid #242424;
   color: #242424 !important; }
+  .btn-outline.btn-dark:hover {
+    background-color: #242424 !important;
+    color: white !important; }
+  .btn-outline.btn-dark:active {
+    background-color: black !important;
+    border: 2px solid black; }
+
+.btn.btn-light {
+  background-color: #F3F3F3;
+  color: black !important; }
+  .btn.btn-light:hover {
+    background-color: lightgrey; }
+  .btn.btn-light:focus {
+    box-shadow: 0 0 0 3px rgba(246, 246, 246, 0.8); }
+  .btn.btn-light:active {
+    background-color: grey; }
 
 .btn-outline.btn-light {
   border: 2px solid #F3F3F3;
+  color: #F3F3F3 !important;
   color: black !important; }
+  .btn-outline.btn-light:hover {
+    background-color: #F3F3F3 !important;
+    color: black !important; }
+  .btn-outline.btn-light:active {
+    background-color: lightgrey !important;
+    border: 2px solid lightgrey; }
+
+.btn-outline {
+  background-color: transparent !important; }
 
 .btn:hover {
-  cursor: pointer;
-  color: white !important; }
-
-.btn.btn-default:hover {
-  background-color: #00a78e !important; }
-
-.btn.btn-blue:hover {
-  background-color: #0f7ec8 !important; }
-
-.btn.btn-yellow:hover {
-  background-color: #ffcf12 !important;
-  color: black !important; }
-
-.btn.btn-red:hover {
-  background-color: #f80032 !important; }
-
-.btn.btn-green:hover {
-  background-color: #17a753 !important; }
-
-.btn.btn-dark:hover {
-  background-color: black !important; }
-
-.btn.btn-light:hover {
-  background-color: #E0E0E0 !important;
-  color: black !important; }
-
-.btn-outline.btn-default:hover {
-  background-color: #00D1B2 !important; }
-
-.btn-outline.btn-blue:hover {
-  background-color: #209cee !important; }
-
-.btn-outline.btn-yellow:hover {
-  background-color: #ffdd57 !important;
-  color: black !important; }
-
-.btn-outline.btn-red:hover {
-  background-color: #FF3860 !important; }
-
-.btn-outline.btn-green:hover {
-  background-color: #1DD168 !important; }
-
-.btn-outline.btn-dark:hover {
-  background-color: #242424 !important; }
+  cursor: pointer; }
 
 .btn:disabled, .btn.btn-disabled {
   background-color: #6B6B6B;
@@ -1187,48 +1219,6 @@ a.btn-fluid {
 .btn:disabled:hover, .btn.btn-disabled:hover {
   background-color: #6B6B6B !important;
   cursor: not-allowed; }
-
-[class*="darken"][class*="btn"]::before, [class*="lighten"][class*="btn"]::before {
-  content: "Magic.CSS found a layout error: \a \a" "Cannot use darkens or lightens for button colours." '\a \aPlease fix this error to remove this warning or set the "debug" SASS variable to false in magic.scss, and compile it.';
-  font-family: 'Noto' !important;
-  color: white;
-  position: fixed;
-  background-color: #FF3860;
-  margin: 0;
-  padding-top: 20vh;
-  left: 0;
-  top: 0;
-  text-align: center;
-  z-index: 60;
-  font-size: 2rem;
-  height: 100vh;
-  width: 100vw;
-  text-decoration: none;
-  text-transform: none;
-  white-space: pre-wrap;
-  pointer-events: none;
-  font-weight: normal; }
-
-[class*="btn"][class*="btn-"]:not(.btn-fluid):not(.btn-group):not([class*="default"]):not([class*="red"]):not([class*="blue"]):not([class*="green"]):not([class*="yellow"]):not([class*="dark"]):not([class*="light"])::before {
-  content: "Magic.CSS found a layout error: \a \a" "Specified btn-XXX attribute not found." '\a \aPlease fix this error to remove this warning or set the "debug" SASS variable to false in magic.scss, and compile it.';
-  font-family: 'Noto' !important;
-  color: white;
-  position: fixed;
-  background-color: #FF3860;
-  margin: 0;
-  padding-top: 20vh;
-  left: 0;
-  top: 0;
-  text-align: center;
-  z-index: 60;
-  font-size: 2rem;
-  height: 100vh;
-  width: 100vw;
-  text-decoration: none;
-  text-transform: none;
-  white-space: pre-wrap;
-  pointer-events: none;
-  font-weight: normal; }
 
 .breadcrumb {
   width: 100%;
@@ -1484,10 +1474,14 @@ a.btn-fluid {
     align-items: center;
     justify-content: center; }
   .modal .modal-content {
-    width: 60%;
+    min-width: 60%;
+    width: min-content;
     background-color: white;
     border-radius: 4px;
     padding: 2em; }
+    @media only screen and (max-width: 768px) {
+      .modal .modal-content {
+        min-width: 80%; } }
   .modal .modal-close {
     border: none;
     outline: none;
@@ -1506,10 +1500,14 @@ a.btn-fluid {
     .modal .modal-close:hover {
       background-color: rgba(0, 0, 0, 0.5); }
   .modal .modal-adv {
-    width: 60%;
+    width: min-content;
+    min-width: 60%;
     background-color: white;
     border-radius: 4px;
     padding: 0; }
+    @media only screen and (max-width: 768px) {
+      .modal .modal-adv {
+        min-width: 80%; } }
     .modal .modal-adv .modal-adv-title {
       width: 100%;
       box-sizing: border-box;
@@ -1663,6 +1661,8 @@ a.btn-fluid {
       transition: all .1s ease; }
       .dropdown-container .dropdown.dark .dropdown-item:hover {
         background-color: black; }
+      .dropdown-container .dropdown.dark .dropdown-item.disabled {
+        background-color: #656565; }
     .dropdown-container .dropdown.dark .dropdown-separator {
       box-shadow: 0 10px 10px -10px black inset !important;
       margin: .5rem 0;
@@ -1674,6 +1674,8 @@ a.btn-fluid {
       transition: all .1s ease; }
       .dropdown-container .dropdown.light .dropdown-item:hover {
         background-color: lightgrey; }
+      .dropdown-container .dropdown.light .dropdown-item.disabled {
+        background-color: #f6f6f6; }
     .dropdown-container .dropdown.light .dropdown-separator {
       box-shadow: 0 10px 10px -10px lightgrey inset !important;
       margin: .5rem 0;

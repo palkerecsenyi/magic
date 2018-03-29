@@ -1,4 +1,4 @@
-# Changelog for version 0.7.1
+# Changelog for version 0.7.2
 ### New features:
 None
 
@@ -6,8 +6,7 @@ None
 None
 
 ### Bug fixes:
-* Changed header line heights to 140%
-* Removed some header margins
+* #50 - Fixed width of modals on mobile
 
 ### More
 See commit descriptions for more. I add large descriptions to all big commits.
