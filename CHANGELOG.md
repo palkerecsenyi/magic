@@ -1,15 +1,12 @@
-# Changelog for version 0.7.2
+# Changelog for version 1.0.0
 ### New features:
-* Shortened SASS for buttons
-* Added button 'active' effect
-* Changed flex system in footer
+* Progress bar
 
 ### New documentation:
-* Footer
+* Progress bar
 
 ### Bug fixes:
-* #50 - Fixed width of modals on mobile
-* #51 - Minor typo fix
+None
 
 ### More
 See commit descriptions for more. I add large descriptions to all big commits.

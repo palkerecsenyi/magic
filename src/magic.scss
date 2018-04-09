@@ -1655,6 +1655,34 @@ a.btn-fluid{
     }
   }
 }
+
+//Progress
+.progress{
+  width:100%;
+  background-color: $light;
+  border-radius:4px;
+  margin: 0.25rem 0;
+  .bar{
+    border-radius:4px;
+    max-width: 100%;
+    text-align: center;
+    font-size: 0.85rem;
+    transition: width .2s ease, background-color .3s ease;
+    &.small{
+      padding: 0.25rem 0;
+    }
+    &.regular{
+      padding: 0.5rem 0;
+    }
+    &.large{
+      padding: 0.75rem 0;
+    }
+    &.xlarge{
+      padding: 1.25rem 0;
+    }
+  }
+}
+
 //Dropdown
 $dropdown-min-width: 10rem;
 $dropdown-border-radius:3px;

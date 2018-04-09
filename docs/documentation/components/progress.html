@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" href="https://unpkg.com/magical-css">-->
+    <link rel="stylesheet" href="../../../dist/magic.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+    <link rel="stylesheet" href="../../prism.css">
+    <meta charset="UTF-8">
+    <title>Magic - Documentation</title>
+    <script>
+      function openNav(){
+        document.getElementById("nav-mobile").style.width = "100%";
+      }
+      function closeNav(){
+        document.getElementById("nav-mobile").style.width = "0";
+      }
+    </script>
+    <script src="../../navbar.js"></script>
+  </head>
+  <body>
+    <div id="nav-mobile" class="blue animate">
+      <a href="javascript:void(0)" class="close" onClick="closeNav()">&times;</a>
+      <a href="https://palkerecsenyi.github.io/magic/">Home</a>
+      <a href="https://palkerecsenyi.github.io/magic/start">Get Started</a>
+      <a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a>
+      <a href="https://github.com/palkerecsenyi/magic">Github</a>
+    </div>
+    <nav class="blue">
+      <ul class="nav-left">
+        <li><a href="/magic" class="nav-brand-text">Magic.CSS</a></li>
+        <li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/">Home</a></li>
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/start">Get Started</a></li>
+        <li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a></li>
+        <li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
+      </ul>
+    </nav>
+    <div class="navigation blue">
+			<div class="links">
+        <script>addNav(true,"progress");</script>
+			</div>
+		</div>
+    <div class="container">
+      <h1 class="header">Progress <span class="badge red">New!</span></h1>
+      <h2 class="trailer">A very simple progress bar component with a customisable colour, width and height.</h2>
+      <hr class="separator">
+      <div class="progress">
+        <div class="bar small default" style="width:25%">25%</div>
+      </div>
+      <div class="progress">
+        <div class="bar regular red" style="width:50%">50%</div>
+      </div>
+      <div class="progress">
+        <div class="bar large green" style="width:75%">75%</div>
+      </div>
+      <div class="progress">
+        <div class="bar xlarge yellow" style="width:100%">100%</div>
+      </div>
+      <h2>Basic layout</h2>
+      <p>The basic layout of a progress bar is as follows:</p>
+      <pre><code class="language-markup">&lt;div class="progress"&gt;
+  &lt;div class="bar SIZE COLOUR" style="width:WIDTH%"&gt;TEXT&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <p>In this case, <span class="i-code">SIZE</span> refers to the height of the progress bar. You can choose from:</p>
+      <ul>
+        <li>small</li>
+        <li>regular</li>
+        <li>large</li>
+        <li>xlarge</li>
+      </ul>
+      <p><span class="i-code">COLOUR</span> refers to any Magic colour (including darkens and lightens). <span class="i-code">WIDTH</span> refers to a percentage which defines the current 'progress' of the bar. <span class="i-code">TEXT</span> can be any textual content to show in the middle of the progress bar - this <strong>must not</strong> be empty, as the height of the progress bar will not work properly otherwise.</p>
+      <h2>Functionality</h2>
+      <p>Magic.css does not include any JavaScript, and you must add your own in order to add functionality to Magic progress bars. All you need to do is increase the <span class="i-code">width</span> CSS property of the <code class="language-markup">&lt;div class="bar"&gt;</code>, up to a maximum of 100%. <strong>A width transition is applied automatically</strong>, so the width will be animated if a change in percentage occurs.</p>
+      <p>Here is an example:</p>
+      <div class="progress">
+        <div class="bar regular blue" style="width:0%" id="bar">0%</div>
+      </div>
+      <button class="btn btn-blue" onclick="progress()">Start</button>
+      <script>
+        function progress(){
+          var obj = document.getElementById("bar");
+          var interval = undefined;
+          if(interval===undefined){
+            interval = window.setInterval(function(){
+              var width = obj.style.width;
+              if(width!=="100%"){
+                width = width.split("%");
+                width[0] = parseInt(width[0]);
+                width[0]+= 5;
+                width = width.join("%");
+                obj.style.width = width;
+                obj.innerHTML = width;
+              }else{
+                window.clearInterval(interval);
+              }
+            },500);
+          }
+        }
+      </script>
+      <pre><code class="language-markup">&lt;div class=&quot;progress&quot;&gt;
+  &lt;div class=&quot;bar regular blue&quot; style=&quot;width:0%&quot; id=&quot;bar&quot;&gt;0%&lt;/div&gt;
+&lt;/div&gt;
+&lt;button class=&quot;btn btn-blue&quot; onclick=&quot;progress()&quot;&gt;Start&lt;/button&gt;
+&lt;script&gt;
+  function progress(){
+    var obj = document.getElementById(&quot;bar&quot;);
+    var interval = undefined;
+    if(interval===undefined){
+      interval = window.setInterval(function(){
+        var width = obj.style.width;
+        if(width!==&quot;100%&quot;){
+          width = width.split(&quot;%&quot;);
+          width[0] = parseInt(width[0]);
+          width[0]+= 5;
+          width = width.join(&quot;%&quot;);
+          obj.style.width = width;
+          obj.innerHTML = width;
+        }else{
+          window.clearInterval(interval);
+        }
+      },500);
+    }
+  }
+&lt;/script&gt;</code></pre>
+      <p>You can also change the colour of the progress bar using JS, and the transition will be applied automatically:</p>
+      <div class="progress">
+        <div class="bar regular blue-lighten" style="width:0%" id="bar2">0%</div>
+      </div>
+      <button class="btn btn-blue" onclick="progress2()">Start</button>
+      <script>
+        function progress2(){
+          var obj = document.getElementById("bar2");
+          var interval = undefined;
+          if(interval===undefined){
+            interval = window.setInterval(function(){
+              var width = obj.style.width;
+              if(width!=="100%"){
+                width = width.split("%");
+                width[0] = parseInt(width[0]);
+                width[0]+= 5;
+                width = width.join("%");
+                obj.style.width = width;
+                obj.innerHTML = width;
+              }else{
+                window.clearInterval(interval);
+                obj.classList.remove("blue-lighten");
+                obj.classList.add("yellow-lighten");
+              }
+            },500);
+          }
+        }
+      </script>
+      <pre><code class="language-markup">&lt;div class=&quot;progress&quot;&gt;
+  &lt;div class=&quot;bar regular blue-lighten&quot; style=&quot;width:0%&quot; id=&quot;bar2&quot;&gt;0%&lt;/div&gt;
+&lt;/div&gt;
+&lt;button class=&quot;btn btn-blue&quot; onclick=&quot;progress2()&quot;&gt;Start&lt;/button&gt;
+&lt;script&gt;
+  function progress2(){
+    var obj = document.getElementById(&quot;bar2&quot;);
+    var interval = undefined;
+    if(interval===undefined){
+      interval = window.setInterval(function(){
+        var width = obj.style.width;
+        if(width!==&quot;100%&quot;){
+          width = width.split(&quot;%&quot;);
+          width[0] = parseInt(width[0]);
+          width[0]+= 5;
+          width = width.join(&quot;%&quot;);
+          obj.style.width = width;
+          obj.innerHTML = width;
+        }else{
+          window.clearInterval(interval);
+          obj.classList.remove(&quot;blue-lighten&quot;);
+          obj.classList.add(&quot;yellow-lighten&quot;);
+        }
+      },500);
+    }
+  }
+&lt;/script&gt;</code></pre>
+    </div>
+    <footer class="blue">
+      <div class="body">
+        <div class="content">
+          <h1>Magic.css</h1>
+          <p>Neat and unique CSS framework for dynamic websites</p>
+        </div>
+        <div class="links">
+          <ul>
+            <li class="header">Pages</li>
+            <li><a href="/magic">Home</a></li>
+            <li><a href="/magic/start">Start</a></li>
+            <li><a href="https://github.com/palkerecsenyi/magic/">Github</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>&copy; Magic 2018 | Magic.CSS <span class="version"></span><span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
+      </div>
+    </footer>
+    <script src="../../prism.js"></script>
+  </body>
+</html>
