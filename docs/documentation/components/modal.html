@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://unpkg.com/magical-css">
+    <!--<link rel="stylesheet" href="https://unpkg.com/magical-css">-->
+    <link rel="stylesheet" href="../../../dist/magic.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
@@ -73,7 +74,7 @@
       <p>Visually, the <code class="language-css">.modal</code> class creates the black background and frame for the content. The <code class="language-css">.modal-content</code> is a white block containing what you want your modal to show. Finally, <code class="language-css">.modal-close</code> is a close button. CSS does not insert the cross by itself; you need to add the <code class="language-markup">&amp;times;</code> escape manually.</p>
       <div class="error yellow">Please bear in mind that Magic is not packaged with any JS at all, so you will need to add some custom JavaScript to make modals appear and disappear.</div>
       <p>To add the modal demonstrated above:</p>
-      <pre><code class="language-html">&lt;div class=&quot;modal&quot;
+      <pre><code class="language-html">&lt;div class=&quot;modal&quot;&gt;
   &lt;div class=&quot;modal-content&quot;&gt;
     &lt;p&gt;Hello!&lt;/p&gt;
   &lt;/div&gt;
@@ -119,7 +120,7 @@
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
       <h3>Toggling modals</h3>
-      <p>To toggle modals, simply create some JavaScript that toggles the class <span class="i-code">active</span> on the <span class="i-code">&lt;div class="modal"&gt;</span> element. When the class is present, the modal will be displayed; otherwise it will be hidden. <strong>Modals can be placed anywhere on the page.</strong></p>
+      <p>To toggle modals, simply create some JavaScript that toggles the class <span class="i-code">active</span> on the <code class="language-markup">&lt;div class="modal"&gt;</code> element. When the class is present, the modal will be displayed; otherwise it will be hidden. <strong>Modals can be placed anywhere on the page.</strong></p>
     </div>
     <footer class="blue">
       <div class="body">

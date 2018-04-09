@@ -14,7 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see https://github.com/palkerecsenyi/magic/blob/master/LICENSE.
 
-MAGIC.CSS VERSION 0.7.1 on npm https://www.npmjs.com/package/magical-css
+MAGIC.CSS VERSION 0.7.2 on npm https://www.npmjs.com/package/magical-css
 */
 @font-face{
   font-family: 'Noto';
@@ -72,7 +72,9 @@ $lighten: (
   red: $red-lighter,
   green: $green-lighter,
   yellow: $yellow-lighter,
-  blue: $blue-lighter
+  blue: $blue-lighter,
+  dark: #656565,
+  light: #f6f6f6
 );
 
 //map of darkens
@@ -84,6 +86,16 @@ $darken1: (
   blue: $blue-darker,
   dark: black,
   light: lightgrey
+);
+
+$darken2: (
+  default: $default-darker-2,
+  red: $red-darker-2,
+  green: $green-darker-2,
+  yellow: $yellow-darker-2,
+  blue: $blue-darker-2,
+  dark: black,
+  light: grey
 );
 
 //Native gradients
@@ -119,7 +131,7 @@ $break-t: 768px;
 $break-l: 1024px;
 
 //Controllers
-$version: 'v0.7.1';
+$version: 'v0.7.2';
 $debug: true;
 //^^^ Display errors or not (default: true)
 
@@ -1175,125 +1187,48 @@ a.btn-fluid{
 .btn-grad.btn-grad-blue{
   @extend %gradient-blue;
 }
-.btn.btn-default{
-  background-color: $default;
-  &:focus{
-    box-shadow:0 0 0 3px rgba(14,255,219, 0.8);
+@each $name,$value in $standard{
+  .btn.btn-#{$name}{
+    background-color:$value;
+    @if $name == light or $name == yellow{
+      color:black !important;
+    }
+    &:hover{
+      background-color:map-get($darken1,$name);
+    }
+    &:focus{
+      $border-colour: map-get($lighten,$name);
+      box-shadow:0 0 0 3px rgba($border-colour,0.8);
+    }
+    &:active{
+      background-color:map-get($darken2,$name);
+    }
   }
-}
-.btn.btn-blue{
-  background-color: $blue;
-  &:focus{
-    box-shadow:0 0 0 3px rgba(76,175,241, 0.8);
-  }
-}
-.btn.btn-yellow{
-  background-color: $yellow;
-  color:black !important;
-  &:focus{
-    box-shadow:0 0 0 3px rgba(255,227,120, 0.8);
-  }
-}
-.btn.btn-red{
-  background-color: $red;
-  &:focus{
-    box-shadow:0 0 0 3px rgba(255,95,127, 0.8);
-  }
-}
-.btn.btn-green{
-  background-color: $green;
-  &:focus{
-    box-shadow:0 0 0 3px rgba(63,228,132, 0.8);
-  }
-}
-.btn.btn-dark{ 
-  background-color: $dark;
-  &:focus{
-    box-shadow:0 0 0 3px rgba(50,50,50, 0.8);
-  }
-}
-.btn.btn-light{ 
-  background-color: $light; color: black !important;
-  &:focus{
-    box-shadow:0 0 0 3px rgba(245,245,245, 0.8);
+  .btn-outline.btn-#{$name}{
+    border:2px solid $value;
+    color:$value !important;
+    @if $name == light{
+      color: black !important;
+    }
+    &:hover{
+      background-color:$value !important;
+      @if $name == light or $name == yellow{
+        color:black !important;
+      } @else {
+        color:white !important;
+      }
+    }
+    &:active{
+      background-color: map-get($darken1,$name) !important;
+      border: 2px solid map-get($darken1,$name);
+    }
   }
 }
 .btn-outline{
   background-color:transparent!important;
 }
-.btn-outline.btn-default{
-  border:2px solid $default;
-  color:$default !important;
-}
-.btn-outline.btn-yellow{
-  border:2px solid $yellow;
-  color:$yellow !important;
-}
-.btn-outline.btn-blue{
-  border:2px solid $blue;
-  color:$blue !important;
-}
-.btn-outline.btn-red{
-  border:2px solid $red;
-  color:$red !important;
-}
-.btn-outline.btn-green{
-  border:2px solid $green;
-  color:$green !important;
-}
-.btn-outline.btn-dark{
-  border:2px solid $dark;
-  color:$dark !important;
-}
-.btn-outline.btn-light{
-  border:2px solid $light;
-  color:black !important;
-}
 .btn:hover{
   cursor:pointer;
-  color:white !important;
-}
-.btn.btn-default:hover{
-  background-color: $default-darker !important;
-}
-.btn.btn-blue:hover{
-  background-color: $blue-darker !important;
-}
-.btn.btn-yellow:hover{
-  background-color: $yellow-darker!important;
-  color:black !important;
-}
-.btn.btn-red:hover{
-  background-color: $red-darker !important;
-}
-.btn.btn-green:hover{
-  background-color: $green-darker !important;
-}
-.btn.btn-dark:hover{
-  background-color: black !important;
-}
-.btn.btn-light:hover{
-  background-color: #E0E0E0 !important;
-  color:black !important;
-}
-.btn-outline.btn-default:hover{
-  background-color: $default !important;
-}
-.btn-outline.btn-blue:hover{
-  background-color: $blue !important;
-}
-.btn-outline.btn-yellow:hover{
-  background-color: $yellow!important;
-  color:black !important;
-}
-.btn-outline.btn-red:hover{
-  background-color: $red !important;
-}
-.btn-outline.btn-green:hover{
-  background-color: $green !important;
-}
-.btn-outline.btn-dark:hover{
-  background-color: $dark !important;
 }
 .btn:disabled, .btn.btn-disabled{
   background-color: #6B6B6B;
@@ -1306,12 +1241,6 @@ a.btn-fluid{
 .btn:disabled:hover, .btn.btn-disabled:hover{
   background-color:#6B6B6B !important;
   cursor:not-allowed;
-}
-[class*="darken"][class*="btn"]::before, [class*="lighten"][class*="btn"]::before{
-  @include error("Cannot use darkens or lightens for button colours.");
-}
-[class*="btn"][class*="btn-"]:not(.btn-fluid):not(.btn-group):not([class*="default"]):not([class*="red"]):not([class*="blue"]):not([class*="green"]):not([class*="yellow"]):not([class*="dark"]):not([class*="light"])::before{
-  @include error("Specified btn-XXX attribute not found.");
 }
 //Breadcrumb
 .breadcrumb{
@@ -1637,10 +1566,14 @@ a.btn-fluid{
   }
   .modal-content{
     //margin:15% auto;
-    width:60%;
+    min-width:60%;
+    width:min-content;
     background-color:white;
     border-radius:4px;
     padding:2em;
+    @include media($break-t){
+      min-width: 80%;
+    }
   }
   .modal-close{
     border:none;
@@ -1663,10 +1596,14 @@ a.btn-fluid{
   }
   .modal-adv{
     //margin:5% auto;
-    width:60%;
+    width:min-content;
+    min-width:60%;
     background-color:white;
     border-radius:4px;
     padding:0;
+    @include media($break-t){
+      min-width:80%;
+    }
     .modal-adv-title{
       width:100%;
       box-sizing: border-box;
@@ -1846,7 +1783,8 @@ footer{
   color:white;
   margin-bottom:0;
   .body{
-    padding: 15px 10% 0 10%;
+    padding: 15px 10% 0;
+    width:100%;
     display:inline-flex;
     justify-content: flex-end;
     .content{
@@ -1867,6 +1805,7 @@ footer{
       ul{
         margin-top:0;
         list-style-type: none;
+        text-align: right;
         li{
           margin: 5px 0;
           a{
@@ -1885,22 +1824,13 @@ footer{
     padding: 5px 10%;
     margin-bottom:0 !important;
   }
+  @each $name, $value in $darken1{
+    &.#{$name} .bottom{
+      background-color: $value;
+    }
+  }
 }
-footer.default .bottom{
-  background-color: $default-darker;
-}
-footer.red .bottom{
-  background-color: $red-darker;
-}
-footer.green .bottom{
-  background-color: $green-darker;
-}
-footer.yellow .bottom{
-  background-color: $yellow-darker;
-}
-footer.blue .bottom{
-  background-color: $blue-darker;
-}
+
 footer .body .links ul li.header{
   font-size:18px;
 }
@@ -1923,6 +1853,7 @@ footer .link{
   footer .body .links ul{
     padding:0;
     padding-right:10px;
+    text-align:left;
   }
 }
 @include media($break-xsm){
