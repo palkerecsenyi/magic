@@ -1,9 +1,11 @@
 # Changelog for version 0.7.2
 ### New features:
-None
+* Shortened SASS for buttons
+* Added button 'active' effect
+* Changed flex system in footer
 
 ### New documentation:
-None
+* Footer
 
 ### Bug fixes:
 * #50 - Fixed width of modals on mobile

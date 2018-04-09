@@ -14,7 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see https://github.com/palkerecsenyi/magic/blob/master/LICENSE.
 
-MAGIC.CSS VERSION 0.7.1 on npm https://www.npmjs.com/package/magical-css
+MAGIC.CSS VERSION 0.7.2 on npm https://www.npmjs.com/package/magical-css
 */
 @font-face{
   font-family: 'Noto';
@@ -131,7 +131,7 @@ $break-t: 768px;
 $break-l: 1024px;
 
 //Controllers
-$version: 'v0.7.1';
+$version: 'v0.7.2';
 $debug: true;
 //^^^ Display errors or not (default: true)
 
@@ -1783,7 +1783,8 @@ footer{
   color:white;
   margin-bottom:0;
   .body{
-    padding: 15px 10% 0 10%;
+    padding: 15px 10% 0;
+    width:100%;
     display:inline-flex;
     justify-content: flex-end;
     .content{
@@ -1804,6 +1805,7 @@ footer{
       ul{
         margin-top:0;
         list-style-type: none;
+        text-align: right;
         li{
           margin: 5px 0;
           a{
@@ -1822,22 +1824,13 @@ footer{
     padding: 5px 10%;
     margin-bottom:0 !important;
   }
+  @each $name, $value in $darken1{
+    &.#{$name} .bottom{
+      background-color: $value;
+    }
+  }
 }
-footer.default .bottom{
-  background-color: $default-darker;
-}
-footer.red .bottom{
-  background-color: $red-darker;
-}
-footer.green .bottom{
-  background-color: $green-darker;
-}
-footer.yellow .bottom{
-  background-color: $yellow-darker;
-}
-footer.blue .bottom{
-  background-color: $blue-darker;
-}
+
 footer .body .links ul li.header{
   font-size:18px;
 }
@@ -1860,6 +1853,7 @@ footer .link{
   footer .body .links ul{
     padding:0;
     padding-right:10px;
+    text-align:left;
   }
 }
 @include media($break-xsm){

@@ -14,7 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see https://github.com/palkerecsenyi/magic/blob/master/LICENSE.
 
-MAGIC.CSS VERSION 0.7.1 on npm https://www.npmjs.com/package/magical-css
+MAGIC.CSS VERSION 0.7.2 on npm https://www.npmjs.com/package/magical-css
 */
 @font-face {
   font-family: 'Noto';
@@ -1716,7 +1716,8 @@ footer {
   color: white;
   margin-bottom: 0; }
   footer .body {
-    padding: 15px 10% 0 10%;
+    padding: 15px 10% 0;
+    width: 100%;
     display: inline-flex;
     justify-content: flex-end; }
     footer .body .content {
@@ -1733,7 +1734,8 @@ footer {
       justify-content: flex-end; }
       footer .body .links ul {
         margin-top: 0;
-        list-style-type: none; }
+        list-style-type: none;
+        text-align: right; }
         footer .body .links ul li {
           margin: 5px 0; }
           footer .body .links ul li a {
@@ -1746,21 +1748,20 @@ footer {
   footer .bottom {
     padding: 5px 10%;
     margin-bottom: 0 !important; }
-
-footer.default .bottom {
-  background-color: #00a78e; }
-
-footer.red .bottom {
-  background-color: #f80032; }
-
-footer.green .bottom {
-  background-color: #17a753; }
-
-footer.yellow .bottom {
-  background-color: #ffcf12; }
-
-footer.blue .bottom {
-  background-color: #0f7ec8; }
+  footer.default .bottom {
+    background-color: #00a78e; }
+  footer.red .bottom {
+    background-color: #f80032; }
+  footer.green .bottom {
+    background-color: #17a753; }
+  footer.yellow .bottom {
+    background-color: #ffcf12; }
+  footer.blue .bottom {
+    background-color: #0f7ec8; }
+  footer.dark .bottom {
+    background-color: black; }
+  footer.light .bottom {
+    background-color: lightgrey; }
 
 footer .body .links ul li.header {
   font-size: 18px; }
@@ -1783,7 +1784,8 @@ footer .link {
 
   footer .body .links ul {
     padding: 0;
-    padding-right: 10px; } }
+    padding-right: 10px;
+    text-align: left; } }
 @media only screen and (max-width: 320px) {
   footer .body .links {
     display: block;
@@ -2168,6 +2170,6 @@ select .opt-light:hover {
   background-color: #F3F3F3 !important; }
 
 .version::after {
-  content: "v0.7.1"; }
+  content: "v0.7.2"; }
 
 /*# sourceMappingURL=magic.css.map */
