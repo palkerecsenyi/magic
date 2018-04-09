@@ -9,6 +9,7 @@
 
 ### Bug fixes:
 * #50 - Fixed width of modals on mobile
+* #51 - Minor typo fix
 
 ### More
 See commit descriptions for more. I add large descriptions to all big commits.
