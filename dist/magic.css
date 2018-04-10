@@ -1550,25 +1550,61 @@ a.btn-fluid {
         border-bottom-right-radius: 4px; }
 
 .progress {
-  width: 100%;
-  background-color: #F3F3F3;
-  border-radius: 4px;
-  margin: 0.25rem 0; }
-  .progress .bar {
-    border-radius: 4px;
-    max-width: 100%;
-    text-align: center;
-    font-size: 0.85rem;
-    transition: width .2s ease, background-color .3s ease; }
-    .progress .bar.small {
-      padding: 0.25rem 0; }
-    .progress .bar.regular {
-      padding: 0.5rem 0; }
-    .progress .bar.large {
-      padding: 0.75rem 0; }
-    .progress .bar.xlarge {
-      padding: 1.25rem 0; }
-
+  margin: 0.25rem 0;
+  height: 1.25rem; }
+  .progress::-webkit-progress-bar, .progress::-webkit-progress-value {
+    border-radius: 10px; }
+  .progress.progress-small {
+    height: 1rem; }
+  .progress.progress-large {
+    height: 1.5rem; }
+    .progress.progress-large::-webkit-progress-bar, .progress.progress-large::-webkit-progress-value {
+      border-radius: 15px; }
+  .progress.progress-xlarge {
+    height: 1.75rem; }
+    .progress.progress-xlarge::-webkit-progress-bar, .progress.progress-xlarge::-webkit-progress-value {
+      border-radius: 20px; }
+  .progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%; }
+    .progress[value]::-webkit-progress-bar {
+      background-color: #F3F3F3; }
+    .progress[value].progress-default::-webkit-progress-value {
+      background-color: #00D1B2; }
+    .progress[value].progress-red::-webkit-progress-value {
+      background-color: #FF3860; }
+    .progress[value].progress-green::-webkit-progress-value {
+      background-color: #1DD168; }
+    .progress[value].progress-yellow::-webkit-progress-value {
+      background-color: #ffdd57; }
+    .progress[value].progress-blue::-webkit-progress-value {
+      background-color: #209cee; }
+    .progress[value].progress-dark::-webkit-progress-value {
+      background-color: #242424; }
+    .progress[value].progress-light::-webkit-progress-value {
+      background-color: #F3F3F3; }
+  .progress:not([value]) {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%; }
+    .progress:not([value]).progress-default::-webkit-progress-bar {
+      background: repeating-linear-gradient(45deg, #00D1B2, #00D1B2 10px, #00a78e 10px, #00a78e 20px); }
+    .progress:not([value]).progress-red::-webkit-progress-bar {
+      background: repeating-linear-gradient(45deg, #FF3860, #FF3860 10px, #f80032 10px, #f80032 20px); }
+    .progress:not([value]).progress-green::-webkit-progress-bar {
+      background: repeating-linear-gradient(45deg, #1DD168, #1DD168 10px, #17a753 10px, #17a753 20px); }
+    .progress:not([value]).progress-yellow::-webkit-progress-bar {
+      background: repeating-linear-gradient(45deg, #ffdd57, #ffdd57 10px, #ffcf12 10px, #ffcf12 20px); }
+    .progress:not([value]).progress-blue::-webkit-progress-bar {
+      background: repeating-linear-gradient(45deg, #209cee, #209cee 10px, #0f7ec8 10px, #0f7ec8 20px); }
+    .progress:not([value]).progress-dark::-webkit-progress-bar {
+      background: repeating-linear-gradient(45deg, #242424, #242424 10px, black 10px, black 20px); }
+    .progress:not([value]).progress-light::-webkit-progress-bar {
+      background: repeating-linear-gradient(45deg, #F3F3F3, #F3F3F3 10px, lightgrey 10px, lightgrey 20px); }
+@keyframes animate-stripes {
+  100% {
+    background-position: -100px 0; } }
 .dropdown-container {
   position: relative;
   display: inline-block; }

@@ -49,139 +49,79 @@
       <h1 class="header">Progress <span class="badge red">New!</span></h1>
       <h2 class="trailer">A very simple progress bar component with a customisable colour, width and height.</h2>
       <hr class="separator">
-      <div class="progress">
-        <div class="bar small default" style="width:25%">25%</div>
+      <h6 class="no-mar">Determinate</h6>
+      <progress value="25" max="100" class="progress progress-blue progress-small"></progress>
+      <progress value="50" max="100" class="progress progress-red"></progress>
+      <progress value="75" max="100" class="progress progress-green progress-large"></progress>
+      <progress value="100" max="100" class="progress progress-yellow progress-xlarge"></progress>
+      <h6 class="no-mar">Indeterminate</h6>
+      <progress class="progress progress-default progress-small"></progress>
+      <progress class="progress progress-dark"></progress>
+      <progress class="progress progress-light progress-large"></progress>
+      <progress class="progress progress-green progress-xlarge"></progress>
+      <h2>Basic progress bar</h2>
+      <p>Magic uses the HTML5 <span class="i-code">&lt;progress&gt;</span> tag to create styled progress bars. As a result of this, the required syntax is extremely simple. To create a progress bar, you need to choose a colour and a size. The template for a Magic progress bar is as follows:</p>
+      <pre><code class="language-markup">&lt;progress class="progress progress-COLOUR (progress-SIZE)"&gt;&lt;/progress&gt;</code></pre>
+      <p>You can replace 'COLOUR' with any <strong>standard</strong> Magic colour. This means you can <strong>not</strong> use darkens or lightens. Refer to the <a class="link lined" href="colour.html">colour</a> docs for more info. Here are all supported colours, in both determinate and indeterminate forms (in their 'small' version to conserve space):</p>
+      <progress value="50" max="100" class="progress progress-default progress-small"></progress>
+      <progress value="50" max="100" class="progress progress-red progress-small"></progress>
+      <progress value="50" max="100" class="progress progress-green progress-small"></progress>
+      <progress value="50" max="100" class="progress progress-yellow progress-small"></progress>
+      <progress value="50" max="100" class="progress progress-blue progress-small"></progress>
+      <progress value="50" max="100" class="progress progress-dark progress-small"></progress>
+      <progress value="50" max="100" class="progress progress-light progress-small"></progress>
+      <progress class="progress progress-default progress-small"></progress>
+      <progress class="progress progress-red progress-small"></progress>
+      <progress class="progress progress-green progress-small"></progress>
+      <progress class="progress progress-yellow progress-small"></progress>
+      <progress class="progress progress-blue progress-small"></progress>
+      <progress class="progress progress-dark progress-small"></progress>
+      <progress class="progress progress-light progress-small"></progress>
+      <p>If you do not include the 'progress-SIZE' class, a default size will be applied. If you do include it, you can choose from the following sizes:</p>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Height</th>
+              <th>Border radius</th>
+              <th width="25%">Demo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="i-code">progress-small</span></td>
+              <td>1rem</td>
+              <td>10px</td>
+              <td><progress class="progress progress-small progress-blue"></progress></td>
+            </tr>
+            <tr>
+              <td>None</td>
+              <td>1.25rem</td>
+              <td>10px</td>
+              <td><progress class="progress progress-blue"></progress></td>
+            </tr>
+            <tr>
+              <td><span class="i-code">progress-large</span></td>
+              <td>1.5rem</td>
+              <td>15px</td>
+              <td><progress class="progress progress-large progress-blue"></progress></td>
+            </tr>
+            <tr>
+              <td><span class="i-code">progress-xlarge</span></td>
+              <td>1.75rem</td>
+              <td>20px</td>
+              <td><progress class="progress progress-xlarge progress-blue"></progress></td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Determinate vs. indeterminate</h2>
+        <p>If a progress bar does not have a <span class="i-code">value</span> attribute, it will automatically appear full and it will have stripes. Otherwise, the <span class="i-code">value</span> attribute (along with the <span class="i-code">max</span> attribute) defines how 'full' the progress bar should be. Here are two examples:</p>
+        <progress value="50" max="100" class="progress progress-blue"></progress>
+        <pre><code class="language-markup">&lt;progress value="50" max="100" class="progress progress-blue"&gt;&lt;/progress&gt;</code></pre>
+        <progress class="progress progress-blue"></progress>
+        <pre><code class="language-markup">&lt;progress class="progress progress-blue"&gt;&lt;/progress&gt;</code></pre>
       </div>
-      <div class="progress">
-        <div class="bar regular red" style="width:50%">50%</div>
-      </div>
-      <div class="progress">
-        <div class="bar large green" style="width:75%">75%</div>
-      </div>
-      <div class="progress">
-        <div class="bar xlarge yellow" style="width:100%">100%</div>
-      </div>
-      <h2>Basic layout</h2>
-      <p>The basic layout of a progress bar is as follows:</p>
-      <pre><code class="language-markup">&lt;div class="progress"&gt;
-  &lt;div class="bar SIZE COLOUR" style="width:WIDTH%"&gt;TEXT&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-      <p>In this case, <span class="i-code">SIZE</span> refers to the height of the progress bar. You can choose from:</p>
-      <ul>
-        <li>small</li>
-        <li>regular</li>
-        <li>large</li>
-        <li>xlarge</li>
-      </ul>
-      <p><span class="i-code">COLOUR</span> refers to any Magic colour (including darkens and lightens). <span class="i-code">WIDTH</span> refers to a percentage which defines the current 'progress' of the bar. <span class="i-code">TEXT</span> can be any textual content to show in the middle of the progress bar - this <strong>must not</strong> be empty, as the height of the progress bar will not work properly otherwise.</p>
-      <h2>Functionality</h2>
-      <p>Magic.css does not include any JavaScript, and you must add your own in order to add functionality to Magic progress bars. All you need to do is increase the <span class="i-code">width</span> CSS property of the <code class="language-markup">&lt;div class="bar"&gt;</code>, up to a maximum of 100%. <strong>A width transition is applied automatically</strong>, so the width will be animated if a change in percentage occurs.</p>
-      <p>Here is an example:</p>
-      <div class="progress">
-        <div class="bar regular blue" style="width:0%" id="bar">0%</div>
-      </div>
-      <button class="btn btn-blue" onclick="progress()">Start</button>
-      <script>
-        function progress(){
-          var obj = document.getElementById("bar");
-          var interval = undefined;
-          if(interval===undefined){
-            interval = window.setInterval(function(){
-              var width = obj.style.width;
-              if(width!=="100%"){
-                width = width.split("%");
-                width[0] = parseInt(width[0]);
-                width[0]+= 5;
-                width = width.join("%");
-                obj.style.width = width;
-                obj.innerHTML = width;
-              }else{
-                window.clearInterval(interval);
-              }
-            },500);
-          }
-        }
-      </script>
-      <pre><code class="language-markup">&lt;div class=&quot;progress&quot;&gt;
-  &lt;div class=&quot;bar regular blue&quot; style=&quot;width:0%&quot; id=&quot;bar&quot;&gt;0%&lt;/div&gt;
-&lt;/div&gt;
-&lt;button class=&quot;btn btn-blue&quot; onclick=&quot;progress()&quot;&gt;Start&lt;/button&gt;
-&lt;script&gt;
-  function progress(){
-    var obj = document.getElementById(&quot;bar&quot;);
-    var interval = undefined;
-    if(interval===undefined){
-      interval = window.setInterval(function(){
-        var width = obj.style.width;
-        if(width!==&quot;100%&quot;){
-          width = width.split(&quot;%&quot;);
-          width[0] = parseInt(width[0]);
-          width[0]+= 5;
-          width = width.join(&quot;%&quot;);
-          obj.style.width = width;
-          obj.innerHTML = width;
-        }else{
-          window.clearInterval(interval);
-        }
-      },500);
-    }
-  }
-&lt;/script&gt;</code></pre>
-      <p>You can also change the colour of the progress bar using JS, and the transition will be applied automatically:</p>
-      <div class="progress">
-        <div class="bar regular blue-lighten" style="width:0%" id="bar2">0%</div>
-      </div>
-      <button class="btn btn-blue" onclick="progress2()">Start</button>
-      <script>
-        function progress2(){
-          var obj = document.getElementById("bar2");
-          var interval = undefined;
-          if(interval===undefined){
-            interval = window.setInterval(function(){
-              var width = obj.style.width;
-              if(width!=="100%"){
-                width = width.split("%");
-                width[0] = parseInt(width[0]);
-                width[0]+= 5;
-                width = width.join("%");
-                obj.style.width = width;
-                obj.innerHTML = width;
-              }else{
-                window.clearInterval(interval);
-                obj.classList.remove("blue-lighten");
-                obj.classList.add("yellow-lighten");
-              }
-            },500);
-          }
-        }
-      </script>
-      <pre><code class="language-markup">&lt;div class=&quot;progress&quot;&gt;
-  &lt;div class=&quot;bar regular blue-lighten&quot; style=&quot;width:0%&quot; id=&quot;bar2&quot;&gt;0%&lt;/div&gt;
-&lt;/div&gt;
-&lt;button class=&quot;btn btn-blue&quot; onclick=&quot;progress2()&quot;&gt;Start&lt;/button&gt;
-&lt;script&gt;
-  function progress2(){
-    var obj = document.getElementById(&quot;bar2&quot;);
-    var interval = undefined;
-    if(interval===undefined){
-      interval = window.setInterval(function(){
-        var width = obj.style.width;
-        if(width!==&quot;100%&quot;){
-          width = width.split(&quot;%&quot;);
-          width[0] = parseInt(width[0]);
-          width[0]+= 5;
-          width = width.join(&quot;%&quot;);
-          obj.style.width = width;
-          obj.innerHTML = width;
-        }else{
-          window.clearInterval(interval);
-          obj.classList.remove(&quot;blue-lighten&quot;);
-          obj.classList.add(&quot;yellow-lighten&quot;);
-        }
-      },500);
-    }
-  }
-&lt;/script&gt;</code></pre>
     </div>
     <footer class="blue">
       <div class="body">
