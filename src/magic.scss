@@ -142,6 +142,36 @@ $debug: true;
   }
 }
 
+//Button mixin
+@mixin button($base-name, $padding, $link, $shadow-size:3px){
+  @content;
+  padding: $padding;
+  background-color:map-get($standard,$base-name);
+  border-radius: 4px;
+  transition: all .2s ease;
+  @if $base-name == yellow or $base-name == light{
+    color:black;
+  }@else{
+    color:white;
+  }
+  @if $link{
+    text-decoration: none;
+  }@else{
+    cursor:pointer;
+  }
+  text-transform: uppercase;
+  &:hover{
+    background-color: map-get($darken1,$base-name);
+  }
+  &:active{
+    background-color: map-get($darken2,$base-name);
+  }
+  &:focus{
+    $lighten-colour: map-get($lighten,$base-name);
+    box-shadow:0 0 0 $shadow-size rgba($lighten-colour,0.8);
+  }
+}
+
 //Error mixin
 @mixin error($message){
   @if ($debug){
@@ -357,105 +387,41 @@ table.table{
   max-width:100%;
 }
 //Colours
-.default{
-  background-color: $default;
-  color:white !important;
-}
-.default-darken-1{
-  background-color: $default-darker;
-  color:white !important;
-}
-.default-darken-2{
-  background-color: $default-darker-2;
-  color:white !important;
-}
-.default-lighten{
-  background-color: $default-lighter;
-  color:black !important;
-}
-
-.red{
-  background-color: $red;
-  color:white !important;
-}
-.red-darken-1{
-  background-color: $red-darker;
-  color:white !important;
-}
-.red-darken-2{
-  background-color: $red-darker-2;
-  color:white !important;
-}
-.red-lighten{
-  background-color: $red-lighter;
-  color:white !important;
-}
-
-.green{
-  background-color: $green;
-  color:white !important;
-}
-.green-darken-1{
-  background-color: $green-darker;
-  color:white !important;
-}
-.green-darken-2{
-  background-color: $green-darker-2;
-  color:white !important;
-}
-.green-lighten{
-  background-color: $green-lighter;
-  color:white !important;
+@each $name,$value in $standard{
+  .#{$name}{
+    background-color: $value;
+    @if $name == yellow or $name == light{
+      color:black;
+    }@else{
+      color:white;
+    }
+  }
+  .#{$name}-darken-1{
+    background-color: map-get($darken1, $name);
+    @if $name == yellow or $name == light{
+      color:black;
+    }@else{
+      color:white;
+    }
+  }
+  .#{$name}-darken-2{
+    background-color: map-get($darken2, $name);
+    @if $name == light{
+      color:black;
+    }@else{
+      color:white;
+    }
+  }
+  .#{$name}-lighten{
+    background-color: map-get($lighten, $name);
+    @if $name == light or $name == yellow or $name == default{
+      color:black;
+    }@else{
+      color:white;
+    }
+  }
 }
 
-.yellow{
-  background-color: $yellow;
-  color:black !important;
-}
-.yellow-darken-1{
-  background-color: $yellow-darker;
-  color:black !important;
-}
-.yellow-darken-2{
-  background-color: $yellow-darker-2;
-  color:white !important;
-}
-.yellow-lighten{
-  background-color: $yellow-lighter;
-  color:black !important;
-}
-
-.blue{
-  background-color: $blue;
-  color:white !important;
-}
-.blue-darken-1{
-  background-color: $blue-darker;
-  color:white !important;
-}
-.blue-darken-2{
-  background-color: $blue-darker-2;
-  color:white !important;
-}
-.blue-lighten{
-  background-color: $blue-lighter;
-  color:white !important;
-}
-
-.dark{
-  background-color: $dark;
-  color:white !important;
-}
-.light{
-  background-color: $light;
-  color:black !important;
-}
-.white-text{
-  color:white !important;
-}
-.black-text{
-  color:black !important;
-}
 .gradient-red{
   @extend %gradient-red;
   color:white;
@@ -1719,6 +1685,86 @@ a.btn-fluid{
       100% {
         background-position: -100px 0;
       }
+    }
+  }
+}
+
+//Pagination
+.pagination{
+  display:flex;
+  flex-wrap: wrap;
+  width:100%;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  .pagination-left{
+    order:1;
+    margin-top:0;
+    @include media($break-t){
+      flex:1;
+      margin-right: 1.5px;
+    }
+  }
+  .pagination-list{
+    order:2;
+    @include media($break-t){
+      order:3;
+      width:100%;
+    }
+    flex-grow: 1;
+    flex-shrink: 1;
+    vertical-align:middle;
+    .pagination-item{
+      display: inline-block;
+      margin: 0 .2rem;
+    }
+    .pagination-skip{
+      cursor: default;
+      vertical-align: baseline;
+      color: map-get($darken1,light);
+      margin: 0 .3rem;
+    }
+    .pagination-link{
+      text-decoration: none;
+      color:black;
+      padding:0.5em 0.75em;
+      border-radius: 5px;
+      transition: all .2s ease;
+      &:hover{
+        background-color:$light;
+      }
+      &:active{
+        background-color: map-get($darken1, light);
+      }
+    }
+  }
+  @each $name,$value in $standard{
+    .pagination-list.active-#{$name} .pagination-item.active .pagination-link{
+      background-color: $value;
+      @if $name == yellow{
+        color:black;
+      }@else{
+        color:white;
+      }
+      &:hover{
+        background-color: map-get($darken1, $name);
+      }
+      &:active{
+        background-color: map-get($darken2, $name); 
+      }
+      &:focus{
+        $border-colour: map-get($lighten, $name);
+        box-shadow:0 0 0 3px rgba($border-colour,0.8);
+      }
+    }
+  }
+  .pagination-right{
+    order:3;
+    margin-top:0;
+    @include media($break-t){
+      order:2;
+      flex:1;
+      margin-left: 1.5px;
     }
   }
 }

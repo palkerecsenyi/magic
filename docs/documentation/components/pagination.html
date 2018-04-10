@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/magical-css">
+    <link rel="stylesheet" href="../../../dist/magic.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><link rel="icon" href="//palkerecsenyi.github.io/magic/documentation/media/icon.png" type="image/x-icon" />
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+    <link rel="stylesheet" href="../../prism.css">
+    <meta charset="UTF-8">
+    <title>Magic - Documentation</title>
+    <script>
+      function openNav(){
+        document.getElementById("nav-mobile").style.width = "100%";
+      }
+      function closeNav(){
+        document.getElementById("nav-mobile").style.width = "0";
+      }
+    </script>
+    <script src="../../navbar.js"></script>
+  </head>
+  <body>
+    <div id="nav-mobile" class="blue animate">
+      <a href="javascript:void(0)" class="close" onClick="closeNav()">&times;</a>
+      <a href="https://palkerecsenyi.github.io/magic/">Home</a>
+      <a href="https://palkerecsenyi.github.io/magic/start">Get Started</a>
+      <a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a>
+      <a href="https://github.com/palkerecsenyi/magic">Github</a>
+    </div>
+    <nav class="blue">
+      <ul class="nav-left">
+        <li><a href="/magic" class="nav-brand-text">Magic.CSS</a></li>
+        <li class="nav-mobile-open" onClick="openNav()"><i class="fas fa-bars"></i></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/">Home</a></li>
+        <li class="nav-item"><a href="https://palkerecsenyi.github.io/magic/start">Get Started</a></li>
+        <li class="nav-item active"><a href="https://palkerecsenyi.github.io/magic/documentation">Documentation</a></li>
+        <li class="nav-item"><a href="https://github.com/palkerecsenyi/magic">Github</a></li>
+      </ul>
+    </nav>
+    <div class="navigation blue">
+			<div class="links">
+        <script>addNav(true,"pagination");</script>
+			</div>
+		</div>
+    <div class="container">
+      <h1 class="header">Pagination <span class="badge red">New!</span></h1>
+      <h2 class="trailer">A neat and responsive system for representing pages, powered by flexbox.</h2>
+      <a href="#" class="test-component">Hello</a>
+      <hr class="separator">
+      <div class="pagination">
+        <a class="pagination-left btn btn-blue" href="#">Previous</a>
+        <a class="pagination-right btn btn-blue" href="#">Next</a>
+        <ul class="pagination-list active-blue">
+          <li class="pagination-item"><a href="#" class="pagination-link">1</a></li>
+          <li class="pagination-item pagination-skip">&hellip;</li>
+          <li class="pagination-item"><a href="#" class="pagination-link">3</a></li>
+          <li class="pagination-item active"><a href="#" class="pagination-link">4</a></li>
+          <li class="pagination-item"><a href="#" class="pagination-link">5</a></li>
+          <li class="pagination-item pagination-skip">&hellip;</li>
+          <li class="pagination-item"><a href="#" class="pagination-link">24</a></li>
+        </ul>
+      </div>
+      <pre><code class="language-markup">&lt;div class=&quot;pagination&quot;&gt;
+  &lt;a class=&quot;pagination-left btn btn-blue&quot; href=&quot;#&quot;&gt;Previous&lt;/a&gt;
+  &lt;a class=&quot;pagination-right btn btn-blue&quot; href=&quot;#&quot;&gt;Next&lt;/a&gt;
+  &lt;ul class=&quot;pagination-list active-blue&quot;&gt;
+    &lt;li class=&quot;pagination-item&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;pagination-link&quot;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;pagination-item pagination-skip&quot;&gt;
+      &amp;hellip;
+    &lt;/li&gt;
+    &lt;li class=&quot;pagination-item&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;pagination-link&quot;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;pagination-item active&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;pagination-link&quot;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;pagination-item&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;pagination-link&quot;&gt;5&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;pagination-item pagination-skip&quot;&gt;
+      &amp;hellip;
+    &lt;/li&gt;
+    &lt;li class=&quot;pagination-item&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;pagination-link&quot;&gt;24&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+      <h2>Structure</h2>
+      <p>Magic pagination components are quite simple to build. They use flexbox to position elements in one line, and are responsive on tablet.</p>
+      <p>They consist of <strong>3 root level sections</strong> that should be contained in a <code class="language-markup">&lt;div class="pagination"&gt;</code> and can be placed in <strong>any order</strong>:</p>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Section</th>
+              <th>Class name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Left button</td>
+              <td><span class="i-code">pagination-left</span></td>
+              <td>This should be a button, typically with the text '<strong>Previous</strong>'. You can create this button using the normal ,<span class="i-code">btn</span> class system (see the <a href="button.html" class="link lined">button</a> docs).</td>
+            </tr>
+            <tr>
+              <td>Right button</td>
+              <td><span class="i-code">pagination-right</span></td>
+              <td>Same as above, but is placed on the right and usually contains the text '<strong>Next</strong>'.</td>
+            </tr>
+            <tr>
+              <td>Pagination list</td>
+              <td><span class="i-code">pagination-list</span></td>
+              <td>Must be a <code class="language-markup">&lt;ul class="pagination-list"&gt;</code>. This can also contain an additional <span class="i-code">pagination-COLOUR</span>, where colour is a <strong>standard</strong> Magic colour - this will set the colour that active items should be. The list should contain (multiple) <code class="language-markup">&lt;li class="pagination-item"&gt;</code>s, which can each either contain a <code class="language-markup">&lt;a class="pagination-link" href="#"&gt;</code> or have an additonal <span class="i-code">pagination-skip</span> class and contain <span class="i-code">&amp;hellip;</span>. <span class="i-code">pagination-link</span> tags can also have the <span class="i-code">active</span> class, which will give them the background colour defined previously and therefore make them appear active.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="blue">
+      <div class="body">
+        <div class="content">
+          <h1>Magic.css</h1>
+          <p>Neat and unique CSS framework for dynamic websites</p>
+        </div>
+        <div class="links">
+          <ul>
+            <li class="header">Pages</li>
+            <li><a href="/magic">Home</a></li>
+            <li><a href="/magic/start">Start</a></li>
+            <li><a href="https://github.com/palkerecsenyi/magic/">Github</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>&copy; Magic 2018 | Magic.CSS <span class="version"></span><span class="right-float"><a onClick="$('html, body').animate({ scrollTop: 0 }, 'slow');return false;" href="#" class="link"><i class="fas fa-arrow-up"></i> Back to Top</a></span></p>
+      </div>
+    </footer>
+    <script src="../../prism.js"></script>
+  </body>
+</html>

@@ -200,97 +200,115 @@ table.table {
 
 .default {
   background-color: #00D1B2;
-  color: white !important; }
+  color: white; }
 
 .default-darken-1 {
   background-color: #00a78e;
-  color: white !important; }
+  color: white; }
 
 .default-darken-2 {
   background-color: #008571;
-  color: white !important; }
+  color: white; }
 
 .default-lighten {
   background-color: #0effdb;
-  color: black !important; }
+  color: black; }
 
 .red {
   background-color: #FF3860;
-  color: white !important; }
+  color: white; }
 
 .red-darken-1 {
   background-color: #f80032;
-  color: white !important; }
+  color: white; }
 
 .red-darken-2 {
   background-color: #c60027;
-  color: white !important; }
+  color: white; }
 
 .red-lighten {
   background-color: #ff5f7f;
-  color: white !important; }
+  color: white; }
 
 .green {
   background-color: #1DD168;
-  color: white !important; }
+  color: white; }
 
 .green-darken-1 {
   background-color: #17a753;
-  color: white !important; }
+  color: white; }
 
 .green-darken-2 {
   background-color: #128542;
-  color: white !important; }
+  color: white; }
 
 .green-lighten {
   background-color: #3fe484;
-  color: white !important; }
+  color: white; }
 
 .yellow {
   background-color: #ffdd57;
-  color: black !important; }
+  color: black; }
 
 .yellow-darken-1 {
   background-color: #ffcf12;
-  color: black !important; }
+  color: black; }
 
 .yellow-darken-2 {
   background-color: #daae00;
-  color: white !important; }
+  color: white; }
 
 .yellow-lighten {
   background-color: #ffe378;
-  color: black !important; }
+  color: black; }
 
 .blue {
   background-color: #209cee;
-  color: white !important; }
+  color: white; }
 
 .blue-darken-1 {
   background-color: #0f7ec8;
-  color: white !important; }
+  color: white; }
 
 .blue-darken-2 {
   background-color: #0c64a0;
-  color: white !important; }
+  color: white; }
 
 .blue-lighten {
   background-color: #4caff1;
-  color: white !important; }
+  color: white; }
 
 .dark {
   background-color: #242424;
-  color: white !important; }
+  color: white; }
+
+.dark-darken-1 {
+  background-color: black;
+  color: white; }
+
+.dark-darken-2 {
+  background-color: black;
+  color: white; }
+
+.dark-lighten {
+  background-color: #656565;
+  color: white; }
 
 .light {
   background-color: #F3F3F3;
-  color: black !important; }
+  color: black; }
 
-.white-text {
-  color: white !important; }
+.light-darken-1 {
+  background-color: lightgrey;
+  color: black; }
 
-.black-text {
-  color: black !important; }
+.light-darken-2 {
+  background-color: grey;
+  color: black; }
+
+.light-lighten {
+  background-color: #f6f6f6;
+  color: black; }
 
 .gradient-red {
   color: white; }
@@ -1613,6 +1631,119 @@ a.btn-fluid {
 @keyframes animate-stripes {
   100% {
     background-position: -100px 0; } }
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between; }
+  .pagination .pagination-left {
+    order: 1;
+    margin-top: 0; }
+    @media only screen and (max-width: 768px) {
+      .pagination .pagination-left {
+        flex: 1;
+        margin-right: 1.5px; } }
+  .pagination .pagination-list {
+    order: 2;
+    flex-grow: 1;
+    flex-shrink: 1;
+    vertical-align: middle; }
+    @media only screen and (max-width: 768px) {
+      .pagination .pagination-list {
+        order: 3;
+        width: 100%; } }
+    .pagination .pagination-list .pagination-item {
+      display: inline-block;
+      margin: 0 .2rem; }
+    .pagination .pagination-list .pagination-skip {
+      cursor: default;
+      vertical-align: baseline;
+      color: lightgrey;
+      margin: 0 .3rem; }
+    .pagination .pagination-list .pagination-link {
+      text-decoration: none;
+      color: black;
+      padding: 0.5em 0.75em;
+      border-radius: 5px;
+      transition: all .2s ease; }
+      .pagination .pagination-list .pagination-link:hover {
+        background-color: #F3F3F3; }
+      .pagination .pagination-list .pagination-link:active {
+        background-color: lightgrey; }
+  .pagination .pagination-list.active-default .pagination-item.active .pagination-link {
+    background-color: #00D1B2;
+    color: white; }
+    .pagination .pagination-list.active-default .pagination-item.active .pagination-link:hover {
+      background-color: #00a78e; }
+    .pagination .pagination-list.active-default .pagination-item.active .pagination-link:active {
+      background-color: #008571; }
+    .pagination .pagination-list.active-default .pagination-item.active .pagination-link:focus {
+      box-shadow: 0 0 0 3px rgba(14, 255, 219, 0.8); }
+  .pagination .pagination-list.active-red .pagination-item.active .pagination-link {
+    background-color: #FF3860;
+    color: white; }
+    .pagination .pagination-list.active-red .pagination-item.active .pagination-link:hover {
+      background-color: #f80032; }
+    .pagination .pagination-list.active-red .pagination-item.active .pagination-link:active {
+      background-color: #c60027; }
+    .pagination .pagination-list.active-red .pagination-item.active .pagination-link:focus {
+      box-shadow: 0 0 0 3px rgba(255, 95, 127, 0.8); }
+  .pagination .pagination-list.active-green .pagination-item.active .pagination-link {
+    background-color: #1DD168;
+    color: white; }
+    .pagination .pagination-list.active-green .pagination-item.active .pagination-link:hover {
+      background-color: #17a753; }
+    .pagination .pagination-list.active-green .pagination-item.active .pagination-link:active {
+      background-color: #128542; }
+    .pagination .pagination-list.active-green .pagination-item.active .pagination-link:focus {
+      box-shadow: 0 0 0 3px rgba(63, 228, 132, 0.8); }
+  .pagination .pagination-list.active-yellow .pagination-item.active .pagination-link {
+    background-color: #ffdd57;
+    color: black; }
+    .pagination .pagination-list.active-yellow .pagination-item.active .pagination-link:hover {
+      background-color: #ffcf12; }
+    .pagination .pagination-list.active-yellow .pagination-item.active .pagination-link:active {
+      background-color: #daae00; }
+    .pagination .pagination-list.active-yellow .pagination-item.active .pagination-link:focus {
+      box-shadow: 0 0 0 3px rgba(255, 227, 120, 0.8); }
+  .pagination .pagination-list.active-blue .pagination-item.active .pagination-link {
+    background-color: #209cee;
+    color: white; }
+    .pagination .pagination-list.active-blue .pagination-item.active .pagination-link:hover {
+      background-color: #0f7ec8; }
+    .pagination .pagination-list.active-blue .pagination-item.active .pagination-link:active {
+      background-color: #0c64a0; }
+    .pagination .pagination-list.active-blue .pagination-item.active .pagination-link:focus {
+      box-shadow: 0 0 0 3px rgba(76, 175, 241, 0.8); }
+  .pagination .pagination-list.active-dark .pagination-item.active .pagination-link {
+    background-color: #242424;
+    color: white; }
+    .pagination .pagination-list.active-dark .pagination-item.active .pagination-link:hover {
+      background-color: black; }
+    .pagination .pagination-list.active-dark .pagination-item.active .pagination-link:active {
+      background-color: black; }
+    .pagination .pagination-list.active-dark .pagination-item.active .pagination-link:focus {
+      box-shadow: 0 0 0 3px rgba(101, 101, 101, 0.8); }
+  .pagination .pagination-list.active-light .pagination-item.active .pagination-link {
+    background-color: #F3F3F3;
+    color: white; }
+    .pagination .pagination-list.active-light .pagination-item.active .pagination-link:hover {
+      background-color: lightgrey; }
+    .pagination .pagination-list.active-light .pagination-item.active .pagination-link:active {
+      background-color: grey; }
+    .pagination .pagination-list.active-light .pagination-item.active .pagination-link:focus {
+      box-shadow: 0 0 0 3px rgba(246, 246, 246, 0.8); }
+  .pagination .pagination-right {
+    order: 3;
+    margin-top: 0; }
+    @media only screen and (max-width: 768px) {
+      .pagination .pagination-right {
+        order: 2;
+        flex: 1;
+        margin-left: 1.5px; } }
+
 .dropdown-container {
   position: relative;
   display: inline-block; }

@@ -3,6 +3,7 @@
 * Progress bar
 * Added top shadow to footer
 * Made container wider on narrower devices
+* Added pagination
 
 ### New documentation:
 * Progress bar
