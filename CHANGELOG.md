@@ -1,6 +1,8 @@
 # Changelog for version 1.0.0
 ### New features:
 * Progress bar
+* Added top shadow to footer
+* Made container wider on narrower devices
 
 ### New documentation:
 * Progress bar

@@ -547,6 +547,14 @@ table.table {
   margin-right: 10%;
   margin-top: 10px;
   padding: 5px; }
+  @media only screen and (max-width: 768px) {
+    .container {
+      margin-left: 5%;
+      margin-right: 5%; } }
+  @media only screen and (max-width: 425px) {
+    .container {
+      margin-left: 2%;
+      margin-right: 2%; } }
 
 nav + .container, nav + #nav-mobile + .container {
   margin-top: 60px; }
@@ -1552,17 +1560,17 @@ a.btn-fluid {
 .progress {
   margin: 0.25rem 0;
   height: 1.25rem; }
-  .progress::-webkit-progress-bar, .progress::-webkit-progress-value {
+  .progress::-webkit-progress-bar, .progress::-webkit-progress-value, .progress:not([value]) {
     border-radius: 10px; }
   .progress.progress-small {
     height: 1rem; }
   .progress.progress-large {
     height: 1.5rem; }
-    .progress.progress-large::-webkit-progress-bar, .progress.progress-large::-webkit-progress-value {
+    .progress.progress-large::-webkit-progress-bar, .progress.progress-large::-webkit-progress-value, .progress.progress-large:not([value]) {
       border-radius: 15px; }
   .progress.progress-xlarge {
     height: 1.75rem; }
-    .progress.progress-xlarge::-webkit-progress-bar, .progress.progress-xlarge::-webkit-progress-value {
+    .progress.progress-xlarge::-webkit-progress-bar, .progress.progress-xlarge::-webkit-progress-value, .progress.progress-xlarge:not([value]) {
       border-radius: 20px; }
   .progress[value] {
     -webkit-appearance: none;
@@ -1770,7 +1778,8 @@ nav .nav-dropdown-container .nav-dropdown {
 footer {
   margin-top: 30px;
   color: white;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  box-shadow: 0px -3px 10px 0px rgba(50, 50, 50, 0.5); }
   footer .body {
     padding: 15px 10% 0;
     width: 100%;
