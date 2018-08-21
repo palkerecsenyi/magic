@@ -14,7 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see https://github.com/palkerecsenyi/magic/blob/master/LICENSE.
 
-MAGIC.CSS VERSION 0.7.2 on npm https://www.npmjs.com/package/magical-css
+MAGIC.CSS VERSION 0.7.3 on npm https://www.npmjs.com/package/magical-css
 */
 @font-face {
   font-family: 'Noto';
@@ -415,6 +415,8 @@ table.table {
     color: black !important; }
   .notification.default .body {
     background-color: #0effdb; }
+    .notification.default .body .link {
+      color: white; }
     .notification.default .body .separator {
       box-shadow: 0 10px 10px -10px #00a78e inset !important;
       margin: .7rem 0; }
@@ -422,6 +424,8 @@ table.table {
     background-color: #00a78e; }
   .notification.red .body {
     background-color: #ff5f7f; }
+    .notification.red .body .link {
+      color: white; }
     .notification.red .body .separator {
       box-shadow: 0 10px 10px -10px #f80032 inset !important;
       margin: .7rem 0; }
@@ -429,6 +433,8 @@ table.table {
     background-color: #f80032; }
   .notification.green .body {
     background-color: #3fe484; }
+    .notification.green .body .link {
+      color: white; }
     .notification.green .body .separator {
       box-shadow: 0 10px 10px -10px #17a753 inset !important;
       margin: .7rem 0; }
@@ -436,6 +442,8 @@ table.table {
     background-color: #17a753; }
   .notification.yellow .body {
     background-color: #ffe378; }
+    .notification.yellow .body .link {
+      color: white; }
     .notification.yellow .body .separator {
       box-shadow: 0 10px 10px -10px #ffcf12 inset !important;
       margin: .7rem 0; }
@@ -443,6 +451,8 @@ table.table {
     background-color: #ffcf12; }
   .notification.blue .body {
     background-color: #4caff1; }
+    .notification.blue .body .link {
+      color: white; }
     .notification.blue .body .separator {
       box-shadow: 0 10px 10px -10px #0f7ec8 inset !important;
       margin: .7rem 0; }
@@ -450,6 +460,8 @@ table.table {
     background-color: #0f7ec8; }
   .notification.dark .body {
     background-color: #656565; }
+    .notification.dark .body .link {
+      color: white; }
     .notification.dark .body .separator {
       box-shadow: 0 10px 10px -10px black inset !important;
       margin: .7rem 0; }
@@ -457,6 +469,8 @@ table.table {
     background-color: black; }
   .notification.light .body {
     background-color: #f6f6f6; }
+    .notification.light .body .link {
+      color: white; }
     .notification.light .body .separator {
       box-shadow: 0 10px 10px -10px lightgrey inset !important;
       margin: .7rem 0; }
@@ -2170,6 +2184,6 @@ select .opt-light:hover {
   background-color: #F3F3F3 !important; }
 
 .version::after {
-  content: "v0.7.2"; }
+  content: "v0.7.3"; }
 
 /*# sourceMappingURL=magic.css.map */

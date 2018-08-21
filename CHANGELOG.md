@@ -1,15 +1,9 @@
-# Changelog for version 0.7.2
+# Changelog for version 0.7.3
 ### New features:
-* Shortened SASS for buttons
-* Added button 'active' effect
-* Changed flex system in footer
+N/A
 
 ### New documentation:
-* Footer
+N/A
 
 ### Bug fixes:
-* #50 - Fixed width of modals on mobile
-* #51 - Minor typo fix
-
-### More
-See commit descriptions for more. I add large descriptions to all big commits.
+* #54 - `link`s in `notification` `body`s are now white, except for colour `light`, which recieves the normal `link` colour (i.e. blue).
